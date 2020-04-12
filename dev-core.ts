@@ -17,20 +17,19 @@ sanitize the variable naming and parameter ordering
 across the entire file.
 `);
 console.warn(`
+once finished
 
+replace all global constants with "export const"
 `);
 console.warn(`
 *** ORGANIZE THE MODULES TO BE GROUPED TOGETHER
-
     //// ????
     - SANDBOX-JS
     - CODE-FILE-STRUCTURE
-
     /// MERGED FUNCTIONAL LIBRARIES
     *** RAMBDA      FUNCTIONAL LIBRARY
     *** UNDERSCORE  FUNCTIONAL LIBRARY
     *** AUTHORS     FUNCTIONAL LIBRARY
-
     //// LANGUAGE CONSTRUCT REVAMP & HARDENING
     - PARADIGM-STYLER
     - PARAMS
@@ -46,59 +45,43 @@ console.warn(`
     - CLI-FUNC
     - CLI-CLAS
     - GOF4
-
     //// LANGUAGE CONSTRUCT MUST HAVES
-
     - INSTRUCTIONS
     - CONFIG
     - MODULES
     - DIM
     - APPLICATION
     - UNIFRAME
-
     //// ALGORITHMIC DATA STRUCTURES
-
     - LIST
-
     //// ALGORITHMIC ALGORITHMS
-
     //// WORKS OUT OF THE BOX
     - DISTRIBUTED APPLICATION
     - SERVER
     - ZENDB
-
 *** DEV-CORE FILE STRUCTURE
-
-
-0)  SHARED MEMORY/FUNCTION VARIABLES
-1)  STRUCTURAL PRESENTATIONS
+0)  STRUCTURAL PRESENTATIONS
+1)  SHARED MEMORY/FUNCTION VARIABLES
 2)  LANGUAGE CONSTRUCT REVAMP & HARDENING
 3)  LANGUAGE CONSTRUCT MUST HAVES
 4)  ALGORITHMIC DATA STRUCTURES
 5)  ALGORITHMIC ALGORITHMS
 6)  WORKS OUT THE BOX SOFTWARE
-
-
-
-
-
 CHECKLIST: merging all code into oe file checklist
-
 STATUSES:   [INPROGRESS, HELP, COMPLET]
-
 ___NAME____________________________________STATUS__________NOTES____
 APPLICATION
-auditor
+auditor                                 
 bootstrap
 capsule                                 INPROGRESS
-claS
-cli-claS
+claS                                    INPROGRESS
+cli-claS  
 cli-funC
 clone-any                               INPROGRESS
 closure                                 INPROGRESS
 code-file-structure
 Codebrarian-namespace
-config
+config                                  INPROGRESS
 CRUDS-JS
 Dependency-Injection-Management
 distributed-application
@@ -106,7 +89,7 @@ funC                                    INPROGRESS
 funClite                                INPROGRESS
 GOF4
 instructions
-js-builtins
+js-builtins                             
 js-datatype-validations                 FINISHED
 JSHackbot
 List
@@ -114,31 +97,249 @@ LOOP                                    INPROGRESS
 memory-scoping
 modules
 PARAMS                                  INPROGRESS
-PARADIGM-STYLER
+PARADIGM-STYLER                         INPROGRESS
 public-private-protect
 Quantify
-sandbox-js
-server
+sandbox-js                              FINISHED
+server                                  SKIPPED
 SPEC                                    SKIPPED
-symbolic-programming
-uniframe
-ZenDB
+symbolic-programming                    SKIPPED
+uniframe  
+ZenDB                                   SKIPPED
 ****************************************************************************************
 ****************************************************************************************
 ****************************************************************************************
 ****************************************************************************************
 `);
+console.warn(`
+  PROGRAMMING RULES
+  * constant    -> ALL CAPS 
+  * mutable     -> NOTALLCAPS
+`)
 console.warn("once finished with this, build a looper injector for ML purposes");
+
+
+
+!(function sanityCheck(){
+
+console.warn('asserting programming language functionality meets expectations');
+console.warn("test all operators");
+console.warn("test all builtin functions");
+console.warn("test error-handling");
+console.warn("test everything");
+
+1+1 === 2 || THROWE();
+1-1 === 0 || THROWE();
+
+});
+
+
+
+
+
+
+
+
+
+/*1)  STRUCTURAL PRESENTATIONS
+    * TYPES
+    * INTERACES
+    * ABSTRACTIONS
+*/
+/*export*/ interface paramsLoader {
+    (paramsOBJ:paramsOBJ): {paramsOBJ} | {create,read,update,delete}
+};
+/*export*/ interface paramsOBJ {
+    [index: string]: string
+    // let pS = { // params_obj
+        // name: function as string
+        // func: `$DTypes.function($p)`,
+        // prop: `$DTypes.string($p)`,
+        // obj:  `$DTypes.object($p)`,
+        // cb:   `$Dtypes.function($p)`,
+        // prop: `$Dtypes.string($p)`,
+        // val:  `$Dtypes.undefined($p)`
+    // };
+};
+/*export*/ interface func0props {
+    validate: Function,
+    block: Function
+}
+/*export*/ interface func0loaderobj {
+    funClite: Function,
+    paramsOBJ:paramsOBJ
+}
+/*export*/ interface func0Loader {
+    (paramsOBJ:paramsOBJ): func0loaderobj
+}
+/*export*/ interface interface_pm {
+	globalConfig,
+	instance,
+	funC
+};
+/*export*/ interface interface_funCinterface {
+	name, description, author,
+	notes,
+	isStrict,isAsync,isThis,isCapsule,
+	inputType,outputType,
+	params,
+	inputBehavior,outputBehavior,
+	onError,
+	validations,block,spec
+};
+    /*export*/ interface interface_meths {
+      global,
+      instance,
+      funC
+  };
+
+type validate = Function;
+type block    = Function;
+type neW      = Function;
+type deletE   = Function;
+type extend = Function;
+type implement = Function;
+
+type debug = Boolean;   
+type public_reflects_imports = Boolean; 
+type public_async = Boolean;  
+type public_reflects_static = Boolean;
+type singleton = Boolean;
+type public_reflects_internal = Boolean;
+type public_visible = Boolean;  
+type public_methods_auth = Boolean;
+type public_mutable = Boolean;  
+type public_expires = Boolean;
+type public_gettable = Boolean;  
+type public_auth = Boolean;
+type public_settable = Boolean;  
+type public_chainable = Boolean;
+type public_input_interface = Object;   
+type sessionable_requests = Boolean;
+type public_output_interface = Object;   
+type maximum_requests_concurrently = Boolean | Number;                              
+type public_output = String;  
+type hot_reload = Boolean;     
+type name = String;
+type extendS = Array<object>;
+type implementS = Array<object>;
+type constructor = Function;
+type imports = string[];
+
+type di  = enumStrAny;  type mi  = enumStrFunc;
+type ds  = enumStrAny;  type ms  = enumStrFunc;
+type dp  = enumStrAny;  type mp  = enumStrFunc;
+type dp1 = enumStrAny;  type mp1 = enumStrFunc;
+type dp2 = enumStrAny;  type mp2 = enumStrFunc;
+
+/*export*/ interface funClite                   {   
+    validate:   validate,   block:  block    
+};
+/*export*/ interface claS {
+    (setupOBJ:setupOBJ):__claS__public
+}
+/*export*/ interface __claS__public             {};
+/*export*/ interface __claS__instance_public    {
+    new:        neW,        extend:     extend,
+    delete:     deletE,     implement:  implement
+};
+/*export*/ interface enumStrFunc    {   [index: string]: Function   };
+/*export*/ interface enumStrAny     {   [index: string]: any        };
+/*export*/ interface settings {
+    debug:                       debug,             public_reflects_imports:         public_reflects_imports,
+    public_async:                public_async,      public_reflects_static:          public_reflects_static,
+    singleton:                   singleton,         public_reflects_internal:        public_reflects_internal,
+                                        
+    public_visible:              public_visible,    public_methods_auth:             public_methods_auth,
+    public_mutable:              public_mutable,    public_expires:                  public_expires,
+    public_gettable:             public_gettable,   public_auth:                     public_auth,
+    public_settable:             public_settable,   public_chainable:                public_chainable,
+
+    public_input_interface:      public_input_interface,    sessionable_requests:            sessionable_requests,
+    public_output_interface:     public_output_interface,   maximum_requests_concurrently:   maximum_requests_concurrently,                              
+    public_output:               public_output,             hot_reload:                      hot_reload     
+};
+/*export*/ interface setupOBJ {
+    name:String, extends:Array<object>, implements:Array<object>,
+    constructor:    constructor,
+    settings:       settings,
+    imports:        imports,
+    events:         events,
+    di:di,ds:ds,dp:dp,dp1:dp1,dp2:dp2,
+    mi:mi,ms:ms,mp:mp,mp1:mp1,mp2:mp2
+};
+/*export*/ interface events         {   
+
+};
+/*export*/ interface __this__       {   [index:string]:any              };
+
+/*export*/ interface __internal__   {   di: enumStrAny, mi: enumStrFunc };
+/*export*/ interface __imports__    {   [index:string]:any              };
+/*export*/ interface __public__     {   dp: enumStrAny, mp: enumStrFunc };
+/*export*/ interface __middlemans__ {                                   };
+/*export*/ interface __static__     {   ds: enumStrAny, ms: enumStrFunc };
+/*export*/ interface __settings__   {
+                                    debug:                  Boolean,
+                                    singleton:              Boolean,
+                                    visible:         Boolean,
+                                    mutable:         Boolean,
+                                    gettable:        Boolean,
+                                    settable:        Boolean,
+                                    chainable:       Boolean,
+                                    async:           Boolean,
+                                    mirror:          Boolean,
+};
+/*export*/ interface __constructor__ {
+  ():any
+}
+/*export*/ interface __MEM__ {
+    (setupOBJ:setupOBJ):{
+        __settings__    :__settings__,
+        __imports__     :__imports__,
+        __middlemans__  :__middlemans__,
+        __internal__    :__internal__,
+        __static__      :__static__,
+        __public__      :__public__,
+        __constructor__ :__constructor__
+    }
+};
+/*export*/ interface buildPublic {
+    (
+        __internal__    :__internal__,
+        __static__      :__static__,
+        __public__      :__public__,
+        __settings__    :__settings__,
+        __imports__     :__imports__,
+        __middlemans__  :__middlemans__,
+        constructorBlock:Function
+    ):Function
+};
+/*export*/ interface publicConstruction {
+    (
+        __this__        :__this__,
+        __internal__    :__internal__,
+        __static__      :__static__,
+        __public__      :__public__,
+        __settings__    :__settings__,
+        __imports__     :__imports__,
+        __middlemans__  :__middlemans__,
+        constructorBlock:Function
+    ):void
+};
+/*export*/ interface constructionComplete {
+    (
+        __settings__    :__settings__,
+        __this__        :__this__,
+        __internal__    :__internal__
+    ):void
+};
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*0)  SHARED MEMORY VARIABLES
-
-    *** evaluate modules one by one, do not leave any
+    *** evaluate modules one by one, do not leave any STONES UNTURNED
     *** anything global non related to module gets bumped to SHARED MEMORY VARIABLES
-
     *** sandbox-js must be the first to execute
-
 */
 /*export*/ const SANDBOX = (function SANDBOX() {
     let instances = 0;
@@ -185,13 +386,9 @@ console.warn("once finished with this, build a looper injector for ML purposes")
 // freeze builtins
     console.warn(` 
         !!! BUG !!!
-
         TopLevel Object properties are frozen,
-
         buttttt,
-
         there properties properties ...
-
         are not frozen.
     `);
     Object.freeze(eval); // Object.freeze(jsB["eval/*"]*/)
@@ -383,7 +580,6 @@ const __findHighestArity = function(spec, max = 0) {
         max = Math.max(max, spec[key].length);
       }
     }
-  
     return max;
 };
 
@@ -437,6 +633,9 @@ const flipExport = function(fn) {
       return undefined;
     };
 };
+const _isInteger = Number.isInteger || function _isInteger(n) {
+    return (n << 0) === n;
+};
 const _isInteger$1 = Number.isInteger || _isInteger;
 const indexByPath = function(pathInput, list) {
   const toReturn = {};
@@ -479,6 +678,32 @@ const mapObject = function(fn, obj) {
   return willReturn;
 }
 const reduce = curry(reduceFn);
+
+const _curry3 = function(fn) {
+    return function f3(a, b, c) {
+      switch (arguments.length) {
+        case 0:
+          return f3;
+        case 1:
+          return _isPlaceholder(a) ? f3
+               : _curry2(function(_b, _c) { return fn(a, _b, _c); });
+        case 2:
+          return _isPlaceholder(a) && _isPlaceholder(b) ? f3
+               : _isPlaceholder(a) ? _curry2(function(_a, _c) { return fn(_a, b, _c); })
+               : _isPlaceholder(b) ? _curry2(function(_b, _c) { return fn(a, _b, _c); })
+               : _curry1(function(_c) { return fn(a, b, _c); });
+        default:
+          return _isPlaceholder(a) && _isPlaceholder(b) && _isPlaceholder(c) ? f3
+               : _isPlaceholder(a) && _isPlaceholder(b) ? _curry2(function(_a, _b) { return fn(_a, _b, c); })
+               : _isPlaceholder(a) && _isPlaceholder(c) ? _curry2(function(_a, _c) { return fn(_a, b, _c); })
+               : _isPlaceholder(b) && _isPlaceholder(c) ? _curry2(function(_b, _c) { return fn(a, _b, _c); })
+               : _isPlaceholder(a) ? _curry1(function(_a) { return fn(_a, b, c); })
+               : _isPlaceholder(b) ? _curry1(function(_b) { return fn(a, _b, c); })
+               : _isPlaceholder(c) ? _curry1(function(_c) { return fn(a, b, _c); })
+               : fn(a, b, c);
+      }
+    };
+};  
 const parseRegex = function(maybeRegex) {
   if (maybeRegex.constructor !== RegExp) return [false];
   return [true, maybeRegex.toString()];
@@ -532,6 +757,207 @@ const Const = x => ({
   x,
   map: fn => Const(x)
 });
+const _curry1 = function(fn) {
+    return function f1(a) {
+      if (arguments.length === 0 || _isPlaceholder(a)) {
+        return f1;
+      } else {
+        return fn.apply(this, arguments);
+      }
+    };
+};
+const _curry2 = function(fn) {
+    return function f2(a, b) {
+      switch (arguments.length) {
+        case 0:
+          return f2;
+        case 1:
+          return _isPlaceholder(a) ? f2
+               : _curry1(function(_b) { return fn(a, _b); });
+        default:
+          return _isPlaceholder(a) && _isPlaceholder(b) ? f2
+               : _isPlaceholder(a) ? _curry1(function(_a) { return fn(_a, b); })
+               : _isPlaceholder(b) ? _curry1(function(_b) { return fn(a, _b); })
+               : fn(a, b);
+      }
+    };
+};
+const _isPlaceholder = function(a) {
+    return a != null &&
+           typeof a === 'object' &&
+           a['@@functional/placeholder'] === true;
+};
+const _dispatchable = function(methodNames, xf, fn) {
+    return function() {
+      if (arguments.length === 0) {
+        return fn();
+      }
+      var args = Array.prototype.slice.call(arguments, 0);
+      var obj = args.pop();
+      if (!_isArray(obj)) {
+        var idx = 0;
+        while (idx < methodNames.length) {
+          if (typeof obj[methodNames[idx]] === 'function') {
+            return obj[methodNames[idx]].apply(obj, args);
+          }
+          idx += 1;
+        }
+        if (_isTransformer(obj)) {
+          var transducer = xf.apply(null, args);
+          return transducer(obj);
+        }
+      }
+      return fn.apply(this, arguments);
+    };
+  }
+const _isObject = function(x) {
+return Object.prototype.toString.call(x) === '[object Object]';
+}
+const _reduced = function(x) {
+    return x && x['@@transducer/reduced'] ? x :
+      {
+        '@@transducer/value': x,
+        '@@transducer/reduced': true
+      };
+};
+const XWrap = function(fn) {
+    this.f = fn;
+};
+XWrap.prototype['@@transducer/init'] = function() {
+throw new Error('init not implemented on XWrap');
+};
+XWrap.prototype['@@transducer/result'] = function(acc) { return acc; };
+XWrap.prototype['@@transducer/step'] = function(acc, x) {
+return this.f(acc, x);
+};
+const _xwrap = function(fn) { return new XWrap(fn); }
+const _reduce = function(fn, acc, list) {
+    if (typeof fn === 'function') {
+      fn = _xwrap(fn);
+    }
+    if (_isArrayLike(list)) {
+      return _arrayReduce(fn, acc, list);
+    }
+    if (typeof list['fantasy-land/reduce'] === 'function') {
+      return _methodReduce(fn, acc, list, 'fantasy-land/reduce');
+    }
+    if (list[symIterator] != null) {
+      return _iterableReduce(fn, acc, list[symIterator]());
+    }
+    if (typeof list.next === 'function') {
+      return _iterableReduce(fn, acc, list);
+    }
+    if (typeof list.reduce === 'function') {
+      return _methodReduce(fn, acc, list, 'reduce');
+    }
+  
+    throw new TypeError('reduce: list must be array or iterable');
+};
+const _filter = function(fn, list) {
+    var idx = 0;
+    var len = list.length;
+    var result = [];
+  
+    while (idx < len) {
+      if (fn(list[idx])) {
+        result[result.length] = list[idx];
+      }
+      idx += 1;
+    }
+    return result;
+};
+const _isTransformer = function(obj) {
+    return obj != null && typeof obj['@@transducer/step'] === 'function';
+}
+const _isArray = Array.isArray || function _isArray(val) {
+    return (val != null &&
+            val.length >= 0 &&
+            Object.prototype.toString.call(val) === '[object Array]');
+};
+const _isArrayLike = _curry1(function isArrayLike(x) {
+    if (_isArray(x)) { return true; }
+    if (!x) { return false; }
+    if (typeof x !== 'object') { return false; }
+    if (_isString(x)) { return false; }
+    if (x.nodeType === 1) { return !!x.length; }
+    if (x.length === 0) { return true; }
+    if (x.length > 0) {
+      return x.hasOwnProperty(0) && x.hasOwnProperty(x.length - 1);
+    }
+    return false;
+  });
+const _arrayReduce = function(xf, acc, list) {
+    var idx = 0;
+    var len = list.length;
+    while (idx < len) {
+        acc = xf['@@transducer/step'](acc, list[idx]);
+        if (acc && acc['@@transducer/reduced']) {
+        acc = acc['@@transducer/value'];
+        break;
+        }
+        idx += 1;
+    }
+    return xf['@@transducer/result'](acc);
+};
+const _arity = function(n, fn) {
+    /* eslint-disable no-unused-vars */
+    switch (n) {
+      case 0: return function() { return fn.apply(this, arguments); };
+      case 1: return function(a0) { return fn.apply(this, arguments); };
+      case 2: return function(a0, a1) { return fn.apply(this, arguments); };
+      case 3: return function(a0, a1, a2) { return fn.apply(this, arguments); };
+      case 4: return function(a0, a1, a2, a3) { return fn.apply(this, arguments); };
+      case 5: return function(a0, a1, a2, a3, a4) { return fn.apply(this, arguments); };
+      case 6: return function(a0, a1, a2, a3, a4, a5) { return fn.apply(this, arguments); };
+      case 7: return function(a0, a1, a2, a3, a4, a5, a6) { return fn.apply(this, arguments); };
+      case 8: return function(a0, a1, a2, a3, a4, a5, a6, a7) { return fn.apply(this, arguments); };
+      case 9: return function(a0, a1, a2, a3, a4, a5, a6, a7, a8) { return fn.apply(this, arguments); };
+      case 10: return function(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) { return fn.apply(this, arguments); };
+      default: throw new Error('First argument to _arity must be a non-negative integer no greater than ten');
+    }
+};
+const bind = _curry2(function bind(fn, thisObj) {
+    return _arity(fn.length, function() {
+      return fn.apply(thisObj, arguments);
+    });
+});  
+const _methodReduce = function(xf, acc, obj, methodName) {
+    return xf['@@transducer/result'](obj[methodName](bind(xf['@@transducer/step'], xf), acc));
+};
+const _iterableReduce = function(xf, acc, iter) {
+    var step = iter.next();
+    while (!step.done) {
+      acc = xf['@@transducer/step'](acc, step.value);
+      if (acc && acc['@@transducer/reduced']) {
+        acc = acc['@@transducer/value'];
+        break;
+      }
+      step = iter.next();
+    }
+    return xf['@@transducer/result'](acc);
+};
+const _isString = function(x) {
+    return Object.prototype.toString.call(x) === '[object String]';
+};
+const _identity = function(x) { return x; };
+const _xfBase = {
+    init: function() {
+      return this.xf['@@transducer/init']();
+    },
+    result: function(result) {
+      return this.xf['@@transducer/result'](result);
+    }
+};
+const XFilter = function(f, xf) {
+    this.xf = xf;
+    this.f = f;
+  }
+  XFilter.prototype['@@transducer/init'] = _xfBase.init;
+  XFilter.prototype['@@transducer/result'] = _xfBase.result;
+  XFilter.prototype['@@transducer/step'] = function(result, input) {
+    return this.f(input) ? this.xf['@@transducer/step'](result, input) : result;
+};  
+const _xfilter = _curry2(function _xfilter(f, xf) { return new XFilter(f, xf); });  
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const always = function(x) {
     return () => x;
@@ -608,8 +1034,8 @@ const add = function(a, b) {
     if (arguments.length === 1) return _b => add(a, _b);
     return Number(a) + Number(b);
 };
-//   function dec(n) {return  n - 1},
-//   function inc(n) {return  n + 1},
+const dec = function(n) {return  n - 1};
+const inc = function(n) {return  n + 1};
 const mathMod = function(m, p) {
     if (arguments.length === 1) return _p => mathMod(m, _p);
     if (!_isInteger$1(m) || !_isInteger$1(p) || p < 1) return NaN;
@@ -636,11 +1062,6 @@ const multiply = function(a, b) {
     if (arguments.length === 1) return _b => multiply(a, _b);
     return a * b;
 };
-// const RESTARGS = function(..._args)  {return (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function subtract(a, b) {
-//     if (arguments.length === 1) return _b => subtract(a, _b);
-//     return a - b;
-// };
-  
 const sum = function(list) {
     return list.reduce((prev, current) => prev + current, 0);
 };
@@ -694,29 +1115,19 @@ const endsWith = function(suffix, list) {
     if (arguments.length === 1) return _list => endsWith(suffix, _list);
     return list.endsWith(suffix);
 };
-const filter = function(fn, list) {
-    if (arguments.length === 1) return _list => filter(fn, _list);
-    if (!list) return [];
-  
-    if (!Array.isArray(list)) {
-      return filterObject(fn, list);
-    }
-  
-    let index = -1;
-    let resIndex = 0;
-    const len = list.length;
-    const willReturn = [];
-  
-    while (++index < len) {
-      const value = list[index];
-  
-      if (fn(value, index)) {
-        willReturn[resIndex++] = value;
-      }
-    }
-  
-    return willReturn;
-};
+const filter = _curry2(_dispatchable(['filter'], _xfilter, function(pred, filterable) {
+    return (
+      _isObject(filterable) ?
+        _reduce(function(acc, key) {
+          if (pred(filterable[key])) {
+            acc[key] = filterable[key];
+          }
+          return acc;
+        }, {}, KEYS(filterable)) :
+      // else
+        _filter(pred, filterable)
+    );
+  }));
 const find = function(fn, list) {
     if (arguments.length === 1) return _list => find(fn, _list);
     return list.find(fn);
@@ -774,36 +1185,20 @@ const groupBy = function(fn, list) {
   
     return result;
 };
-// const groupWith = function(predicate, list) {
-//     const toReturn = [];
-//     let holder = [];
-//     list.reduce((prev, current, i) => {
-//       if (i > 0 && predicate(prev, current)) {
-//         if (holder.length === 0) {
-//           holder.push(prev);
-//           holder.push(current);
-//         } else {
-//           holder.push(current);
-//         }
-//       } else if (i > 0) {
-//         if (holder.length === 0) {
-//           toReturn.push([prev]);
-//           if (i === list.length - 1) holder.push(current);
-//         } else {
-//           toReturn.push(holder);
-//           holder = [];
-//         }
-//       }
-  
-//       return current;
-//     }
-     
-//     undefined: return holder.length === 0 ? toReturn : [...toReturn, holder];
-  
-// };
-// //  undefined);
-// //     return holder.length === 0 ? toReturn : [...toReturn, holder];
-// //   },
+const groupWith = _curry2(function(fn, list) {
+    var res = [];
+    var idx = 0;
+    var len = list.length;
+    while (idx < len) {
+      var nextidx = idx + 1;
+      while (nextidx < len && fn(list[nextidx - 1], list[nextidx])) {
+        nextidx += 1;
+      }
+      res.push(list.slice(idx, nextidx));
+      idx = nextidx;
+    }
+    return res;
+});
 const head = function(list) {
     if (typeof list === 'string') return list[0] || '';
     return list[0];
@@ -903,13 +1298,6 @@ const lastIndexOf = function(target, list) {
   
     return -1;
 };
-const length = function(list) {
-    if (!list || list.length === undefined) {
-      return NaN;
-    }
-  
-    return list.length;
-};
 const map = function(fn, list) {
     if (arguments.length === 1) return _list => map(fn, _list);
   
@@ -973,14 +1361,11 @@ const range = function(from, to) {
   
     return willReturn;
 };
-// (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function reject(fn, list) {
-//     if (arguments.length === 1) return _list => reject(fn, _list);
-//     return filter((x, i) => !fn(x, i), list);
-//   },function repeat(val, n) {
-//     if (arguments.length === 1) return _n => repeat(val, _n);
-//     const willReturn = Array(n);
-//     return willReturn.fill(val);
-  // },
+const repeat = function(val, n) {
+    if (arguments.length === 1) return _n => repeat(val, _n);
+    const willReturn = Array(n);
+    return willReturn.fill(val);
+};
 const reverse = function(input) {
   if (typeof input === 'string') {
     return input.split('').reverse().join('');
@@ -989,11 +1374,6 @@ const reverse = function(input) {
   const clone = input.slice();
   return clone.reverse();
 };
-// (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function sort(fn, list) {
-//     if (arguments.length === 1) return _list => sort(fn, _list);
-//     const arrClone = list.slice();
-//     return arrClone.sort(fn);
-//   },
 const splitEvery = function(n, list) {
     if (arguments.length === 1) return _list => splitEvery(n, _list);
     if (n < 1) throw new Error('First argument to splitEvery must be a positive integer');
@@ -1033,7 +1413,7 @@ const times = function(fn, n) {
     if (!Number.isInteger(n) || n < 0) throw new RangeError('n must be an integer');
     return map(fn, range(0, n));
 };
-const uniq = function(list) {
+const UNIQ = function(list) {
     let index = -1;
     const willReturn = [];
   
@@ -1099,17 +1479,6 @@ const zipObj = function(keys, values) {
       return prev;
     }, {});
 };
-// (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),(..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function clone(val) {
-//     const out = Array.isArray(val) ? Array(val.length) : {};
-//     if (val && val.getTime) return new Date(val.getTime());
-  
-//     for (const key in val) {
-//       const v = val[key];
-//       out[key] = typeof v === 'object' && v !== null ? v.getTime ? new Date(v.getTime()) : clone(v) : v;
-//     }
-  
-//     return out;
-//   };
 const dissoc = function(prop, obj) {
     if (arguments.length === 1) return _obj => dissoc(prop, _obj);
     if (obj === null || obj === undefined) return {};
@@ -1127,24 +1496,6 @@ const has = function(prop, obj) {
     if (!obj) return false;
     return obj[prop] !== undefined;
 };
-const isEmpty = function(input) {
-    const inputType = type(input);
-    if (['Undefined', 'NaN', 'Number', 'Null'].includes(inputType)) return false;
-    if (!input) return true;
-  
-    if (inputType === 'Object') {
-      return Object.keys(input).length === 0;
-    }
-  
-    if (inputType === 'Array') {
-      return input.length === 0;
-    }
-  
-    return false;
-};
-const keys = function(obj) {
-    return Object.keys(obj);
-};
 const lens = function(getter, setter) {
     if (arguments.length === 1) return _setter => lens(getter, _setter);
     return function (functor) {
@@ -1159,6 +1510,31 @@ const lensIndex = function(i) {
 const lensPath = function(key) {
     return lens(path(key), assocPath(key));
 };
+const assoc = _curry3(function assoc(prop, val, obj) {
+    var result = {};
+    for (var p in obj) {
+      result[p] = obj[p];
+    }
+    result[prop] = val;
+    return result;
+});
+const assocPath = _curry3(function assocPath(path, val, obj) {
+    if (path.length === 0) {
+      return val;
+    }
+    var idx = path[0];
+    if (path.length > 1) {
+      var nextObj = (!isNil(obj) && _has(idx, obj)) ? obj[idx] : _isInteger(path[1]) ? [] : {};
+      val = assocPath(Array.prototype.slice.call(path, 1), val, nextObj);
+    }
+    if (_isInteger(idx) && _isArray(obj)) {
+      var arr = [].concat(obj);
+      arr[idx] = val;
+      return arr;
+    } else {
+      return assoc(idx, val, obj);
+    }
+});
 const lensProp = function(key) {
     return lens(prop(key), assoc(key));
 };
@@ -1187,7 +1563,7 @@ const omit = function(keys, obj) {
 const over = function(lens, fn, object) {
     if (arguments.length === 1) return (_fn, _object) => over(lens, _fn, _object);
     if (arguments.length === 2) return _object => over(lens, fn, _object);
-    return lens(x => Identity(fn(x)))(object).x;
+    return lens(x => _identity(fn(x)))(object).x;
 };
 const path = function(list, obj) {
     if (arguments.length === 1) return _obj => path(list, _obj);
@@ -1211,9 +1587,6 @@ const path = function(list, obj) {
   
     return willReturn;
 };
-// (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function paths(pathsInput, obj) {
-//     return pathsInput.map(singlePath => path(singlePath, obj));
-// };
 const allPass = function(predicates) {
     return input => {
       let counter = 0;
@@ -1271,20 +1644,6 @@ const cond = function(conditions) {
 const either = function(f, g) {
     if (arguments.length === 1) return _g => either(f, _g);
     return (...input) => f(...input) || g(...input);
-  },(..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function isEmpty(input) {
-    const inputType = type(input);
-    if (['Undefined', 'NaN', 'Number', 'Null'].includes(inputType)) return false;
-    if (!input) return true;
-  
-    if (inputType === 'Object') {
-      return Object.keys(input).length === 0;
-    }
-  
-    if (inputType === 'Array') {
-      return input.length === 0;
-    }
-  
-    return false;
 };
 const not = function(a) {
     return !a;
@@ -1293,14 +1652,10 @@ const xor = function(a, b) {
     if (arguments.length === 1) return _b => xor(a, _b);
     return Boolean(a) && !b || Boolean(b) && !a;
 };
-(..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function difference(list1, list2) {
-    if (arguments.length === 1) return _list => difference(list1, _list);
-    return uniq(list1).filter(x1 => !includes(x1, list2));
-};
 const equals = function(a, b) {
     if (arguments.length === 1) return _b => equals(a, _b);
-    const aType = type(a);
-    if (aType !== type(b)) return false;
+    const aType = DType(a);
+    if (aType !== DType(b)) return false;
     if (['NaN', 'Undefined', 'Null'].includes(aType)) return true;
     if (['Boolean', 'Number', 'String'].includes(aType)) return a.toString() === b.toString();
   
@@ -1397,62 +1752,9 @@ const minBy = function(fn, a, b) {
   
     return fn(b) < fn(a) ? b : a;
 };
-// (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function sortBy(fn, list) {
-//     if (arguments.length === 1) return _list => sortBy(fn, _list);
-//     const arrClone = list.slice();
-//     return arrClone.sort((a, b) => {
-//       const fnA = fn(a);
-//       const fnB = fn(b);
-//       if (fnA === fnB) return 0;
-//       return fnA < fnB ? -1 : 1;
-//     });
-//   },
-
 const isNil = function(x) {
     return x === undefined || x === null;
 };
-// (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function type(input) {
-//     const typeOf = typeof input;
-  
-//     if (input === null) {
-//       return 'Null';
-//     } else if (input === undefined) {
-//       return 'Undefined';
-//     } else if (typeOf === 'boolean') {
-//       return 'Boolean';
-//     } else if (typeOf === 'number') {
-//       return Number.isNaN(input) ? 'NaN' : 'Number';
-//     } else if (typeOf === 'string') {
-//       return 'String';
-//     } else if (Array.isArray(input)) {
-//       return 'Array';
-//     } else if (input instanceof RegExp) {
-//       return 'RegExp';
-//     }
-  
-//     const asStr = input && input.toString ? input.toString() : '';
-//     if (['true', 'false'].includes(asStr)) return 'Boolean';
-//     if (!Number.isNaN(Number(asStr))) return 'Number';
-//     if (asStr.startsWith('async')) return 'Async';
-//     if (asStr === '[object Promise]') return 'Promise';
-//     if (typeOf === 'function') return 'Function';
-//     if (input instanceof String) return 'String';
-//     return 'Object';
-// };
-// (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),(..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function clone(val) {
-//     const out = Array.isArray(val) ? Array(val.length) : {};
-//     if (val && val.getTime) return new Date(val.getTime());
-  
-//     for (const key in val) {
-//       const v = val[key];
-//       out[key] = typeof v === 'object' && v !== null ? v.getTime ? new Date(v.getTime()) : clone(v) : v;
-//     }
-  
-//     return out;
-// };
-// (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([...args, ..._args]),function paths(pathsInput, obj) {
-//     return pathsInput.map(singlePath => path(singlePath, obj));
-//   },
 const pick = function(keys, obj) {
     if (arguments.length === 1) return _obj => pick(keys, _obj);
   
@@ -1514,148 +1816,297 @@ const set = function(lens, v, x) {
     return over(lens, always(v), x);
 };
 const toPairs = function(obj) {
-    return Object.entries(obj);
+    return S._Object.entries(obj);
 };
 const values = function(obj) {
-    if (type(obj) !== 'Object') return [];
-    return Object.values(obj);
+    if (DType(obj) !== 'Object') return [];
+    return S._Object.values(obj);
 };
 const view = function(lens, target) {
     if (arguments.length === 1) return _target => view(lens, _target);
     return lens(Const)(target).x;
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const THROWE                  = function(){};
+const THROWE0 /* IMMEDIATE */ = function(){};
+const THROWE1 /* STACK */     = function(){};
+const THROWE2 /* PROGRAMMABLE*/=function(){};
+const THROWEZ                  =function(){};
 
-const PARADIGM_STLYER = function(sel){
+const UNFINISHED              = function(){throw new Error("UNFINISHED");};
+const UNFINSHED0 /*IMMEDIATE*/= function(){};
+const UNFINSHED1 /*STACK*/    = function(){};
+const UNFINSHEDZ              = function(){};
 
-};
-const PARADIGMS = {
-  "FUNCTIONAL":{},
-  "OOP"       :{}
-};
-const OOP_PARADIGM_STYLER = function(instance,obj){
-    // var chainResult = function(instance, obj) {
-        return instance._chain ? _(obj).chain() : obj;
-    //   };
-};
+const BUG                     = function(){};
+const BUG0                    = function(){};
+const BUGZ                    = function(){};
 
+const MAINTENANCE             = function(){};
+const MAINTENANCE0            = function(){};
+const MAINTENANCEZ            = function(){};
 
-const THROWE = function(){THROWE();};
-const datatypes:string[] = ["boolean","string","number","object","array","symbol","function"];
-const _lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z"];
-const _upperCase = _lowerCase.map(v => v.toUpperCase());
-const _symbols   = ["!@#$%^&*()_+{}[]-=|;:'\"\\?,.<>`~"];
-const isSafe        =   v => S._Number.isSafeInteger(v);
-const isTrue        =   v => v === true;
-const isFalse       =   v => v === false;
-const isInfinity    =   v => v === Infinity;
-const isFinite      =   v => S._isFinite(v);
-const isMaxValue    =   v => v === Number.MAX_VALUE;
-const isMinValue    =   v => v === Number.MAX_VALUE;
-const isMaxSafeValue=   v => v === Number.MAX_SAFE_INTEGER;
-const isMinSafeValue=   v => v === Number.MIN_SAFE_INTEGER;
-const isNaN         =   v => S._isNaN(v);
-const isPositive    =   v => 0 < v;
-const isNegative    =   v => 0 > v;
-const isZero        =   v => v === 0;
-const isFloat       =   v => S._String(v).includes(".");
-const isInteger     =   v => !S._String(v).includes(".");
-const isAlpha       =   v => [..._lowerCase,..._upperCase].includes(v);
-const isLowerCase   =   v => _lowerCase.includes(v);
-const isUpperCase   =   v => _upperCase.includes(v);
-const isSymbol      =   v => _symbols.includes(v);
-const isThis        =   v => v.toString().includes("function ");
-const isAnon        =   v => v.toString().includes("function(");
-const isLambda      =   v => v.toString().includes("=>");
-const isEmpty       =   function(v){
-                            return {
-                                "str":v=>v.length===0,"obj":v=>S._Object.keys(v).length===0,
-                                "arr":v=>v.length===0,"fnc":v => v.toString()
-                            }[(S._Array.isArray(v) && "arr") || (typeof v)](v);
-};
-const isNotEmpty    = (v)=>{
-                            return {
-                                "str":v=>v.length!==0,"obj":v=>S._Object.keys(v).length !== 0,
-                                "arr":v=>v.length!==0,"fnc":v=>v.toString()
-                            }[(S._Array.isArray(v) && "arr") || (typeof v)](v);
-};
-const getParams = function(func){
-    const start = func.toString().indexOf("(");
-    const end   = func.toString().indexOf(")");
-    return func.toString().slice(start+1,end).split(",");
-};
-const assertIndependence = f => name(f.toString()).is(allSamCase)&&name(f.toString()).is(allAlpha);
-const assertCompound     = f => name(f.toString()).is(allTwoCase)&&name(f.toString()).is(allAlpha);
-const assertComplex      = f => name(f.toString()).is(allMulCase)&&name(f.toString()).is(allAlpha);
+const REVIEW                  = function(){};
+const REVIEW0                 = function(){};
+const REVIEWZ                 = function(){};
 
-// const allSamCase         = e => {let _ = e.slice().shift(); e = (isLowerCase(_) && isLowerCase) || (isUpperCase(_) && isUpperCase);  for (let k in e) { true === _(e) || THROWE(); }};
-// const allTwoCase         = e => {let a,b,c;   for (let k in e){ (isLowerCase(_) && a=true) || (isUpperCase(_) && b=true) || c=true; }; return (a&&b)^c};
-// const allMulCase         = e => {let a = false, b = false, c = false;for (let k in e) { (isLowerCase(k)&&a=true) || (isUpperCase(k)&&b=true) || (isSymbol(k)&&c=true)};return a&&b&&c;};
-const allAlpha           = e => {e.forEach(isAlpha); return true};
-const isAlpha            = e => {return e >= "a" && e <= "Z";};
-const isSymbol           = e => {return "`~!@#$%^&*()_+-=[]{};':\",.<>/?".includes(e);};
-const isLowerCase        = e => {return e >= "a" && e <= "z";};
-const isUpperCase        = e => {return e => "A" && e <= "Z";};
-
-
-const notEmpty               = v => (isArray(v)            && throwE("must not be empty",(v.length > 0))
-                                ||  (typeof v === "object" && throwE("must not be empty",(S._Object.keys(v).length > 0)))
-                                ||  (typeof v === "string" && throwE("must not be empty",(v.length > 0)))
-                                ||  (false)
-);
-const hasOwnProperty         = (obj,prop) => throwE("must have prop "+prop, obj.hasOwnProperty(prop));
+https://www.npmjs.com/package/yow
+const MKDIR       = REQUIRE('YOW/MKDIR')
+const MKPATH      = REQUIRE('YOW/MKPATH');
+const FILEEXISTS  = REQUIRE('YOW/FILEEXISTS');
+const READJSON    = REQUIRE('YOW/READJSON');
+const WRITEJSON   = REQUIRE('YOW/WRITEJSON');
 
 
 
-const standardString		:Function = (val:string):void    => {typeof val === "string"   || throwE("string required"); val.length > 0 || throwE("len must be gt 0");};
-const standardStringArray	:Function = (val:string[]):void  => {Array.isArray(val) 	   || throwE("array required");val.forEach(standardString);};
-const arrayIncludes			:Function = (arr:any[]):Function => {return (val:any):void=>{arr.includes(val) || throwE("unexpected value");}};
+const TYP,DATATYPES:string[] = ["boolean","string","number","object","array","symbol","function","set"];
 
-const period = (e: string) => {
-    if (e[0] === ".") {
-        if (e[1] === ".")           e = "../" + e;
-        else if (e[1] === "/")      e.shift(), e.shift(), e = "../" + e;
-        else                        {THROWE();}
-    }
-    return e;
-};
-
-const loopObject             = (obj,cb) => { for (let k in obj) cb(obj,k); };
-
-
-const enforce_object_datas   = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
-const enforce_object_methods = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isFunction);};
-const enforce_object_propsss = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
-const enforce_object_nulls   = v => {isObject(v);isNull(v);};
-const enforce_settings       = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(enforceSetting);};
-const enforce_setting        = v => {};
+const NUM,NUMBER    = function(){return S._Number (...arguments);};  
+const BOL,BOOLEAN   = function(){return S._Boolean(...arguments)};   
+const STR,STRING    = function(){return S._String (...arguments)};   
+const ARR,ARRAY     = function(){return S._Array  (...arguments)};   
+const OBJ,OBJECT    = function(){return S._Object (...arguments)};   
+const SET           = function(){return S._Set    (...arguments)};   
+const SYM,SYMBOL    = function(){return S._Symbol (...arguments)};   
+const FNC,FUNCTION  = function(){return S._Function(...arguments)};  
+const LMD,LAMBDA    = function(){return Lambda (...arguments)};   
+const CLS,CLASS     = function(){return Class  (...arguments)};   
+const NUL,NULL      = function(){return Null   (...arguments)};   
+const UND,UNDEFINED = function(){return Undefined(...arguments)}; 
 
 
-const removeDuplicateUsingSet = function(arr){
-    let unique_array = S._Array.from(new Set(arr))
-    return unique_array;
-};
-const is                 = v => {};
-// const name               = e => {for (let k in e) {}return {};};
+const FORBIDDEN_OBJECT_PROPS = [/***/];
+console.warn("FORBIDDEN OBJECT PROPS UNFINISHED");
 
-const TYPESTATE = Object.freeze(Object.assign(function(v,meth){
+
+
+
+const VOBJ = CAPSULE(function(sel,val){
+  return{
+    0: ["TYPE","ALTERED","LEN0","FORBID"],
+    1: ["TYPE","ALTERED","LENZ","FORBID"],
+    2: ["TYPE","ALTERED","FORBID"],
+    3: ["TYPE","FORBID"]
+  }[sel].every(f=>{return VOBJ[f](val);});
+},{
+  TYPE:   (v)=>{if (S._Array.isArray(v) || typeof v !== "object")return false;  else return true;},
+  ALTERED:(v)=>{if (PROPSALTERED.OBJ(v))                         return false;  else return true;},
+  LEN0:   (v)=>{if (ISEMPTY(v))                                  return false;  else return true;},
+  LENZ:   (v)=>{if (ISNOTEMPTY(v))                               return false;  else return true;},
+  FORBID: (v)=>{for (let e in S._Object.keys(v)) {
+                    if (FORBIDDEN_OBJECT_PROPS.includes(k[e]))   return false;    
+  }return true;}
+});
+const VNUM = CAPSULE(function(sel,val){
+  return {
+    0:  ["TYPE","ISNAN","ALTERED","SAFEINT","FINITE"],
+    1:  ["TYPE","ISNAN","ALTERED","FINITE"],
+    2:  ["TYPE","ISNAN","ALTERED"],
+    3:  ["TYPE","ALTERED"],
+    4:  ["TYPE"]
+  }[sel].every(f=>{return VNUM[f](val);});
+},{
+  ISNAN:  (v)=>{if (S._Number.isNaN(v))                          return false;  else return true;},
+  TYPE:   (v)=>{if (typeof v !== "number")                       return false;  else return true;},
+  ALTERED:(v)=>{if (PROPSALTERED.NUM(v))                         return false;  else return true;},
+  SAFEINT:(v)=>{if (!S._Number.isSafeInteger(v))                 return false;  else return true;},
+  FINITE: (v)=>{if (!S._Number.isFinite(v))                      return false;  else return true;}
+});
+const VSTR = CAPSULE(function(sel,val){
+  return {
+    0:  ["TYPE","ALTERED","EMPTY"],
+    1:  ["TYPE","ALTERED","NTEMPTY"],
+    2:  ["TYPE","ALTERED"],
+    3:  ["TYPE"]
+  }[sel].every(f=>{return VSTR[f](val);});
+},{
+  TYPE:   (v)=>{if (typeof v !== "string")                       return false;  else return true;},
+  ALTERED:(v)=>{if (PROPSALTERED.STR(v))                         return false;  else return true;},
+  EMPTY:  (v)=>{if (ISEMPTY(v))                                  return false;  else return true;},
+  NEMPTY: (v)=>{if (ISNOTEMPTY(v))                               return false;  else return true;}
+});
+const VFNC = CAPSULE(function(sel,val){
+  return {
+    0:["TYPE","NTFUNCTION","ALTERED","NTEMPTY"],
+    1:["TYPE","NTFUNCTION","ALTERED","EMPTY"],
+    2:["TYPE","NTFUNCTION","ALTERED"],
+    3:["TYPE","NTFUNCTION"]
+  }[sel].every(f=>{return FNC[f](val)})
+},{
+  
+  TYPE:      (v)=>{if (typeof v !== "function")                  return false;  else return true;},
+  NTFUNCTION:(v)=>{if (ISNOTFUNCTION(v))                         return false;  else return true;},
+  ALTERED:   (v)=>{if (PROPSALTERED.FNC(v))                      return false;  else return true;},
+  EMPTY:     (v)=>{if (ISEMPTY(v))                               return false;  else return true;},
+  NTEMPTY:   (v)=>{if (ISNOTEMPTY(v))                            return false;  else return true;}
+});
+const VLMD = CAPSULE(function(sel,val){
+  return {
+    0:["TYPE","NTLAMBDA","ALTERED","NTEMPTY"],
+    1:["TYPE","NTLAMBDA","ALTERED","EMPTY"],
+    2:["TYPE","NTLAMBDA","ALTERED"],
+    3:["TYPE","NTLAMBDA"]
+  }[sel].every(f=>{return VLMD[f](val);});
+},{
+  TYPE:     (v)=>{if (typeof v !== "function")                   return false;  else return true;},
+  NTLAMBDA: (v)=>{if (ISNOTLAMBDA(v))                            return false;  else return true;},
+  ALTERED:  (v)=>{if (PROPSALTERED.LMD(v))                       return false;  else return true;},
+  NTEMPTY:  (v)=>{if (ISNOTEMPTY(v))                             return false;  else return true;}
+});
+const VSYM = CAPSULE(function(sel,val){
+  return {
+    0:["TYPE","ALTERED"],
+    1:["TYPE"]
+  }[sel].every(f=>{return VSYM[f](val);});
+},{
+  TYPE:   (v)=>{if (typeof v !== "symbol")                       return false;   else return true;},
+  ALTERED:(v)=>{if (PROPSALTERED.SYM(v))                         return false;   else return true;}
+});
+const VSET = CAPSULE(function(sel,val){
+  throw new Error("UNFINISHED");
+  return {
+    0:["TYPE","ALTERED"],
+    1:["TYPE"]
+  }[sel].every(f=>{return VSET[f](val);});
+},{
+  TYPE:   (v)=>{if (typeof v !== "set")                          return false;  else return true;},
+  ALTERED:(v)=>{if (PROPSALTERED.SET(v))                         return false;  else return true;}
+});
+
+const VCLA = CAPSULE(function(sel,val){
+  throw new Error("UNFINISHED");
+  return {
+    0:["TYPE","NEWABLE","NTCLASS","ALTERED","NTEMPTY"],
+    1:["TYPE","NEWABLE","NTCLASS","ALTERED","EMPTY"],
+    2:["TYPE","NEWABLE","NTCLASS","ALTERED"],
+    3:["TYPE","NEWABLE","NTCLASS"]
+  }[sel].every(f=>{return VCLA[f](val);});
+},{
+  TYPE:   (v) => {if (typeof v !== "function")                  return false;  else return true;},
+  NEWABLE:(v) => {if (NEWABLE(v))                               return false;  else return true;},
+  NTCLASS:(v) => {if (ISCLASS(v))                               return false;  else return true;},
+  ALTERED:(v) => {if (PROPSALTERED.CLS(v))                      return false;  else return true;},
+  EMPTY:  (v) => {if (ISEMPTY(v))                               return false;  else return true;},
+  NTEMPTY:(v) => {if (NOTEMPTY(v))                              return false;  else return true;}
+});
+const VARR = CAPSULE(function(sel,val){
+  return {
+    0:["TYPE","NTEMPTY","ALTERED"],
+    1:["TYPE","EMPTY",  "ALTERED"],
+    2:["TYPE","ALTERED"],
+    3:["TYPE"]
+  }[sel].every(f=>{return VARR[f](val);});
+},{
+  TYPE:   (v) => {if (!S._Array.isArray(v))                     return false;  else return true;},
+  NTEMPTY:(v) => {if (ISEMPTY(v))                               return false;  else return true;},
+  EMPTY:  (v) => {if (ISNOTEMPTY(v))                            return false;  else return true;},
+  ALTERED:(v) => {if (PROPSALTERED.ARR(v))                      return false;  else return true;}
+});
+const VUND = CAPSULE(function(sel,val){
+  return {
+    0:["TYPE","ALTERED"],
+    1:["TYPE"]
+  }[sel].every(f=>{return VUND[f](val);});
+},{
+  TYPE:   (v) => {if (v === undefined)                          return false;  else return true;},
+  ALTERED:(v) => {if (PROPSALTERED.UND(v))                      return false;  else return true;}
+});
+
+const VNUL = CAPSULE(function(sel,val){
+  return {
+    0:["TYPE","ALTERED"],
+    1:["TYPE"]
+  }[sel].every(f=>{return VNUL[f](val);});
+},{
+  TYPE:   (v) => {if (v === null)                               return false; else return true;},
+  ALTERED:(v) => {if (PROPSALTERED.NUL(v))                      return false; else return true;}
+});
+const VBOL = CAPSULE(function(sel,val){
+  return {
+    0:["TYPE","ALTERED"],
+    1:["TYPE"]
+  }[sel].every(f=>{return VBOL[f](val);});
+},{
+  TYPE:    (v) => {if (typeof v !== "boolean")                  return false; else return true;},
+  ALTERED: (v) => {if (PROPSALTERED.BOL(v))                     return false; else return true;}
+});
+
+/*export*/ const DType = CAPSULE(function(typ?,sel?,val?){
+    /** LEGEND: arg SEL
+     * 
+     * 0: STRICTEST VALIDATION ENFORCEMENT
+     * |
+     *(^)
+     * N: LESS STRICT VALIDATION ENFORCEMENT, NO ALTEREDPROP CHECK 
+     */
+  throw new Error("UNFINISHED");
+  let a;
+  if (typ)  
+  return DType[typ](sel,val);
+},{
+    BOL:   VBOL,
+    NUM:   VNUM,
+    STR:   VSTR,
+    OBJ:   VOBJ,
+    FNC:   VFNC,
+    LMD:   VLMD,
+
+    CLA:   VCLA,
+    SYM:   VSYM,
+    ARR:   VARR,
+    SET:   VSET,
+    UND:   VUND,
+    NUL:   VNUL,
+});
+const TYPETRUTHY = CAPSULE(function(){
+  console.warn(`this assumes the conditional statements are the same to all types of conditions`);
+  console.warn(`bewarned, bug is probable`);
+},{
+/*const*/ BOL  : v => { if (v) return true; else return false; },
+/*const*/ NUM  : v => { if (v) return true; else return false; },
+/*const*/ STR  : v => { if (v) return true; else return false; },
+/*const*/ OBJ  : v => { if (v) return true; else return false; },
+/*const*/ ARR  : v => { if (v) return true; else return false; },
+/*const*/ SYM  : v => { if (v) return true; else return false; },
+/*const*/ SET  : v => { if (v) return true; else return false; },
+/*const*/ FNC  : v => { if (v) return true; else return false; },
+/*const*/ CLS  : v => { if (v) return true; else return false; },
+/*const*/ NUL  : v => { if (v) return true; else return false; },
+/*const*/ UND  : v => { if (v) return true; else return false; },
+});
+const TYPEFALSEY = CAPSULE(function(){
+
+},{
+/*const*/ BOL  : v => { if (v) return false; else return true; },
+/*const*/ NUM  : v => { if (v) return false; else return true; },
+/*const*/ STR  : v => { if (v) return false; else return true; },
+/*const*/ OBJ  : v => { if (v) return false; else return true; },
+/*const*/ ARR  : v => { if (v) return false; else return true; },
+/*const*/ SYM  : v => { if (v) return false; else return true; },
+/*const*/ SET  : v => { if (v) return false; else return true; },
+/*const*/ FNC  : v => { if (v) return false; else return true; },
+/*const*/ CLS  : v => { if (v) return false; else return true; },
+/*const*/ NUL  : v => { if (v) return false; else return true; },
+/*const*/ UND  : v => { if (v) return false; else return true; },
+});
+const TYPESTATE = CAPSULE(function(v,meth){
 
   // TYPEID[typeof v][]
 
 
 },{
-bol : {isTrue,isFalse},
-num : {isSafe,isInfinity,isFinite,isMaxValue,isMinValue,isZero,isNaN,isPositive,isNegative,isInteger,isFloat},
-str : {isEmpty,isNotEmpty,isAlpha,isSymbol,isLowerCase,isUpperCase},
-fnc : {isEmpty,isNotEmpty,isThis,isLambda,isAnon},
-obj : {isEmpty,isNotEmpty},
-arr : {isEmpty,isNotEmpty},
-sym : {isEmpty,isNotEmpty},
-cla : {isEmpty},
-und : {},
-nul : {}
-}));
-const PROPSALTERED = Object.freeze(Object.assign(function(){
+BOL : {ISTRUE,ISFALSE},
+NUM : {ISSAFE,ISINFINITY,ISFINITE,ISMAXVALUE,ISMINVALUE,ISZERO,ISNAN,ISPOSITIVE,ISNEGATIVE,ISINTEGER,ISFLOAT},
+STR : {ISEMPTY,ISNOTEMPTY,ISALPHA,ISSYMBOL,ISLOWERCASE,ISUPPERCASE},
+FNC : {ISEMPTY,ISNOTEMPTY,ISFUNCTION,ISLAMBDA,ISANONYMOUS},
+OBJ : {ISEMPTY,ISNOTEMPTY},
+ARR : {ISEMPTY,ISNOTEMPTY},
+SYM : {ISEMPTY,ISNOTEMPTY},
+CLA : {ISEMPTY},
+UND : {},
+NUL : {}
+});
+const PROPSALTERED = CAPSULE(function(){
 
 },{
 /*const*/ BOL  : v => {},
@@ -1671,12 +2122,12 @@ const PROPSALTERED = Object.freeze(Object.assign(function(){
 /*const*/ UND  : v => {},
 }));
 
-const consT = function(script){
-    isString(script);
+
+const CONST = function(script){
+  isString(script);
 };
-
-
 // RAW STATEMENTS
+const UNHANDLED= function(){return THROWE("UNHANDLED EXCEPTION");}
 const IF0      = function(){if(c0) return cb0()};
 const IF1      = function(){if(c0) return cb0(); else return cb1();};
 const IF2      = function(){if(c0) return cb0(); else if (c1) return cb1(); else return cb2();};
@@ -1684,9 +2135,8 @@ const IFZ      = function(){
   if (c0) return cb0();
   else {
     for (let k in arr) if (arr[k][0]) return arr[k][1]();
-  }  
+  }
 };
-
 // CUSTOMIZED STATEMENTS
 
 console.warn(`
@@ -1694,200 +2144,479 @@ console.warn(`
   *** else statement triggered ... throw new Error("unaacounted input");
 `);
 
-
-
-
-/*1)  STRUCTURAL PRESENTATIONS
-
-
-    * TYPES
-    * INTERACES
-    * ABSTRACTIONS
-
-
-*/
-/*export*/ interface paramsLoader {
-    (paramsOBJ:paramsOBJ): {paramsOBJ} | {create,read,update,delete}
-};
-/*export*/ interface paramsOBJ {
-    [index: string]: string
-    // let pS = { // params_obj
-        // name: function as string
-        // func: `$DTypes.function($p)`,
-        // prop: `$DTypes.string($p)`,
-        // obj:  `$DTypes.object($p)`,
-        // cb:   `$Dtypes.function($p)`,
-        // prop: `$Dtypes.string($p)`,
-        // val:  `$Dtypes.undefined($p)`
-    // };
-};
-/*export*/ interface func0props {
-    validate: Function,
-    block: Function
-}
-/*export*/ interface func0loaderobj {
-    funClite: Function,
-    paramsOBJ:paramsOBJ
-}
-/*export*/ interface func0Loader {
-    (paramsOBJ:paramsOBJ): func0loaderobj
-}
-/*export*/ interface interface_pm {
-	globalConfig,
-	instance,
-	funC
-};
-/*export*/ interface interface_funCinterface {
-	name, description, author,
-	notes,
-	isStrict,isAsync,isThis,isCapsule,
-	inputType,outputType,
-	params,
-	inputBehavior,outputBehavior,
-	onError,
-	validations,block,spec
-};
-
-
-type validate = Function;
-type block    = Function;
-type neW      = Function;
-type deletE   = Function;
-type extend = Function;
-type implement = Function;
-
-type debug = Boolean;   
-type public_reflects_imports = Boolean; 
-type public_async = Boolean;  
-type public_reflects_static = Boolean;
-type singleton = Boolean;
-type public_reflects_internal = Boolean;
-type public_visible = Boolean;  
-type public_methods_auth = Boolean;
-type public_mutable = Boolean;  
-type public_expires = Boolean;
-type public_gettable = Boolean;  
-type public_auth = Boolean;
-type public_settable = Boolean;  
-type public_chainable = Boolean;
-type public_input_interface = Object;   
-type sessionable_requests = Boolean;
-type public_output_interface = Object;   
-type maximum_requests_concurrently = Boolean | Number;                              
-type public_output = String;  
-type hot_reload = Boolean;     
-type name = String;
-type extendS = Array<object>;
-type implementS = Array<object>;
-type constructor = Function;
-type imports = string[];
-
-type di  = enumStrAny;  type mi  = enumStrFunc;
-type ds  = enumStrAny;  type ms  = enumStrFunc;
-type dp  = enumStrAny;  type mp  = enumStrFunc;
-type dp1 = enumStrAny;  type mp1 = enumStrFunc;
-type dp2 = enumStrAny;  type mp2 = enumStrFunc;
-
-/*export*/ interface funClite                   {   
-    validate:   validate,   block:  block    
-};
-/*export*/ interface claS {
-    (setupOBJ:setupOBJ):__claS__public
-}
-/*export*/ interface __claS__public             {};
-/*export*/ interface __claS__instance_public    {
-    new:        neW,        extend:     extend,
-    delete:     deletE,     implement:  implement
-};
-/*export*/ interface enumStrFunc    {   [index: string]: Function   };
-/*export*/ interface enumStrAny     {   [index: string]: any        };
-/*export*/ interface settings {
-    debug:                       debug,             public_reflects_imports:         public_reflects_imports,
-    public_async:                public_async,      public_reflects_static:          public_reflects_static,
-    singleton:                   singleton,         public_reflects_internal:        public_reflects_internal,
-                                        
-    public_visible:              public_visible,    public_methods_auth:             public_methods_auth,
-    public_mutable:              public_mutable,    public_expires:                  public_expires,
-    public_gettable:             public_gettable,   public_auth:                     public_auth,
-    public_settable:             public_settable,   public_chainable:                public_chainable,
-
-    public_input_interface:      public_input_interface,    sessionable_requests:            sessionable_requests,
-    public_output_interface:     public_output_interface,   maximum_requests_concurrently:   maximum_requests_concurrently,                              
-    public_output:               public_output,             hot_reload:                      hot_reload     
-};
-/*export*/ interface setupOBJ {
-    name:String, extends:Array<object>, implements:Array<object>,
-    constructor:    constructor,
-    settings:       settings,
-    imports:        imports,
-    events:         events,
-    di:di,ds:ds,dp:dp,dp1:dp1,dp2:dp2,
-    mi:mi,ms:ms,mp:mp,mp1:mp1,mp2:mp2
-};
-/*export*/ interface events         {   
-
-};
-/*export*/ interface __this__       {   [index:string]:any              };
-
-/*export*/ interface __internal__   {   di: enumStrAny, mi: enumStrFunc };
-// /*export*/ interface __imports__    {                                   };
-/*export*/ interface __public__     {   dp: enumStrAny, mp: enumStrFunc };
-/*export*/ interface __middlemans__ {                                   };
-/*export*/ interface __static__     {   ds: enumStrAny, ms: enumStrFunc };
-// /*export*/ interface __settings__   {
-//                                     debug:                  Boolean,
-//                                     singleton:              Boolean,
-//                                     public_visible:         Boolean,
-//                                     public_mutable:         Boolean,
-//                                     public_gettable:        Boolean,
-//                                     public_settable:        Boolean,
-//                                     public_methods_auth:    Boolean,
-//                                     public_reflects_static: Boolean,
-//                                     sessionable_requests:   Boolean,
-//                                     public_output:          String       
+// const SWITCH = function(){
+//   switch (key) {
+//     case value:
+      
+//       break;
+  
+//     default:
+//       break;
+//   }
 // };
-/*export*/ interface __mem__ {
-    (setupOBJ:setupOBJ):{
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __constructor__ :__constructor__
-    }
+
+
+
+const LOWERCASE = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z"];
+const UPPERCASE = LOWERCASE.map(v => v.toUpperCase());
+const ALPHA     = (LOWERCASE.join("")+UPPERCASE.join("")).split("");
+const SYMBOLS   = ["!@#$%^&*()_+{}[]-=|;:'\"\\?,.<>`~"];
+const NUMBERS   = ["0","1","2","3","4","5","6","7","8","9"];
+const OPS       = ["!","%","%=","^","^=","&","&&","&=","&&=","*","*=","**","**=","-","-=","+","+=","|","||","/","/="];
+
+const KYB5      = ["ESC","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"];
+const KYB4      = ["~`","!1","@2","#3","$4","%5","^6","&7","*8","(9",")0","_-","+=","DELETE"];
+const KYB3      = ["TAB","q","w","e","r","t","y","u","i","o","p","{[","}]","|\\"];
+const KYB2      = ["CAPS LOCK","A","S","D","F","G","H","J","K","L",":;","\"'","RETURN"];
+const KYB1      = ["SHIFT","Z","X","C","V","B","N","M","<,",">.","?/","SHIFT"];
+const KYB0      = ["FN","CONTROL","OPTION","COMMAND","SPACE","COMMAND","OPTION","LEFT","UP/DOWN","RIGHT"];
+
+const KYBRD_EN      = {};
+const KYBRD_PC      = {};
+const KYBRD_MACBOOK = {KYB5,KYB4,KYB3,KYB2,KYB1,KYB0};
+
+const INTERFACE = function(){
+  const fakeIfNull = function(obj,prop:string,val:any):void {
+    if (!obj.hasOwnProperty(prop)) {obj[prop] = val;}
+  };	
 };
-/*export*/ interface buildPublic {
-    (
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        constructorBlock:Function
-    ):Function
+const VALIDATE  = function(){};
+const BLOCK     = function(){};
+const SPEC      = function(){};
+
+const DELETEPROPKEY   = function(obj,prop){return delete obj[prop];};
+const DELETEPROPVALUE = function(obj,prop){return obj[prop] = undefined;};
+
+const KEYS = function(v){
+  return S._Object.keys(v);
+}
+
+const FUNC0BLOCK = function(func0props){
+    return CAPSULE(
+      function(){
+        funC0validate(func0props.block,func0props.validate(arguments));
+        return func0props.block(...arguments);
+      },
+      func0props
+    );
 };
-/*export*/ interface publicConstruction {
-    (
-        __this__        :__this__,
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        constructorBlock:Function
-    ):void
-};
-/*export*/ interface constructionComplete {
-    (
-        __settings__    :__settings__,
-        __this__        :__this__,
-        __internal__    :__internal__
-    ):void
+const FUNC0VALIDATE = function(funCBlock,funCvalidate) {
+    if (typeof funCBlock    !== "function") {THROWE();}
+    if (typeof funCvalidate !== "function") {THROWE();}
+    const _params = getParams(funCBlock);
+    return function() {
+        return _params.every((e,i)=>{
+            return pS[e](arguments[i]);
+        }) && funCvalidate(arguments);
+    };
 };
 
+const INHERITCONFIG:Function = function(config_inherit:{[index: string]: {}}, config_inheritor:{[index: string]: {}}):void {
+    for (let k in config_inherit) !config_inheritor.hasOwnProperty(k) && (config_inheritor[k]=config_inherit[k]);
+};
+const CONFIGMAIN = function(config:{[index: string]: {}}){
+        allPropsRequired:for (let k in itf_keys) {
+            k = itf_keys[k];
+            // console.log(k, config[k]);
+            if (!config.hasOwnProperty(k)) {THROWE(k);}
+        }
+        allPropsValidated:for (let k in itf_keys) {
+            k = itf_keys[k];
+            // console.log(k, config[k]);
+            intF[k](config[k]);
+        }
+};
+
+
+/*export*/ const PARSEFUNCTION = function(functioN:Function) {
+        /** 
+         * - extracts information from regular code into funC template 
+         * - possibly detects errors
+         *         // looking for variables references.
+        // does not allow this references
+
+        // if it finds duplicate variable references it reports it's findings.
+
+        // console.warn("parse progam unprogrammed");
+        
+        */
+       return ()=>({
+        validate: ()=>({}),
+        block:	  ()=>({})
+    });
+},({
+hasName         	:() =>  ,
+hasDescription      :() =>  ,
+hasAuthor         	:() =>  ,
+hasNotes         	:() => f.toString().includes("//"),
+hasAsync         	:() => f.toString().indexOf("async") < 3,
+hasThis         	:f =>  f.toString().indexOf("function") < 2,
+hasCapsule         	:f =>  f.toString().slice(0,1) === "(",
+hasInputType        :() =>  ,
+hasOutputType       :() =>  ,
+hasInputBehavior    :() =>  ,
+hasOutputBehavior   :() =>  ,
+hasOnError         	:() =>  f.toString().includes("throw"),
+hasValidations      :() =>  /**memntioned 2x or more */,
+hasBlock         	:() =>  /**mentioned once */,
+hasSpec         	:() =>  /**recognized lib or console.assert */,
+});
+const parserClass = function(){
+    /**
+     * 
+     * 
+     * returns the json result of parsed input
+     */
+};
+
+
+
+
+const GET       = function(){};
+const GETMETHOD = function(){};
+// const SET       = function(){};
+const SETMETHOD = function(){};
+const IS        = CAPSULE(function(val,sel){
+
+},{
+// ...DATATYPES
+});
+const KINDA     = CAPSULE(function(){
+
+},{
+
+});
+const HAS       = CAPSULE(function(val,sel){
+
+},{
+
+});
+
+const TO        = CAPSULE(function(val,sel){
+
+},{
+TOBINARY,
+TOHEX,
+TODEC,
+TOBASE
+TODATATYPE
+});
+
+const ESSENTIAL = function(){
+    
+    throw new Error("UNFINISHED")
+    
+    return {    // procedural base layer (building block) functions
+/*const*/ COLLECTIONS : CAPSULE(function(){
+    
+},{
+
+}),
+/*const*/ LISTS    : CAPSULE(function(){
+
+},{
+
+}),
+/*const*/ FUNCTIONS: CAPSULE(function(){
+
+}), 
+/*const*/ MATHS    : CAPSULE(function(){
+
+},{
+
+}),
+/*const*/ RELATIONS: CAPSULE(function(){
+
+},{
+
+}),
+/*const*/ LOGICS: CAPSULE(function(){
+
+},{
+
+}),
+
+
+};
+
+};
+
+
+
+
+
+
+const CHARS = capsule(function(){
+    THROWE("UNFINISHED");
+},{
+    LOWERCASE,
+    UPPERCASE,
+    SYMBOLS,
+    NUMBERS,
+    KYBRD
+})
+const ISBOOLEAN     =   v => typeof v === "boolean";
+const ISNOTBOOLEAN  =   v => !ISBOOLEAN(v);
+const ISNUMBER      =   v => typeof v === "number";
+const ISNOTNUMBER   =   v => !ISNUMBER(v);
+const ISSTRING      =   v => typeof v === "string";
+const ISNOTSTRING   =   v => !ISNOTSTRING(v);
+const ISJSON        =   v => typeof v === "object" && !S._Array.isArray(v);
+const ISNOTJSON     =   v => !ISNOTJSON(v);
+const ISOBJECT      =   v => typeof v === "object";
+const ISNOTOBJECT   =   v => !ISNOTOBJECT(v);
+const ISARRAY       =   v => S._Array.isArray(v);
+const ISNOTARRAY    =   v => !ISARRAY(v);
+const ISSYMBOL      =   v => typeof v === "symbol";
+const ISNOTSYMBOL   =   v => !ISSYMBOL(v);
+const ISFUNCTION    =   v => typeof v === "function";
+const ISNOTFUNCTION =   v => !ISFUNCTION(v);
+const ISTHIS        =   v => v.toString().includes("function ");
+const ISNOTTHIS     =   v => !ISTHIS(v);
+const ISLAMBDA      =   v => ISFUNCTION(v) && v.toString().includes("=>");
+const ISNOTLAMBDA   =   v => !ISLAMBDA(v);
+const ISANONYMOUS   =   v => ISFUNCTION(v) && !ISLAMBDA(v) && v["name"] === undefined;
+const ISNOTANONYMOUS=   v => !ISANONYMOUS(v);
+const ISFUNC        =   v => ISFUNCTION(v) && !ISLAMBDA(v) && v.hasOwnProperty("name");
+const ISNOTFUNC     =   v => !ISFUNC(v);
+const ISCLASS       =   v => {throw new Error("UNFINISHED")};
+const ISNOTCLASS    =   v => !ISCLASS(v);
+const ISNEWABLE     =   v => {throw new Error("UNFINISHED")};
+const ISUNDEFINED   =   v => v === undefined;
+const ISNOTUNDEFINED=   v => !ISUNDEFINED(v);
+const ISNULL        =   v => v === "null";
+const ISNOTNULL     =   v => !ISNULL(v);
+
+
+
+
+const ISSAFE        =   v => S._Number.isSafeInteger(v);
+const ISNOTSAFE     =   v => !ISNOTSAFE(v);
+const ISTRUE        =   v => v === true;
+const ISNOTTRUE     =   V => !ISTRUE(v);
+const ISFALSE       =   v => v === false;
+const ISNOTFALSE    =   v => !ISSAFE(v);
+const ISINFINITY    =   v => v === Infinity;
+const ISNOTINFINITY =   v => !ISINFINITY(v);
+const ISFINITE      =   v => S._isFinite(v);
+const ISNOTFINITE   =   v => !ISFINITE(v);
+const ISMAXVALUE    =   v => v === Number.MAX_VALUE;
+const ISNOTMAXVALUE =   v => !ISMAXVALUE(v);
+const ISMINVALUE    =   v => v === Number.MAX_VALUE;
+const ISNOTMINVALUE =   v => !ISMINVALUE(v);
+const ISMAXSAFEVALUE=   v => v === Number.MAX_SAFE_INTEGER;
+const ISNOTMAXSAFEVALUE=v => !ISMAXSAFEVALUE(v);
+const ISMINSAFEVALUE=   v => v === Number.MIN_SAFE_INTEGER;
+const ISNOTMINSAFEVALUE=v => !ISMINSAFEVALUE(v);
+const ISNAN         =   v => S._isNaN(v);
+const ISNOTNAN      =   v => !ISNAN(v);
+const ISPOSITIVE    =   v => 0 < v;
+const ISNOTPOSITIVE =   v => !ISPOSITIVE(v);
+const ISNEGATIVE    =   v => 0 > v;
+const ISNOTNEGATIVE =   v => !ISNEGATIVE(v);
+const ISZERO        =   v => v === 0;
+const ISNOTZERO     =   v => !ISZERO(v);
+const ISFLOAT       =   v => S._String(v).includes(".");
+const ISNOTFLOAT    =   v => !ISFLOAT(v);
+const ISINTEGER     =   v => !S._String(v).includes(".");
+const ISNOTINTEGER  =   v => !ISINTEGER(v);
+const ISALPHA       =   v => [..._lowerCase,..._upperCase].includes(v);
+const ISNOTALPHA    =   v => !ALPHA(v);
+const ISLOWERCASE   =   v => _lowerCase.includes(v);
+const ISNOTLOWERCASE=   v => !ISLOWERCASE(v);
+const ISUPPERCASE   =   v => _upperCase.includes(v);
+const ISNOTUPPERCASE=   v => !ISUPPERCASE(v);
+const ISSYMBOL      =   v => _symbols.includes(v);
+const ISNOTSYMBOL   =   v => !ISSYMBOL(v);
+const ISEMPTY       =   function(v){
+                            return {
+                                "str":v=>v.length===0,"obj":v=>S._Object.keys(v).length===0,
+                                "arr":v=>v.length===0,"fnc":v => v.toString()
+                            }[(S._Array.isArray(v) && "arr") || (typeof v)](v);
+};
+const ISNOTEMPTY    = (v)=>{
+                            return {
+                                "str":v=>v.length!==0,"obj":v=>S._Object.keys(v).length !== 0,
+                                "arr":v=>v.length!==0,"fnc":v=>v.toString()
+                            }[(S._Array.isArray(v) && "arr") || (typeof v)](v);
+};
+
+const GETNAME       = function(func){};
+const GETPARAMS     = function(func){
+    let start = func.toString().indexOf("(");
+    let end   = func.toString().indexOf(")");
+    return func.toString().slice(start+1,end).split(",");
+};
+const GETCOMMENTS   = function(func){};
+const GETINPUTTYPE  = function(func){};
+const GETOUTPUTTYPE = function(func){};
+const GETEXETYPE    = function(func){};
+const GETSTATEMENTS = function(func){};
+const GETINNERMEM   = function(func){};
+
+const ALLSAMCASE         = e => {let _ = e.slice().shift(); e = (ISLOWERCASE(_) && isLowerCase) || (ISUPPUERCASE(_) && ISUPPERCASE);  for (let k in e) { true === _(e) || THROWE(); }};
+const ALLTWOCASE         = e => {let a,b,c;   for (let k in e){ (ISLOWERCASE(_) && a=true) || (ISUPPERCASE(_) && b=true) || c=true; }; return (a&&b)^c};
+const ALLMULCASE         = e => {let a = false, b = false, c = false;for (let k in e) { (ISLOWERCASE(k)&&a=true) || (ISUPPERCASE(k)&&b=true) || (ISSYMBOL(k)&&c=true)};return a&&b&&c;};
+
+
+const ASSERTINDEPENDENCE = f => EVERY(f.toString(),ALLSAMCASE)&&EVERY(f.toString(),ALLALPHA);
+const ASSERTCOMPOUND     = f => EVERY(f.toString(),ALLTWOCASE)&&EVERY(f.toString(),ALLALPHA);
+const assertComplex      = f => EVERY(f.toString(),ALLMULCASE)&&EVERY(f.toString(),ALLALPHA);
+
+const NOTEMPTY               = v => (ISARRAY(v)            && THROWE("must not be empty",(v.length > 0))
+                                ||  (typeof v === "object" && THROWE("must not be empty",(S._Object.keys(v).length > 0)))
+                                ||  (typeof v === "string" && THROWE("must not be empty",(v.length > 0)))
+                                ||  (false)
+);
+const HASPROPERTY         = (obj,prop) => THROWE("must have prop "+prop, obj.hasOwnProperty(prop));
+
+
+const ISEVEN = function(){};
+const ISODD = function(){};
+
+const period = (e: string) => {
+    if (e[0] === ".") {
+        if (e[1] === ".")           e = "../" + e;
+        else if (e[1] === "/")      e.shift(), e.shift(), e = "../" + e;
+        else                        {THROWE();}
+    }
+    return e;
+};
+
+// const loopObject             = (obj,cb) => { for (let k in obj) cb(obj,k); };
+
+
+const enforce_object_datas   = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
+const enforce_object_methods = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isFunction);};
+const enforce_object_propsss = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
+const enforce_object_nulls   = v => {isObject(v);isNull(v);};
+const enforce_settings       = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(enforceSetting);};
+const enforce_setting        = v => {};
+
+
+const EVERY = function(v,cb){
+  if      (typeof v === "string")   {for (let k in v) {if (!cb(v[k])) return false}; return true;}
+  else if (S._Array.isArray(v))     {return v.every(cb);}
+  else if (typeof v === "object")   {for (let k in v) {if (!cb(v[k])) return false} return true;}
+  else if (typeof v === "symbol")   {throw new Error("UNFINISHED");}
+  else                              {throw new Error();}
+};
+const ALL = EVERY;
+
+
+const NUMSTR = v => EVERY(v,function(a){return NUMBERS.includes(a)});
+const NNUMSTR =v => EVERY(v,function(a){return !NUMBERS.includes(a)});
+const STRSTR = v => EVERY(v,ISSTRING);
+const NSTRSTR = v => EVERY(v,ISNOTSTRING);
+const BOLARR = v => EVERY(v,ISBOOLEAN);
+const NBOLARR = v => EVERY(v,ISNOTBOOLEAN);
+const NUMARR = v => EVERY(v,ISNUMBER);
+const NNUMARR = v => EVERY(v,ISNOTNUMBER);
+const STRARR = v => EVERY(v,ISSTRING);
+const NSTRARR = v => EVERY(v,ISNOTSTRING);
+const ARRARR = v => EVERY(v,ISARRAY);
+const NARRARR = v => EVERY(v,ISNOTARRAY);
+const OBJARR = v => EVERY(v,ISOBJECT); 
+const NOBJARR = v => EVERY(v,ISNOTOBJECT); 
+const JSNARR = v => EVERY(v,ISJSON);
+const NJSNARR = v => EVERY(v,ISNOTJSON);
+const FNCARR = v => EVERY(v,ISFUNCTION); 
+const NFNCARR = v => EVERY(v,ISNOTFUNCTION); 
+const OBJLMD = v => EVERY(v,ISLAMBDA);
+const NOBJLMD = v => EVERY(v,ISNOTLAMBDA);
+const ANOARR = v => EVERY(v,ISANONYMOUS);
+const NANOARR = v => EVERY(v,ISNOTANONYMOUS);
+const UNDARR = v => EVERY(v,ISUNDEFINED); 
+const NUNDARR = v => EVERY(v,ISNOTUNDEFINED); 
+const NULARR = v => EVERY(v,ISNULL);
+const NNULARR = v => EVERY(v,ISNOTNULL);
+
+const BOLJSN = v => EVERY(v,ISBOOLEAN);
+const NBOLJSN = v => EVERY(v,ISNOTBOOLEAN);
+const NUMJSN = v => EVERY(v,ISNUMBER);
+const NNUMJSN = v => EVERY(v,ISNOTNUMBER);
+const STRJSN = v => EVERY(v,ISSTRING);
+const NSTRJSN = v => EVERY(v,ISNOTSTRING);
+const JSNJSN = v => EVERY(v,ISJSON);
+const NJSNJSN = v => EVERY(v,ISNOTJSON);
+const OBJJSN = v => EVERY(v,ISOBJECT); 
+const NOBJJSN = v => EVERY(v,ISNOTOBJECT); 
+const FNCJSN = v => EVERY(v,ISFUNCTION); 
+const NFNCJSN = v => EVERY(v,ISNOTFUNCTION); 
+const OBJJSN = v => EVERY(v,ISLAMBDA);
+const OBJJSN = v => EVERY(v,ISNOTLAMBDA);
+const ANOJSN = v => EVERY(v,ISANONYMOUS);
+const NANOJSN = v => EVERY(v,ISNOTANONYMOUS);
+const UNDJSN = v => EVERY(v,ISUNDEFINED); 
+const NUNDJSN = v => EVERY(v,ISNOTUNDEFINED); 
+const NULJSN = v => EVERY(v,ISNULL);  
+const NNULJSN = v => EVERY(v,ISNOTNULL);  
+// const SYM
+const TRIM = CAPSULE(function(){
+
+},{
+/*const*/ ALL      : function(){},
+/*const*/ TRIMLEFT  : function(){},
+/*const*/ TRIMRIGHT : function(){},
+/*const*/ TRIMINNER : function(){},
+/*const*/ TRIMOUTER : function(){},
+});
+const SWAP = function(memA,memB) {
+  /**
+   * it would be better if memory addresses were swapped 
+   * instead of memoryValues to save RAM & CPU.
+   */
+  arguments.length !== 2 && THROWE();
+  let temp = memA;
+  memA = memB;
+  memB = temp;
+  temp = undefined;
+  return [memA,memB]
+};
+const LIST = CAPSULE(function(){
+
+},{
+  queries: {
+    endsWith,
+    filter,
+    find,
+    Model.deleteMany()
+    Model.deleteOne()
+    Model.find()
+    Model.findById()
+    Model.findByIdAndDelete()
+    Model.findByIdAndRemove()
+    Model.findByIdAndUpdate()
+    Model.findOne()
+    Model.findOneAndDelete()
+    Model.findOneAndRemove()
+    Model.findOneAndReplace()
+    Model.findOneAndUpdate()
+    Model.replaceOne()
+    Model.updateMany()
+    Model.updateOne()
+    findIndex,
+    flatten,
+    forEach,
+    fromPairs,
+    groupBy,
+    groupWith,
+    includes,
+    indexBy,
+    indexOf,
+    last,
+    lastIndexOf,
+    takeLast,
+    UNIQ,
+    uniqWith,
+    update,
+    has
+  },
+  qmods:   {},
+  props:   function(){},
+  conversion:function(){},
+  replication:{}
+})
 
 
 
@@ -1900,25 +2629,23 @@ type dp2 = enumStrAny;  type mp2 = enumStrFunc;
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*2)  LANGUAGE CONSTRUCT REVAMP & HARDENING
-
-
-
-
 */
-/*export*/ const params:paramsLoader = function(paramsOBJ){
+/*export*/ const PARAMS:paramsLoader = function(paramsOBJ){
     // no duplicates allowed --> objects don't automatically overwrite duplications
     if (!paramsOBJ) {THROWE();}
     for (let k in paramsOBJ) { eval(`paramsOBJ[k] = function(${k}){ return ${paramsOBJ[k].replace("$p",k)}; }`); }
     return paramsOBJ;
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ const capsule = function(cb:Function, props:{[index:string]:any}) {
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/*export*/ const CAPSULE = function(cb:Function, props:{[index:string]:any}) {
     for (let k in props) {
-        !restrictedProps.includes(k) || THROWE()
+        !RESTRICTEDPROPS.includes(k) || THROWE()
     }
     return S._Object.freeze(S._Object.assign(cb,props));
 };
-/*export*/ const restrictedProps = [
+/*export*/ const RESTRICTEDPROPS = [
 "__defineGetter__",
 "__defineSetter__",      
 "__lookupGetter__",      
@@ -1941,7 +2668,7 @@ type dp2 = enumStrAny;  type mp2 = enumStrFunc;
 "prototype"              
 ]; 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ const closure = function(cb, variables) {
+/*export*/ const CLOSURE = function(cb, variables) {
     /** Mock Representation ... real version needs to parse cb and variables,
      * 
      * then replace real values in placheholders.
@@ -1957,835 +2684,854 @@ type dp2 = enumStrAny;  type mp2 = enumStrFunc;
     });
     return f;
 };
-//////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ const clone = capsule(function(v:any):any {
-        let tP = typeof v;
-        if (tP === 'boolean') 	return clone[tP](v);
-        if (tP === 'number')  	return clone[tP](v);
-        if (tP === 'string')  	return clone[tP](v);
-        if (Array.isArray(tP))  return clone['array'](v);
-        if (tP === 'function')	return clone[tP](v);
-        if (tP === 'object')    return clone[tP];
-        return ['cloning error, type v is not builtin datatype '+v];
-    },{
-        boolean  : function(v:boolean) {return !!v;},
-        number   : function(v:number) {return v+0;},
-        string   : function(v:string) {return v.slice();},
-        array    : function(v:any[]) {return v.slice();},
-        object   : function(v:object) {return Object.assign({}, v);},
-        function : function(v:Function) {const temp = v; return temp;/*new Function('return ' + v.toString())();*/}
-});
-//////////////////////////////////////////////////////////////////////////////////////////////////
-const Vobj0 = function(v:any){   // strictest object validation
-    if (S._Array.isArray(v) || typeof v !== "object")  return false;
-    let k = S._Object.keys(v);
-    if (k.len === 0)                                return false;
-    for (let e in k) {
-        if (FORBIDDEN_OBJECT_PROPS.includes(k[e]))  return false;    
-    }
-                                                    return true;
-};
-const Vobj1 = function(v:any){   // loosest object validation
-    if (S._Array.isArray(v) || typeof v !== "object")  return false;
-    let k = S._Object.keys(v);
-    if (k.len !== 0)                                return false;
-    for (let e in k) {
-        if (FORBIDDEN_OBJECT_PROPS.includes(k[e]))  return false;    
-    }
-                                                    return true;
-};
-const Vobj2 = function(v:any){   // loosest object validation
-    if (S._Array.isArray(v) || typeof v !== "object")  return false;
-    let k = S._Object.keys(v);
-    for (let e in k) {
-        if (FORBIDDEN_OBJECT_PROPS.includes(k[e]))  return false;    
-    }
-                                                    return true;
-};
-
-const Vnum0 = function(v:any){  // strictest number validation
-    if (S._Number.isNaN(v))                            return false;
-    if (typeof v !== "number")                      return false;
-    if (!S._Number.isSafeInteger(v))                   return false;
-    if (!S._Number.isFinite(v))                        return false;
-    /*passed*/                                      return true;
-};
-const Vnum1 = function(v:any){ // second strictest number validation
-    if (S._Number.isNaN(v))                            return false;
-    if (typeof v !== "number")                      return false;
-    if (!S._Number.isFinite(v))                        return false;
-    /*passed*/                                      return true;
-};
-const Vnum2 = function(v:any){ // 3rd strictest number validation
-    if (S._Number.isNaN(v))                            return false;
-    if (typeof v !== "number")                      return false;
-    /*passed*/                                      return true;
-};
-
-const Vstr0 = function(v:any){ // strictest string validation
-    if (typeof v !== "string")                      return false;
-    if (v.length === 0)                             return false;
-    /*passed*/                                      return true;
-};
-const Vstr1 = function(v:any){ // 2nd strictest string validation
-    if (typeof v !== "string")                      return false;
-    if (v.length !== 0)                             return false;
-    /*passed*/                                      return true;
-};
-const Vstr2 = function(v:any){ // 2nd strictest string validation
-    if (typeof v !== "string")                      return false;
-    /*passed*/                                      return true;
-};
-
-const Vfnc0 = function(v:any){ // strictest function validation
-    if (typeof v !== "function")                    return false;
-    if (!isFunction(v))                             return false;
-    if (isEmpty(v))                                 return false;
-    /*passed*/                                      return true;  
-};
-const Vfnc1 = function(v:any){ // 2nd strictest function validation
-    if (typeof v !== "function")                    return false;
-    if (!isFunction(v))                             return false;
-    if (isNotEmpty(v))                              return false;
-    /*passed*/                                      return true;  
-};
-const Vfnc2 = function(v:any){ // 2nd strictest function validation
-    if (typeof v !== "function")                    return false;
-    if (!isFunction(v))                             return false;
-    /*passed*/                                      return true;  
-};
-const Vlmd0 = function(v:any){ // strictest lambda validation
-    if (typeof v !== "function")                    return false;
-    if (!isLambda(v))                               return false;
-    if (isNotEmpty(v))                              return false;
-    /*passed*/                                      return true;  
-};
-const Vlmd1 = function(v:any){ // strictest lambda validation
-    if (typeof v !== "function")                    return false;
-    if (!isLambda(v))                               return false;
-    if (isEmpty(v))                                 return false;
-    /*passed*/                                      return true;  
-};
-const Vlmd2 = function(v:any){ // strictest lambda validation
-    if (typeof v !== "function")                    return false;
-    if (!isLambda(v))                               return false;
-    /*passed*/                                      return true;  
-};
-const Vsym0 = function(v:any){ // strictest symbol validation
-    if (typeof v !== "symbol")                      return false;
-    THROWE("UNFINISHED");
-    /*passed*/                                      return true;
-};
-const Vsym1 = function(v:any){ // strictest symbol validation
-    if (typeof v !== "symbol")                      return false;
-    THROWE("UNFINISHED");
-    /*passed*/                                      return true;
-};
-
-const Vcls0 = function(v:any){ // strictests class validation
-    if (typeof v !== "function")                    return false;
-    if (!newable(v))                                return false;
-    if (isEmpty(v))                                 return false;
-    if (!isClas(v))                                 return false;
-    /*passed*/                                      return true;
-};
-const Vcls1 = function(v:any){ // loosest class validation
-    if (typeof v !== "function")                    return false;
-    if (!newable(v))                                return false;
-    if (!isEmpty(v))                                return false;
-    if (!isClas(v))                                 return false;
-    /*passed*/                                      return true;
-};
-const Varr0 = function(v:any){ // strictest array validation
-    /** 
-     * surprisingly the length can be messed with
-     * 
-     * *** all the array properties can be messed with
-    */
-    if (!S._Array.isArray(v))                          return false;
-    if (isEmpty(v))                                 return false;
-    if (ARRPROPSALTERED(v))                         return false;                
-    /*passed*/                                      return true;
-};
-const Varr1 = function(v:any){ // 2nd strictest array validation
-    if (!S._Array.isArray(v))                          return false;
-    if (!isEmpty(v))                                return false;
-    if (ARRPROPSALTERED(v))                         return false;                
-    /*passed*/                                      return true;
-};
-const Varr2 = function(v:any){ // loosest array validation
-    if (!S._Array.isArray(v))                          return false;
-    if (ARRPROPSALTERED(v))                         return false;                
-    /*passed*/                                      return true;
-};
-const Vund0 = function(v:any){ // strictest undefined validation
-    if (v === undefined)                            return true;
-    else                                            return false;
-};
-const Vund1 = function(v:any){ // strictest undefined validation
-    if (v ==  undefined)                            return true;
-    else                                            return false;
-};
-const Vnul0 = function(v:any){ // strictest null validation
-    if (v === null)                                 return true;
-    else                                            return false;
-};
-const Vnul1 = function(v:any){ // loosest null validation
-    if (v == null)                                  return true; 
-    else                                            return false;
-};
-const Vbol0 = function(v:any){ // strictest boolean validation
-    if (typeof v === "boolean")                     return true;
-    else                                            return false;
-};
-
-/*export*/ const DType = capsule(function(){
-    THROWE("NOTFINISHED");
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const REPLICATE = CAPSULE(function(sel,val){
+// clone          100% copy & memory seperation
+// mirror         100% copy & no memory seperation
+// depth          clone "n" layers deep in
+  typeof sel === "string" || THROWE();
+  return REPLICATE[sel](val);
 },{
-    bol:   [Vbol0],
-    num:   [Vnum0,Vnum1,Vnum2],       
-    str:   [Vstr0,Vstr1,Vstr2],
-    obj:   [Vobj0,Vobj1,Vobj2],
-    fnc:   [Vfnc0,Vfnc1,Vfnc2],
-    cla:   [Vcls0,Vcls1],
-    sym:   [Vsym0,Vsym1],
-    arr:   [Varr0,Varr1,Varr2],
-    und:   [Vund0,Vund1],
-    nul:   [Vnul0,Vnul1]
+MIRROR: CAPSULE(function(v:any){ // deep memory reference replication
+  let tP = typeof v;
+  if (tP === 'boolean') 	return REPLICATE.MIRROR[tP](v);
+  if (tP === 'number')  	return REPLICATE.MIRROR[tP](v);
+  if (tP === 'string')  	return REPLICATE.MIRROR[tP](v);
+  if (Array.isArray(tP))  return REPLICATE.MIRROR['array'](v);
+  if (tP === 'function')	return REPLICATE.MIRROR[tP](v);
+  if (tP === 'object')    return REPLICATE.MIRROR[tP];
+  if (tP === 'symbol')    throw new Error("UNFINISHED");
+  return ['mirroring error, type v is not builtin datatype '+v];
+},{
+  boolean  : function(v:boolean)  {return v;},
+  number   : function(v:number)   {return v;},
+  string   : function(v:string)   {return v},
+  array    : function(v:any[])    {return v},
+  object   : function(v:object)   {return v},
+  symbol   : function(v:object)   {return v},
+  function : function(v:Function) {return v;}
+}),
+CLONE:  CAPSULE(function(v:any):any { // deep memory referencing disattaching replication]
+  throw new Error("UNFINISHED ... DEEP CLONING LOOP NEEDED");
+  let tP = typeof v;
+  if (tP === 'boolean') 	return REPLICATE.CLONE[tP](v);
+  if (tP === 'number')  	return REPLICATE.CLONE[tP](v);
+  if (tP === 'string')  	return REPLICATE.CLONE[tP](v);
+  if (Array.isArray(tP))  return REPLICATE.CLONE['array'](v);
+  if (tP === 'function')	return REPLICATE.CLONE[tP](v);
+  if (tP === 'object')    return REPLICATE.CLONE[tP];
+  if (tP === 'symbol')    throw new Error("UNFINISHED");
+  return ['cloning error, type v is not builtin datatype '+v];
+},{
+  boolean  : function(v:boolean)  {return !!v;},
+  number   : function(v:number)   {return v+0;},
+  string   : function(v:string)   {return v.slice();},
+  array    : function(v:any[])    {return v.slice();},
+  object   : function(v:object)   {return Object.assign({}, v);},
+  symbol   : function(v:object)   {return Object.assign({}, v);},
+  function : function(v:Function) {const temp = v; return temp;/*new Function('return ' + v.toString())();*/}
+}),
+DEPTH:  CAPSULE(function(sel,val){
+  throw new Error("UNFINISHED");
+},{
+
+})
 });
+//////////////////////////////////////////////////////////////////////////////////////////////////
+const CONFIG = function(config){
+  /**should be used in funC & claS */
+  const o = config;
+  INTERFACE(o)    || o.onFailure();
+  VALIDATION(o)   || o.onFailure();
+  MEMASSIGN(o)    || o.onFailure();
+  o.onSuccess();
+};
+const VALIDATION = capsule(function(){
+  throw new Error();
+  return Object.keys(VALIDATION).every(e=>{
+    e()
+  });
+},{
+  ITERATIVE:    function(){},
+  CROSSEXAMINE: function(){}
+});
+const MEMASSIGN = function(){
+
+};
 //////////////////////////////////////////////////////////////////////////////////////////////////
 /*export*/ const LOOP = {};
-const Loop_for                = function(){}; // for loop
-const Loop_forever            = function(){}; // no explanation rqd
-const Loop_while              = function(){}; // while loop
-const Loop_break              = function(){}; // stops loop
-const Loop_continue           = function(){}; // skips loop iteration
-const Loop_each               = function(){}; // forEach iteration
-const Loop_deep               = function(){}; // loops everything loopable
-const Loop_deepNoRecursion    = function(){}; // stacks all recursions into one list
-const Loop_cycle              = function(){}; // loop in circles
-const Loop_filter             = function(){}; // returns conditions matched
-const Loop_checklist          = function(){}; // ensures all info meets passes conditions
-const Loop_interval           = function(){}; // loop in time ms increments
-const Loop_when               = function(){}; // mem-value equals
-const Loop_before             = function(){}; // 
-const Loop_after              = function(){}; // 
-const Loop_noNest             = function(){}; // 
-const Loop_split              = function(){}; //
-const Loop_merge              = function(){}; //
+const LOOP_FOR                = function(){}; // for loop
+const LOOP_FOREVER            = function(){}; // no explanation rqd
+const LOOP_WHILE              = function(){}; // while loop
+const LOOP_BREAK              = function(){}; // stops loop
+const LOOP_CONTINUE           = function(){}; // skips loop iteration
+const LOOP_EACH               = function(){}; // forEach iteration
+const LOOP_DEEP               = function(){}; // loops everything loopable
+const LOOP_DEEPRECURSION      = function(){}; // stacks all recursions into one list
+const LOOP_CYCLE              = function(){}; // loop in circles
+const LOOP_FILTER             = function(){}; // returns conditions matched
+const LOOP_CHECKLIST          = function(){}; // ensures all info meets passes conditions
+const LOOP_INTERVAL           = function(){}; // loop in time ms increments
+const LOOP_WHEN               = function(){}; // mem-value equals
+const LOOP_BEFORE             = function(){}; // 
+const LOOP_AFTER              = function(){}; // 
+const LOOP_NONEST             = function(){}; // 
+const LOOP_SPLIT              = function(){}; //
+const LOOP_MERGE              = function(){}; //
 
-const Loop_skip               = function(){}; // iterator fluxor
+const LOOP_SKIP               = function(){}; // iterator fluxor
     // vs
-const Loop_pingpong           = function(v,cbs){  }; // next exe memory swaping // instead of conditionals drags
-const ENTER = v => (typeof v=== "string"||typeof v==="object"||Array.isArray(v));
-const filter = function(v,hit,miss,conditions){
-    if      (conditions(e)) return hit.push(v);
-    else                    return miss.push(v);
-};
-const checklist = (v) => {for (let i=0;i^v.length;i++){ if (v[i] !== true) return false; }return true;}
-const interval = (ms,cb)=>(setInterval(cb,ms));
-const forever = function(cb){while (true) {cb();}};
-const cycle = function() {};
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-import { params,paramsOBJ } from "../params/main";
-let pS = {};
-////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////// INTERNAL CODE
-////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ const funCLite:func0Loader = function(paramsOBJ){
-    return {
-        funClite: func0,
-        paramsOBJ: (pS = params(paramsOBJ))
-    }
-};
-const func0 = function(func0props){
-    return capsule(
-      function(){
-        funC0validate(func0props.block,func0props.validate(arguments));
-        return func0props.block(...arguments);
-      },
-      func0props
-    );
-};
-const funC0validate = function(funCBlock,funCvalidate) {
-    if (typeof funCBlock    !== "function") {THROWE();}
-    if (typeof funCvalidate !== "function") {THROWE();}
-    const _params = getParams(funCBlock);
-    return function() {
-        return _params.every((e,i)=>{
-            return pS[e](arguments[i]);
-        }) && funCvalidate(arguments);
-    };
-};
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-let gConfig:   {[index: string]: {}} = {};
-let instances: {[index: string]: {}} = {};
-let configs:   {[index: string]: {}} = {};
-let funcs:     {[index: string]: {}} = {};
-
-// /*export*/ const funC = function(){}
-
-const intF:interface_funCinterface 	= funCinterface;
-const itf_keys: string[] 			= Object.keys(intF);
-
-const incConfig:Function = function(config:{[index: string]: {}},name:string):void {
-	name = name || THROWE();
-	configs[name] = config;
-};
-const inheritConfig:Function = function(config_inherit:{[index: string]: {}}, config_inheritor:{[index: string]: {}}):void {
-	for (let k in config_inherit) !config_inheritor.hasOwnProperty(k) && (config_inheritor[k]=config_inherit[k]);
-};
-let confiGmain = function(config:{[index: string]: {}}){
-		allPropsRequired:for (let k in itf_keys) {
-			k = itf_keys[k];
-			// console.log(k, config[k]);
-			if (!config.hasOwnProperty(k)) {THROWE(k);}
-		}
-		allPropsValidated:for (let k in itf_keys) {
-			k = itf_keys[k];
-			// console.log(k, config[k]);
-			intF[k](config[k]);
-		}
-};
-/*export*/ const parseFunction = (function(func:Function) {
-    
-    // looking for variables references.
-    // does not allow this references
-
-    // if it finds duplicate variable references it reports it's findings.
-
-    // console.warn("parse progam unprogrammed");
-    
-    
-
-});
-/*export*/ const parser = function(functioN:Function) {
-    /** 
-     * - extracts information from regular code into funC template 
-     * - possibly detects errors
-    */
-	return ()=>({
-		validate: ()=>({}),
-		block:	  ()=>({})
-	});
-},({
-hasName         	:() =>  ,
-hasDescription      :() =>  ,
-hasAuthor         	:() =>  ,
-hasNotes         	:() => f.toString().includes("//"),
-hasAsync         	:() => f.toString().indexOf("async") < 3,
-hasThis         	:f =>  f.toString().indexOf("function") < 2,
-hasCapsule         	:f =>  f.toString().slice(0,1) === "(",
-hasInputType        :() =>  ,
-hasOutputType       :() =>  ,
-hasInputBehavior    :() =>  ,
-hasOutputBehavior   :() =>  ,
-hasOnError         	:() =>  f.toString().includes("throw"),
-hasValidations      :() =>  /**memntioned 2x or more */,
-hasBlock         	:() =>  /**mentioned once */,
-hasSpec         	:() =>  /**recognized lib or console.assert */,
-});
-const fakeIfNull = function(obj,prop:string,val:any):void {
-	if (!obj.hasOwnProperty(prop)) {obj[prop] = val;}
-};	
-let obj = {};
-const d = ["arguments","console","return","callback","onError/onSuccess","onTrue/onFalse","throw"];
-["name","description","author"]				.forEach((e)=>{ obj[e] = standardString;});
-["notes","params"]					   		.forEach((e)=>{ obj[e] = standardStringArray;});
-["isStrict","isAsync","isThis","isCapsule"]	.forEach((e)=>{ obj[e] = standardBoolean;});
-["inputType","outputType"]					.forEach((e)=>{ obj[e] = arrayIncludes(datatypes);});
-["inputBehavior"]							.forEach((e)=>{ obj[e] = arrayIncludes([d[0],d[1]]);});
-["outputBehavior"]							.forEach((e)=>{ obj[e] = arrayIncludes([d[1],d[2],d[3],d[4],d[5]]);});
-["onError"]									.forEach((e)=>{ obj[e] = arrayIncludes([d[6]]);});
-["validations","block","spec"]				.forEach((e)=>{ obj[e] = vFunction;});
-/*export*/ const funCinterface:interface_funCinterface = obj;
-const fakeIfNull = Object.assign(function(){},{
-"namE" 			: function(obj) {fakeIfNull(obj,'name',			"fake name to pass test");};
-"description" 	: function(obj) {fakeIfNull(obj,'description',	"fake description to pass the test");};
-"author"		: function(obj) {fakeIfNull(obj,'author',		"fake author")};
-"notes" 		: function(obj) {fakeIfNull(obj,'notes',		["fake notes to pass the test"]);};
-"validations" 	: function(obj) {fakeIfNull(obj,'validations',	()=>{/*fake*/});};
-"block" 		: function(obj) {fakeIfNull(obj,'block',		()=>{/*fake*/});};
-"spec" 			: function(obj) {fakeIfNull(obj,'spec',			()=>{/*fake*/});};
-});
-
-const loopInterface = function(config){S._Object.keys(fakeIfNull).forEach(e=>{fakeIfNull[e](config)})};
-const assignInstance = function(config,name){return instances[name]=config;};
-const confiGglobal:Function = function(config:{[index: string]: {}}):interface_pm{
-	loopInterface(config);
-	confiG(config);	
-	gConfig = config;
-	configs["global"] = gConfig;
-	return pm;
-};
-const confiGinstance:Function = function(name:string,config:{[index: string]: {}}) {
-	if (!name) 				 {THROWE();}
-	if (name&&config) {
-		if (instances[name]) {THROWE("no duplicates allowed")}
-		gConfig = S._Object.assign({},gConfig);
-		inheritConfig(gConfig, config);
-		loopInterface(config);
-		confiG(config);	
-		assignInstance(config,name);
-		incConfig(config,name);
-	} 
-	else if (name) 		   {	assignInstance(config,name) || (()=>{THROWE();})();} 
-	else 				   {	THROWE();	s}
-	return {funC:func.bind({config:config})};
-};
-const confiGfunC:Function = function(config):void {
-	confiG(config);
-	incConfig(config, config.name);
-};
-/*export*/ interface interface_meths {
-	global,
-	instance,
-	funC
-};
-const meths = {
-	global:confiGglobal,
-	instance: confiGinstance,
-	funC: confiGfunC
-};
-const confiG = S._Object.freeze(S._Object.assign(confiGmain,meths));
-const func:Function = function(config):Function {
-
-	if (typeof this.config === "object") {inheritConfig(this.config,config);}
-
-	confiG.funC(config);
-	let c = config;
-	templatefunction: {
-		const name 					= c.name;
-		const description 			= c.description; 
-		const author				= c.author;
-		const notes					= c.notes;
-		const params				= c.params;
-		const strict				= c.isStrict?'"use strict";':"";
-		const async					= c.isAsync?'async ':''; 		
-		const _this = c.isThis? (`${async}function ${name}(${params}) `):(`const ${name} = ${async}(${params}) => `);
-		// let isCapsule		    = c.isCapsule === true;
-		const inputType				= c.inputType;
-		const outputType			= c.outputType;
-		const inputBehavior			= c.inputBehavior;
-		const outputBehavior      	= c.outputBehavior;
-		const onError 				= c.onError;
-
-		const validations			= c.validations;
-		const block					= c.block;
-		const spec					= c.spec;
-
-		const cb = `/*
-		* author: ${author}
-		* description: ${description}
-		* notes: ${notes}
-		*/
-		return (${validations})(${params}) && (${block})(${params});
-		/* spec
-			${spec}
-		*/`;
-		console.log(cb); 
-		return new Function(params, `${cb}`);
-	}
-};
-const pm000:interface_pm = Object.freeze({
-	globalConfig: confiG.global,
-	instance: confiG.instance,
-	funC: func
-});
-// /*export*/ const funC:interface_pm = pm;
-
-/*export*/ const funC = pm000;
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-let claS_roster = [];
-
-/*export*/ const claS:claS = function(setupOBJ) {
-
-    independent_validations:    for (let k in setup) {setup[k].validate(setupOBJ);}
-    crossexamine_validations:   {noDuplicates123456(setupOBJ);}
-    
-    // const __MEM__ = {
-    //     __settings__   :settings     .block(setupOBJ),
-    //     __internal__   :internal     .block(setupOBJ),
-    //     __static__     :statiC       .block(setupOBJ),
-    //     __public__     :publiC       .block(setupOBJ),
-    //     __constructor__:constructor  .block(setupOBJ),
-    //     __imports__    :imports      .block(setupOBJ),
-    //     __middlemans__ :{}
-    // };
-    // __MEM__.__middlemans__    = middlemans.block(__MEM__.__imports__);
-
-    // claS_roster.push(__MEM__);        
-
-    // setupOBJ = undefined;
-    // let PUBLIC;
-    // return __clas__public__instance(PUBLIC = function(__mem__) {
-    //     const buildPublic:buildPublic = function(__mem__) { return class c { constructor() {
-    //         constructMethods:   publicConstruction       (this,__mem__);
-    //         invokeConstructor:  constructorBlock    .bind(this)(...arguments);
-    //         onFinish:           constructionComplete     (this,__mem__);
-    //     }   }   };
-    //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //     const publicConstruction:publicConstruction = (function ww(__this__,__mem__) {
-    //         const pm = clone(__mem__.__public__.mp), pd = clone(JSON.parse(JSON.stringify(__mem__.__public__.dp)));
-    //         const sm = clone(__mem__.__static__.ms), sd = clone(JSON.parse(JSON.stringify(__mem__.__static__.ds)));
-    //         if (__mem__.__settings__.singleton===true) __mem__.__internal__.di.instances < 1 || (()=>{THROWE();})();
-    //         if (__mem__.__settings__.public_reflects_static === true) {
-    //             __mem__.getMethod.validate(__this__,__mem__.__settings__,"ds");__mem__.getMethod.block(__this__,__mem__.__settings__,"ds");
-    //             __mem__.setMethod.validate(__this__,__mem__.__settings__,"ds");__mem__.setMethod.block(__this__,__mem__.__settings__,"ds");
-    //             for (let k in sm) {__this__[k] = function() {return clone(sm[k](...arguments));}}
-    //         } else mp.block(__this__,pm,pd,__mem__);
-    //     });
-    //     const constructionComplete:constructionComplete = (__this__,__mem__)=>__settings__.public_mutable === false && Object.freeze(__this__),++__mem__.__internal__.di.instances;
-
-    //     return buildPublic(__mem__);
-    // }(__MEM__));
-};
-
-
-
-const __clas__public = function(){};
-const __clas__public__instance = function(PUBLIC){
-    return S._Object.freeze({
-        new:        neW(PUBLIC),
-        delete:     deletE(PUBLIC),
-        extend:     extenD(PUBLIC),
-        implement:  implemenT(PUBLIC)
-    });
-};
-const neW = function(PUBLIC)        {return function(){return new PUBLIC(...arguments);}};
-const deletE = function(PUBLIC)     {return function(){};};
-const extenD = function(PUBLIC)     {return function(){};};
-const implemenT = function(PUBLIC)  {return function(){};};
- 
-const noDuplicates123456 = function(setupOBJ:setupOBJ) {
-    let a = S._Object.keys(setupOBJ.dp||{});
-    let b = S._Object.keys(setupOBJ.mp||{});
-    let c = S._Object.keys(setupOBJ.protectData||{});
-    let e = S._Object.keys(setupOBJ.privateData||{});
-    let f = S._Object.keys(setupOBJ.privateMethods||{});
-    let oriG = a.concat(b).concat(c).concat(d).concat(e).concat(f);
-    let neW = removeDuplicateUsingSet(oriG);
-    neW.length === oriG.length || (()=>{THROWE()})()
-};
-
-/*export*/ const parseClass = (function(){
-    
-});
-
-let list_mem = ["__settings__","__imports__","__middlemans__","__internal__","__static__","__public__","__constructor__"];
-const __mem__ = S._Object.assign(list_mem,list_mem.map((e,i)=>{
-    let obj;
-    eval(`
-        obj={
-            default:    props[${i}][0],
-            validate:   props[${i}][1],
-            block:      props[${1}][2]
-        };
-    `);
-    return obj;
-}));
-const default__settings__   = () => ({
-    debug:                          false,
-    singleton:                      false,
-    public_visible:                 false,
-    public_mutable:                 false,
-    public_gettable:                false,
-    public_settable:                false,
-    public_methods_auth:            false,
-    public_reflects_static:         false,
-    public_chainable:               false,
-    public_async:                   false,
-    // public_output:          "",  
-    public_expires:                 false,
-    public_auth:                    false,
-    public_input_interface:         false,
-    public_output_interface:        false,
-    sessionable_requests:           false,
-    maximum_requests_concurrently:  false,
-    hot_reload:                     false
-});
-const props = [    // validates can be empty for now since file setupOBJ does all the heavy lifting.`
-/**             default                                validate      block                                          */
-// /*imports*/     [() => ({})                            ,()=>{}       ,(o,z)  => iP.block(o,z)],
-// /*middlemans*/  [() => ({})                            ,()=>{}       ,z      => clone(z)],
-/*intenal*/     [() => ({"mi":{},"di":{"instances":0}}),()=>{}       ,(o,z)  => (mi.block(o,z),di.block(o,z)],
-/*static*/      [() => ({"ds":{},"ms":{}})             ,()=>{}       ,o      => ms.block(o,statiC.default())],
-/*public*/      [() => ({"dp":{},"mp":{}})             ,()=>{}       ,o      => ({"dp": o.dp, "mp":o.mp})],
-                [() => ({})],
-/*settings*/    [()=>{}],
-/*constructor*/ [()=>{}]
-//  block__constructor__   = 
-];
-
-// console.warn(`A distinction needs to be made between internal, static, public`);
-// console.warn(`A distinction needs to be made between method & data`);
-const setupobJ = function(){ return capsule(function(){
-
-},
-{                      // validations                              // block                    
-/*const*/  extends    : [[hasOwnProperty,isObject,notEmpty,uhhhh]   ,clone],
-/*const*/  implements : [[hasOwnProperty,isObject,notEmpty,uhhhh]   ,clone],
-/*const*/  name       : [[hasOwnProperty,isString,notEmpty]         ,clone],
-/*const*/  settings   : [[hasOwnProperty,isObject,notEmpty]         ,clone],
-/*const*/  imports    : [[hasOwnProperty,isObject,notEmpty]         ,clone&&block_imports],
-/*const*/  events     : [[hasOwnProperty,isObject,notEmpty]         ,clone],
-/*const*/  di         : [[enforce_object_datas]                     ,clone],
-/*const*/  ds         : [[enforce_object_datas]                     ,clone],
-/*const*/  dp         : [[enforce_object_datas]                     ,clone],
-/*const*/  dp1        : [[enforce_object_datas]                     ,clone],
-/*const*/  dp2        : [[enforce_object_datas]                     ,clone],
-/*const*/  mi         : [[enforce_object_methods]                   ,[block_mi,clone]],
-/*const*/  ms         : [[enforce_object_methods]                   ,[block_ms,clone]],
-/*const*/  mp         : [[enforce_object_methods]                   ,[block_mp,clone]],
-/*const*/  mp1        : [[enforce_object_methods]                   ,[block_mp1,clone]],
-/*const*/  mp2        : [[enforce_object_methods]                   ,[block_mp2,clone]],
-/*const*/  constructor: [[enforce_object_methods]                   ,[clone]]
-});
-
-// const methods = ["mi","ms","mp","mp1","mp2","constructor"];
-// const datas   = ["di","ds","dp","dp1","dp2"];
-// const properties = [
-//     "name","extends","implements",/*"constructor"*/, "settings","imports","events",
-//      ...datas,
-//      ...methods
-// ];
-// let tempOBJ = {};
-// properties.forEach((e,i)=>{
-//     console.log(i);
-//     tempOBJ[e] = {
-//         default:  closure_default (e),
-//         validate: closure_validate(e),
-//         block:    closure_block   (e)
-//     };
-// });
-// /*export*/ const setupOBJ = tempOBJ;
-// //////////////////////////////////////////////////////////////////////////
-// //////////////////////////////////////////////////////////////////////////
-// const closure_default   = function(){ return function(){THROWE("unfinished");}; };
-// const closure_validate  = function(sel){
-//     let opts:any = {
-//         "datas":    enforce_object_datas,
-//         "methods":  enforce_object_methods,
-//         "propsss":  enforce_object_propsss,
-//         "nulls":    enforce_object_nulls,
-//     };
-//     if      (datas     .includes(sel)) opts = opts["datas"];
-//     else if (methods   .includes(sel)) opts = opts["methods"];
-//     else if (properties.includes(sel)) opts = opts["propsss"];
-//     else    (nulls     .includes(sel)) opts = opts["nulls"];
-//     return function(obj,val){
-//         hasOwnProperty(obj,val);
-//         opts(val);
-//         return true;
-//     };
+const LOOP_PINGPONG           = function(v,cbs){  }; // next exe memory swaping // instead of conditionals drags
+// const ENTER = v => (typeof v=== "string"||typeof v==="object"||Array.isArray(v));
+// const filter = function(v,hit,miss,conditions){
+//     if      (conditions(e)) return hit.push(v);
+//     else                    return miss.push(v);
 // };
-// const closure_block     = function(){return function(){THROWE("unfinished");}};
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// const checklist = (v) => {for (let i=0;i^v.length;i++){ if (v[i] !== true) return false; }return true;}
+// const interval = (ms,cb)=>(setInterval(cb,ms));
+// const forever = function(cb){while (true) {cb();}};
+// const cycle = function() {};
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/*export*/ const funCLite:func0Loader = (function(){
+  const pS = {};
+  return function(paramsOBJ){
+      return {
+          funClite: func0block,
+          paramsOBJ: (pS = params(paramsOBJ))
+      }
+  };
+})();
+//////////////////////////////////////////////////////////////////////////////////////////////////
+const FUNC = function(config){
+  const M = MEM({
+      gConfig,
+      FInstances,
+      configs,
+      funcs,
+      intF,
+      intF_keys
+  });
+  CONFIG(config,
+      FUNCINTERFACE,
+      FUNCINDEPENDENTVALIDATION,
+      FUNCCROSSEXAMINEVALIDATION,
+      FUNCMEMASSIGN
+  );
+  return FUNCTRETURN(config);
+};
+/***************************************************************** */
+const FUNCINTERFACE = function(config){
+  let obj = config;
+  const d = ["arguments","console","return","callback","onError/onSuccess","onTrue/onFalse","throw"];
+  ["name","description","author"]             .forEach((e)=>{ obj[e] = standardString(e);});
+  ["notes","params"]                          .forEach((e)=>{ obj[e] = standardStringArray(e);});
+  ["isStrict","isAsync","isThis","isCapsule"]	.forEach((e)=>{ obj[e] = standardBoolean(e);});
+  ["inputType","outputType"]					.forEach((e)=>{ obj[e] = arrayIncludes(datatypes);});
+  ["inputBehavior"]		                    .forEach((e)=>{ obj[e] = arrayIncludes([d[0],d[1]]);});
+  ["outputBehavior"]							.forEach((e)=>{ obj[e] = arrayIncludes([d[1],d[2],d[3],d[4],d[5]]);});
+  ["onError"]									.forEach((e)=>{ obj[e] = arrayIncludes([d[6]]);});
+  ["validations","block","spec"]				.forEach((e)=>{ obj[e] = vFunction;});
+  return true;
+};
+const FUNCFAKEIFNULL = function(obj,prop:string,val:any):void {
+  const fakeIfNull = function(){
+      if (!obj.hasOwnProperty(prop)) {obj[prop] = val;}
+  }
+  return Object.assign(function(){},{
+      "namE" 			    : function(obj) {fakeIfNull(obj,'name',			    "fake name to pass test");};
+      "description" 	: function(obj) {fakeIfNull(obj,'description',	"fake description to pass the test");};
+      "author"		    : function(obj) {fakeIfNull(obj,'author',		    "fake author")};
+      "notes" 		    : function(obj) {fakeIfNull(obj,'notes',		    ["fake notes to pass the test"]);};
+      "validations" 	: function(obj) {fakeIfNull(obj,'validations',	()=>{/*fake*/});};
+      "block" 		    : function(obj) {fakeIfNull(obj,'block',		    ()=>{/*fake*/});};
+      "spec" 			    : function(obj) {fakeIfNull(obj,'spec',			    ()=>{/*fake*/});};
+  });
+};
+const FUNCINDEPEDENTVALIDATION = function(){};
+const FUNCCROSSEXAMINEVALIDATION = function(){};
+const FUNCMEMASSIGN = function(){};
+const FUNCTRETURN   = function(confiG){
+  return Object.freeze({
+      globalConfig:   FUNCCONFIGGLOBAL,
+      instance:       FUNCCONFIGINSTANCE,
+      funC:           FUNCTEMPLATE
+  });
+};
+const FUNCTEMPLATE  = function(){
+  if (typeof this.config === "object") {inheritConfig(this.config,config);}
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  confiG.funC(config);
+  let c = config;
+  templatefunction: {
+      const strict				= c.isStrict?'"use strict";':"";
+      const async					= c.isAsync?'async ':''; 		
+      const _this = c.isThis? (`${async}function ${name}(${params}) `):(`const ${name} = ${async}(${params}) => `);
+      // let isCapsule		    = c.isCapsule === true;
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-consT(`
-debug:                          false,
-singleton:                      false,
-public_visible:                 false,
-public_mutable:                 false,
-public_gettable:                false,
-public_settable:                false,
-public_methods_auth:            false,
-public_reflects_static:         false,
-public_chainable:               false,
-public_async:                   false,
-// public_output:          "",  
-public_expires:                 false,
-public_auth:                    false,
-public_input_interface:         false,
-public_output_interface:        false,
-sessionable_requests:           false,
-maximum_requests_concurrently:  false,
-hot_reload:                     false
-`);
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      const cb = `/*
+      * author: ${author}
+      * description: ${description}
+      * notes: ${notes}
+      */
+      return (${validations})(${params}) && (${block})(${params});
+      /* spec
+          ${spec}
+      */`;
+      console.log(cb); 
+      return new Function(params, `${cb}`);
+  }
+};
+const FUNCCONFIGGLOBAL = function(){
+  loopInterface(config);
+  confiG(config);	
+  gConfig = config;
+  configs["global"] = gConfig;
+  return pm;
+};
+const FUNCCONFIGINSTANCE = function(){
+  if (!name) 				 {THROWE();}
+  if (name&&config) {
+      if (instances[name]) {THROWE("no duplicates allowed")}
+      gConfig = S._Object.assign({},gConfig);
+      inheritConfig(gConfig, config);
+      loopInterface(config);
+      confiG(config);	
+      assignInstance(config,name);
+      incConfig(config,name);
+  } 
+  else if (name) 		   {	assignInstance(config,name) || (()=>{THROWE();})();} 
+  else 				   {	THROWE();	s}
+  return {funC:func.bind({config:config})};
+};
+const FUNCCONFIGFUNC = function(){
+  confiG(config);
+  incConfig(config, config.name);
+}
+const FUNCINCCONFIG = function(){
+  name = name || THROWE();
+  configs[name] = config;
+};
+const FUNCCONFIG = S._Object.freeze(S._Object.assign(confiGmain,meths));
+const FUNCFAKEIFNULL = function(){};
+const FUNCMETHS = function(){
+  return {
+      global: FUNCCONFIGGLOBAL
+      instance: FUNCCONFIGINSTANCE,
+      funC: FUNCCONFIGFUNC
+  };
+};
+const FUNCLOOPINTERFACE = function(config){S._Object.keys(fakeIfNull).forEach(e=>{fakeIfNull[e](config)})};
+const FUNCASSIGNINTERFACE = function(config,name){return instances[name]=config;};
 
-const uhhhh = function(obj) {   
-    // loopObject(obj, (obj,k)=>{ loopObject(obj.extends, k) });
-    S._Object.keys(obj.extends).forEach(e => Object.keys(obj.extends[e]).forEach((k) => 
-            throwE("pm || pd",()=>(typeof obj.mp[k] === obj.extends[e][k] || typeof obj.dp[k] === obj.extends[e][k])));
+const gConfig:   {[index: string]: {}} = {};
+const FInstances: {[index: string]: {}} = {};
+const configs:   {[index: string]: {}} = {};
+const funcs:     {[index: string]: {}} = {};
+const intF:interface_funCinterface 	= funCinterface;
+const intF_keys: string[] 			= Object.keys(intF);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/** CLAS BLUEPRINT
+ * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ * GLOBAL CONFIG            config settings only, stores as global config / zero index, no inherit
+ * BRANCH CONFIG            all config settings,  stores as branch config / non zero index, inherits global then overwritten by config
+ * BRANCH INSTANCE CONFIG   all config settings,  stores as branch instance config / non zero index, inherits global then overwritten by branch config then overwritten by config.
+ * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ * BUILD METHODS MODIFICATIONS
+ * -- visible               func.toString() printed on terminal reveals insensitives
+ * -- mutable               post render modifiable state  
+ * -- gettable              if information is readable
+ * -- settable              if information is writeable
+ * -- chainable             .method().method().method() ...
+ * -- async                 runs asynchronously
+ * -- mirror                mocks something
+ * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ *                          ACCESS-LEVELS                 OTHER                     NOTES
+ * MEMORY REFERENCING   CLASS PACKAGE SUBCLASS WORLD    DATA METHOD
+ * -- SETTINGS          YES   NO      NO       NO       YES  NO             SETTINGS ARE IMMUTABLE & INHERITED
+ * -- INTERNAL          YES   NO      YES      NO       YES  YES            INTERNAL PROGRAMMABLE TO SUPERCLASS ONLY
+ * -- STATIC            YES   NO      NO       NO       YES  YES            ONLY AVAILABLE TO IT'S CLASS
+ * -- PUBLIC            YES   YES     YES      YES      YES  YES            AVAILABLE EVERYWHERE    
+ * -- PROTECT           YES   YES     YES      NO       YES  YES
+ * -- PRIVATE           YES   NO      NO       NO       YES  YES
+ * -- CONSTRUCTOR       YES   YES     NO       YES      NO   YES
+ * -- IMPORTS           YES   NO      YES      NO       YES  NO             IMPORTS    PROGRAMMABLE TO SUPERCLASS ONLY
+ * -- MIDDLEMANS        YES   NO      YES      NO       YES  YES            MIDDLEMANS PROGRAMMABLE TO SUPERCLASS ONLY
+ * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ * -- NON METHODS | METHODS
+ * d vs m   (data vs method)  
+ * 
+ * -- INHERITANCE -> new,extend,implement
+ * i vs s vs p0 vs p1 vs p2
+ * internal static public private protect
+ * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ *  0) CONFIG
+ *  -- VALIDATION.ITERATE
+ *  -- VALIDATION.CROSSEXAMINE
+ *  -- MEMASSIGN
+ *  1) BUILDPUBLIC
+ *  2) return S._Object.freeze({
+            new:        neW(PUBLIC),
+            delete:     deletE(PUBLIC),
+            extend:     extenD(PUBLIC),
+            implement:  implemenT(PUBLIC)
+  });
+ * 
+ * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ * How does a programmer see all class configurations?; readonly access.
+ * How does a programmer mod all class configuration?; read-write access.
+ * 
+ * How does a programmer confidently new configurations that don't mod others?
+ * 
+ * Should Internal be constant & available to all inheritances?
+ * 
+ * 
+ */
+
+
+// const c = Clas({/*global config*/});
+
+// const ci0 = c.new(/*branch config*/);
+
+// const ci0i0 = ci0.new(/* branch instance config*/);
+
+
+const CLAS = (function(){
+
+    // const configs = {
+    //   "GLOBAL":     {}, // FREEZE AFTER GLOBAL CONFIG ASSIGNED
+    //   "BRANCH":     {}, 
+    //   "BINSTANCES": {}
+    // };
+
+    /*export*/ const claS:claS = function(setupOBJ) {
+        const __MEM__ = CONFIG(setupOBJ,
+              CLASSINGULARVALIDATIONS,
+              CLASSCROSSEXAMINEVALIDATIONS,
+              function() {
+                __mem__ = {
+                  __settings__   :CLASMEMSETUP["SETTINGS"]     [1](setupOBJ),
+                  __internal__   :CLASMEMSETUP["INTERNAL"]     [1](setupOBJ),
+                  __static__     :CLASMEMSETUP["STATIC"]       [1](setupOBJ),
+                  __public__     :CLASMEMSETUP["PUBLIC"]       [1](setupOBJ),
+                  __private__    :CLASMEMSETUP["PRIVATE"]      [1](setupOBJ),
+                  __protect__    :CLASMEMSETUP["PROTECT"]      [1](setupOBJ),
+                  __constructor__:CLASMEMSETUP["CONSTRUCTOR"]  [1](setupOBJ),
+                  __imports__    :CLASMEMSETUP["IMPORTS"]      [1](setupOBJ),
+                  __middlemans__ :CLASMEMSETUP["MIDDLEMANS"]   [1](setupOBJ),
+              };
         });
+        // __MEM__.__middlemans__    = middlemans.block(__MEM__.__imports__);
+
+        // claS_roster.push(__MEM__);        
+
+        // setupOBJ = undefined;
+        // let PUBLIC;
+        // return __clas__public__instance(PUBLIC = function(__mem__) {
+        //     const buildPublic:buildPublic = function(__mem__) { return class c { constructor() {
+        //         constructMethods:   publicConstruction       (this,__mem__);
+        //         invokeConstructor:  constructorBlock    .bind(this)(...arguments);
+        //         onFinish:           constructionComplete     (this,__mem__);
+        //     }   }   };
+        //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //     const publicConstruction:publicConstruction = (function ww(__this__,__mem__) {
+        //         const pm = clone(__mem__.__public__.mp), pd = clone(JSON.parse(JSON.stringify(__mem__.__public__.dp)));
+        //         const sm = clone(__mem__.__static__.ms), sd = clone(JSON.parse(JSON.stringify(__mem__.__static__.ds)));
+        //         if (__mem__.__settings__.singleton===true) __mem__.__internal__.di.instances < 1 || (()=>{THROWE();})();
+        //         if (__mem__.__settings__.public_reflects_static === true) {
+        //             __mem__.getMethod.validate(__this__,__mem__.__settings__,"ds");__mem__.getMethod.block(__this__,__mem__.__settings__,"ds");
+        //             __mem__.setMethod.validate(__this__,__mem__.__settings__,"ds");__mem__.setMethod.block(__this__,__mem__.__settings__,"ds");
+        //             for (let k in sm) {__this__[k] = function() {return clone(sm[k](...arguments));}}
+        //         } else mp.block(__this__,pm,pd,__mem__);
+        //     });
+        //     const constructionComplete:constructionComplete = (__this__,__mem__)=>__settings__.public_mutable === false && Object.freeze(__this__),++__mem__.__internal__.di.instances;
+
+        //     return buildPublic(__mem__);
+        // }(__MEM__));
+    };
+
+
+
+    const __clas__public = function(){};
+    const __clas__public__instance = function(PUBLIC){
+        return S._Object.freeze({
+            new:        CLASNEW      (PUBLIC),
+            delete:     CLASDELETE   (PUBLIC),
+            extend:     CLASEXTEND   (PUBLIC),
+            implement:  CLASIMPLEMENT(PUBLIC)
+        });
+    };
+    const CLASNEW       = function(PUBLIC)     {return function(){return new PUBLIC(...arguments);}};
+    const CLASDELETE    = function(PUBLIC)     {return function(){};};
+    const CLASEXTEND    = function(PUBLIC)     {return function(){};};
+    const CLASIMPLEMENT = function(PUBLIC)     {return function(){};};
+    
+    const noDuplicates123456 = function(setupOBJ:setupOBJ) {
+        let a = KEYS(setupOBJ.dp||{});
+        let b = KEYS(setupOBJ.mp||{});
+        let c = KEYS(setupOBJ.protectData||{});
+        let e = KEYS(setupOBJ.privateData||{});
+        let f = KEYS(setupOBJ.privateMethods||{});
+        let oriG = a.concat(b).concat(c).concat(d).concat(e).concat(f);
+        let neW = UNIQ(oriG);
+        neW.length === oriG.length || (()=>{THROWE()})()
+    };
+
+    /*export*/ const parseClass = (function(){
+        
     });
-};
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-const keys = {
-    "d":    "data",
-    "m":    "method",
-    "i":    "internal",
-    "s":    "static",
-    "p":    "public",
-    "p1":   "private",
-    "p2":   "protect"
-};
-const wrap = Object.freeze(Object.assign(function() {},
-{
-/*const*/ method    : (v,f)=> {  },
-/*const*/ data      : v => {},
-/*const*/ internal  : v => {},  
-/*const*/ static    : v => {},
-/*const*/ public    : v => {},
-/*const*/ private   : v => {},
-/*const*/ protect   : v => {}
-}));
-/** 
- *      internal 
- *      static
- *      public
-*/
-const block_imports     :Function = obj => {
-    obj.imports.forEach((e:string)=>{
-        e = period(e);
-        let r = require(e);
-        __imports__[e.toLowerCase()] = [()=>(new r()),()=>(r),()=>{THROWE();}]  [(isClas(r)&&1) || (isFunC(r)||isFunction(r)||isObj(r) && 2) || 0];
 
-        });
-};
-// Object.keys(obj.ms).forEach(e => {const tempFunc = obj.ms[e];__static__.ms[e] = function () {return tempFunc.call(obj, ...arguments);};}); 
-// getMethod.validate(pm);getMethod.block(__this__,__settings__,"dp");
-// setMethod.validate(pm);setMethod.block(__this__,__settings__,"dp");
-// for (let k in pm) {__this__[k] = pubM(pm[k].bind({dp: pd,mp: __this__,ms: __static__.ms,ds: __static__.ds,_: __middlemans__}),__this__);}
-const block_mi          :Function = obj => { loopObject(obj.mi,  (obj,k)=>{__internal__["mi"] [k] = wrap.method("internal",obj["mi"] [k]); });
-const block_ms          :Function = obj => { loopObject(obj.ms,  (obj,k)=>{__static__  ["ms"] [k] = wrap.method("static",  obj["ms"] [k]); });
-const block_mp          :Function = obj => { loopObject(obj.mp,  (obj,k)=>{__public__  ["mp"] [k] = wrap.method("public",  obj["mp"] [k]); });
-const block_mp1         :Function = obj => { loopObject(obj.mp1, (obj,k)=>{__private__ ["mp1"][k] = wrap.method("private", obj["mp1"][k]); });
-const block_mp2         :Function = obj => { loopObject(obj.mp2, (obj,k)=>{__protect__ ["mp2"][k] = wrap.method("protect", obj["mp2"][k]); });
+    let list_mem = ["__settings__","__imports__","__middlemans__","__internal__","__static__","__public__","__constructor__"];
+    const __mem__ = S._Object.assign(list_mem,list_mem.map((e,i)=>{
+        let obj;
+        eval(`
+            obj={
+                default:    props[${i}][0],
+                validate:   props[${i}][1],
+                block:      props[${1}][2]
+            };
+        `);
+        return obj;
+    }));
+    const CLASMEMSETUP = CAPSULE(function(){
 
+    },{          // default                             // validate   // block
+    IMPORTS:     [() => ({})                            ,()=>{}       ,(o,z)  => CLASSETUPOBJ["imports"][1](o,z)],
+    MIDDLEMANS:  [() => ({})                            ,()=>{}       ,z      => CLONE(z)],
+    INTERNAL:    [() => ({"mi":{},"di":{"instances":0}}),()=>{}       ,(o,z)  => (CLASSETUPOBJ["mi"][1](o,z),CLASSETUPOBJ["di"](o,z)],
+    STATIC:      [() => ({"ds":{},"ms":{}})             ,()=>{}       ,o      => CLASSETUPOBJ["ms"](o,CLASMEMSETUP["STATIC"][0])],
+    PUBLIC:      [() => ({"dp":{},"mp":{}})             ,()=>{}       ,o      => ({"dp": o.dp, "mp":o.mp})],
+    PRIVATE:     [],
+    PROTECT:     [],
+    SETTINGS:    [()=>{}],
+    CONSTRUCTOR: [()=>{}]
+    });
+    const CLASSETUPOBJ = function(){ return CAPSULE(function(){
 
-const getMethod:funClite = {
-    validate:function(methods){
-        if ("get" in methods) {THROWE();} 
     },
-    block:function(__this__,__settings__:interface_settings,enuM:string){
-        if (__settings__.public_gettable === true) {
-            
-            let obj = S._JSON.parse(`{"${enuM}:{}"}`); obj[enuM] = __this__[enuM];
+    {                      // SINGULAR VALIDATIONS                    BLOCK                       DEFAULT
+    /*const*/  extends    : [[HASPROPERTY,ISOBJECT,NOTEMPTY,UHHHH]      ,CLONE,                   {}],
+    /*const*/  implements : [[HASPROPERTY,ISOBJECT,NOTEMPTY,UHHHH]      ,CLONE,                   {}],
+    /*const*/  name       : [[HASPROPERTY,ISSTRING,NOTEMPTY]            ,CLONE,                   ""],
+    /*const*/  settings   : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,CLONE,                   {}],
+    /*const*/  imports    : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,[CLONE,block_imports],   {}],
+    /*const*/  events     : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,CLONE,                   {}],
+    /*const*/  di         : [[enforce_object_datas]                     ,CLONE,                   {}],
+    /*const*/  ds         : [[enforce_object_datas]                     ,CLONE,                   {}],
+    /*const*/  dp         : [[enforce_object_datas]                     ,CLONE,                   {}],
+    /*const*/  dp1        : [[enforce_object_datas]                     ,CLONE,                   {}],
+    /*const*/  dp2        : [[enforce_object_datas]                     ,CLONE,                   {}],
+    /*const*/  mi         : [[enforce_object_methods]                   ,[block_mi,CLONE],        {}],
+    /*const*/  ms         : [[enforce_object_methods]                   ,[block_ms,CLONE],        {}],
+    /*const*/  mp         : [[enforce_object_methods]                   ,[block_mp,CLONE],        {}],
+    /*const*/  mp1        : [[enforce_object_methods]                   ,[block_mp1,CLONE],       {}],
+    /*const*/  mp2        : [[enforce_object_methods]                   ,[block_mp2,CLONE],       {}],
+    /*const*/  constructor: [[enforce_object_methods]                   ,[CLONE],                 function(){}]
+    });
 
-            __this__["get"] = function(prop:string) {
-                return clone(this[enuM][prop]||this[enuM])
-            }.bind(obj);
+    // const methods = ["mi","ms","mp","mp1","mp2","constructor"];
+    // const datas   = ["di","ds","dp","dp1","dp2"];
+    // const properties = [
+    //     "name","extends","implements",/*"constructor"*/, "settings","imports","events",
+    //      ...datas,
+    //      ...methods
+    // ];
+    // let tempOBJ = {};
+    // properties.forEach((e,i)=>{
+    //     console.log(i);
+    //     tempOBJ[e] = {
+    //         default:  closure_default (e),
+    //         validate: closure_validate(e),
+    //         block:    closure_block   (e)
+    //     };
+    // });
+    // /*export*/ const setupOBJ = tempOBJ;
+    // //////////////////////////////////////////////////////////////////////////
+    // //////////////////////////////////////////////////////////////////////////
+    // const closure_default   = function(){ return function(){THROWE("unfinished");}; };
+    // const closure_validate  = function(sel){
+    //     let opts:any = {
+    //         "datas":    enforce_object_datas,
+    //         "methods":  enforce_object_methods,
+    //         "propsss":  enforce_object_propsss,
+    //         "nulls":    enforce_object_nulls,
+    //     };
+    //     if      (datas     .includes(sel)) opts = opts["datas"];
+    //     else if (methods   .includes(sel)) opts = opts["methods"];
+    //     else if (properties.includes(sel)) opts = opts["propsss"];
+    //     else    (nulls     .includes(sel)) opts = opts["nulls"];
+    //     return function(obj,val){
+    //         hasOwnProperty(obj,val);
+    //         opts(val);
+    //         return true;
+    //     };
+    // };
+    // const closure_block     = function(){return function(){THROWE("unfinished");}};
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // consT(`
+
+    // `);
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    const UHHHH = function(obj) {   
+        // loopObject(obj, (obj,k)=>{ loopObject(obj.extends, k) });
+        S._Object.keys(obj.extends).forEach(
+            e => Object.keys(obj.extends[e]).forEach(
+                    (k) => throwE("pm || pd",()=>(typeof obj.mp[k] === obj.extends[e][k] || typeof obj.dp[k] === obj.extends[e][k]))
+            )
+        );
+    };
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    const CLASSLEGEND = {
+        "d0":    "data",
+        "m0":    "method",
+        "i0":    "internal",
+        "s0":    "static",
+        "p0":    "public",
+        "p1":    "private",
+        "p2":    "protect"
+    };
+    const CLASSLEGENDWRAP = Object.freeze(Object.assign(function() {},
+    {
+    /*const*/ method    : (v,f)=> {  },
+    /*const*/ data      : v => {},
+    /*const*/ internal  : v => {},  
+    /*const*/ static    : v => {},
+    /*const*/ public    : v => {},
+    /*const*/ private   : v => {},
+    /*const*/ protect   : v => {}
+    }));
+    /** 
+     *      internal 
+     *      static
+     *      public
+    */
+    const block_imports     :Function = obj => {
+        obj.imports.forEach((e:string)=>{
+            e = period(e);
+            let r = require(e);
+            __imports__[e.toLowerCase()] = [()=>(new r()),()=>(r),()=>{THROWE();}]  [(isClas(r)&&1) || (isFunC(r)||isFunction(r)||isObj(r) && 2) || 0];
+
+            });
+    };
+    // Object.keys(obj.ms).forEach(e => {const tempFunc = obj.ms[e];__static__.ms[e] = function () {return tempFunc.call(obj, ...arguments);};}); 
+    // getMethod.validate(pm);getMethod.block(__this__,__settings__,"dp");
+    // setMethod.validate(pm);setMethod.block(__this__,__settings__,"dp");
+    // for (let k in pm) {__this__[k] = pubM(pm[k].bind({dp: pd,mp: __this__,ms: __static__.ms,ds: __static__.ds,_: __middlemans__}),__this__);}
+    const block_mi          :Function = obj => { loopObject(obj.mi,  (obj,k)=>{__internal__["mi"] [k] = wrap.method("internal",obj["mi"] [k]); });
+    const block_ms          :Function = obj => { loopObject(obj.ms,  (obj,k)=>{__static__  ["ms"] [k] = wrap.method("static",  obj["ms"] [k]); });
+    const block_mp          :Function = obj => { loopObject(obj.mp,  (obj,k)=>{__public__  ["mp"] [k] = wrap.method("public",  obj["mp"] [k]); });
+    const block_mp1         :Function = obj => { loopObject(obj.mp1, (obj,k)=>{__private__ ["mp1"][k] = wrap.method("private", obj["mp1"][k]); });
+    const block_mp2         :Function = obj => { loopObject(obj.mp2, (obj,k)=>{__protect__ ["mp2"][k] = wrap.method("protect", obj["mp2"][k]); });
+
+
+    const getMethod:funClite = {
+        validate:function(methods){
+            if ("get" in methods) {THROWE();} 
+        },
+        block:function(__this__,__settings__:interface_settings,enuM:string){
+            if (__settings__.public_gettable === true) {
+                let obj = S._JSON.parse(`{"${enuM}:{}"}`); obj[enuM] = __this__[enuM];
+                __this__["get"] = function(prop:string) {
+                    return CLONE(this[enuM][prop]||this[enuM])
+                }.bind(obj);
+            }
         }
-    }
-};
-const setMethod:funClite = {
-    validate:function(methods):void{
-        if ("set" in methods) {THROWE();}
-    },
-    block:function(__this__,__settings__:interface_settings,enuM:string):void{
-        if (__settings__.public_settable === true) {
-
-            let obj = S._JSON.parse(`{"${enuM}:{}"}`); obj[enuM] = __this__[enuM];
-
-            __this__["set"] = function(prop:string, val:any):void {
-                this[enuM][prop] = val;
-            }.bind(obj);
+    };
+    const setMethod:funClite = {
+        validate:function(methods):void{
+            if ("set" in methods) {THROWE();}
+        },
+        block:function(__this__,__settings__:interface_settings,enuM:string):void{
+            if (__settings__.public_settable === true) {
+                let obj = S._JSON.parse(`{"${enuM}:{}"}`); obj[enuM] = __this__[enuM];
+                __this__["set"] = function(prop:string, val:any):void {
+                    this[enuM][prop] = val;
+                }.bind(obj);
+            }
         }
-    }
-};
+    };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+})();
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*3)  LANGUAGE CONSTRUCT MUST HAVES
-
-
-
 */
+const SPECDEV = CAPSULE(function(){
+  console.warn(`
+  ** collects all tests from different projects and stores into one repository for data science
+  ** study the other testing frameworks to see what they did wrong
+  ** do everything in power to automate this
+  ** applications are written in node-terminal. "manual-mode" demands thinking ahead.
+  ** tests zoning are automated
+  ** tests styles are selectable & documented in db
+  ** notification system needs to be built. ??? display what notifications first? ???
+  ** 
+  `);
+  throw new Error("UNFINISHED");
+},{
+/*const*/ SPECDB : function(){
+
+},
+/*const*/ TESTSZONE : {
+  "E2E": {
+    DESCRIPTION: `END 2 END TESTING: ALL TESTS ARE EXECUTED ON LIVE FULLY ASSEMBLED SOFTWARE`
+  },
+  "SEG": {
+    DESCRIPTION: `SEGMENTED TESTING: ALL TESTS ARE EXECUTED ON ISOLATED COMPONENTS`
+  }
+},
+/*const*/ TESTSTYLE : {
+  "TDD":{
+    DESCRIPTION: `TEST-DRIVEN-DEVELOPMENT: ALL SOFTWARE DEVELOPMENT ORIENTED AROUND PASSING TESTS FOR NEW CODE`,
+  },
+  "BDD":{
+    DESCRIPTION: `BEHAVIOR-DRIVEN-DEVELOPMENT: DEVELOPMENT ORIENTED AROUND SEEMINGLY MAKING THE GRADE`,
+  },
+  "FDD":{
+    DESCRIPTION: `FEATURE-DRIVEN-DEVELOPMENT: DEVELOPMENT ORIENTED AROUND VERSIONING RELEASE PRIORITIES`
+  },
+},
+/*const*/ TESTAPPROACHES : {
+  "DATATYPES": {
+    DESCRIPTION: `WHAT DATATYPES ARE ACCEPTED`
+  },
+  "VALIDATIONS": {
+    DESCRIPTION: `WHAT CAUSES RETURN FALSE OR FAILURES`
+  },
+  "CONDITIONAL-SLIPPING": {
+    DESCRIPTION: `WHAT FUNKY DATATYPE INPUTS SLIP BY CONDITIONAL STATEMENTS`
+  },
+  "IOSETS": {
+    DESCRIPTION: `WHAT INPUT & OUTPUT SETS ARE SUPPOSE TO PASS`
+  },
+  "RANGES": {
+    DESCRIPTION: `WHAT RANGES OF INPUTS & OUTPUTS ARE ALLOWED`
+  }
+},
+/*const*/ TESTGUIDE : { // think of testing like gaming
+  "START PROJECT": {
+    DESCRIPTION: `ROSTERS PROJECT INTO DB. MAPS FOLDER STRUCTURES. CREATES A RESERVATION IN CODEDATABASE.`,
+    F:  function(){NEWPROJECTTITLE();NEWPROJECTDESCRIPTION();NEWFOLDERS();NEWSPECFOLDER();}
+  },
+  "START LAYER":   {
+    DESCRIPTION: `ROSTERS LAYER INTO DB. MAPS LAYER STRUCTURES. CREATES A LAYER IN PROJECT.`,
+    F:  function(){NEWLAYERTITLE();NEWLAYERDESCRIPTION();NEWFILELAYER();NEWSPECLAYER();}
+  },
+  "START FILE": {
+    DESCRIPTION: `ROSTERS FILE INTO BD. MAPS FILE STRUCTURES. CREATES A FILE IN FOLDER.`,
+    F:  function(){NEWFILETITLE();NEWFILEDESCRIPTION();NEWFILE();NEWSPECFILE();}
+  },
+  "START TASK":    {
+    DESCRIPTION: `ROSTERS LAYER INTO DB. MAPS TASK STRUCTURES. CREATES A TASK-ZONE IN FILE.`,
+    F:  function(){NEWTASKTITLE();NEWTASKDESCRIPTION();NEWTASK();NEWTASKSPEC();}
+  }
+},
+/*const*/ TESTMETHODS : {
+  "BYDATATYPE":{},
+  "BYRANGE":{},
+  "BYIOSET":{},
+  "BYVALIDATION":{}
+},
+});
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+const LAYERS = function(){
+  // bottom layer: the functional layer   code density high,mostly imperative
+  // top layer:    the highlevel layer    code density low, mostly english & pseudo
+  // inbetween layers: programmable       code density med, mostly declarative & symbolic paradigm
+};
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+const CODEDECONSTRUCTOR = function(inputs){
+
+
+  // codeparser     // converts findings into json jstructures
+  // deconstruct    // strips code apart into distinct properties; procedures not needed
+  // quantifier     // converts findings into numbers
+  // procedureprint // converts unarranged distincts into executable code
+  let props = {};
+  let funcs = {};
+  let dry   = {};
+  let found = [];
+  let k     = "";
+  let j     = "";
+
+  const CODEPARSER      = (function(inputs){
+
+  })(inputs);
+  const DESCONSTRUCT    = (function(inputs){
+
+    inputs.forEach(e=>{
+        for (let k in e) {
+            if (!props.hasOwnProperty(k)) props[k] = []; 
+            if (!funcs.hasOwnProperty(k)) props[k] = []; 
+            props[k].push(e[k]);
+        }
+    });
+  })(inputs);
+  const QUANTIFIER      = (function(inputs){
+    for (let k in props) {
+      for (let j in props[k]) {
+
+          if (!found.includes(props[k][j])) {found.push(props[k][j]);}
+
+      }
+      dry[k] = found;
+      found = [];
+  }
+  });
+  const PROCEDUREPRINT  = (function(inputs){
+
+  })(inputs);    
+  console.log(props);
+  console.log(dry);
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+const DIFFERENTIALBUILDCODING = function(){};
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*4)  ALGORITHMIC DATA STRUCTURES
-
-
 */
+const INTUITLIST = function(){};
+const TREES = function(){};
+const WEB   = function(){};
+const MATRIX= function(){};
+
+const STORE = function(){};
+const FETCH = function(){};
+const AMBIENT=function(){};
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*5)  ALGORITHMIC ALGORITHMS
-
-
-
 */
+const SORT = function(){};
+const QUANTIFY = function(){};
+const SEARCH  = function(){};
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*6)  WORKS OUT THE BOX
-
-
-
-
 */
+const API           = function(){};
+const SERVER        = function(){};
+const CLIENT        = function(){};
+const ZENDB         = function(){};
+const PROXY         = function(){};
+const CLUSTER       = function(){};
+const DHCA          = function(){};
+const SOCKET        = function(){};
+const AUTOTEMPLATER = function(){};
+const SMARTCSS      = function(){};
+const TAPJS         = function(){};
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+/** 7) PARADIGM STYLER
+ * 
+ * ** FUNCTIONAL
+ * ** OOP
+ * ** DECLARATIVE
+ * ** VERBOSE       // 100% DECLARATIVE
+ * ** SENSICAL      // TYPING WORDS; NATURAL LANGUAGE INTERPRETTING
+*/
 
-
-
-
-
-
-
-
-
-
-
+const COMPARTMENTALIZE = function(){
+  throw new Error("UNFINISHED");
+  /**
+   * SUBJECTIVE/CUSTOMIZABLE API ORGANIZATION
+   * 
+   * 
+   * i.e
+   * 
+   * organize all methods by input datatype
+   * organize all methods by output datatype
+   * organize all methods by paradigms
+   * organize all methods by alphabet
+   * organize all methods by authors recommendation
+   * 
+   */
+};
+const PARADIGMS = CAPSULE(function(sel){
+  throw new Error("UNFINISHED");
+  PARADIGMS.hasOwnProperty(sel) && PARADIGMS[sel]()
+},{
+"FUNCTIONAL":function(){},
+"GROUPING"  :function(){},
+"OOP"       :function(){},
+"VERBOSE"   :function(){},  
+"SENSICAL"  :function(){}   
+});
 
 console.warn(`miscellaneous todo list
-
 ** analyze the functional libraries. remove duplicate functionalities.
-
-
-
 `);
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+/** 7) SNIPPETS
+*/
+const SNIPPETS = {
+  CAPSULE: {},
+  CLOSURE: {},
+  FUNCLITE:{},
+  FUNC:{},
+  CLAS:{}
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+const LEARNDEVCORE = function(){
+  console.warn(`
+  learn everything exported from devcore.
+
+
+
+  ** iterate by category
+  ** iterate by one a time
+  ** iterate by random
+  //////////////////////////////////////////
+  ** answer by solving
+  ** answer by multiple-choice
+
+
+
+
+  `); 
+  throw new Error("UNFINISHED");
+};
+
+
+
+
+
+export const weavePackageExportable = (function(){ 
+
+  // enforce LOOPCHECKLIST on pkgs & functional programs
+  // convert into pkg paradigm selection style
+  // convert into exportable ${PROGRAMMING LANGUAGE}`
+
+})();
