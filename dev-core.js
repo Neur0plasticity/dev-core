@@ -1,124 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-console.warn(`
-After completing the merger.
-Write a module that ensures
-only the absolute minimum of functions are dependended.
-no idling software. noting should take up any space.
-`);
-console.warn(`
-* need to convert all javascript buitlin methods to global
-`);
-console.warn(`
-core.ts is a one file merge of all the build structs files.
-Why merge them all together?
-core.ts mission is to be the leanest, fastet, core development tool
-`);
-console.warn(`
-sanitize the variable naming and parameter ordering
-across the entire file.
-`);
-console.warn(`
-once finished
-
-replace all global constants with "export const"
-`);
-console.warn(`
-*** ORGANIZE THE MODULES TO BE GROUPED TOGETHER
-    //// ????
-    - SANDBOX-JS
-    - CODE-FILE-STRUCTURE
-    /// MERGED FUNCTIONAL LIBRARIES
-    *** RAMBDA      FUNCTIONAL LIBRARY
-    *** UNDERSCORE  FUNCTIONAL LIBRARY
-    *** AUTHORS     FUNCTIONAL LIBRARY
-    //// LANGUAGE CONSTRUCT REVAMP & HARDENING
-    - PARADIGM-STYLER
-    - PARAMS
-    - CAPSULE
-    - CLOSURE
-    - CLONE-ANY
-    - JS-DATATYPE-VALIDATIONS
-    - SPEC
-    - LOOP
-    - FUNCLITE
-    - FUNC
-    - CLAS
-    - CLI-FUNC
-    - CLI-CLAS
-    - GOF4
-    //// LANGUAGE CONSTRUCT MUST HAVES
-    - INSTRUCTIONS
-    - CONFIG
-    - MODULES
-    - DIM
-    - APPLICATION
-    - UNIFRAME
-    //// ALGORITHMIC DATA STRUCTURES
-    - LIST
-    //// ALGORITHMIC ALGORITHMS
-    //// WORKS OUT OF THE BOX
-    - DISTRIBUTED APPLICATION
-    - SERVER
-    - ZENDB
-*** DEV-CORE FILE STRUCTURE
-0)  STRUCTURAL PRESENTATIONS
-1)  SHARED MEMORY/FUNCTION VARIABLES
-2)  LANGUAGE CONSTRUCT REVAMP & HARDENING
-3)  LANGUAGE CONSTRUCT MUST HAVES
-4)  ALGORITHMIC DATA STRUCTURES
-5)  ALGORITHMIC ALGORITHMS
-6)  WORKS OUT THE BOX SOFTWARE
-CHECKLIST: merging all code into oe file checklist
-STATUSES:   [INPROGRESS, HELP, COMPLET]
-___NAME____________________________________STATUS__________NOTES____
-APPLICATION
-auditor                                 
-bootstrap
-capsule                                 INPROGRESS
-claS                                    INPROGRESS
-cli-claS  
-cli-funC
-clone-any                               INPROGRESS
-closure                                 INPROGRESS
-code-file-structure
-Codebrarian-namespace
-config                                  INPROGRESS
-CRUDS-JS
-Dependency-Injection-Management
-distributed-application
-funC                                    INPROGRESS
-funClite                                INPROGRESS
-GOF4
-instructions
-js-builtins                             
-js-datatype-validations                 FINISHED
-JSHackbot
-List
-LOOP                                    INPROGRESS
-memory-scoping
-modules
-PARAMS                                  INPROGRESS
-PARADIGM-STYLER                         INPROGRESS
-public-private-protect
-Quantify
-sandbox-js                              FINISHED
-server                                  SKIPPED
-SPEC                                    SKIPPED
-symbolic-programming                    SKIPPED
-uniframe  
-ZenDB                                   SKIPPED
-****************************************************************************************
-****************************************************************************************
-****************************************************************************************
-****************************************************************************************
-`);
-console.warn(`
-  PROGRAMMING RULES
-  * constant    -> ALL CAPS 
-  * mutable     -> NOTALLCAPS
-`);
-console.warn("once finished with this, build a looper injector for ML purposes");
+/**
+ *
+ *
+ * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ *
+ *
+ * SELF MODIFYING DOCUMENT ON EVERY EXECUTION
+ *
+ * *
+ *
+ *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+ *
+ */
 !(function sanityCheck() {
     console.warn('asserting programming language functionality meets expectations');
     console.warn("test all operators");
@@ -599,7 +500,9 @@ exports.NUNDJSN = v => exports.EVERY(v, exports.ISNOTUNDEFINED);
 exports.NULJSN = v => exports.EVERY(v, exports.ISNULL);
 exports.NNULJSN = v => exports.EVERY(v, exports.ISNOTNULL);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-exports.__FINDHIGHESTARITY = function (spec, max = 0) {
+exports.__FINDHIGHESTARITY = function (spec, max) {
+    if (max === "undefined")
+        max = 0;
     for (const key in spec) {
         if (exports.HASPROPERTY(spec, key) === false || key === 'constructor')
             continue;
@@ -623,7 +526,7 @@ exports.__APPLYSPECWITHARITY = function (spec, arity, cache) {
     if (remaining === 4)
         return (x, y, z, a) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, x, y, z, a));
     if (remaining > 4)
-        return (...args) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, ...args));
+        return (args) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, ...args));
     if (exports.S._Array.isArray(spec)) {
         const ret = [];
         let i = 0;
@@ -652,7 +555,7 @@ exports.__FILTERUNDEFINED = function () {
     return defined;
 };
 exports.FLIPEXPORT = function (fn) {
-    return (...input) => {
+    return (input) => {
         if (input.length === 1) {
             return holder => fn(holder, input[0]);
         }
@@ -742,7 +645,7 @@ exports._OBJECTIS = function (a, b) {
     return a !== a && b !== b;
 };
 exports._OBJECTIS$1 = exports.S._Object.is || _objectIs;
-exports.DEFAULTTO = function (defaultArgument, ...inputArguments) {
+exports.DEFAULTTO = function (defaultArgument, inputArguments) {
     if (arguments.length === 1) {
         return _inputArguments => exports.DEFAULTTO(defaultArgument, _inputArguments);
     }
@@ -988,7 +891,7 @@ exports.XFILTER.prototype['@@transducer/step'] = function (result, input) {
 exports.ALWAYS = function (x) {
     return () => x;
 };
-exports.APPLYSPEC = function (spec, ...args) {
+exports.APPLYSPEC = function (spec, args) {
     const arity = exports.__FINDHIGHESTARITY(spec);
     if (arity === 0) {
         return () => ({});
@@ -996,11 +899,11 @@ exports.APPLYSPEC = function (spec, ...args) {
     const toReturn = exports.__APPLYSPECWITHARITY(spec, arity, args);
     return toReturn;
 };
-exports.COMPOSE = function (...fns) {
+exports.COMPOSE = function (fns) {
     if (fns.length === 0) {
         throw new Error('compose requires at least one argument');
     }
-    return (...args) => {
+    return (args) => {
         const list = fns.slice();
         if (list.length > 0) {
             const fn = list.pop();
@@ -1012,7 +915,9 @@ exports.COMPOSE = function (...fns) {
         }
     };
 };
-exports.CURRY = function (fn, args = []) {
+exports.CURRY = function (fn, args) {
+    if (!args)
+        args = [];
     return (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : exports.CURRY(fn, rest))([...args, ..._args]);
 };
 exports.F = function () {
@@ -1027,7 +932,7 @@ exports.IDENTITY = function (x) {
 exports.NEGATE = function (n) {
     return -n;
 };
-exports.PARTIAL = function (fn, ...args) {
+exports.PARTIAL = function (fn, args) {
     const len = fn.length;
     return (...rest) => {
         if (args.length + rest.length >= len) {
@@ -1036,7 +941,7 @@ exports.PARTIAL = function (fn, ...args) {
         return partial(fn, ...[...args, ...rest]);
     };
 };
-exports.PIPE = function (...fns) {
+exports.PIPE = function (fns) {
     if (fns.length === 0)
         throw new Error('pipe requires at least one argument');
     return exports.COMPOSE(...fns.reverse());
@@ -1649,10 +1554,10 @@ exports.ANYPASS = function (predicates) {
 exports.BOTH = function (f, g) {
     if (arguments.length === 1)
         return _g => exports.BOTH(f, _g);
-    return (...input) => f(...input) && g(...input);
+    return (input) => f(...input) && g(...input);
 };
 exports.COMPLEMENT = function (fn) {
-    return (...input) => !fn(...input);
+    return (input) => !fn(...input);
 };
 exports.COND = function (conditions) {
     return input => {
@@ -1670,7 +1575,7 @@ exports.COND = function (conditions) {
 exports.EITHER = function (f, g) {
     if (arguments.length === 1)
         return _g => exports.EITHER(f, _g);
-    return (...input) => f(...input) || g(...input);
+    return (input) => f(...input) || g(...input);
 };
 exports.NOT = function (a) {
     return !a;
@@ -4176,6 +4081,15 @@ exports.DELETE = function () { };
 //   MORPH,
 //   SHAPELESS
 // });
+exports.FINDDEADCODE = function (func) {
+    /*  find dead code
+        * returns nothing
+        * does not modify inputs
+        * does not modify externally referenced code
+    */
+    let ps = exports.GETPARAMS(func);
+    let argS = func.toString().includes("arguments");
+};
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
