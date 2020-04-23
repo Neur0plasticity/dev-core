@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 console.warn(`
 After completing the merger.
 Write a module that ensures
@@ -115,217 +117,41 @@ console.warn(`
   PROGRAMMING RULES
   * constant    -> ALL CAPS 
   * mutable     -> NOTALLCAPS
-`)
+`);
 console.warn("once finished with this, build a looper injector for ML purposes");
-
-
-
-!(function sanityCheck(){
-
-console.warn('asserting programming language functionality meets expectations');
-console.warn("test all operators");
-console.warn("test all builtin functions");
-console.warn("test error-handling");
-console.warn("test everything");
-
-1+1 === 2 || THROWE();
-1-1 === 0 || THROWE();
-
+!(function sanityCheck() {
+    console.warn('asserting programming language functionality meets expectations');
+    console.warn("test all operators");
+    console.warn("test all builtin functions");
+    console.warn("test error-handling");
+    console.warn("test everything");
+    1 + 1 === 2 || exports.THROWE();
+    1 - 1 === 0 || exports.THROWE();
 });
-
-
-/*1)  STRUCTURAL PRESENTATIONS
-    * TYPES
-    * INTERACES
-    * ABSTRACTIONS
-*/
-/*export*/ interface paramsLoader {
-    (paramsOBJ:paramsOBJ): {paramsOBJ} | {create,read,update,delete}
-};
-/*export*/ interface paramsOBJ {
-    [index: string]: string
-    // let pS = { // params_obj
-        // name: function as string
-        // func: `$DTypes.function($p)`,
-        // prop: `$DTypes.string($p)`,
-        // obj:  `$DTypes.object($p)`,
-        // cb:   `$Dtypes.function($p)`,
-        // prop: `$Dtypes.string($p)`,
-        // val:  `$Dtypes.undefined($p)`
-    // };
-};
-/*export*/ interface func0props {
-    validate: Function,
-    block: Function
-}
-/*export*/ interface func0loaderobj {
-    funClite: Function,
-    paramsOBJ:paramsOBJ
-}
-/*export*/ interface func0Loader {
-    (paramsOBJ:paramsOBJ): func0loaderobj
-}
-/*export*/ interface interface_pm {
-	globalConfig,
-	instance,
-	funC
-};
-/*export*/ interface interface_funCinterface {
-	name, description, author,
-	notes,
-	isStrict,isAsync,isThis,isCapsule,
-	inputType,outputType,
-	params,
-	inputBehavior,outputBehavior,
-	onError,
-	validations,block,spec
-};
-    /*export*/ interface interface_meths {
-      global,
-      instance,
-      funC
-  };
-
-type validate = Function;
-type block    = Function;
-type neW      = Function;
-type deletE   = Function;
-type extend = Function;
-type implement = Function;
-
-type debug = Boolean;   
-type public_reflects_imports = Boolean; 
-type public_async = Boolean;  
-type public_reflects_static = Boolean;
-type singleton = Boolean;
-type public_reflects_internal = Boolean;
-type public_visible = Boolean;  
-type public_methods_auth = Boolean;
-type public_mutable = Boolean;  
-type public_expires = Boolean;
-type public_gettable = Boolean;  
-type public_auth = Boolean;
-type public_settable = Boolean;  
-type public_chainable = Boolean;
-type public_input_interface = Object;   
-type sessionable_requests = Boolean;
-type public_output_interface = Object;   
-type maximum_requests_concurrently = Boolean | Number;                              
-type public_output = String;  
-type hot_reload = Boolean;     
-type name = String;
-type extendS = Array<object>;
-type implementS = Array<object>;
-type constructor = Function;
-type imports = string[];
-
-type di  = enumStrAny;  type mi  = enumStrFunc;
-type ds  = enumStrAny;  type ms  = enumStrFunc;
-type dp  = enumStrAny;  type mp  = enumStrFunc;
-type dp1 = enumStrAny;  type mp1 = enumStrFunc;
-type dp2 = enumStrAny;  type mp2 = enumStrFunc;
-
-/*export*/ interface funClite                   {   
-    validate:   validate,   block:  block    
-};
-/*export*/ interface claS {
-    (setupOBJ:setupOBJ):__claS__public
-}
-/*export*/ interface __claS__public             {};
-/*export*/ interface __claS__instance_public    {
-    new:        neW,        extend:     extend,
-    delete:     deletE,     implement:  implement
-};
-/*export*/ interface enumStrFunc    {   [index: string]: Function   };
-/*export*/ interface enumStrAny     {   [index: string]: any        };
-/*export*/ interface settings {
-    debug:                       debug,             public_reflects_imports:         public_reflects_imports,
-    public_async:                public_async,      public_reflects_static:          public_reflects_static,
-    singleton:                   singleton,         public_reflects_internal:        public_reflects_internal,
-                                        
-    public_visible:              public_visible,    public_methods_auth:             public_methods_auth,
-    public_mutable:              public_mutable,    public_expires:                  public_expires,
-    public_gettable:             public_gettable,   public_auth:                     public_auth,
-    public_settable:             public_settable,   public_chainable:                public_chainable,
-
-    public_input_interface:      public_input_interface,    sessionable_requests:            sessionable_requests,
-    public_output_interface:     public_output_interface,   maximum_requests_concurrently:   maximum_requests_concurrently,                              
-    public_output:               public_output,             hot_reload:                      hot_reload     
-};
-/*export*/ interface setupOBJ {
-    name:String, extends:Array<object>, implements:Array<object>,
-    constructor:    constructor,
-    settings:       settings,
-    imports:        imports,
-    events:         events,
-    di:di,ds:ds,dp:dp,dp1:dp1,dp2:dp2,
-    mi:mi,ms:ms,mp:mp,mp1:mp1,mp2:mp2
-};
-/*export*/ interface events         {   
-
-};
-/*export*/ interface __this__       {   [index:string]:any              };
-
-/*export*/ interface __internal__   {   di: enumStrAny, mi: enumStrFunc };
-/*export*/ interface __imports__    {   [index:string]:any              };
-/*export*/ interface __public__     {   dp: enumStrAny, mp: enumStrFunc };
-/*export*/ interface __middlemans__ {                                   };
-/*export*/ interface __static__     {   ds: enumStrAny, ms: enumStrFunc };
-/*export*/ interface __settings__   {
-                                    debug:                  Boolean,
-                                    singleton:              Boolean,
-                                    visible:         Boolean,
-                                    mutable:         Boolean,
-                                    gettable:        Boolean,
-                                    settable:        Boolean,
-                                    chainable:       Boolean,
-                                    async:           Boolean,
-                                    mirror:          Boolean,
-};
-/*export*/ interface __constructor__ {
-  ():any
-}
-/*export*/ interface __MEM__ {
-    (setupOBJ:setupOBJ):{
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __constructor__ :__constructor__
-    }
-};
-/*export*/ interface buildPublic {
-    (
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        constructorBlock:Function
-    ):Function
-};
-/*export*/ interface publicConstruction {
-    (
-        __this__        :__this__,
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        constructorBlock:Function
-    ):void
-};
-/*export*/ interface constructionComplete {
-    (
-        __settings__    :__settings__,
-        __this__        :__this__,
-        __internal__    :__internal__
-    ):void
-};
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -334,49 +160,52 @@ type dp2 = enumStrAny;  type mp2 = enumStrFunc;
     *** anything global non related to module gets bumped to SHARED MEMORY VARIABLES
     *** sandbox-js must be the first to execute
 */
-/*export*/ export const SANDBOX = (function SANDBOX() {
+/*export*/ exports.SANDBOX = (function SANDBOX() {
     let instances = 0;
-
     if (instances++ !== 0) {
-        THROWE();
+        exports.THROWE();
     }
-    const clone = Object.freeze(Object.assign(function(v:any):any {
+    const clone = Object.freeze(Object.assign(function (v) {
         let tP = typeof v;
-        if (tP === 'boolean') 	return clone[tP](v);
-        if (tP === 'number')  	return clone[tP](v);
-        if (tP === 'string')  	return clone[tP](v);
-        if (Array.isArray(tP))  return clone['array'](v);
-        if (tP === 'function')	return clone[tP](v);
-        if (tP === 'object')    return clone[tP];
-        return ['cloning error, type v is not builtin datatype '+v];
-    },{
-        boolean  : function(v:boolean) {return !!v;},
-        number   : function(v:number) {return v+0;},
-        string   : function(v:string) {return v.slice();},
-        array    : function(v:any[]) {return v.slice();},
-        object   : function(v:object) {return Object.assign({}, v);},
-        function : function(v:Function) {const temp = v; return temp;/*new Function('return ' + v.toString())();*/}
+        if (tP === 'boolean')
+            return clone[tP](v);
+        if (tP === 'number')
+            return clone[tP](v);
+        if (tP === 'string')
+            return clone[tP](v);
+        if (Array.isArray(tP))
+            return clone['array'](v);
+        if (tP === 'function')
+            return clone[tP](v);
+        if (tP === 'object')
+            return clone[tP];
+        return ['cloning error, type v is not builtin datatype ' + v];
+    }, {
+        boolean: function (v) { return !!v; },
+        number: function (v) { return v + 0; },
+        string: function (v) { return v.slice(); },
+        array: function (v) { return v.slice(); },
+        object: function (v) { return Object.assign({}, v); },
+        function: function (v) { const temp = v; return temp; /*new Function('return ' + v.toString())();*/ }
     }));
-// deep freeze require
-
-/** ALERT 
- * 
- * regex parsers scanning for requires and relocating to a central dependency management may be the best option.
- * options freezing require properly
- * 
- * option 1)  
- * 
- *  require("<directory path>/<file>.<ext>")
- *  Object.freeze(require.cache[<directory path>/<file>.<ext>].exports)
- * 
- * option 2)
- * 
- *  *** migrate all requires to one page
- *  *** declare with const
- *  *** distributed dependency injection 
-*/
-
-// freeze builtins
+    // deep freeze require
+    /** ALERT
+     *
+     * regex parsers scanning for requires and relocating to a central dependency management may be the best option.
+     * options freezing require properly
+     *
+     * option 1)
+     *
+     *  require("<directory path>/<file>.<ext>")
+     *  Object.freeze(require.cache[<directory path>/<file>.<ext>].exports)
+     *
+     * option 2)
+     *
+     *  *** migrate all requires to one page
+     *  *** declare with const
+     *  *** distributed dependency injection
+    */
+    // freeze builtins
     console.warn(` 
         !!! BUG !!!
         TopLevel Object properties are frozen,
@@ -438,1600 +267,1591 @@ type dp2 = enumStrAny;  type mp2 = enumStrFunc;
     Object.freeze(Proxy); // Object.freeze(jsB["Proxy/*"]*/)
     Object.freeze(Intl); // Object.freeze(jsB["Intl/*"]*/)
     Object.freeze(WebAssembly); // Object.freeze(jsB["WebAssembly/*"]*/)
-
     // let jsB = require('js-builtins')
-
-    const _eval = Object.freeze(clone(/*jsB"*/eval/*"]*/));
-    const _isFinite = Object.freeze(clone(/*jsB"*/isFinite/*"]*/));
-    const _isNaN = Object.freeze(clone(/*jsB"*/isNaN/*"]*/));
-    const _parseFloat = Object.freeze(clone(/*jsB"*/parseFloat/*"]*/));
-    const _parseInt = Object.freeze(clone(/*jsB"*/parseInt/*"]*/));
-    const _decodeURI = Object.freeze(clone(/*jsB"*/decodeURI/*"]*/));
-    const _decodeURIComponent = Object.freeze(clone(/*jsB"*/decodeURIComponent/*"]*/));
-    const _encodeURI = Object.freeze(clone(/*jsB"*/encodeURI/*"]*/));
-    const _encodeURIComponent = Object.freeze(clone(/*jsB"*/encodeURIComponent/*"]*/));
-    const _escape = Object.freeze(clone(/*jsB"*/escape/*"]*/));
-    const _unescape = Object.freeze(clone(/*jsB"*/unescape/*"]*/));
-    const _Object = Object.freeze(clone(/*jsB"*/Object/*"]*/));
-    const _Function = Object.freeze(clone(/*jsB"*/Function/*"]*/));
-    const _Boolean = Object.freeze(clone(/*jsB"*/Boolean/*"]*/));
-    const _Symbol = Object.freeze(clone(/*jsB"*/Symbol/*"]*/));
-    const _Error = Object.freeze(clone(/*jsB"*/Error/*"]*/));
-    const _EvalError = Object.freeze(clone(/*jsB"*/EvalError/*"]*/));
-    const _RangeError = Object.freeze(clone(/*jsB"*/RangeError/*"]*/));
-    const _ReferenceError = Object.freeze(clone(/*jsB"*/ReferenceError/*"]*/));
-    const _SyntaxError = Object.freeze(clone(/*jsB"*/SyntaxError/*"]*/));
-    const _TypeError = Object.freeze(clone(/*jsB"*/TypeError/*"]*/));
-    const _URIError = Object.freeze(clone(/*jsB"*/URIError/*"]*/));
-    const _Number = Object.freeze(clone(/*jsB"*/Number/*"]*/));
-    const _BigInt = Object.freeze(clone(/*jsB"*/BigInt/*"]*/));
-    const _Math = Object.freeze(clone(/*jsB"*/Math/*"]*/));
-    const _Date = Object.freeze(clone(/*jsB"*/Date/*"]*/));
-    const _String = Object.freeze(clone(/*jsB"*/String/*"]*/));
-    const _RegExp = Object.freeze(clone(/*jsB"*/RegExp/*"]*/));
-    const _Array = Object.freeze(clone(/*jsB"*/Array/*"]*/));
-    const _Int8Array = Object.freeze(clone(/*jsB"*/Int8Array/*"]*/));
-    const _Uint8Array = Object.freeze(clone(/*jsB"*/Uint8Array/*"]*/));
-    const _Uint8ClampedArray = Object.freeze(clone(/*jsB"*/Uint8ClampedArray/*"]*/));
-    const _Int16Array = Object.freeze(clone(/*jsB"*/Int16Array/*"]*/));
-    const _Uint16Array = Object.freeze(clone(/*jsB"*/Uint16Array/*"]*/));
-    const _Int32Array = Object.freeze(clone(/*jsB"*/Int32Array/*"]*/));
-    const _Uint32Array = Object.freeze(clone(/*jsB"*/Uint32Array/*"]*/));
-    const _Float32Array = Object.freeze(clone(/*jsB"*/Float32Array/*"]*/));
-    const _Float64Array = Object.freeze(clone(/*jsB"*/Float64Array/*/*"]*/));
-    const _BigInt64Array = Object.freeze(clone(/*jsB"*/BigInt64Array/*/*"]*/));
-    const _BigUint64Array = Object.freeze(clone(/*jsB"*/BigUint64Array/*/*"]*/));
-    const _Map = Object.freeze(clone(/*jsB"*/Map/*/*"]*/));
-    const _Set = Object.freeze(clone(/*jsB"*/Set/*/*"]*/));
-    const _WeakMap = Object.freeze(clone(/*jsB"*/WeakMap/*/*"]*/));
-    const _WeakSet = Object.freeze(clone(/*jsB"*/WeakSet/*/*"]*/));
-    const _ArrayBuffer = Object.freeze(clone(/*jsB"*/ArrayBuffer/*/*"]*/));
-    const _SharedArrayBuffer = Object.freeze(clone(/*jsB"*/SharedArrayBuffer/*/*"]*/));
-    const _Atomics = Object.freeze(clone(/*jsB"*/Atomics/*/*"]*/));
-    const _DataView = Object.freeze(clone(/*jsB"*/DataView/*/*"]*/));
-    const _JSON = Object.freeze(clone(/*jsB"*/JSON/*/*"]*/));
-    const _Promise = Object.freeze(clone(/*jsB"*/Promise/*/*"]*/));
-    const _Reflect = Object.freeze(clone(/*jsB"*/Reflect/*/*"]*/));
-    const _Proxy = Object.freeze(clone(/*jsB"*/Proxy/*/*"]*/));
-    const _Intl = Object.freeze(clone(/*jsB"*/Intl/*/*"]*/));
-    const _WebAssembly = Object.freeze(clone(/*jsB"*/WebAssembly/*/*"]*/));
-
+    const _eval = Object.freeze(clone(/*jsB"*/ eval /*"]*/));
+    const _isFinite = Object.freeze(clone(/*jsB"*/ isFinite /*"]*/));
+    const _isNaN = Object.freeze(clone(/*jsB"*/ isNaN /*"]*/));
+    const _parseFloat = Object.freeze(clone(/*jsB"*/ parseFloat /*"]*/));
+    const _parseInt = Object.freeze(clone(/*jsB"*/ parseInt /*"]*/));
+    const _decodeURI = Object.freeze(clone(/*jsB"*/ decodeURI /*"]*/));
+    const _decodeURIComponent = Object.freeze(clone(/*jsB"*/ decodeURIComponent /*"]*/));
+    const _encodeURI = Object.freeze(clone(/*jsB"*/ encodeURI /*"]*/));
+    const _encodeURIComponent = Object.freeze(clone(/*jsB"*/ encodeURIComponent /*"]*/));
+    const _escape = Object.freeze(clone(/*jsB"*/ escape /*"]*/));
+    const _unescape = Object.freeze(clone(/*jsB"*/ unescape /*"]*/));
+    const _Object = Object.freeze(clone(/*jsB"*/ Object /*"]*/));
+    const _Function = Object.freeze(clone(/*jsB"*/ Function /*"]*/));
+    const _Boolean = Object.freeze(clone(/*jsB"*/ Boolean /*"]*/));
+    const _Symbol = Object.freeze(clone(/*jsB"*/ Symbol /*"]*/));
+    const _Error = Object.freeze(clone(/*jsB"*/ Error /*"]*/));
+    const _EvalError = Object.freeze(clone(/*jsB"*/ EvalError /*"]*/));
+    const _RangeError = Object.freeze(clone(/*jsB"*/ RangeError /*"]*/));
+    const _ReferenceError = Object.freeze(clone(/*jsB"*/ ReferenceError /*"]*/));
+    const _SyntaxError = Object.freeze(clone(/*jsB"*/ SyntaxError /*"]*/));
+    const _TypeError = Object.freeze(clone(/*jsB"*/ TypeError /*"]*/));
+    const _URIError = Object.freeze(clone(/*jsB"*/ URIError /*"]*/));
+    const _Number = Object.freeze(clone(/*jsB"*/ Number /*"]*/));
+    const _BigInt = Object.freeze(clone(/*jsB"*/ BigInt /*"]*/));
+    const _Math = Object.freeze(clone(/*jsB"*/ Math /*"]*/));
+    const _Date = Object.freeze(clone(/*jsB"*/ Date /*"]*/));
+    const _String = Object.freeze(clone(/*jsB"*/ String /*"]*/));
+    const _RegExp = Object.freeze(clone(/*jsB"*/ RegExp /*"]*/));
+    const _Array = Object.freeze(clone(/*jsB"*/ Array /*"]*/));
+    const _Int8Array = Object.freeze(clone(/*jsB"*/ Int8Array /*"]*/));
+    const _Uint8Array = Object.freeze(clone(/*jsB"*/ Uint8Array /*"]*/));
+    const _Uint8ClampedArray = Object.freeze(clone(/*jsB"*/ Uint8ClampedArray /*"]*/));
+    const _Int16Array = Object.freeze(clone(/*jsB"*/ Int16Array /*"]*/));
+    const _Uint16Array = Object.freeze(clone(/*jsB"*/ Uint16Array /*"]*/));
+    const _Int32Array = Object.freeze(clone(/*jsB"*/ Int32Array /*"]*/));
+    const _Uint32Array = Object.freeze(clone(/*jsB"*/ Uint32Array /*"]*/));
+    const _Float32Array = Object.freeze(clone(/*jsB"*/ Float32Array /*"]*/));
+    const _Float64Array = Object.freeze(clone(/*jsB"*/ Float64Array /*/*"]*/));
+    const _BigInt64Array = Object.freeze(clone(/*jsB"*/ BigInt64Array /*/*"]*/));
+    const _BigUint64Array = Object.freeze(clone(/*jsB"*/ BigUint64Array /*/*"]*/));
+    const _Map = Object.freeze(clone(/*jsB"*/ Map /*/*"]*/));
+    const _Set = Object.freeze(clone(/*jsB"*/ Set /*/*"]*/));
+    const _WeakMap = Object.freeze(clone(/*jsB"*/ WeakMap /*/*"]*/));
+    const _WeakSet = Object.freeze(clone(/*jsB"*/ WeakSet /*/*"]*/));
+    const _ArrayBuffer = Object.freeze(clone(/*jsB"*/ ArrayBuffer /*/*"]*/));
+    const _SharedArrayBuffer = Object.freeze(clone(/*jsB"*/ SharedArrayBuffer /*/*"]*/));
+    const _Atomics = Object.freeze(clone(/*jsB"*/ Atomics /*/*"]*/));
+    const _DataView = Object.freeze(clone(/*jsB"*/ DataView /*/*"]*/));
+    const _JSON = Object.freeze(clone(/*jsB"*/ JSON /*/*"]*/));
+    const _Promise = Object.freeze(clone(/*jsB"*/ Promise /*/*"]*/));
+    const _Reflect = Object.freeze(clone(/*jsB"*/ Reflect /*/*"]*/));
+    const _Proxy = Object.freeze(clone(/*jsB"*/ Proxy /*/*"]*/));
+    const _Intl = Object.freeze(clone(/*jsB"*/ Intl /*/*"]*/));
+    const _WebAssembly = Object.freeze(clone(/*jsB"*/ WebAssembly /*/*"]*/));
     // clone = {}; // delete jsB;
     // jsb = {};   // delete clone;
     // return 
-
-
     return Object.freeze({
-    /* const */ _eval , // Object.freeze(clone(/*jsB"*/eval/*"]*/));
-    /* const */ _isFinite , // Object.freeze(clone(/*jsB"*/isFinite/*"]*/));
-    /* const */ _isNaN , // Object.freeze(clone(/*jsB"*/isNaN/*"]*/));
-    /* const */ _parseFloat , // Object.freeze(clone(/*jsB"*/parseFloat/*"]*/));
-    /* const */ _parseInt , // Object.freeze(clone(/*jsB"*/parseInt/*"]*/));
-    /* const */ _decodeURI , // Object.freeze(clone(/*jsB"*/decodeURI/*"]*/));
-    /* const */ _decodeURIComponent , // Object.freeze(clone(/*jsB"*/decodeURIComponent/*"]*/));
-    /* const */ _encodeURI , // Object.freeze(clone(/*jsB"*/encodeURI/*"]*/));
-    /* const */ _encodeURIComponent , // Object.freeze(clone(/*jsB"*/encodeURIComponent/*"]*/));
-    /* const */ _escape , // Object.freeze(clone(/*jsB"*/escape/*"]*/));
-    /* const */ _unescape , // Object.freeze(clone(/*jsB"*/unescape/*"]*/));
-    /* const */ _Object , // Object.freeze(clone(/*jsB"*/Object/*"]*/));
-    /* const */ _Function , // Object.freeze(clone(/*jsB"*/Function/*"]*/));
-    /* const */ _Boolean , // Object.freeze(clone(/*jsB"*/Boolean/*"]*/));
-    /* const */ _Symbol , // Object.freeze(clone(/*jsB"*/Symbol/*"]*/));
-    /* const */ _Error , // Object.freeze(clone(/*jsB"*/Error/*"]*/));
-    /* const */ _EvalError , // Object.freeze(clone(/*jsB"*/EvalError/*"]*/));
-    /* const */ _RangeError , // Object.freeze(clone(/*jsB"*/RangeError/*"]*/));
-    /* const */ _ReferenceError , // Object.freeze(clone(/*jsB"*/ReferenceError/*"]*/));
-    /* const */ _SyntaxError , // Object.freeze(clone(/*jsB"*/SyntaxError/*"]*/));
-    /* const */ _TypeError , // Object.freeze(clone(/*jsB"*/TypeError/*"]*/));
-    /* const */ _URIError , // Object.freeze(clone(/*jsB"*/URIError/*"]*/));
-    /* const */ _Number , // Object.freeze(clone(/*jsB"*/Number/*"]*/));
-    /* const */ _BigInt , // Object.freeze(clone(/*jsB"*/BigInt/*"]*/));
-    /* const */ _Math , // Object.freeze(clone(/*jsB"*/Math/*"]*/));
-    /* const */ _Date , // Object.freeze(clone(/*jsB"*/Date/*"]*/));
-    /* const */ _String , // Object.freeze(clone(/*jsB"*/String/*"]*/));
-    /* const */ _RegExp , // Object.freeze(clone(/*jsB"*/RegExp/*"]*/));
-    /* const */ _Array , // Object.freeze(clone(/*jsB"*/Array/*"]*/));
-    /* const */ _Int8Array , // Object.freeze(clone(/*jsB"*/Int8Array/*"]*/));
-    /* const */ _Uint8Array , // Object.freeze(clone(/*jsB"*/Uint8Array/*"]*/));
-    /* const */ _Uint8ClampedArray , // Object.freeze(clone(/*jsB"*/Uint8ClampedArray/*"]*/));
-    /* const */ _Int16Array , // Object.freeze(clone(/*jsB"*/Int16Array/*"]*/));
-    /* const */ _Uint16Array , // Object.freeze(clone(/*jsB"*/Uint16Array/*"]*/));
-    /* const */ _Int32Array , // Object.freeze(clone(/*jsB"*/Int32Array/*"]*/));
-    /* const */ _Uint32Array , // Object.freeze(clone(/*jsB"*/Uint32Array/*"]*/));
-    /* const */ _Float32Array , // Object.freeze(clone(/*jsB"*/Float32Array/*"]*/));
-    /* const */ _Float64Array , // Object.freeze(clone(/*jsB"*/Float64Array/*"]*/));
-    /* const */ _BigInt64Array , // Object.freeze(clone(/*jsB"*/BigInt64Array/*"]*/));
-    /* const */ _BigUint64Array , // Object.freeze(clone(/*jsB"*/BigUint64Array/*"]*/));
-    /* const */ _Map , // Object.freeze(clone(/*jsB"*/Map/*"]*/));
-    /* const */ _Set , // Object.freeze(clone(/*jsB"*/Set/*"]*/));
-    /* const */ _WeakMap , // Object.freeze(clone(/*jsB"*/WeakMap/*"]*/));
-    /* const */ _WeakSet , // Object.freeze(clone(/*jsB"*/WeakSet/*"]*/));
-    /* const */ _ArrayBuffer , // Object.freeze(clone(/*jsB"*/ArrayBuffer/*"]*/));
-    /* const */ _SharedArrayBuffer , // Object.freeze(clone(/*jsB"*/SharedArrayBuffer/*"]*/));
-    /* const */ _Atomics , // Object.freeze(clone(/*jsB"*/Atomics/*"]*/));
-    /* const */ _DataView , // Object.freeze(clone(/*jsB"*/DataView/*"]*/));
-    /* const */ _JSON , // Object.freeze(clone(/*jsB"*/JSON/*"]*/));
-    /* const */ _Promise , // Object.freeze(clone(/*jsB"*/Promise/*"]*/));
-    /* const */ _Reflect , // Object.freeze(clone(/*jsB"*/Reflect/*"]*/));
-    /* const */ _Proxy , // Object.freeze(clone(/*jsB"*/Proxy/*"]*/));
-    /* const */ _Intl , // Object.freeze(clone(/*jsB"*/Intl/*"]*/));
-    /* const */ _WebAssembly , // Object.freeze(clone(/*jsB"*/WebAssembly/*"]*/));
+        /* const */ _eval,
+        /* const */ _isFinite,
+        /* const */ _isNaN,
+        /* const */ _parseFloat,
+        /* const */ _parseInt,
+        /* const */ _decodeURI,
+        /* const */ _decodeURIComponent,
+        /* const */ _encodeURI,
+        /* const */ _encodeURIComponent,
+        /* const */ _escape,
+        /* const */ _unescape,
+        /* const */ _Object,
+        /* const */ _Function,
+        /* const */ _Boolean,
+        /* const */ _Symbol,
+        /* const */ _Error,
+        /* const */ _EvalError,
+        /* const */ _RangeError,
+        /* const */ _ReferenceError,
+        /* const */ _SyntaxError,
+        /* const */ _TypeError,
+        /* const */ _URIError,
+        /* const */ _Number,
+        /* const */ _BigInt,
+        /* const */ _Math,
+        /* const */ _Date,
+        /* const */ _String,
+        /* const */ _RegExp,
+        /* const */ _Array,
+        /* const */ _Int8Array,
+        /* const */ _Uint8Array,
+        /* const */ _Uint8ClampedArray,
+        /* const */ _Int16Array,
+        /* const */ _Uint16Array,
+        /* const */ _Int32Array,
+        /* const */ _Uint32Array,
+        /* const */ _Float32Array,
+        /* const */ _Float64Array,
+        /* const */ _BigInt64Array,
+        /* const */ _BigUint64Array,
+        /* const */ _Map,
+        /* const */ _Set,
+        /* const */ _WeakMap,
+        /* const */ _WeakSet,
+        /* const */ _ArrayBuffer,
+        /* const */ _SharedArrayBuffer,
+        /* const */ _Atomics,
+        /* const */ _DataView,
+        /* const */ _JSON,
+        /* const */ _Promise,
+        /* const */ _Reflect,
+        /* const */ _Proxy,
+        /* const */ _Intl,
+        /* const */ _WebAssembly,
     });
 })();
-
-export const S = SANDBOX;
+exports.S = exports.SANDBOX;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // lambdas                // returns true or false or value. no validations. barebones
 // GROUPED LAMBDAS        // OOP STYLE
 // FUNC WRAPPED LAMBDAS   // SPECIAL INPUT / OUTPUT BEHAVIOR
-
-
 /*// LAMBDAS //
   * returns a value
   * no validations
   * does not handle errors
   * does not use callbacks as an information return
 */
-export const ISBOOLEAN     =   v => typeof v === "boolean";
-export const ISNOTBOOLEAN  =   v => !ISBOOLEAN(v);
-export const ISNUMBER      =   v => typeof v === "number";
-export const ISNOTNUMBER   =   v => !ISNUMBER(v);
-export const ISSTRING      =   v => typeof v === "string";
-export const ISNOTSTRING   =   v => !ISNOTSTRING(v);
-export const ISJSON        =   v => typeof v === "object" && !S._Array.isArray(v);
-export const ISNOTJSON     =   v => !ISNOTJSON(v);
-export const ISOBJECT      =   v => typeof v === "object";
-export const ISNOTOBJECT   =   v => !ISNOTOBJECT(v);
-export const ISARRAY       =   v => S._Array.isArray(v);
-export const ISNOTARRAY    =   v => !ISARRAY(v);
-export const ISSYMBOL      =   v => typeof v === "symbol";
-export const ISNOTSYMBOL   =   v => !ISSYMBOL(v);
-export const ISFUNCTION    =   v => typeof v === "function";
-export const ISNOTFUNCTION =   v => !ISFUNCTION(v);
-export const ISTHIS        =   v => v.toString().includes("function ");
-export const ISNOTTHIS     =   v => !ISTHIS(v);
-export const ISLAMBDA      =   v => ISFUNCTION(v) && v.toString().includes("=>");
-export const ISNOTLAMBDA   =   v => !ISLAMBDA(v);
-export const ISANONYMOUS   =   v => ISFUNCTION(v) && !ISLAMBDA(v) && v["name"] === undefined;
-export const ISNOTANONYMOUS=   v => !ISANONYMOUS(v);
-export const ISFUNC        =   v => ISFUNCTION(v) && !ISLAMBDA(v) && v.hasOwnProperty("name");
-export const ISNOTFUNC     =   v => !ISFUNC(v);
-export const ISCLASS       =   v => {throw new Error("UNFINISHED")};
-export const ISNOTCLASS    =   v => !ISCLASS(v);
-export const ISNEWABLE     =   v => {throw new Error("UNFINISHED")};
-export const ISUNDEFINED   =   v => v === undefined;
-export const ISNOTUNDEFINED=   v => !ISUNDEFINED(v);
-export const ISNULL        =   v => v === "null";
-export const ISNOTNULL     =   v => !ISNULL(v);
-
-
-
-
-export const ISSAFE        =   v => S._Number.isSafeInteger(v);
-export const ISNOTSAFE     =   v => !ISSAFE(v);
-export const ISTRUE        =   v => v === true;
-export const ISNOTTRUE     =   V => !ISTRUE(v);
-export const ISFALSE       =   v => v === false;
-export const ISNOTFALSE    =   v => !ISSAFE(v);
-export const ISINFINITY    =   v => v === Infinity;
-export const ISNOTINFINITY =   v => !ISINFINITY(v);
-export const ISFINITE      =   v => S._isFinite(v);
-export const ISNOTFINITE   =   v => !ISFINITE(v);
-export const ISMAXVALUE    =   v => v === S._Number.MAX_VALUE;
-export const ISNOTMAXVALUE =   v => !ISMAXVALUE(v);
-export const ISMINVALUE    =   v => v === S._Number.MAX_VALUE;
-export const ISNOTMINVALUE =   v => !ISMINVALUE(v);
-export const ISMAXSAFEVALUE=   v => v === S._Number.MAX_SAFE_INTEGER;
-export const ISNOTMAXSAFEVALUE=v => !ISMAXSAFEVALUE(v);
-export const ISMINSAFEVALUE=   v => v === S._Number.MIN_SAFE_INTEGER;
-export const ISNOTMINSAFEVALUE=v => !ISMINSAFEVALUE(v);
-export const ISNAN         =   v => S._isNaN(v);
-export const ISNOTNAN      =   v => !ISNAN(v);
-export const ISPOSITIVE    =   v => 0 < v;
-export const ISNOTPOSITIVE =   v => !ISPOSITIVE(v);
-export const ISNEGATIVE    =   v => 0 > v;
-export const ISNOTNEGATIVE =   v => !ISNEGATIVE(v);
-export const ISZERO        =   v => v === 0;
-export const ISNOTZERO     =   v => !ISZERO(v);
-export const ISFLOAT       =   v => S._String(v).includes(".");
-export const ISNOTFLOAT    =   v => !ISFLOAT(v);
-export const ISINTEGER     =   v => (V << 0) === V;
-export const ISNOTINTEGER  =   v => !ISINTEGER(v);
-export const ISALPHA       =   v => [..._lowerCase,..._upperCase].includes(v);
-export const ISNOTALPHA    =   v => !ALPHA(v);
-export const ISLOWERCASE   =   v => _lowerCase.includes(v);
-export const ISNOTLOWERCASE=   v => !ISLOWERCASE(v);
-export const ISUPPERCASE   =   v => _upperCase.includes(v);
-export const ISNOTUPPERCASE=   v => !ISUPPERCASE(v);
-export const ISSYMBOL      =   v => _symbols.includes(v);
-export const ISNOTSYMBOL   =   v => !ISSYMBOL(v);
-export const ISEMPTY       =   function(v){
-                            return {
-                                "str":v=>v.length===0,"obj":v=>S._Object.keys(v).length===0,
-                                "arr":v=>v.length===0,"fnc":v => v.toString()
-                            }[(S._Array.isArray(v) && "arr") || (typeof v)](v);
+exports.ISBOOLEAN = v => typeof v === "boolean";
+exports.ISNOTBOOLEAN = v => !exports.ISBOOLEAN(v);
+exports.ISNUMBER = v => typeof v === "number";
+exports.ISNOTNUMBER = v => !exports.ISNUMBER(v);
+exports.ISSTRING = v => typeof v === "string";
+exports.ISNOTSTRING = v => !exports.ISNOTSTRING(v);
+exports.ISJSON = v => typeof v === "object" && !exports.S._Array.isArray(v);
+exports.ISNOTJSON = v => !exports.ISNOTJSON(v);
+exports.ISOBJECT = v => typeof v === "object";
+exports.ISNOTOBJECT = v => !exports.ISNOTOBJECT(v);
+exports.ISARRAY = v => exports.S._Array.isArray(v);
+exports.ISNOTARRAY = v => !exports.ISARRAY(v);
+exports.ISSYMBOL = v => typeof v === "symbol";
+exports.ISNOTSYMBOL = v => !exports.ISSYMBOL(v);
+exports.ISFUNCTION = v => typeof v === "function";
+exports.ISNOTFUNCTION = v => !exports.ISFUNCTION(v);
+exports.ISTHIS = v => v.toString().includes("function ");
+exports.ISNOTTHIS = v => !exports.ISTHIS(v);
+exports.ISLAMBDA = v => exports.ISFUNCTION(v) && v.toString().includes("=>");
+exports.ISNOTLAMBDA = v => !exports.ISLAMBDA(v);
+exports.ISANONYMOUS = v => exports.ISFUNCTION(v) && !exports.ISLAMBDA(v) && v["name"] === undefined;
+exports.ISNOTANONYMOUS = v => !exports.ISANONYMOUS(v);
+exports.ISFUNC = v => exports.ISFUNCTION(v) && !exports.ISLAMBDA(v) && v.hasOwnProperty("name");
+exports.ISNOTFUNC = v => !exports.ISFUNC(v);
+exports.ISCLASS = v => { throw new Error("UNFINISHED"); };
+exports.ISNOTCLASS = v => !exports.ISCLASS(v);
+exports.ISNEWABLE = v => { throw new Error("UNFINISHED"); };
+exports.ISUNDEFINED = v => v === undefined;
+exports.ISNOTUNDEFINED = v => !exports.ISUNDEFINED(v);
+exports.ISNULL = v => v === "null";
+exports.ISNOTNULL = v => !exports.ISNULL(v);
+exports.ISSAFE = v => exports.S._Number.isSafeInteger(v);
+exports.ISNOTSAFE = v => !exports.ISSAFE(v);
+exports.ISTRUE = v => v === true;
+exports.ISNOTTRUE = V => !exports.ISTRUE(v);
+exports.ISFALSE = v => v === false;
+exports.ISNOTFALSE = v => !exports.ISSAFE(v);
+exports.ISINFINITY = v => v === Infinity;
+exports.ISNOTINFINITY = v => !exports.ISINFINITY(v);
+exports.ISFINITE = v => exports.S._isFinite(v);
+exports.ISNOTFINITE = v => !exports.ISFINITE(v);
+exports.ISMAXVALUE = v => v === exports.S._Number.MAX_VALUE;
+exports.ISNOTMAXVALUE = v => !exports.ISMAXVALUE(v);
+exports.ISMINVALUE = v => v === exports.S._Number.MAX_VALUE;
+exports.ISNOTMINVALUE = v => !exports.ISMINVALUE(v);
+exports.ISMAXSAFEVALUE = v => v === exports.S._Number.MAX_SAFE_INTEGER;
+exports.ISNOTMAXSAFEVALUE = v => !exports.ISMAXSAFEVALUE(v);
+exports.ISMINSAFEVALUE = v => v === exports.S._Number.MIN_SAFE_INTEGER;
+exports.ISNOTMINSAFEVALUE = v => !exports.ISMINSAFEVALUE(v);
+exports.ISNAN = v => exports.S._isNaN(v);
+exports.ISNOTNAN = v => !exports.ISNAN(v);
+exports.ISPOSITIVE = v => 0 < v;
+exports.ISNOTPOSITIVE = v => !exports.ISPOSITIVE(v);
+exports.ISNEGATIVE = v => 0 > v;
+exports.ISNOTNEGATIVE = v => !exports.ISNEGATIVE(v);
+exports.ISZERO = v => v === 0;
+exports.ISNOTZERO = v => !exports.ISZERO(v);
+exports.ISFLOAT = v => exports.S._String(v).includes(".");
+exports.ISNOTFLOAT = v => !exports.ISFLOAT(v);
+exports.ISINTEGER = v => (V << 0) === V;
+exports.ISNOTINTEGER = v => !exports.ISINTEGER(v);
+exports.ISALPHA = v => [..._lowerCase, ..._upperCase].includes(v);
+exports.ISNOTALPHA = v => !exports.ALPHA(v);
+exports.ISLOWERCASE = v => _lowerCase.includes(v);
+exports.ISNOTLOWERCASE = v => !exports.ISLOWERCASE(v);
+exports.ISUPPERCASE = v => _upperCase.includes(v);
+exports.ISNOTUPPERCASE = v => !exports.ISUPPERCASE(v);
+exports.ISSYMBOL = v => _symbols.includes(v);
+exports.ISNOTSYMBOL = v => !exports.ISSYMBOL(v);
+exports.ISEMPTY = function (v) {
+    return {
+        "str": v => v.length === 0, "obj": v => exports.S._Object.keys(v).length === 0,
+        "arr": v => v.length === 0, "fnc": v => v.toString()
+    }[(exports.S._Array.isArray(v) && "arr") || (typeof v)](v);
 };
-export const ISNOTEMPTY    = (v)=>{
-                            return {
-                                "str":v=>v.length!==0,"obj":v=>S._Object.keys(v).length !== 0,
-                                "arr":v=>v.length!==0,"fnc":v=>v.toString()
-                            }[(S._Array.isArray(v) && "arr") || (typeof v)](v);
+exports.ISNOTEMPTY = (v) => {
+    return {
+        "str": v => v.length !== 0, "obj": v => exports.S._Object.keys(v).length !== 0,
+        "arr": v => v.length !== 0, "fnc": v => v.toString()
+    }[(exports.S._Array.isArray(v) && "arr") || (typeof v)](v);
 };
-
-export const GETNAME       = function(func){};
-export const GETPARAMS     = function(func){
+exports.GETNAME = function (func) { };
+exports.GETPARAMS = function (func) {
     let start = 0;
     let end = 0;
-
     if (func.toString().includes("function")) {
         start = func.toString().indexOf("(");
-        end   = func.toString().indexOf(")");
-    } else if (func.toString().includes("=>")) {
-      return [];
+        end = func.toString().indexOf(")");
     }
-    return func.toString().slice(start+1,end).split(",") || [];
+    else if (func.toString().includes("=>")) {
+        return [];
+    }
+    return func.toString().slice(start + 1, end).split(",") || [];
 };
-export const GETCOMMENTS   = function(func){};
-export const GETINPUTTYPE  = function(func){};
-export const GETOUTPUTTYPE = function(func){};
-export const GETEXETYPE    = function(func){};
-export const GETSTATEMENTS = function(func){};
-export const GETINNERMEM   = function(func){};
-
+exports.GETCOMMENTS = function (func) { };
+exports.GETINPUTTYPE = function (func) { };
+exports.GETOUTPUTTYPE = function (func) { };
+exports.GETEXETYPE = function (func) { };
+exports.GETSTATEMENTS = function (func) { };
+exports.GETINNERMEM = function (func) { };
 // export const ALLSAMCASE         = e => {let _ = e.slice().shift(); e = (ISLOWERCASE(_) && isLowerCase) || (ISUPPUERCASE(_) && ISUPPERCASE);  for (let k in e) { true === _(e) || THROWE(); }};
 // export const ALLTWOCASE         = e => {let a,b,c;   for (let k in e){ (ISLOWERCASE(_) && (a=true)) || (ISUPPERCASE(_) && (b=true)) || (c=true); }; return (a&&b)^c};
 // export const ALLMULCASE         = e => {let a = false, b = false, c = false;for (let k in e) { (ISLOWERCASE(k)&&a=true) || (ISUPPERCASE(k)&&b=true) || (ISSYMBOL(k)&&c=true)};return a&&b&&c;};
-
-
-export const ASSERTINDEPENDENCE = f => EVERY(f.toString(),ALLSAMCASE)&&EVERY(f.toString(),ALLALPHA);
-export const ASSERTCOMPOUND     = f => EVERY(f.toString(),ALLTWOCASE)&&EVERY(f.toString(),ALLALPHA);
-export const assertComplex      = f => EVERY(f.toString(),ALLMULCASE)&&EVERY(f.toString(),ALLALPHA);
-
-export const NOTEMPTY               = v => (ISARRAY(v)            && THROWE("must not be empty",(v.length > 0))
-                                ||  (typeof v === "object" && THROWE("must not be empty",(S._Object.keys(v).length > 0)))
-                                ||  (typeof v === "string" && THROWE("must not be empty",(v.length > 0)))
-                                ||  (false)
-);
-export const HASPROPERTY         = (obj,prop) => THROWE("must have prop "+prop, obj.hasOwnProperty(prop));
-
-
-export const ISEVEN = function(){};
-export const ISODD = function(){};
-
-export const PERIOD = (e: string) => {
+exports.ASSERTINDEPENDENCE = f => exports.EVERY(f.toString(), ALLSAMCASE) && exports.EVERY(f.toString(), ALLALPHA);
+exports.ASSERTCOMPOUND = f => exports.EVERY(f.toString(), ALLTWOCASE) && exports.EVERY(f.toString(), ALLALPHA);
+exports.assertComplex = f => exports.EVERY(f.toString(), ALLMULCASE) && exports.EVERY(f.toString(), ALLALPHA);
+exports.NOTEMPTY = v => (exports.ISARRAY(v) && exports.THROWE("must not be empty", (v.length > 0))
+    || (typeof v === "object" && exports.THROWE("must not be empty", (exports.S._Object.keys(v).length > 0)))
+    || (typeof v === "string" && exports.THROWE("must not be empty", (v.length > 0)))
+    || (false));
+exports.HASPROPERTY = (obj, prop) => exports.THROWE("must have prop " + prop, obj.hasOwnProperty(prop));
+exports.ISEVEN = function () { };
+exports.ISODD = function () { };
+exports.PERIOD = (e) => {
     if (e[0] === ".") {
-        if (e[1] === ".")           e = "../" + e;
-        else if (e[1] === "/")      e.shift(), e.shift(), e = "../" + e;
-        else                        {THROWE();}
+        if (e[1] === ".")
+            e = "../" + e;
+        else if (e[1] === "/")
+            e.shift(), e.shift(), e = "../" + e;
+        else {
+            exports.THROWE();
+        }
     }
     return e;
 };
-
 // export const loopObject             = (obj,cb) => { for (let k in obj) cb(obj,k); };
-
-
-export const enforce_object_datas   = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
-export const enforce_object_methods = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isFunction);};
-export const enforce_object_propsss = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
-export const enforce_object_nulls   = v => {isObject(v);isNull(v);};
-export const enforce_settings       = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(enforceSetting);};
-export const enforce_setting        = v => {};
-
-
-export const EVERY = function(v,cb){
-  if      (typeof v === "string")   {for (let k in v) {if (!cb(v[k])) return false}; return true;}
-  else if (S._Array.isArray(v))     {return v.every(cb);}
-  else if (typeof v === "object")   {for (let k in v) {if (!cb(v[k])) return false} return true;}
-  else if (typeof v === "symbol")   {throw new Error("UNFINISHED");}
-  else                              {throw new Error();}
+exports.enforce_object_datas = v => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isNotFunction); };
+exports.enforce_object_methods = v => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isFunction); };
+exports.enforce_object_propsss = v => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isNotFunction); };
+exports.enforce_object_nulls = v => { isObject(v); isNull(v); };
+exports.enforce_settings = v => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(enforceSetting); };
+exports.enforce_setting = v => { };
+exports.EVERY = function (v, cb) {
+    if (typeof v === "string") {
+        for (let k in v) {
+            if (!cb(v[k]))
+                return false;
+        }
+        ;
+        return true;
+    }
+    else if (exports.S._Array.isArray(v)) {
+        return v.every(cb);
+    }
+    else if (typeof v === "object") {
+        for (let k in v) {
+            if (!cb(v[k]))
+                return false;
+        }
+        return true;
+    }
+    else if (typeof v === "symbol") {
+        throw new Error("UNFINISHED");
+    }
+    else {
+        throw new Error();
+    }
 };
-export const ALL = EVERY;
-
-
-export const NUMSTR = v => EVERY(v,function(a){return NUMBERS.includes(a)});
-export const NNUMSTR =v => EVERY(v,function(a){return !NUMBERS.includes(a)});
-export const STRSTR = v => EVERY(v,ISSTRING);
-export const NSTRSTR = v => EVERY(v,ISNOTSTRING);
-export const BOLARR = v => EVERY(v,ISBOOLEAN);
-export const NBOLARR = v => EVERY(v,ISNOTBOOLEAN);
-export const NUMARR = v => EVERY(v,ISNUMBER);
-export const NNUMARR = v => EVERY(v,ISNOTNUMBER);
-export const STRARR = v => EVERY(v,ISSTRING);
-export const NSTRARR = v => EVERY(v,ISNOTSTRING);
-export const ARRARR = v => EVERY(v,ISARRAY);
-export const NARRARR = v => EVERY(v,ISNOTARRAY);
-export const OBJARR = v => EVERY(v,ISOBJECT); 
-export const NOBJARR = v => EVERY(v,ISNOTOBJECT); 
-export const JSNARR = v => EVERY(v,ISJSON);
-export const NJSNARR = v => EVERY(v,ISNOTJSON);
-export const FNCARR = v => EVERY(v,ISFUNCTION); 
-export const NFNCARR = v => EVERY(v,ISNOTFUNCTION); 
-export const OBJLMD = v => EVERY(v,ISLAMBDA);
-export const NOBJLMD = v => EVERY(v,ISNOTLAMBDA);
-export const ANOARR = v => EVERY(v,ISANONYMOUS);
-export const NANOARR = v => EVERY(v,ISNOTANONYMOUS);
-export const UNDARR = v => EVERY(v,ISUNDEFINED); 
-export const NUNDARR = v => EVERY(v,ISNOTUNDEFINED); 
-export const NULARR = v => EVERY(v,ISNULL);
-export const NNULARR = v => EVERY(v,ISNOTNULL);
-
-export const BOLJSN = v => EVERY(v,ISBOOLEAN);
-export const NBOLJSN = v => EVERY(v,ISNOTBOOLEAN);
-export const NUMJSN = v => EVERY(v,ISNUMBER);
-export const NNUMJSN = v => EVERY(v,ISNOTNUMBER);
-export const STRJSN = v => EVERY(v,ISSTRING);
-export const NSTRJSN = v => EVERY(v,ISNOTSTRING);
-export const JSNJSN = v => EVERY(v,ISJSON);
-export const NJSNJSN = v => EVERY(v,ISNOTJSON);
-export const OBJJSN = v => EVERY(v,ISOBJECT); 
-export const NOBJJSN = v => EVERY(v,ISNOTOBJECT); 
-export const FNCJSN = v => EVERY(v,ISFUNCTION); 
-export const NFNCJSN = v => EVERY(v,ISNOTFUNCTION); 
-export const OBJJSN = v => EVERY(v,ISLAMBDA);
-export const OBJJSN = v => EVERY(v,ISNOTLAMBDA);
-export const ANOJSN = v => EVERY(v,ISANONYMOUS);
-export const NANOJSN = v => EVERY(v,ISNOTANONYMOUS);
-export const UNDJSN = v => EVERY(v,ISUNDEFINED); 
-export const NUNDJSN = v => EVERY(v,ISNOTUNDEFINED); 
-export const NULJSN = v => EVERY(v,ISNULL);  
-export const NNULJSN = v => EVERY(v,ISNOTNULL);  
-
-
-
-
-
-
+exports.ALL = exports.EVERY;
+exports.NUMSTR = v => exports.EVERY(v, function (a) { return exports.NUMBERS.includes(a); });
+exports.NNUMSTR = v => exports.EVERY(v, function (a) { return !exports.NUMBERS.includes(a); });
+exports.STRSTR = v => exports.EVERY(v, exports.ISSTRING);
+exports.NSTRSTR = v => exports.EVERY(v, exports.ISNOTSTRING);
+exports.BOLARR = v => exports.EVERY(v, exports.ISBOOLEAN);
+exports.NBOLARR = v => exports.EVERY(v, exports.ISNOTBOOLEAN);
+exports.NUMARR = v => exports.EVERY(v, exports.ISNUMBER);
+exports.NNUMARR = v => exports.EVERY(v, exports.ISNOTNUMBER);
+exports.STRARR = v => exports.EVERY(v, exports.ISSTRING);
+exports.NSTRARR = v => exports.EVERY(v, exports.ISNOTSTRING);
+exports.ARRARR = v => exports.EVERY(v, exports.ISARRAY);
+exports.NARRARR = v => exports.EVERY(v, exports.ISNOTARRAY);
+exports.OBJARR = v => exports.EVERY(v, exports.ISOBJECT);
+exports.NOBJARR = v => exports.EVERY(v, exports.ISNOTOBJECT);
+exports.JSNARR = v => exports.EVERY(v, exports.ISJSON);
+exports.NJSNARR = v => exports.EVERY(v, exports.ISNOTJSON);
+exports.FNCARR = v => exports.EVERY(v, exports.ISFUNCTION);
+exports.NFNCARR = v => exports.EVERY(v, exports.ISNOTFUNCTION);
+exports.OBJLMD = v => exports.EVERY(v, exports.ISLAMBDA);
+exports.NOBJLMD = v => exports.EVERY(v, exports.ISNOTLAMBDA);
+exports.ANOARR = v => exports.EVERY(v, exports.ISANONYMOUS);
+exports.NANOARR = v => exports.EVERY(v, exports.ISNOTANONYMOUS);
+exports.UNDARR = v => exports.EVERY(v, exports.ISUNDEFINED);
+exports.NUNDARR = v => exports.EVERY(v, exports.ISNOTUNDEFINED);
+exports.NULARR = v => exports.EVERY(v, exports.ISNULL);
+exports.NNULARR = v => exports.EVERY(v, exports.ISNOTNULL);
+exports.BOLJSN = v => exports.EVERY(v, exports.ISBOOLEAN);
+exports.NBOLJSN = v => exports.EVERY(v, exports.ISNOTBOOLEAN);
+exports.NUMJSN = v => exports.EVERY(v, exports.ISNUMBER);
+exports.NNUMJSN = v => exports.EVERY(v, exports.ISNOTNUMBER);
+exports.STRJSN = v => exports.EVERY(v, exports.ISSTRING);
+exports.NSTRJSN = v => exports.EVERY(v, exports.ISNOTSTRING);
+exports.JSNJSN = v => exports.EVERY(v, exports.ISJSON);
+exports.NJSNJSN = v => exports.EVERY(v, exports.ISNOTJSON);
+exports.OBJJSN = v => exports.EVERY(v, exports.ISOBJECT);
+exports.NOBJJSN = v => exports.EVERY(v, exports.ISNOTOBJECT);
+exports.FNCJSN = v => exports.EVERY(v, exports.ISFUNCTION);
+exports.NFNCJSN = v => exports.EVERY(v, exports.ISNOTFUNCTION);
+exports.OBJJSN = v => exports.EVERY(v, exports.ISLAMBDA);
+exports.OBJJSN = v => exports.EVERY(v, exports.ISNOTLAMBDA);
+exports.ANOJSN = v => exports.EVERY(v, exports.ISANONYMOUS);
+exports.NANOJSN = v => exports.EVERY(v, exports.ISNOTANONYMOUS);
+exports.UNDJSN = v => exports.EVERY(v, exports.ISUNDEFINED);
+exports.NUNDJSN = v => exports.EVERY(v, exports.ISNOTUNDEFINED);
+exports.NULJSN = v => exports.EVERY(v, exports.ISNULL);
+exports.NNULJSN = v => exports.EVERY(v, exports.ISNOTNULL);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const __FINDHIGHESTARITY = function(spec, max = 0) {
+exports.__FINDHIGHESTARITY = function (spec, max = 0) {
     for (const key in spec) {
-      if (HASPROPERTY(spec,key) === false || key === 'constructor') continue;
-  
-      if (typeof spec[key] === 'object') {
-        max = S._Math.max(max, __FINDHIGHESTARITY(spec[key]));
-      }
-  
-      if (typeof spec[key] === 'function') {
-        max = S._Math.max(max, spec[key].length);
-      }
+        if (exports.HASPROPERTY(spec, key) === false || key === 'constructor')
+            continue;
+        if (typeof spec[key] === 'object') {
+            max = exports.S._Math.max(max, exports.__FINDHIGHESTARITY(spec[key]));
+        }
+        if (typeof spec[key] === 'function') {
+            max = exports.S._Math.max(max, spec[key].length);
+        }
     }
     return max;
 };
-
-export const __APPLYSPECWITHARITY = function(spec, arity, cache) {
+exports.__APPLYSPECWITHARITY = function (spec, arity, cache) {
     const remaining = arity - cache.length;
-    if (remaining === 1) return x => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x));
-    if (remaining === 2) return (x, y) => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x, y));
-    if (remaining === 3) return (x, y, z) => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x, y, z));
-    if (remaining === 4) return (x, y, z, a) => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x, y, z, a));
-    if (remaining > 4) return (...args) => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, ...args));
-  
-    if (S._Array.isArray(spec)) {
-      const ret = [];
-      let i = 0;
-      const l = LEN(spec);
-  
-      for (; i < l; i++) {
-        if (typeof spec[i] === 'object' || S._Array.isArray(spec[i])) {
-          ret[i] = __APPLYSPECWITHARITY(spec[i], arity, cache);
+    if (remaining === 1)
+        return x => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, x));
+    if (remaining === 2)
+        return (x, y) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, x, y));
+    if (remaining === 3)
+        return (x, y, z) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, x, y, z));
+    if (remaining === 4)
+        return (x, y, z, a) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, x, y, z, a));
+    if (remaining > 4)
+        return (...args) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, ...args));
+    if (exports.S._Array.isArray(spec)) {
+        const ret = [];
+        let i = 0;
+        const l = LEN(spec);
+        for (; i < l; i++) {
+            if (typeof spec[i] === 'object' || exports.S._Array.isArray(spec[i])) {
+                ret[i] = exports.__APPLYSPECWITHARITY(spec[i], arity, cache);
+            }
+            if (typeof spec[i] === 'function') {
+                ret[i] = spec[i](...cache);
+            }
         }
-  
-        if (typeof spec[i] === 'function') {
-          ret[i] = spec[i](...cache);
-        }
-      }
-      return ret;
-  }
+        return ret;
+    }
 };
-export const __FILTERUNDEFINED = function() {
+exports.__FILTERUNDEFINED = function () {
     const defined = [];
     let i = 0;
     const l = arguments.length;
-  
     while (i < l) {
-      if (typeof arguments[i] === 'undefined') break;
-      defined[i] = arguments[i];
-      i++;
+        if (typeof arguments[i] === 'undefined')
+            break;
+        defined[i] = arguments[i];
+        i++;
     }
-  
     return defined;
 };
-export const FLIPEXPORT = function(fn) {
+exports.FLIPEXPORT = function (fn) {
     return (...input) => {
-      if (input.length === 1) {
-        return holder => fn(holder, input[0]);
-      } else if (input.length === 2) {
-        return fn(input[1], input[0]);
-      }
-  
-      return undefined;
-    };
-};
-export const ISINTEGER$1 = Number.isInteger || ISINTEGER;
-export const INDEXBYPATH = function(pathInput, list) {
-  const toReturn = {};
-
-  for (let i = 0; i < list.length; i++) {
-    const item = list[i];
-    toReturn[PATH(pathInput, item)] = item;
-  }
-
-  return toReturn;
-};
-export const BASESLICE = function(array, start, end) {
-  let index = -1;
-  let {
-    length
-  } = array;
-  end = end > length ? length : end;
-
-  if (end < 0) {
-    end += length;
-  }
-
-  length = start > end ? 0 : end - start >>> 0;
-  start >>>= 0;
-  const result = Array(length);
-
-  while (++index < length) {
-    result[index] = array[index + start];
-  }
-
-  return result;
-};
-export const MAPOBJECT = function(fn, obj) {
-  const willReturn = {};
-
-  for (const prop in obj) {
-    willReturn[prop] = fn(obj[prop], prop, obj);
-  }
-
-  return willReturn;
-}
-// export const REDUCE = CURRY(reduceFn);
-
-export const _CURRY3 = function(fn) {
-    return function f3(a, b, c) {
-      switch (arguments.length) {
-        case 0:
-          return f3;
-        case 1:
-          return _ISPLACEHOLDER(a) ? f3
-               : _curry2(function(_b, _c) { return fn(a, _b, _c); });
-        case 2:
-          return _ISPLACEHOLDER(a) && _ISPLACEHOLDER(b) ? f3
-               : _ISPLACEHOLDER(a) ? _curry2(function(_a, _c) { return fn(_a, b, _c); })
-               : _ISPLACEHOLDER(b) ? _curry2(function(_b, _c) { return fn(a, _b, _c); })
-               : _CURRY1(function(_c) { return fn(a, b, _c); });
-        default:
-          return _ISPLACEHOLDER(a) && _ISPLACEHOLDER(b) && _ISPLACEHOLDER(c) ? f3
-               : _ISPLACEHOLDER(a) && _ISPLACEHOLDER(b) ? _curry2(function(_a, _b) { return fn(_a, _b, c); })
-               : _ISPLACEHOLDER(a) && _ISPLACEHOLDER(c) ? _curry2(function(_a, _c) { return fn(_a, b, _c); })
-               : _ISPLACEHOLDER(b) && _ISPLACEHOLDER(c) ? _curry2(function(_b, _c) { return fn(a, _b, _c); })
-               : _ISPLACEHOLDER(a) ? _CURRY1(function(_a) { return fn(_a, b, c); })
-               : _ISPLACEHOLDER(b) ? _CURRY1(function(_b) { return fn(a, _b, c); })
-               : _ISPLACEHOLDER(c) ? _CURRY1(function(_c) { return fn(a, b, _c); })
-               : fn(a, b, c);
-      }
-    };
-};  
-export const PARSEREGEX = function(maybeRegex) {
-  if (maybeRegex.constructor !== S._RegExp) return [false];
-  return [true, maybeRegex.toString()];
-};
-export const PARSEDATE = function(maybeDate) {
-  if (!maybeDate.toDateString) return [false];
-  return [true, maybeDate.getTime()];
-};
-export const PARSEERROR = function(maybeError) {
-  const typeofError = maybeError.__proto__.toString();
-
-  if (!['Error', 'TypeError'].includes(typeofError)) return [];
-  return [typeofError, maybeError.message];
-};
-export const _OBJECTIS = function(a, b) {
-  if (a === b) {
-    return a !== 0 || 1 / a === 1 / b;
-  }
-
-  return a !== a && b !== b;
-};
-export const _OBJECTIS$1 = S._Object.is || _objectIs;
-export const DEFAULTTO = function(defaultArgument, ...inputArguments) {
-  if (arguments.length === 1) {
-    return _inputArguments => DEFAULTTO(defaultArgument, _inputArguments);
-  } else if (arguments.length === 2) {
-    return FLAGIS(inputArguments[0]) ? defaultArgument : inputArguments[0];
-  }
-
-  const limit = inputArguments.length - 1;
-  let len = limit + 1;
-  let ready = false;
-  let holder;
-
-  while (!ready) {
-    const instance = inputArguments[limit - len + 1];
-
-    if (len === 0) {
-      ready = true;
-    } else if (FLAGIS(instance)) {
-      len -= 1;
-    } else {
-      holder = instance;
-      ready = true;
-    }
-  }
-
-  return holder === undefined ? defaultArgument : holder;
-};
-export const Const = x => ({
-  x,
-  map: fn => Const(x)
-});
-export const _CURRY1 = function(fn) {
-    return function f1(a) {
-      if (arguments.length === 0 || _ISPLACEHOLDER(a)) {
-        return f1;
-      } else {
-        return fn.apply(this, arguments);
-      }
-    };
-};
-export const _CURRY2 = function(fn) {
-    return function f2(a, b) {
-      switch (arguments.length) {
-        case 0:
-          return f2;
-        case 1:
-          return _ISPLACEHOLDER(a) ? f2
-               : _CURRY1(function(_b) { return fn(a, _b); });
-        default:
-          return _ISPLACEHOLDER(a) && _ISPLACEHOLDER(b) ? f2
-               : _ISPLACEHOLDER(a) ? _CURRY1(function(_a) { return fn(_a, b); })
-               : _ISPLACEHOLDER(b) ? _CURRY1(function(_b) { return fn(a, _b); })
-               : fn(a, b);
-      }
-    };
-};
-export const _ISPLACEHOLDER = function(a) {
-    return a != null &&
-           typeof a === 'object' &&
-           a['@@functional/placeholder'] === true;
-};
-export const _DISPATCHABLE = function(methodNames, xf, fn) {
-    return function() {
-      if (arguments.length === 0) {
-        return fn();
-      }
-      var args = S._Array.prototype.slice.call(arguments, 0);
-      var obj = args.pop();
-      if (!_ISARRAY(obj)) {
-        var idx = 0;
-        while (idx < methodNames.length) {
-          if (typeof obj[methodNames[idx]] === 'function') {
-            return obj[methodNames[idx]].apply(obj, args);
-          }
-          idx += 1;
+        if (input.length === 1) {
+            return holder => fn(holder, input[0]);
         }
-        if (_isTransformer(obj)) {
-          var transducer = xf.apply(null, args);
-          return transducer(obj);
+        else if (input.length === 2) {
+            return fn(input[1], input[0]);
         }
-      }
-      return fn.apply(this, arguments);
+        return undefined;
     };
-  };
-export const _ISOBJECT = function(x) {
-  return S._Object.prototype.toString.call(x) === '[object Object]';
 };
-export const _REDUCED = function(x) {
-    return x && x['@@transducer/reduced'] ? x :
-      {
-        '@@transducer/value': x,
-        '@@transducer/reduced': true
-      };
+exports.ISINTEGER$1 = Number.isInteger || exports.ISINTEGER;
+exports.INDEXBYPATH = function (pathInput, list) {
+    const toReturn = {};
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        toReturn[exports.PATH(pathInput, item)] = item;
+    }
+    return toReturn;
 };
-export const XWRAP = function(fn) {
-    this.f = fn;
-};
-XWRAP.prototype['@@transducer/init'] = function() {
-  throw new Error('init not implemented on XWrap');
-};
-XWRAP.prototype['@@transducer/result'] = function(acc) { return acc; };
-XWRAP.prototype['@@transducer/step'] = function(acc, x) {
-  return this.f(acc, x);
-};
-export const _XWRAP = function(fn) { return new XWRAP(fn); }
-export const _REDUCE = function(fn, acc, list) {
-if (typeof fn === 'function') {
-      fn = _XWRAP(fn);
+exports.BASESLICE = function (array, start, end) {
+    let index = -1;
+    let { length } = array;
+    end = end > length ? length : end;
+    if (end < 0) {
+        end += length;
     }
-    if (_ISARRAYLIKE(list)) {
-      return _ARRAYREDUCE(fn, acc, list);
-    }
-    if (typeof list['fantasy-land/reduce'] === 'function') {
-      return _METHODREDUCE(fn, acc, list, 'fantasy-land/reduce');
-    }
-    if (list[symIterator] != null) {
-      return _ITERABLEREDUCE(fn, acc, list[symIterator]());
-    }
-    if (typeof list.next === 'function') {
-      return _iterableReduce(fn, acc, list);
-    }
-    if (typeof list.reduce === 'function') {
-      return _methodReduce(fn, acc, list, 'reduce');
-    }
-    throw new TypeError('reduce: list must be array or iterable');
-};
-export const _FILTER = function(fn, list) {
-    var idx = 0;
-    var len = list.length;
-    var result = [];
-  
-    while (idx < len) {
-      if (fn(list[idx])) {
-        result[result.length] = list[idx];
-      }
-      idx += 1;
+    length = start > end ? 0 : end - start >>> 0;
+    start >>>= 0;
+    const result = Array(length);
+    while (++index < length) {
+        result[index] = array[index + start];
     }
     return result;
 };
-export const _ISTRANSFORMER = function(obj) {
+exports.MAPOBJECT = function (fn, obj) {
+    const willReturn = {};
+    for (const prop in obj) {
+        willReturn[prop] = fn(obj[prop], prop, obj);
+    }
+    return willReturn;
+};
+// export const REDUCE = CURRY(reduceFn);
+exports._CURRY3 = function (fn) {
+    return function f3(a, b, c) {
+        switch (arguments.length) {
+            case 0:
+                return f3;
+            case 1:
+                return exports._ISPLACEHOLDER(a) ? f3
+                    : _curry2(function (_b, _c) { return fn(a, _b, _c); });
+            case 2:
+                return exports._ISPLACEHOLDER(a) && exports._ISPLACEHOLDER(b) ? f3
+                    : exports._ISPLACEHOLDER(a) ? _curry2(function (_a, _c) { return fn(_a, b, _c); })
+                        : exports._ISPLACEHOLDER(b) ? _curry2(function (_b, _c) { return fn(a, _b, _c); })
+                            : exports._CURRY1(function (_c) { return fn(a, b, _c); });
+            default:
+                return exports._ISPLACEHOLDER(a) && exports._ISPLACEHOLDER(b) && exports._ISPLACEHOLDER(c) ? f3
+                    : exports._ISPLACEHOLDER(a) && exports._ISPLACEHOLDER(b) ? _curry2(function (_a, _b) { return fn(_a, _b, c); })
+                        : exports._ISPLACEHOLDER(a) && exports._ISPLACEHOLDER(c) ? _curry2(function (_a, _c) { return fn(_a, b, _c); })
+                            : exports._ISPLACEHOLDER(b) && exports._ISPLACEHOLDER(c) ? _curry2(function (_b, _c) { return fn(a, _b, _c); })
+                                : exports._ISPLACEHOLDER(a) ? exports._CURRY1(function (_a) { return fn(_a, b, c); })
+                                    : exports._ISPLACEHOLDER(b) ? exports._CURRY1(function (_b) { return fn(a, _b, c); })
+                                        : exports._ISPLACEHOLDER(c) ? exports._CURRY1(function (_c) { return fn(a, b, _c); })
+                                            : fn(a, b, c);
+        }
+    };
+};
+exports.PARSEREGEX = function (maybeRegex) {
+    if (maybeRegex.constructor !== exports.S._RegExp)
+        return [false];
+    return [true, maybeRegex.toString()];
+};
+exports.PARSEDATE = function (maybeDate) {
+    if (!maybeDate.toDateString)
+        return [false];
+    return [true, maybeDate.getTime()];
+};
+exports.PARSEERROR = function (maybeError) {
+    const typeofError = maybeError.__proto__.toString();
+    if (!['Error', 'TypeError'].includes(typeofError))
+        return [];
+    return [typeofError, maybeError.message];
+};
+exports._OBJECTIS = function (a, b) {
+    if (a === b) {
+        return a !== 0 || 1 / a === 1 / b;
+    }
+    return a !== a && b !== b;
+};
+exports._OBJECTIS$1 = exports.S._Object.is || _objectIs;
+exports.DEFAULTTO = function (defaultArgument, ...inputArguments) {
+    if (arguments.length === 1) {
+        return _inputArguments => exports.DEFAULTTO(defaultArgument, _inputArguments);
+    }
+    else if (arguments.length === 2) {
+        return FLAGIS(inputArguments[0]) ? defaultArgument : inputArguments[0];
+    }
+    const limit = inputArguments.length - 1;
+    let len = limit + 1;
+    let ready = false;
+    let holder;
+    while (!ready) {
+        const instance = inputArguments[limit - len + 1];
+        if (len === 0) {
+            ready = true;
+        }
+        else if (FLAGIS(instance)) {
+            len -= 1;
+        }
+        else {
+            holder = instance;
+            ready = true;
+        }
+    }
+    return holder === undefined ? defaultArgument : holder;
+};
+exports.Const = x => ({
+    x,
+    map: fn => exports.Const(x)
+});
+exports._CURRY1 = function (fn) {
+    return function f1(a) {
+        if (arguments.length === 0 || exports._ISPLACEHOLDER(a)) {
+            return f1;
+        }
+        else {
+            return fn.apply(this, arguments);
+        }
+    };
+};
+exports._CURRY2 = function (fn) {
+    return function f2(a, b) {
+        switch (arguments.length) {
+            case 0:
+                return f2;
+            case 1:
+                return exports._ISPLACEHOLDER(a) ? f2
+                    : exports._CURRY1(function (_b) { return fn(a, _b); });
+            default:
+                return exports._ISPLACEHOLDER(a) && exports._ISPLACEHOLDER(b) ? f2
+                    : exports._ISPLACEHOLDER(a) ? exports._CURRY1(function (_a) { return fn(_a, b); })
+                        : exports._ISPLACEHOLDER(b) ? exports._CURRY1(function (_b) { return fn(a, _b); })
+                            : fn(a, b);
+        }
+    };
+};
+exports._ISPLACEHOLDER = function (a) {
+    return a != null &&
+        typeof a === 'object' &&
+        a['@@functional/placeholder'] === true;
+};
+exports._DISPATCHABLE = function (methodNames, xf, fn) {
+    return function () {
+        if (arguments.length === 0) {
+            return fn();
+        }
+        var args = exports.S._Array.prototype.slice.call(arguments, 0);
+        var obj = args.pop();
+        if (!exports._ISARRAY(obj)) {
+            var idx = 0;
+            while (idx < methodNames.length) {
+                if (typeof obj[methodNames[idx]] === 'function') {
+                    return obj[methodNames[idx]].apply(obj, args);
+                }
+                idx += 1;
+            }
+            if (_isTransformer(obj)) {
+                var transducer = xf.apply(null, args);
+                return transducer(obj);
+            }
+        }
+        return fn.apply(this, arguments);
+    };
+};
+exports._ISOBJECT = function (x) {
+    return exports.S._Object.prototype.toString.call(x) === '[object Object]';
+};
+exports._REDUCED = function (x) {
+    return x && x['@@transducer/reduced'] ? x :
+        {
+            '@@transducer/value': x,
+            '@@transducer/reduced': true
+        };
+};
+exports.XWRAP = function (fn) {
+    this.f = fn;
+};
+exports.XWRAP.prototype['@@transducer/init'] = function () {
+    throw new Error('init not implemented on XWrap');
+};
+exports.XWRAP.prototype['@@transducer/result'] = function (acc) { return acc; };
+exports.XWRAP.prototype['@@transducer/step'] = function (acc, x) {
+    return this.f(acc, x);
+};
+exports._XWRAP = function (fn) { return new exports.XWRAP(fn); };
+exports._REDUCE = function (fn, acc, list) {
+    if (typeof fn === 'function') {
+        fn = exports._XWRAP(fn);
+    }
+    if (exports._ISARRAYLIKE(list)) {
+        return exports._ARRAYREDUCE(fn, acc, list);
+    }
+    if (typeof list['fantasy-land/reduce'] === 'function') {
+        return exports._METHODREDUCE(fn, acc, list, 'fantasy-land/reduce');
+    }
+    if (list[symIterator] != null) {
+        return exports._ITERABLEREDUCE(fn, acc, list[symIterator]());
+    }
+    if (typeof list.next === 'function') {
+        return _iterableReduce(fn, acc, list);
+    }
+    if (typeof list.reduce === 'function') {
+        return _methodReduce(fn, acc, list, 'reduce');
+    }
+    throw new TypeError('reduce: list must be array or iterable');
+};
+exports._FILTER = function (fn, list) {
+    var idx = 0;
+    var len = list.length;
+    var result = [];
+    while (idx < len) {
+        if (fn(list[idx])) {
+            result[result.length] = list[idx];
+        }
+        idx += 1;
+    }
+    return result;
+};
+exports._ISTRANSFORMER = function (obj) {
     return obj != null && typeof obj['@@transducer/step'] === 'function';
 };
-export const _ISARRAY = S._Array.isArray || function _ISARRAY(val) {
+exports._ISARRAY = exports.S._Array.isArray || function _ISARRAY(val) {
     return (val != null &&
-            val.length >= 0 &&
-            S._Object.prototype.toString.call(val) === '[object Array]');
+        val.length >= 0 &&
+        exports.S._Object.prototype.toString.call(val) === '[object Array]');
 };
-export const _ISARRAYLIKE = _CURRY1(function ISARRAYLIKE(x) {
-    if (_isArray(x)) { return true; }
-    if (!x) { return false; }
-    if (typeof x !== 'object') { return false; }
-    if (_isString(x)) { return false; }
-    if (x.nodeType === 1) { return !!x.length; }
-    if (x.length === 0) { return true; }
+exports._ISARRAYLIKE = exports._CURRY1(function ISARRAYLIKE(x) {
+    if (_isArray(x)) {
+        return true;
+    }
+    if (!x) {
+        return false;
+    }
+    if (typeof x !== 'object') {
+        return false;
+    }
+    if (_isString(x)) {
+        return false;
+    }
+    if (x.nodeType === 1) {
+        return !!x.length;
+    }
+    if (x.length === 0) {
+        return true;
+    }
     if (x.length > 0) {
-      return HASPROPERTY(X,0) && HASPROPERTY(x,x.length - 1);
+        return exports.HASPROPERTY(X, 0) && exports.HASPROPERTY(x, x.length - 1);
     }
     return false;
-  });
-export const _ARRAYREDUCE = function(xf, acc, list) {
+});
+exports._ARRAYREDUCE = function (xf, acc, list) {
     var idx = 0;
     var len = list.length;
     while (idx < len) {
         acc = xf['@@transducer/step'](acc, list[idx]);
         if (acc && acc['@@transducer/reduced']) {
-        acc = acc['@@transducer/value'];
-        break;
+            acc = acc['@@transducer/value'];
+            break;
         }
         idx += 1;
     }
     return xf['@@transducer/result'](acc);
 };
-export const _ARITY = function(n, fn) {
+exports._ARITY = function (n, fn) {
     /* eslint-disable no-unused-vars */
     switch (n) {
-      case 0: return function() { return fn.apply(this, arguments); };
-      case 1: return function(a0) { return fn.apply(this, arguments); };
-      case 2: return function(a0, a1) { return fn.apply(this, arguments); };
-      case 3: return function(a0, a1, a2) { return fn.apply(this, arguments); };
-      case 4: return function(a0, a1, a2, a3) { return fn.apply(this, arguments); };
-      case 5: return function(a0, a1, a2, a3, a4) { return fn.apply(this, arguments); };
-      case 6: return function(a0, a1, a2, a3, a4, a5) { return fn.apply(this, arguments); };
-      case 7: return function(a0, a1, a2, a3, a4, a5, a6) { return fn.apply(this, arguments); };
-      case 8: return function(a0, a1, a2, a3, a4, a5, a6, a7) { return fn.apply(this, arguments); };
-      case 9: return function(a0, a1, a2, a3, a4, a5, a6, a7, a8) { return fn.apply(this, arguments); };
-      case 10: return function(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) { return fn.apply(this, arguments); };
-      default: throw new Error('First argument to _arity must be a non-negative integer no greater than ten');
+        case 0: return function () { return fn.apply(this, arguments); };
+        case 1: return function (a0) { return fn.apply(this, arguments); };
+        case 2: return function (a0, a1) { return fn.apply(this, arguments); };
+        case 3: return function (a0, a1, a2) { return fn.apply(this, arguments); };
+        case 4: return function (a0, a1, a2, a3) { return fn.apply(this, arguments); };
+        case 5: return function (a0, a1, a2, a3, a4) { return fn.apply(this, arguments); };
+        case 6: return function (a0, a1, a2, a3, a4, a5) { return fn.apply(this, arguments); };
+        case 7: return function (a0, a1, a2, a3, a4, a5, a6) { return fn.apply(this, arguments); };
+        case 8: return function (a0, a1, a2, a3, a4, a5, a6, a7) { return fn.apply(this, arguments); };
+        case 9: return function (a0, a1, a2, a3, a4, a5, a6, a7, a8) { return fn.apply(this, arguments); };
+        case 10: return function (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) { return fn.apply(this, arguments); };
+        default: throw new Error('First argument to _arity must be a non-negative integer no greater than ten');
     }
 };
-export const BIND = _CURRY2(function BIND(fn, thisObj) {
-    return _ARITY(fn.length, function() {
-      return fn.apply(thisObj, arguments);
+exports.BIND = exports._CURRY2(function BIND(fn, thisObj) {
+    return exports._ARITY(fn.length, function () {
+        return fn.apply(thisObj, arguments);
     });
-});  
-export const _METHODREDUCE = function(xf, acc, obj, methodName) {
-    return xf['@@transducer/result'](obj[methodName](BIND(xf['@@transducer/step'], xf), acc));
+});
+exports._METHODREDUCE = function (xf, acc, obj, methodName) {
+    return xf['@@transducer/result'](obj[methodName](exports.BIND(xf['@@transducer/step'], xf), acc));
 };
-export const _ITERABLEREDUCE = function(xf, acc, iter) {
+exports._ITERABLEREDUCE = function (xf, acc, iter) {
     var step = iter.next();
     while (!step.done) {
-      acc = xf['@@transducer/step'](acc, step.value);
-      if (acc && acc['@@transducer/reduced']) {
-        acc = acc['@@transducer/value'];
-        break;
-      }
-      step = iter.next();
+        acc = xf['@@transducer/step'](acc, step.value);
+        if (acc && acc['@@transducer/reduced']) {
+            acc = acc['@@transducer/value'];
+            break;
+        }
+        step = iter.next();
     }
     return xf['@@transducer/result'](acc);
 };
-export const _ISSTRING = function(x) {
+exports._ISSTRING = function (x) {
     return Object.prototype.toString.call(x) === '[object String]';
 };
-export const _IDENTITY = function(x) { return x; };
-export const _XFBASE = {
-    init: function() {
-      return this.xf['@@transducer/init']();
+exports._IDENTITY = function (x) { return x; };
+exports._XFBASE = {
+    init: function () {
+        return this.xf['@@transducer/init']();
     },
-    result: function(result) {
-      return this.xf['@@transducer/result'](result);
+    result: function (result) {
+        return this.xf['@@transducer/result'](result);
     }
 };
-export const XFILTER = function(f, xf) {
+exports.XFILTER = function (f, xf) {
     this.xf = xf;
     this.f = f;
-  }
-  XFILTER.prototype['@@transducer/init'] = _XFBASE.init;
-  XFILTER.prototype['@@transducer/result'] = _XFBASE.result;
-  XFILTER.prototype['@@transducer/step'] = function(result, input) {
+};
+exports.XFILTER.prototype['@@transducer/init'] = exports._XFBASE.init;
+exports.XFILTER.prototype['@@transducer/result'] = exports._XFBASE.result;
+exports.XFILTER.prototype['@@transducer/step'] = function (result, input) {
     return this.f(input) ? this.xf['@@transducer/step'](result, input) : result;
-};  
+};
 // export const _XFILTER = _curry2(function _xfilter(f, xf) { return new XFilter(f, xf); });  
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const ALWAYS = function(x) {
+exports.ALWAYS = function (x) {
     return () => x;
 };
-export const APPLYSPEC = function(spec, ...args) {
-    const arity = __FINDHIGHESTARITY(spec);
-  
+exports.APPLYSPEC = function (spec, ...args) {
+    const arity = exports.__FINDHIGHESTARITY(spec);
     if (arity === 0) {
-      return () => ({});
+        return () => ({});
     }
-  
-    const toReturn = __APPLYSPECWITHARITY(spec, arity, args);
-  
+    const toReturn = exports.__APPLYSPECWITHARITY(spec, arity, args);
     return toReturn;
 };
-export const COMPOSE = function(...fns) {
+exports.COMPOSE = function (...fns) {
     if (fns.length === 0) {
-      throw new Error('compose requires at least one argument');
+        throw new Error('compose requires at least one argument');
     }
-  
     return (...args) => {
-      const list = fns.slice();
-  
-      if (list.length > 0) {
-        const fn = list.pop();
-        let result = fn(...args);
-  
-        while (list.length > 0) {
-          result = list.pop()(result);
+        const list = fns.slice();
+        if (list.length > 0) {
+            const fn = list.pop();
+            let result = fn(...args);
+            while (list.length > 0) {
+                result = list.pop()(result);
+            }
+            return result;
         }
-  
-        return result;
-      }
     };
 };
-export const CURRY = function(fn, args = []) {
-    return (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : CURRY(fn, rest))([...args, ..._args]);
+exports.CURRY = function (fn, args = []) {
+    return (..._args) => (rest => rest.length >= fn.length ? fn(...rest) : exports.CURRY(fn, rest))([...args, ..._args]);
 };
-export const F = function() {
+exports.F = function () {
     return false;
 };
-export const FLIP = function(fn) {
-    return FLIPEXPORT(fn);
+exports.FLIP = function (fn) {
+    return exports.FLIPEXPORT(fn);
 };
-export const IDENTITY = function(x) {
+exports.IDENTITY = function (x) {
     return x;
 };
-export const NEGATE = function(n) {
+exports.NEGATE = function (n) {
     return -n;
 };
-export const PARTIAL = function(fn, ...args) {
+exports.PARTIAL = function (fn, ...args) {
     const len = fn.length;
     return (...rest) => {
-      if (args.length + rest.length >= len) {
-        return fn(...args, ...rest);
-      }
-  
-      return partial(fn, ...[...args, ...rest]);
+        if (args.length + rest.length >= len) {
+            return fn(...args, ...rest);
+        }
+        return partial(fn, ...[...args, ...rest]);
     };
 };
-export const PIPE = function(...fns) {
-    if (fns.length === 0) throw new Error('pipe requires at least one argument');
-    return COMPOSE(...fns.reverse());
+exports.PIPE = function (...fns) {
+    if (fns.length === 0)
+        throw new Error('pipe requires at least one argument');
+    return exports.COMPOSE(...fns.reverse());
 };
-export const T = function() {
+exports.T = function () {
     return true;
 };
-export const TAP = function(fn, x) {
-    if (arguments.length === 1) return _x => TAP(fn, _x);
+exports.TAP = function (fn, x) {
+    if (arguments.length === 1)
+        return _x => exports.TAP(fn, _x);
     fn(x);
     return x;
 };
-export const ADD = function(a, b) {
-    if (arguments.length === 1) return _b => add(a, _b);
-    return S._Number(a) + S._Number(b);
+exports.ADD = function (a, b) {
+    if (arguments.length === 1)
+        return _b => add(a, _b);
+    return exports.S._Number(a) + exports.S._Number(b);
 };
-export const DEC = function(n) {return  n - 1};
-export const INC = function(n) {return  n + 1};
-export const MATHMOD = function(m, p) {
-    if (arguments.length === 1) return _p => MATHMOD(m, _p);
-    if (!ISINTEGER$1(m) || !ISINTEGER$1(p) || p < 1) return NaN;
+exports.DEC = function (n) { return n - 1; };
+exports.INC = function (n) { return n + 1; };
+exports.MATHMOD = function (m, p) {
+    if (arguments.length === 1)
+        return _p => exports.MATHMOD(m, _p);
+    if (!exports.ISINTEGER$1(m) || !exports.ISINTEGER$1(p) || p < 1)
+        return NaN;
     return (m % p + p) % p;
 };
-export const MEAN = function(list) {
-    return SUM(list) / list.length;
+exports.MEAN = function (list) {
+    return exports.SUM(list) / list.length;
 };
-export const MEDIAN = function(list) {
+exports.MEDIAN = function (list) {
     const len = list.length;
-    if (len === 0) return NaN;
+    if (len === 0)
+        return NaN;
     const width = 2 - len % 2;
     const idx = (len - width) / 2;
-    return MEAN(S._Array.prototype.slice.call(list, 0).sort((a, b) => {
-      if (a === b) return 0;
-      return a < b ? -1 : 1;
+    return exports.MEAN(exports.S._Array.prototype.slice.call(list, 0).sort((a, b) => {
+        if (a === b)
+            return 0;
+        return a < b ? -1 : 1;
     }).slice(idx, idx + width));
 };
-export const MODULO = function(a, b) {
-    if (arguments.length === 1) return _b => MODULO(a, _b);
+exports.MODULO = function (a, b) {
+    if (arguments.length === 1)
+        return _b => exports.MODULO(a, _b);
     return a % b;
 };
-export const MULTIPLY = function(a, b) {
-    if (arguments.length === 1) return _b => MULTIPLY(a, _b);
+exports.MULTIPLY = function (a, b) {
+    if (arguments.length === 1)
+        return _b => exports.MULTIPLY(a, _b);
     return a * b;
 };
-export const SUM = function(list) {
+exports.SUM = function (list) {
     return list.reduce((prev, current) => prev + current, 0);
 };
-export const ALL = function(fn, list) {
-    if (arguments.length === 1) return _list => ALL(fn, _list);
+exports.ALL = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.ALL(fn, _list);
     for (let i = 0; i < list.length; i++) {
-      if (!fn(list[i], i)) return false;
+        if (!fn(list[i], i))
+            return false;
     }
     return true;
 };
-export const ANY = function(fn, list) {
-    if (arguments.length === 1) return _list => ANY(fn, _list);
+exports.ANY = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.ANY(fn, _list);
     let counter = 0;
-  
     while (counter < list.length) {
-      if (fn(list[counter], counter)) {
-        return true;
-      }
-  
-      counter++;
+        if (fn(list[counter], counter)) {
+            return true;
+        }
+        counter++;
     }
-  
     return false;
 };
-export const APPEND = function(el, list) {
-    if (arguments.length === 1) return _list => APPEND(el, _list);
-    if (typeof list === 'string') return `${list}${el}`;
+exports.APPEND = function (el, list) {
+    if (arguments.length === 1)
+        return _list => exports.APPEND(el, _list);
+    if (typeof list === 'string')
+        return `${list}${el}`;
     const clone = list.slice();
     clone.push(el);
     return clone;
 };
-export const CONCAT = function(left, right) {
-    if (arguments.length === 1) return _right => CONCAT(left, _right);
+exports.CONCAT = function (left, right) {
+    if (arguments.length === 1)
+        return _right => exports.CONCAT(left, _right);
     return typeof left === 'string' ? `${left}${right}` : [...left, ...right];
 };
-export const DIFFERENCE = function(list1, list2) {
-    if (arguments.length === 1) return _list => DIFFERENCE(list1, _list);
-    return UNIQ(list1).filter(x1 => !INCLUDES(x1, list2));
+exports.DIFFERENCE = function (list1, list2) {
+    if (arguments.length === 1)
+        return _list => exports.DIFFERENCE(list1, _list);
+    return exports.UNIQ(list1).filter(x1 => !exports.INCLUDES(x1, list2));
 };
-export const DROP = function(n, listOrString) {
-    if (arguments.length === 1) return _list => DROP(n, _list);
+exports.DROP = function (n, listOrString) {
+    if (arguments.length === 1)
+        return _list => exports.DROP(n, _list);
     return listOrString.slice(n > 0 ? n : 0);
 };
-export const DROPLAST = function(n, list) {
-    if (arguments.length === 1) return _list => DROPLAST(n, _list);
+exports.DROPLAST = function (n, list) {
+    if (arguments.length === 1)
+        return _list => exports.DROPLAST(n, _list);
     return n > 0 ? list.slice(0, -n) : list.slice();
 };
-export const ENDSWITH = function(suffix, list) {
-    if (arguments.length === 1) return _list => ENDSWITH(suffix, _list);
+exports.ENDSWITH = function (suffix, list) {
+    if (arguments.length === 1)
+        return _list => exports.ENDSWITH(suffix, _list);
     return list.endsWith(suffix);
 };
-export const FILTER = function(){_CURRY2(_DISPATCHABLE(['filter'], _XFILTER, function(pred, filterable) {
-    return (
-      _ISOBJECT(filterable) ?
-        _REDUCE(function(acc, key) {
-          if (PRED(filterable[key])) {
-            acc[key] = filterable[key];
-          }
-          return acc;
-        }, {}, KEYS(filterable)) :
-      // else
-        _FILTER(pred, filterable)
-    );
-  }));
+exports.FILTER = function () {
+    exports._CURRY2(exports._DISPATCHABLE(['filter'], _XFILTER, function (pred, filterable) {
+        return (exports._ISOBJECT(filterable) ?
+            exports._REDUCE(function (acc, key) {
+                if (PRED(filterable[key])) {
+                    acc[key] = filterable[key];
+                }
+                return acc;
+            }, {}, exports.KEYS(filterable)) :
+            // else
+            exports._FILTER(pred, filterable));
+    }));
 };
-export const FIND = function(fn, list) {
-    if (arguments.length === 1) return _list => FIND(fn, _list);
+exports.FIND = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.FIND(fn, _list);
     return list.find(fn);
 };
-export const FINDINDEX = function(fn, list) {
-    if (arguments.length === 1) return _list => FINDINDEX(fn, _list);
+exports.FINDINDEX = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.FINDINDEX(fn, _list);
     const len = list.length;
     let index = -1;
-  
     while (++index < len) {
-      if (fn(list[index], index)) {
-        return index;
-      }
+        if (fn(list[index], index)) {
+            return index;
+        }
     }
-  
     return -1;
 };
-export const FLATTEN = function(list, input) {
+exports.FLATTEN = function (list, input) {
     const willReturn = input === undefined ? [] : input;
-  
     for (let i = 0; i < list.length; i++) {
-      if (S._Array.isArray(list[i])) {
-        FLATTEN(list[i], willReturn);
-      } else {
-        willReturn.push(list[i]);
-      }
+        if (exports.S._Array.isArray(list[i])) {
+            exports.FLATTEN(list[i], willReturn);
+        }
+        else {
+            willReturn.push(list[i]);
+        }
     }
-  
     return willReturn;
 };
-export const FOREACH = function(fn, list) {
-    if (arguments.length === 1) return _list => FOREACH(fn, _list);
+exports.FOREACH = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.FOREACH(fn, _list);
     map(fn, list);
     return list;
 };
-export const FROMPAIRS = function(list) {
+exports.FROMPAIRS = function (list) {
     const toReturn = {};
     list.forEach(([prop, value]) => toReturn[prop] = value);
     return toReturn;
 };
-export const GROUPBY = function(fn, list) {
-    if (arguments.length === 1) return _list => GROUPBY(fn, _list);
+exports.GROUPBY = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.GROUPBY(fn, _list);
     const result = {};
-  
     for (let i = 0; i < list.length; i++) {
-      const item = list[i];
-      const key = fn(item);
-  
-      if (!result[key]) {
-        result[key] = [];
-      }
-  
-      result[key].push(item);
+        const item = list[i];
+        const key = fn(item);
+        if (!result[key]) {
+            result[key] = [];
+        }
+        result[key].push(item);
     }
-  
     return result;
 };
-export const GROUPWITH = _CURRY2(function(fn, list) {
+exports.GROUPWITH = exports._CURRY2(function (fn, list) {
     var res = [];
     var idx = 0;
     var len = list.length;
     while (idx < len) {
-      var nextidx = idx + 1;
-      while (nextidx < len && fn(list[nextidx - 1], list[nextidx])) {
-        nextidx += 1;
-      }
-      res.push(list.slice(idx, nextidx));
-      idx = nextidx;
+        var nextidx = idx + 1;
+        while (nextidx < len && fn(list[nextidx - 1], list[nextidx])) {
+            nextidx += 1;
+        }
+        res.push(list.slice(idx, nextidx));
+        idx = nextidx;
     }
     return res;
 });
-export const HEAD = function(list) {
-    if (typeof list === 'string') return list[0] || '';
+exports.HEAD = function (list) {
+    if (typeof list === 'string')
+        return list[0] || '';
     return list[0];
 };
-export const INCLUDES = function(target, list) {
-    if (arguments.length === 1) return _input => INCLUDES(target, _input);
-  
+exports.INCLUDES = function (target, list) {
+    if (arguments.length === 1)
+        return _input => exports.INCLUDES(target, _input);
     if (typeof list === 'string') {
-      return list.includes(target);
+        return list.includes(target);
     }
-  
-    if (!Array.isArray(list)) return false;
+    if (!Array.isArray(list))
+        return false;
     let index = -1;
-  
     while (++index < list.length) {
-      if (equals(list[index], target)) {
-        return true;
-      }
+        if (equals(list[index], target)) {
+            return true;
+        }
     }
-  
     return false;
 };
-export const INDEXBY = function(fnOrPath, list) {
+exports.INDEXBY = function (fnOrPath, list) {
     if (arguments.length === 1) {
-      return _list => INDEXBY(fnOrPath, _list);
+        return _list => exports.INDEXBY(fnOrPath, _list);
     }
-  
     if (typeof fnOrPath === 'string') {
-      return INDEXBYPATH(fnOrPath, list);
+        return exports.INDEXBYPATH(fnOrPath, list);
     }
-  
     const toReturn = {};
-  
     for (let i = 0; i < list.length; i++) {
-      const item = list[i];
-      toReturn[fnOrPath(item)] = item;
+        const item = list[i];
+        toReturn[fnOrPath(item)] = item;
     }
     return toReturn;
 };
-export const INDEXOF = function(target, list) {
-    if (arguments.length === 1) return _list => INDEXOF(target, _list);
+exports.INDEXOF = function (target, list) {
+    if (arguments.length === 1)
+        return _list => exports.INDEXOF(target, _list);
     let index = -1;
-    const {
-      length
-    } = list;
-  
+    const { length } = list;
     while (++index < length) {
-      if (list[index] === target) {
-        return index;
-      }
+        if (list[index] === target) {
+            return index;
+        }
     }
-  
     return -1;
 };
-export const INIT = function(list) {
-    if (typeof list === 'string') return list.slice(0, -1);
-    return list.length ? BASESLICE(list, 0, -1) : [];
+exports.INIT = function (list) {
+    if (typeof list === 'string')
+        return list.slice(0, -1);
+    return list.length ? exports.BASESLICE(list, 0, -1) : [];
 };
-export const INTERSECTION = function(list1, list2) {
-    if (arguments.length === 1) return _list => INTERSECTION(list1, _list);
-    return FILTER(value => INCLUDES(value, list2), list1);
+exports.INTERSECTION = function (list1, list2) {
+    if (arguments.length === 1)
+        return _list => exports.INTERSECTION(list1, _list);
+    return exports.FILTER(value => exports.INCLUDES(value, list2), list1);
 };
-export const INTERSPERSE = function(separator, list) {
-    if (arguments.length === 1) return _list => INTERSPERSE(separator, _list);
+exports.INTERSPERSE = function (separator, list) {
+    if (arguments.length === 1)
+        return _list => exports.INTERSPERSE(separator, _list);
     let index = -1;
     const len = list.length;
     const willReturn = [];
-  
     while (++index < len) {
-      if (index === len - 1) {
-        willReturn.push(list[index]);
-      } else {
-        willReturn.push(list[index], separator);
-      }
+        if (index === len - 1) {
+            willReturn.push(list[index]);
+        }
+        else {
+            willReturn.push(list[index], separator);
+        }
     }
-  
     return willReturn;
 };
-export const JOIN = function(separator, list) {
-    if (arguments.length === 1) return _list => JOIN(separator, _list);
+exports.JOIN = function (separator, list) {
+    if (arguments.length === 1)
+        return _list => exports.JOIN(separator, _list);
     return list.join(separator);
 };
-export const LAST = function(list) {
-    if (typeof list === 'string') return list[list.length - 1] || '';
+exports.LAST = function (list) {
+    if (typeof list === 'string')
+        return list[list.length - 1] || '';
     return list[list.length - 1];
 };
-export const LASTINDEXOF = function(target, list) {
-    if (arguments.length === 1) return _list => LASTINDEXOF(target, _list);
+exports.LASTINDEXOF = function (target, list) {
+    if (arguments.length === 1)
+        return _list => exports.LASTINDEXOF(target, _list);
     let index = list.length;
-  
     while (--index > 0) {
-      if (EQUALS(list[index], target)) {
-        return index;
-      }
+        if (exports.EQUALS(list[index], target)) {
+            return index;
+        }
     }
-  
     return -1;
 };
-export const MAP = function(fn, list) {
-    if (arguments.length === 1) return _list => MAP(fn, _list);
-  
+exports.MAP = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.MAP(fn, _list);
     if (list === undefined) {
-      return [];
+        return [];
     }
-  
-    if (!S._Array.isArray(list)) {
-      return MAPOBJECT(fn, list);
+    if (!exports.S._Array.isArray(list)) {
+        return exports.MAPOBJECT(fn, list);
     }
-  
     let index = -1;
     const len = list.length;
-    const willReturn = S._Array(len);
-  
+    const willReturn = exports.S._Array(len);
     while (++index < len) {
-      willReturn[index] = fn(list[index], index);
+        willReturn[index] = fn(list[index], index);
     }
-  
     return willReturn;
 };
-export const NONE = function(fn, list) {
-    if (arguments.length === 1) return _list => NONE(fn, _list);
+exports.NONE = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.NONE(fn, _list);
     return list.filter(fn).length === 0;
 };
-export const NTH = function(offset, list) {
-    if (arguments.length === 1) return _list => NTH(offset, _list);
+exports.NTH = function (offset, list) {
+    if (arguments.length === 1)
+        return _list => exports.NTH(offset, _list);
     const idx = offset < 0 ? list.length + offset : offset;
-    return S._Object.prototype.toString.call(list) === '[object String]' ? list.charAt(idx) : list[idx];
+    return exports.S._Object.prototype.toString.call(list) === '[object String]' ? list.charAt(idx) : list[idx];
 };
-export const PLUCK = function(key, list) {
-    if (arguments.length === 1) return _list => PLUCK(key, _list);
+exports.PLUCK = function (key, list) {
+    if (arguments.length === 1)
+        return _list => exports.PLUCK(key, _list);
     const willReturn = [];
-    MAP(val => {
-      if (val[key] !== undefined) {
-        willReturn.push(val[key]);
-      }
+    exports.MAP(val => {
+        if (val[key] !== undefined) {
+            willReturn.push(val[key]);
+        }
     }, list);
     return willReturn;
 };
-export const PREPEND = function(el, list) {
-    if (arguments.length === 1) return _list => PREPEND(el, _list);
-    if (typeof list === 'string') return `${el}${list}`;
+exports.PREPEND = function (el, list) {
+    if (arguments.length === 1)
+        return _list => exports.PREPEND(el, _list);
+    if (typeof list === 'string')
+        return `${el}${list}`;
     const clone = [el].concat(list);
     return clone;
 };
-export const RANGE = function(from, to) {
-    if (arguments.length === 1) return _to => RANGE(from, _to);
-  
-    if(S._Number.isNaN(S._Number(from)) || S._Number.isNaN(S._Number(to))) {
-      throw new TypeError('Both arguments to range must be numbers');
+exports.RANGE = function (from, to) {
+    if (arguments.length === 1)
+        return _to => exports.RANGE(from, _to);
+    if (exports.S._Number.isNaN(exports.S._Number(from)) || exports.S._Number.isNaN(exports.S._Number(to))) {
+        throw new TypeError('Both arguments to range must be numbers');
     }
-  
-    if (to < from) return [];
+    if (to < from)
+        return [];
     const len = to - from;
-    const willReturn = S._Array(len);
-  
+    const willReturn = exports.S._Array(len);
     for (let i = 0; i < len; i++) {
-      willReturn[i] = from + i;
+        willReturn[i] = from + i;
     }
-  
     return willReturn;
 };
-export const REPEAT = function(val, n) {
-    if (arguments.length === 1) return _n => REPEAT(val, _n);
-    const willReturn = S._Array(n);
+exports.REPEAT = function (val, n) {
+    if (arguments.length === 1)
+        return _n => exports.REPEAT(val, _n);
+    const willReturn = exports.S._Array(n);
     return willReturn.fill(val);
 };
-export const REVERSE = function(input) {
-  if (typeof input === 'string') {
-    return input.split('').reverse().join('');
-  }
-
-  const clone = input.slice();
-  return clone.reverse();
+exports.REVERSE = function (input) {
+    if (typeof input === 'string') {
+        return input.split('').reverse().join('');
+    }
+    const clone = input.slice();
+    return clone.reverse();
 };
-export const SPLITEVERY = function(n, list) {
-    if (arguments.length === 1) return _list => SPLITEVERY(n, _list);
-    if (n < 1) throw new Error('First argument to splitEvery must be a positive integer');
+exports.SPLITEVERY = function (n, list) {
+    if (arguments.length === 1)
+        return _list => exports.SPLITEVERY(n, _list);
+    if (n < 1)
+        throw new Error('First argument to splitEvery must be a positive integer');
     const willReturn = [];
     let counter = 0;
-  
     while (counter < list.length) {
-      willReturn.push(list.slice(counter, counter += n));
+        willReturn.push(list.slice(counter, counter += n));
     }
-  
     return willReturn;
 };
-export const STARTSWITH = function(prefix, list) {
-    if (arguments.length === 1) return _list => STARTSWITH(prefix, _list);
+exports.STARTSWITH = function (prefix, list) {
+    if (arguments.length === 1)
+        return _list => exports.STARTSWITH(prefix, _list);
     return list.startsWith(prefix);
 };
-const TAIL = function(list) {
-    return DROP(1, list);
+const TAIL = function (list) {
+    return exports.DROP(1, list);
 };
-export const TAKE = function(n, list) {
-    if (arguments.length === 1) return _list => TAKE(n, _list);
-    if (n < 0) return list.slice();
-    if (typeof list === 'string') return list.slice(0, n);
-    return BASESLICE(list, 0, n);
+exports.TAKE = function (n, list) {
+    if (arguments.length === 1)
+        return _list => exports.TAKE(n, _list);
+    if (n < 0)
+        return list.slice();
+    if (typeof list === 'string')
+        return list.slice(0, n);
+    return exports.BASESLICE(list, 0, n);
 };
-export const TAKELAST = function(n, list) {
-    if (arguments.length === 1) return _list => TAKELAST(n, _list);
+exports.TAKELAST = function (n, list) {
+    if (arguments.length === 1)
+        return _list => exports.TAKELAST(n, _list);
     const len = list.length;
-    if (n < 0) return list.slice();
+    if (n < 0)
+        return list.slice();
     let numValue = n > len ? len : n;
-    if (typeof list === 'string') return list.slice(len - numValue);
+    if (typeof list === 'string')
+        return list.slice(len - numValue);
     numValue = len - numValue;
-    return BASESLICE(list, numValue, len);
+    return exports.BASESLICE(list, numValue, len);
 };
-export const TIMES = function(fn, n) {
-    if (arguments.length === 1) return _n => TIMES(fn, _n);
-    if (!S._Number.isInteger(n) || n < 0) throw new RangeError('n must be an integer');
+exports.TIMES = function (fn, n) {
+    if (arguments.length === 1)
+        return _n => exports.TIMES(fn, _n);
+    if (!exports.S._Number.isInteger(n) || n < 0)
+        throw new RangeError('n must be an integer');
     return map(fn, range(0, n));
 };
-export const UNIQ = function(list) {
+exports.UNIQ = function (list) {
     let index = -1;
     const willReturn = [];
-  
     while (++index < list.length) {
-      const value = list[index];
-  
-      if (!INCLUDES(value, willReturn)) {
-        willReturn.push(value);
-      }
+        const value = list[index];
+        if (!exports.INCLUDES(value, willReturn)) {
+            willReturn.push(value);
+        }
     }
-  
     return willReturn;
 };
-export const UNIQWITH = function(fn, list) {
-    if (arguments.length === 1) return _list => UNIQWITH(fn, _list);
+exports.UNIQWITH = function (fn, list) {
+    if (arguments.length === 1)
+        return _list => exports.UNIQWITH(fn, _list);
     let index = -1;
     const len = list.length;
     const willReturn = [];
-  
     while (++index < len) {
-      const value = list[index];
-      const flag = ANY(willReturnInstance => fn(value, willReturnInstance), willReturn);
-  
-      if (!flag) {
-        willReturn.push(value);
-      }
+        const value = list[index];
+        const flag = exports.ANY(willReturnInstance => fn(value, willReturnInstance), willReturn);
+        if (!flag) {
+            willReturn.push(value);
+        }
     }
-  
     return willReturn;
 };
-export const UPDATE = function(idx, val, list) {
+exports.UPDATE = function (idx, val, list) {
     if (val === undefined) {
-      return (_val, _list) => UPDATE(idx, _val, _list);
-    } else if (list === undefined) {
-      return _list => UPDATE(idx, val, _list);
+        return (_val, _list) => exports.UPDATE(idx, _val, _list);
     }
-  
+    else if (list === undefined) {
+        return _list => exports.UPDATE(idx, val, _list);
+    }
     const arrClone = list.slice();
     return arrClone.fill(val, idx, idx + 1);
 };
-export const WITHOUT = function(left, right) {
+exports.WITHOUT = function (left, right) {
     if (right === undefined) {
-      return _right => without(left, _right);
+        return _right => without(left, _right);
     }
-  
     return reduce((accum, item) => includes(item, left) ? accum : accum.concat(item), [], right);
 };
-export const ZIP = function(left, right) {
-    if (arguments.length === 1) return _right => ZIP(left, _right);
+exports.ZIP = function (left, right) {
+    if (arguments.length === 1)
+        return _right => exports.ZIP(left, _right);
     const result = [];
-    const length = S._Math.min(left.length, right.length);
-  
+    const length = exports.S._Math.min(left.length, right.length);
     for (let i = 0; i < length; i++) {
-      result[i] = [left[i], right[i]];
+        result[i] = [left[i], right[i]];
     }
-  
     return result;
 };
-export const ZIPOBJ = function(keys, values) {
-    if (arguments.length === 1) return yHolder => ZIPOBJ(keys, yHolder);
-    return TAKE(values.length, keys).reduce((prev, xInstance, i) => {
-      prev[xInstance] = values[i];
-      return prev;
+exports.ZIPOBJ = function (keys, values) {
+    if (arguments.length === 1)
+        return yHolder => exports.ZIPOBJ(keys, yHolder);
+    return exports.TAKE(values.length, keys).reduce((prev, xInstance, i) => {
+        prev[xInstance] = values[i];
+        return prev;
     }, {});
 };
-export const DISSOC = function(prop, obj) {
-    if (arguments.length === 1) return _obj => DISSOC(prop, _obj);
-    if (obj === null || obj === undefined) return {};
+exports.DISSOC = function (prop, obj) {
+    if (arguments.length === 1)
+        return _obj => exports.DISSOC(prop, _obj);
+    if (obj === null || obj === undefined)
+        return {};
     const willReturn = {};
-  
     for (const p in obj) {
-      willReturn[p] = obj[p];
+        willReturn[p] = obj[p];
     }
-  
     delete willReturn[prop];
     return willReturn;
 };
-export const HAS = function(prop, obj) {
-    if (arguments.length === 1) return _obj => has(prop, _obj);
-    if (!obj) return false;
+exports.HAS = function (prop, obj) {
+    if (arguments.length === 1)
+        return _obj => has(prop, _obj);
+    if (!obj)
+        return false;
     return obj[prop] !== undefined;
 };
-export const LENS = function(getter, setter) {
-    if (arguments.length === 1) return _setter => lens(getter, _setter);
+exports.LENS = function (getter, setter) {
+    if (arguments.length === 1)
+        return _setter => lens(getter, _setter);
     return function (functor) {
-      return function (target) {
-        return FUNCTO(GETTER(target)).map(focus => SETTER(focus, target));
-      };
+        return function (target) {
+            return FUNCTO(GETTER(target)).map(focus => SETTER(focus, target));
+        };
     };
 };
-export const LENSINDEX = function(i) {
-    return LENS(nth(i), UPDATE(i));
+exports.LENSINDEX = function (i) {
+    return exports.LENS(nth(i), exports.UPDATE(i));
 };
-export const LENSPATH = function(key) {
+exports.LENSPATH = function (key) {
     return lens(path(key), assocPath(key));
 };
-export const ASSOC = function(){_curry3(function assoc(prop, val, obj) {
-    var result = {};
-    for (var p in obj) {
-      result[p] = obj[p];
-    }
-    result[prop] = val;
-    return result;
-})};
-export const ASSOCPATH = function(){_CURRY3(function ASSOCPATH(path, val, obj) {
-    if (path.length === 0) {
-      return val;
-    }
-    var idx = path[0];
-    if (path.length > 1) {
-      var nextObj = (!ISNIL(obj) && _HAS(idx, obj)) ? obj[idx] : ISINTEGER(path[1]) ? [] : {};
-      val = ASSOCPATH(S._Array.prototype.slice.call(path, 1), val, nextObj);
-    }
-    if (ISINTEGER(idx) && _ISARRAY(obj)) {
-      var arr = [].concat(obj);
-      arr[idx] = val;
-      return arr;
-    } else {
-      return ASSOC(idx, val, obj);
-    }
-})};
-export const LENSPROP = function(key) {
-    return LENS(prop(key), ASSOC(key));
+exports.ASSOC = function () {
+    _curry3(function assoc(prop, val, obj) {
+        var result = {};
+        for (var p in obj) {
+            result[p] = obj[p];
+        }
+        result[prop] = val;
+        return result;
+    });
 };
-export const MERGE = function(obj, props) {
-    if (arguments.length === 1) return _props => MERGE(obj, _props);
-    return S._Object.assign({}, obj || {}, props || {});
+exports.ASSOCPATH = function () {
+    exports._CURRY3(function ASSOCPATH(path, val, obj) {
+        if (path.length === 0) {
+            return val;
+        }
+        var idx = path[0];
+        if (path.length > 1) {
+            var nextObj = (!exports.ISNIL(obj) && _HAS(idx, obj)) ? obj[idx] : exports.ISINTEGER(path[1]) ? [] : {};
+            val = ASSOCPATH(exports.S._Array.prototype.slice.call(path, 1), val, nextObj);
+        }
+        if (exports.ISINTEGER(idx) && exports._ISARRAY(obj)) {
+            var arr = [].concat(obj);
+            arr[idx] = val;
+            return arr;
+        }
+        else {
+            return exports.ASSOC(idx, val, obj);
+        }
+    });
 };
-export const OMIT = function(keys, obj) {
-    if (arguments.length === 1) return _obj => OMIT(keys, _obj);
-  
+exports.LENSPROP = function (key) {
+    return exports.LENS(prop(key), exports.ASSOC(key));
+};
+exports.MERGE = function (obj, props) {
+    if (arguments.length === 1)
+        return _props => exports.MERGE(obj, _props);
+    return exports.S._Object.assign({}, obj || {}, props || {});
+};
+exports.OMIT = function (keys, obj) {
+    if (arguments.length === 1)
+        return _obj => exports.OMIT(keys, _obj);
     if (obj === null || obj === undefined) {
-      return undefined;
+        return undefined;
     }
-  
     const keysValue = typeof keys === 'string' ? keys.split(',') : keys;
     const willReturn = {};
-  
     for (const key in obj) {
-      if (!keysValue.includes(key)) {
-        willReturn[key] = obj[key];
-      }
+        if (!keysValue.includes(key)) {
+            willReturn[key] = obj[key];
+        }
     }
-  
     return willReturn;
-}; 
-export const OVER = function(lens, fn, object) {
-    if (arguments.length === 1) return (_fn, _object) => OVER(lens, _fn, _object);
-    if (arguments.length === 2) return _object => OVER(lens, fn, _object);
-    return LENS(x => _identity(fn(x)))(object).x;
 };
-export const PATH = function(list, obj) {
-    if (arguments.length === 1) return _obj => PATH(list, _obj);
-  
+exports.OVER = function (lens, fn, object) {
+    if (arguments.length === 1)
+        return (_fn, _object) => exports.OVER(lens, _fn, _object);
+    if (arguments.length === 2)
+        return _object => exports.OVER(lens, fn, _object);
+    return exports.LENS(x => _identity(fn(x)))(object).x;
+};
+exports.PATH = function (list, obj) {
+    if (arguments.length === 1)
+        return _obj => exports.PATH(list, _obj);
     if (obj === null || obj === undefined) {
-      return undefined;
+        return undefined;
     }
-  
     let willReturn = obj;
     let counter = 0;
     const pathArrValue = typeof list === 'string' ? list.split('.') : list;
-  
     while (counter < pathArrValue.length) {
-      if (willReturn === null || willReturn === undefined) {
-        return undefined;
-      }
-  
-      willReturn = willReturn[pathArrValue[counter]];
-      counter++;
+        if (willReturn === null || willReturn === undefined) {
+            return undefined;
+        }
+        willReturn = willReturn[pathArrValue[counter]];
+        counter++;
     }
-  
     return willReturn;
 };
-export const ALLPASS = function(predicates) {
+exports.ALLPASS = function (predicates) {
     return input => {
-      let counter = 0;
-  
-      while (counter < predicates.length) {
-        if (!predicates[counter](input)) {
-          return false;
+        let counter = 0;
+        while (counter < predicates.length) {
+            if (!predicates[counter](input)) {
+                return false;
+            }
+            counter++;
         }
-  
-        counter++;
-      }
-  
-      return true;
+        return true;
     };
 };
-export const AND = function(a, b) {
-    if (arguments.length === 1) return _b => AND(a, _b);
+exports.AND = function (a, b) {
+    if (arguments.length === 1)
+        return _b => exports.AND(a, _b);
     return a && b;
 };
-export const ANYPASS = function(predicates) {
+exports.ANYPASS = function (predicates) {
     return input => {
-      let counter = 0;
-  
-      while (counter < predicates.length) {
-        if (predicates[counter](input)) {
-          return true;
+        let counter = 0;
+        while (counter < predicates.length) {
+            if (predicates[counter](input)) {
+                return true;
+            }
+            counter++;
         }
-  
-        counter++;
-      }
-  
-      return false;
+        return false;
     };
 };
-export const BOTH = function(f, g) {
-    if (arguments.length === 1) return _g => BOTH(f, _g);
+exports.BOTH = function (f, g) {
+    if (arguments.length === 1)
+        return _g => exports.BOTH(f, _g);
     return (...input) => f(...input) && g(...input);
 };
-export const COMPLEMENT = function(fn) {
+exports.COMPLEMENT = function (fn) {
     return (...input) => !fn(...input);
 };
-export const COND = function(conditions) {
+exports.COND = function (conditions) {
     return input => {
-      let done = false;
-      let toReturn;
-      conditions.forEach(([predicate, resultClosure]) => {
-        if (!done && predicate(input)) {
-          done = true;
-          toReturn = resultClosure(input);
-        }
-      });
-      return toReturn;
+        let done = false;
+        let toReturn;
+        conditions.forEach(([predicate, resultClosure]) => {
+            if (!done && predicate(input)) {
+                done = true;
+                toReturn = resultClosure(input);
+            }
+        });
+        return toReturn;
     };
 };
-export const EITHER = function(f, g) {
-    if (arguments.length === 1) return _g => EITHER(f, _g);
+exports.EITHER = function (f, g) {
+    if (arguments.length === 1)
+        return _g => exports.EITHER(f, _g);
     return (...input) => f(...input) || g(...input);
 };
-export const NOT = function(a) {
+exports.NOT = function (a) {
     return !a;
 };
-export const XOR = function(a, b) {
-    if (arguments.length === 1) return _b => XOR(a, _b);
-    return S._Boolean(a) && !b || S._Boolean(b) && !a;
+exports.XOR = function (a, b) {
+    if (arguments.length === 1)
+        return _b => exports.XOR(a, _b);
+    return exports.S._Boolean(a) && !b || exports.S._Boolean(b) && !a;
 };
-export const EQUALS = function(a, b) {
-    if (arguments.length === 1) return _b => EQUALS(a, _b);
-    const aType = DTYPE(a);
-    if (aType !== DTYPE(b)) return false;
-    if (['NaN', 'Undefined', 'Null'].includes(aType)) return true;
-    if (['Boolean', 'Number', 'String'].includes(aType)) return a.toString() === b.toString();
-  
-    if (aType === 'Array') {
-      const aClone = S._Array.from(a);
-      const bClone = S._Array.from(b);
-  
-      if (aClone.toString() !== bClone.toString()) {
+exports.EQUALS = function (a, b) {
+    if (arguments.length === 1)
+        return _b => exports.EQUALS(a, _b);
+    const aType = exports.DTYPE(a);
+    if (aType !== exports.DTYPE(b))
         return false;
-      }
-  
-      let loopArrayFlag = true;
-      aClone.forEach((aCloneInstance, aCloneIndex) => {
-        if (loopArrayFlag) {
-          if (aCloneInstance !== bClone[aCloneIndex] && !EQUALS(aCloneInstance, bClone[aCloneIndex])) {
-            loopArrayFlag = false;
-          }
+    if (['NaN', 'Undefined', 'Null'].includes(aType))
+        return true;
+    if (['Boolean', 'Number', 'String'].includes(aType))
+        return a.toString() === b.toString();
+    if (aType === 'Array') {
+        const aClone = exports.S._Array.from(a);
+        const bClone = exports.S._Array.from(b);
+        if (aClone.toString() !== bClone.toString()) {
+            return false;
         }
-      });
-      return loopArrayFlag;
+        let loopArrayFlag = true;
+        aClone.forEach((aCloneInstance, aCloneIndex) => {
+            if (loopArrayFlag) {
+                if (aCloneInstance !== bClone[aCloneIndex] && !exports.EQUALS(aCloneInstance, bClone[aCloneIndex])) {
+                    loopArrayFlag = false;
+                }
+            }
+        });
+        return loopArrayFlag;
     }
-  
-    const aRegex = PARSEREGEX(a);
-    const bRegex = PARSEREGEX(b);
-  
+    const aRegex = exports.PARSEREGEX(a);
+    const bRegex = exports.PARSEREGEX(b);
     if (aRegex[0]) {
-      return bRegex[0] ? aRegex[1] === bRegex[1] : false;
-    } else if (bRegex[0]) return false;
-  
-    const aDate = PARSEDATE(a);
-    const bDate = PARSEDATE(b);
-  
+        return bRegex[0] ? aRegex[1] === bRegex[1] : false;
+    }
+    else if (bRegex[0])
+        return false;
+    const aDate = exports.PARSEDATE(a);
+    const bDate = exports.PARSEDATE(b);
     if (aDate[0]) {
-      return bDate[0] ? aDate[1] === bDate[1] : false;
-    } else if (bDate[0]) return false;
-  
+        return bDate[0] ? aDate[1] === bDate[1] : false;
+    }
+    else if (bDate[0])
+        return false;
     const aError = parseError(a);
     const bError = parseError(b);
-  
     if (aError[0]) {
-      return bError[0] ? aError[0] === bError[0] && aError[1] === bError[1] : false;
+        return bError[0] ? aError[0] === bError[0] && aError[1] === bError[1] : false;
     }
-  
     if (aType === 'Object') {
-      const aKeys = S._Object.keys(a);
-  
-      if (aKeys.length !== S._Object.keys(b).length) {
-        return false;
-      }
-  
-      let loopObjectFlag = true;
-      aKeys.forEach(aKeyInstance => {
-        if (loopObjectFlag) {
-          const aValue = a[aKeyInstance];
-          const bValue = b[aKeyInstance];
-  
-          if (aValue !== bValue && !EQUALS(aValue, bValue)) {
-            loopObjectFlag = false;
-          }
+        const aKeys = exports.S._Object.keys(a);
+        if (aKeys.length !== exports.S._Object.keys(b).length) {
+            return false;
         }
-      });
-      return loopObjectFlag;
+        let loopObjectFlag = true;
+        aKeys.forEach(aKeyInstance => {
+            if (loopObjectFlag) {
+                const aValue = a[aKeyInstance];
+                const bValue = b[aKeyInstance];
+                if (aValue !== bValue && !exports.EQUALS(aValue, bValue)) {
+                    loopObjectFlag = false;
+                }
+            }
+        });
+        return loopObjectFlag;
     }
-  
     return false;
 };
-export const IDENTICAL = function(a, b) {
-    if (arguments.length === 1) return _b => IDENTICAL(a, _b);
-    return _OBJECTIS$1(a, b);
+exports.IDENTICAL = function (a, b) {
+    if (arguments.length === 1)
+        return _b => exports.IDENTICAL(a, _b);
+    return exports._OBJECTIS$1(a, b);
 };
-export const MAX = function(a, b) {
-    if (arguments.length === 1) return _b => MAX(a, _b);
+exports.MAX = function (a, b) {
+    if (arguments.length === 1)
+        return _b => exports.MAX(a, _b);
     return b > a ? b : a;
 };
-export const MAXBy = function(fn, a, b) {
+exports.MAXBy = function (fn, a, b) {
     if (arguments.length === 2) {
-      return _b => MAXBy(fn, a, _b);
-    } else if (arguments.length === 1) {
-      return (_a, _b) => MAXBy(fn, _a, _b);
+        return _b => exports.MAXBy(fn, a, _b);
     }
-  
+    else if (arguments.length === 1) {
+        return (_a, _b) => exports.MAXBy(fn, _a, _b);
+    }
     return fn(b) > fn(a) ? b : a;
 };
-export const MIN = function(a, b) {
-    if (arguments.length === 1) return _b => MIN(a, _b);
+exports.MIN = function (a, b) {
+    if (arguments.length === 1)
+        return _b => exports.MIN(a, _b);
     return b < a ? b : a;
 };
-export const MINBY = function(fn, a, b) {
+exports.MINBY = function (fn, a, b) {
     if (arguments.length === 2) {
-      return _b => minBy(fn, a, _b);
-    } else if (arguments.length === 1) {
-      return (_a, _b) => minBy(fn, _a, _b);
+        return _b => minBy(fn, a, _b);
     }
-  
+    else if (arguments.length === 1) {
+        return (_a, _b) => minBy(fn, _a, _b);
+    }
     return fn(b) < fn(a) ? b : a;
 };
-export const ISNIL = function(x) {
+exports.ISNIL = function (x) {
     return x === undefined || x === null;
 };
-export const PICK = function(keys, obj) {
-    if (arguments.length === 1) return _obj => PICK(keys, _obj);
-  
+exports.PICK = function (keys, obj) {
+    if (arguments.length === 1)
+        return _obj => exports.PICK(keys, _obj);
     if (obj === null || obj === undefined) {
-      return undefined;
+        return undefined;
     }
-  
     const keysValue = typeof keys === 'string' ? keys.split(',') : keys;
     const willReturn = {};
     let counter = 0;
-  
     while (counter < keysValue.length) {
-      if (keysValue[counter] in obj) {
-        willReturn[keysValue[counter]] = obj[keysValue[counter]];
-      }
-  
-      counter++;
+        if (keysValue[counter] in obj) {
+            willReturn[keysValue[counter]] = obj[keysValue[counter]];
+        }
+        counter++;
     }
-  
     return willReturn;
 };
-export const PICKALL = function(keys, obj) {
-    if (arguments.length === 1) return _obj => PICKALL(keys, _obj);
-  
+exports.PICKALL = function (keys, obj) {
+    if (arguments.length === 1)
+        return _obj => exports.PICKALL(keys, _obj);
     if (obj === null || obj === undefined) {
-      return undefined;
+        return undefined;
     }
-  
     const keysValue = typeof keys === 'string' ? keys.split(',') : keys;
     const willReturn = {};
     let counter = 0;
-  
     while (counter < keysValue.length) {
-      if (keysValue[counter] in obj) {
-        willReturn[keysValue[counter]] = obj[keysValue[counter]];
-      } else {
-        willReturn[keysValue[counter]] = undefined;
-      }
-  
-      counter++;
+        if (keysValue[counter] in obj) {
+            willReturn[keysValue[counter]] = obj[keysValue[counter]];
+        }
+        else {
+            willReturn[keysValue[counter]] = undefined;
+        }
+        counter++;
     }
-  
     return willReturn;
 };
-export const PROP = function(key, obj) {
-    if (arguments.length === 1) return _obj => PROP(key, _obj);
-    if (!obj) return undefined;
+exports.PROP = function (key, obj) {
+    if (arguments.length === 1)
+        return _obj => exports.PROP(key, _obj);
+    if (!obj)
+        return undefined;
     return obj[key];
 };
-export const PROPOR = function(defaultValue, p, obj) {
-    if (arguments.length === 2) return _obj => PROPOR(defaultValue, p, _obj);
-    if (arguments.length === 1) return (_p, _obj) => PROPOR(defaultValue, _p, _obj);
-    if (!obj) return defaultValue;
-    return DEFAULTTO(defaultValue, obj[p]);
+exports.PROPOR = function (defaultValue, p, obj) {
+    if (arguments.length === 2)
+        return _obj => exports.PROPOR(defaultValue, p, _obj);
+    if (arguments.length === 1)
+        return (_p, _obj) => exports.PROPOR(defaultValue, _p, _obj);
+    if (!obj)
+        return defaultValue;
+    return exports.DEFAULTTO(defaultValue, obj[p]);
 };
-export const SET = function(lens, v, x) {
-    if (arguments.length === 1) return (_v, _x) => SET(lens, _v, _x);
-    if (arguments.length === 2) return _x => SET(lens, v, _x);
-    return OVER(lens, always(v), x);
+exports.SET = function (lens, v, x) {
+    if (arguments.length === 1)
+        return (_v, _x) => exports.SET(lens, _v, _x);
+    if (arguments.length === 2)
+        return _x => exports.SET(lens, v, _x);
+    return exports.OVER(lens, always(v), x);
 };
-export const TOPAIRS = function(obj) {
-    return S._Object.entries(obj);
+exports.TOPAIRS = function (obj) {
+    return exports.S._Object.entries(obj);
 };
-export const VALUES = function(obj) {
-    if (DTYPE(obj) !== 'Object') return [];
-    return S._Object.values(obj);
+exports.VALUES = function (obj) {
+    if (exports.DTYPE(obj) !== 'Object')
+        return [];
+    return exports.S._Object.values(obj);
 };
-export const VIEW = function(lens, target) {
-    if (arguments.length === 1) return _target => VIEW(lens, _target);
-    return LENS(Const)(target).x;
+exports.VIEW = function (lens, target) {
+    if (arguments.length === 1)
+        return _target => exports.VIEW(lens, _target);
+    return exports.LENS(exports.Const)(target).x;
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
@@ -2059,37 +1879,31 @@ export const VIEW = function(lens, target) {
  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
 /**
  * @license bcrypt.js (c) 2013 Daniel Wirtz <dcode@dcode.io>
  * Released under the Apache License, Version 2.0
  * see: https://github.com/dcodeIO/bcrypt.js for details
  */
 // export const BCRYPT = (function(global, factory) {
-
 //   /* AMD */ if (typeof define === 'function' && define["amd"])
 //       define([], factory);
 //   /* CommonJS */ else if (typeof require === 'function' && typeof module === "object" && module && module["exports"])
 //       module["exports"] = factory();
 //   /* Global */ else
 //       (global["dcodeIO"] = global["dcodeIO"] || {})["bcrypt"] = factory();
-
 // }(this, function() {
 //   "use strict";
-
 //   /**
 //    * bcrypt namespace.
 //    * @type {Object.<string,*>}
 //    */
 //   var bcrypt = {};
-
 //   /**
 //    * The random implementation to use as a fallback.
 //    * @type {?function(number):!Array.<number>}
 //    * @inner
 //    */
 //   var randomFallback = null;
-
 //   /**
 //    * Generates cryptographically secure random bytes.
 //    * @function
@@ -2111,14 +1925,12 @@ export const VIEW = function(lens, target) {
 //           throw Error("Neither WebCryptoAPI nor a crypto module is available. Use bcrypt.setRandomFallback to set an alternative");
 //       return randomFallback(len);
 //   }
-
 //   // Test if any secure randomness source is available
 //   var randomAvailable = false;
 //   try {
 //       random(1);
 //       randomAvailable = true;
 //   } catch (e) {}
-
 //   // Default fallback, if any
 //   randomFallback = null;
 //   /**
@@ -2133,7 +1945,6 @@ export const VIEW = function(lens, target) {
 //   bcrypt.setRandomFallback = function(random) {
 //       randomFallback = random;
 //   };
-
 //   /**
 //    * Synchronously generates a salt.
 //    * @param {number=} rounds Number of rounds to use, defaults to 10 if omitted
@@ -2158,7 +1969,6 @@ export const VIEW = function(lens, target) {
 //       salt.push(base64_encode(random(BCRYPT_SALT_LEN), BCRYPT_SALT_LEN)); // May throw
 //       return salt.join('');
 //   };
-
 //   /**
 //    * Asynchronously generates a salt.
 //    * @param {(number|function(Error, string=))=} rounds Number of rounds to use, defaults to 10 if omitted
@@ -2178,7 +1988,6 @@ export const VIEW = function(lens, target) {
 //           rounds = GENSALT_DEFAULT_LOG2_ROUNDS;
 //       else if (typeof rounds !== 'number')
 //           throw Error("illegal arguments: "+(typeof rounds));
-
 //       function _async(callback) {
 //           nextTick(function() { // Pretty thin, but salting is fast enough
 //               try {
@@ -2188,7 +1997,6 @@ export const VIEW = function(lens, target) {
 //               }
 //           });
 //       }
-
 //       if (callback) {
 //           if (typeof callback !== 'function')
 //               throw Error("Illegal callback: "+typeof(callback));
@@ -2204,7 +2012,6 @@ export const VIEW = function(lens, target) {
 //               });
 //           });
 //   };
-
 //   /**
 //    * Synchronously generates a hash for the given string.
 //    * @param {string} s String to hash
@@ -2220,7 +2027,6 @@ export const VIEW = function(lens, target) {
 //           throw Error("Illegal arguments: "+(typeof s)+', '+(typeof salt));
 //       return _hash(s, salt);
 //   };
-
 //   /**
 //    * Asynchronously generates a hash for the given string.
 //    * @param {string} s String to hash
@@ -2232,7 +2038,6 @@ export const VIEW = function(lens, target) {
 //    * @throws {Error} If `callback` is present but not a function
 //    */
 //   bcrypt.hash = function(s, salt, callback, progressCallback) {
-
 //       function _async(callback) {
 //           if (typeof s === 'string' && typeof salt === 'number')
 //               bcrypt.genSalt(salt, function(err, salt) {
@@ -2243,7 +2048,6 @@ export const VIEW = function(lens, target) {
 //           else
 //               nextTick(callback.bind(this, Error("Illegal arguments: "+(typeof s)+', '+(typeof salt))));
 //       }
-
 //       if (callback) {
 //           if (typeof callback !== 'function')
 //               throw Error("Illegal callback: "+typeof(callback));
@@ -2259,7 +2063,6 @@ export const VIEW = function(lens, target) {
 //               });
 //           });
 //   };
-
 //   /**
 //    * Compares two strings of the same length in constant time.
 //    * @param {string} known Must be of the correct length
@@ -2274,7 +2077,6 @@ export const VIEW = function(lens, target) {
 //       }
 //       return diff === 0;
 //   }
-
 //   /**
 //    * Synchronously tests a string against a hash.
 //    * @param {string} s String to compare
@@ -2289,7 +2091,6 @@ export const VIEW = function(lens, target) {
 //           return false;
 //       return safeStringCompare(bcrypt.hashSync(s, hash.substr(0, hash.length-31)), hash);
 //   };
-
 //   /**
 //    * Asynchronously compares the given data against the given hash.
 //    * @param {string} s Data to compare
@@ -2301,7 +2102,6 @@ export const VIEW = function(lens, target) {
 //    * @throws {Error} If `callback` is present but not a function
 //    */
 //   bcrypt.compare = function(s, hash, callback, progressCallback) {
-
 //       function _async(callback) {
 //           if (typeof s !== "string" || typeof hash !== "string") {
 //               nextTick(callback.bind(this, Error("Illegal arguments: "+(typeof s)+', '+(typeof hash))));
@@ -2318,7 +2118,6 @@ export const VIEW = function(lens, target) {
 //                   callback(null, safeStringCompare(comp, hash));
 //           }, progressCallback);
 //       }
-
 //       if (callback) {
 //           if (typeof callback !== 'function')
 //               throw Error("Illegal callback: "+typeof(callback));
@@ -2334,7 +2133,6 @@ export const VIEW = function(lens, target) {
 //               });
 //           });
 //   };
-
 //   /**
 //    * Gets the number of rounds used to encrypt the specified hash.
 //    * @param {string} hash Hash to extract the used number of rounds from
@@ -2346,7 +2144,6 @@ export const VIEW = function(lens, target) {
 //           throw Error("Illegal arguments: "+(typeof hash));
 //       return parseInt(hash.split("$")[2], 10);
 //   };
-
 //   /**
 //    * Gets the salt portion from a hash. Does not validate the hash.
 //    * @param {string} hash Hash to extract the salt from
@@ -2360,7 +2157,6 @@ export const VIEW = function(lens, target) {
 //           throw Error("Illegal hash length: "+hash.length+" != 60");
 //       return hash.substring(0, 29);
 //   };
-
 //   /**
 //    * Continues with the callback on the next tick.
 //    * @function
@@ -2370,7 +2166,6 @@ export const VIEW = function(lens, target) {
 //   var nextTick = typeof process !== 'undefined' && process && typeof process.nextTick === 'function'
 //       ? (typeof setImmediate === 'function' ? setImmediate : process.nextTick)
 //       : setTimeout;
-
 //   /** Calculates the byte length of a string encoded as UTF8. */
 //   function utf8Length(string) {
 //     var len = 0,
@@ -2392,7 +2187,6 @@ export const VIEW = function(lens, target) {
 //     }
 //     return len;
 //   }
-
 //   /** Converts a string to an array of UTF8 bytes. */
 //   function utf8Array(string) {
 //     var offset = 0,
@@ -2423,7 +2217,6 @@ export const VIEW = function(lens, target) {
 //     }
 //     return buffer;
 //   }
-
 //   /**
 //    * Converts a JavaScript string to UTF8 bytes.
 //    * @function
@@ -2432,9 +2225,7 @@ export const VIEW = function(lens, target) {
 //    * @inner
 //    */
 //   var stringToBytes = utf8Array;
-
 //   // A base64 implementation for the bcrypt algorithm. This is partly non-standard.
-
 //   /**
 //    * bcrypt's own non-standard base64 dictionary.
 //    * @type {!Array.<string>}
@@ -2442,7 +2233,6 @@ export const VIEW = function(lens, target) {
 //    * @inner
 //    **/
 //   var BASE64_CODE = "./ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split('');
-
 //   /**
 //    * @type {!Array.<number>}
 //    * @const
@@ -2456,13 +2246,11 @@ export const VIEW = function(lens, target) {
 //       20, 21, 22, 23, 24, 25, 26, 27, -1, -1, -1, -1, -1, -1, 28, 29, 30,
 //       31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47,
 //       48, 49, 50, 51, 52, 53, -1, -1, -1, -1, -1];
-
 //   /**
 //    * @type {!function(...number):string}
 //    * @inner
 //    */
 //   var stringFromCharCode = String.fromCharCode;
-
 //   /**
 //    * Encodes a byte array to base64 with up to len bytes of input.
 //    * @param {!Array.<number>} b Byte array
@@ -2499,7 +2287,6 @@ export const VIEW = function(lens, target) {
 //       }
 //       return rs.join('');
 //   }
-
 //   /**
 //    * Decodes a base64 encoded string to up to len bytes of output.
 //    * @param {string} s String to decode
@@ -2548,37 +2335,31 @@ export const VIEW = function(lens, target) {
 //           res.push(rs[off].charCodeAt(0));
 //       return res;
 //   }
-
 //   // Date.now = Date.now || function() { return +new Date; };
-
 //   /**
 //    * @type {number}
 //    * @const
 //    * @inner
 //    */
 //   var BCRYPT_SALT_LEN = 16;
-
 //   /**
 //    * @type {number}
 //    * @const
 //    * @inner
 //    */
 //   var GENSALT_DEFAULT_LOG2_ROUNDS = 10;
-
 //   /**
 //    * @type {number}
 //    * @const
 //    * @inner
 //    */
 //   var BLOWFISH_NUM_ROUNDS = 16;
-
 //   /**
 //    * @type {number}
 //    * @const
 //    * @inner
 //    */
 //   var MAX_EXECUTION_TIME = 100;
-
 //   /**
 //    * @type {Array.<number>}
 //    * @const
@@ -2590,7 +2371,6 @@ export const VIEW = function(lens, target) {
 //       0xbe5466cf, 0x34e90c6c, 0xc0ac29b7, 0xc97c50dd, 0x3f84d5b5,
 //       0xb5470917, 0x9216d5d9, 0x8979fb1b
 //   ];
-
 //   /**
 //    * @type {Array.<number>}
 //    * @const
@@ -2803,7 +2583,6 @@ export const VIEW = function(lens, target) {
 //       0xd6ebe1f9, 0x90d4f869, 0xa65cdea0, 0x3f09252d, 0xc208e69f,
 //       0xb74e6132, 0xce77e25b, 0x578fdfe3, 0x3ac372e6
 //   ];
-
 //   /**
 //    * @type {Array.<number>}
 //    * @const
@@ -2813,7 +2592,6 @@ export const VIEW = function(lens, target) {
 //       0x4f727068, 0x65616e42, 0x65686f6c, 0x64657253, 0x63727944,
 //       0x6f756274
 //   ];
-
 //   /**
 //    * @param {Array.<number>} lr
 //    * @param {number} off
@@ -2826,9 +2604,7 @@ export const VIEW = function(lens, target) {
 //       var n,
 //           l = lr[off],
 //           r = lr[off + 1];
-
 //       l ^= P[0];
-
 //       /*
 //       for (var i=0, k=BLOWFISH_NUM_ROUNDS-2; i<=k;)
 //           // Feistel substitution on left word
@@ -2844,7 +2620,6 @@ export const VIEW = function(lens, target) {
 //           n += S[0x300 | (r & 0xff)],
 //           l ^= n ^ P[++i];
 //       */
-
 //       //The following is an unrolled version of the above loop.
 //       //Iteration 0
 //       n  = S[l >>> 24];
@@ -2934,12 +2709,10 @@ export const VIEW = function(lens, target) {
 //       n ^= S[0x200 | ((r >> 8) & 0xff)];
 //       n += S[0x300 | (r & 0xff)];
 //       l ^= n ^ P[16];
-
 //       lr[off] = r ^ P[BLOWFISH_NUM_ROUNDS + 1];
 //       lr[off + 1] = l;
 //       return lr;
 //   }
-
 //   /**
 //    * @param {Array.<number>} data
 //    * @param {number} offp
@@ -2952,7 +2725,6 @@ export const VIEW = function(lens, target) {
 //           offp = (offp + 1) % data.length;
 //       return { key: word, offp: offp };
 //   }
-
 //   /**
 //    * @param {Array.<number>} key
 //    * @param {Array.<number>} P
@@ -2978,7 +2750,6 @@ export const VIEW = function(lens, target) {
 //           S[i] = lr[0],
 //           S[i + 1] = lr[1];
 //   }
-
 //   /**
 //    * Expensive key schedule Blowfish.
 //    * @param {Array.<number>} data
@@ -3019,7 +2790,6 @@ export const VIEW = function(lens, target) {
 //           S[i] = lr[0],
 //           S[i + 1] = lr[1];
 //   }
-
 //   /**
 //    * Internaly crypts a string.
 //    * @param {Array.<number>} b Bytes to crypt
@@ -3035,7 +2805,6 @@ export const VIEW = function(lens, target) {
 //       var cdata = C_ORIG.slice(),
 //           clen = cdata.length,
 //           err;
-
 //       // Validate
 //       if (rounds < 4 || rounds > 31) {
 //           err = Error("Illegal number of rounds (4-31): "+rounds);
@@ -3054,9 +2823,7 @@ export const VIEW = function(lens, target) {
 //               throw err;
 //       }
 //       rounds = (1 << rounds) >>> 0;
-
 //       var P, S, i = 0, j;
-
 //       //Use typed arrays when available - huge speedup!
 //       if (Int32Array) {
 //           P = new Int32Array(P_ORIG);
@@ -3065,9 +2832,7 @@ export const VIEW = function(lens, target) {
 //           P = P_ORIG.slice();
 //           S = S_ORIG.slice();
 //       }
-
 //       _ekskey(salt, b, P, S);
-
 //       /**
 //        * Calcualtes the next round.
 //        * @returns {Array.<number>|undefined} Resulting array if callback has been omitted, otherwise `undefined`
@@ -3104,11 +2869,9 @@ export const VIEW = function(lens, target) {
 //           if (callback)
 //               nextTick(next);
 //       }
-
 //       // Async
 //       if (typeof callback !== 'undefined') {
 //           next();
-
 //           // Sync
 //       } else {
 //           var res;
@@ -3117,7 +2880,6 @@ export const VIEW = function(lens, target) {
 //                   return res || [];
 //       }
 //   }
-
 //   /**
 //    * Internally hashes a string.
 //    * @param {string} s String to hash
@@ -3139,7 +2901,6 @@ export const VIEW = function(lens, target) {
 //           else
 //               throw err;
 //       }
-
 //       // Validate the salt
 //       var minor, offset;
 //       if (salt.charAt(0) !== '$' || salt.charAt(1) !== '2') {
@@ -3166,7 +2927,6 @@ export const VIEW = function(lens, target) {
 //           }
 //           offset = 4;
 //       }
-
 //       // Extract number of rounds
 //       if (salt.charAt(offset + 2) > '$') {
 //           err = Error("Missing salt rounds");
@@ -3181,10 +2941,8 @@ export const VIEW = function(lens, target) {
 //           rounds = r1 + r2,
 //           real_salt = salt.substring(offset + 3, offset + 25);
 //       s += minor >= 'a' ? "\x00" : "";
-
 //       var passwordb = stringToBytes(s),
 //           saltb = base64_decode(real_salt, BCRYPT_SALT_LEN);
-
 //       /**
 //        * Finishes hashing.
 //        * @param {Array.<number>} bytes Byte array
@@ -3205,11 +2963,9 @@ export const VIEW = function(lens, target) {
 //           res.push(base64_encode(bytes, C_ORIG.length * 4 - 1));
 //           return res.join('');
 //       }
-
 //       // Sync
 //       if (typeof callback == 'undefined')
 //           return finish(_crypt(passwordb, saltb, rounds));
-
 //       // Async
 //       else {
 //           _crypt(passwordb, saltb, rounds, function(err, bytes) {
@@ -3220,7 +2976,6 @@ export const VIEW = function(lens, target) {
 //           }, progressCallback);
 //       }
 //   }
-
 //   /**
 //    * Encodes a byte array to base64 with up to len bytes of input, using the custom bcrypt alphabet.
 //    * @function
@@ -3229,7 +2984,6 @@ export const VIEW = function(lens, target) {
 //    * @returns {string}
 //    */
 //   bcrypt.encodeBase64 = base64_encode;
-
 //   /**
 //    * Decodes a base64 encoded string to up to len bytes of output, using the custom bcrypt alphabet.
 //    * @function
@@ -3238,84 +2992,63 @@ export const VIEW = function(lens, target) {
 //    * @returns {!Array.<number>}
 //    */
 //   bcrypt.decodeBase64 = base64_decode;
-
 //   return bcrypt;
 // }));
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const THROWE                  = function(){};
-export const THROWE0 /* IMMEDIATE */ = function(){};
-export const THROWE1 /* STACK */     = function(){};
-export const THROWE2 /* PROGRAMMABLE*/=function(){};
-export const THROWEZ                  =function(){};
-
-export const UNFINISHED              = function(){throw new Error("UNFINISHED");};
-export const UNFINSHED0 /*IMMEDIATE*/= function(){};
-export const UNFINSHED1 /*STACK*/    = function(){};
-export const UNFINSHEDZ              = function(){};
-
-export const BUG                     = function(){};
-export const BUG0                    = function(){};
-export const BUGZ                    = function(){};
-
-export const MAINTENANCE             = function(){};
-export const MAINTENANCE0            = function(){};
-export const MAINTENANCEZ            = function(){};
-
-export const REVIEW                  = function(){};
-export const REVIEW0                 = function(){};
-export const REVIEWZ                 = function(){};
-
-export const CLI         = function(){};
+exports.THROWE = function () { };
+exports.THROWE0 /* IMMEDIATE */ = function () { };
+exports.THROWE1 /* STACK */ = function () { };
+exports.THROWE2 /* PROGRAMMABLE*/ = function () { };
+exports.THROWEZ = function () { };
+exports.UNFINISHED = function () { throw new Error("UNFINISHED"); };
+exports.UNFINSHED0 /*IMMEDIATE*/ = function () { };
+exports.UNFINSHED1 /*STACK*/ = function () { };
+exports.UNFINSHEDZ = function () { };
+exports.BUG = function () { };
+exports.BUG0 = function () { };
+exports.BUGZ = function () { };
+exports.MAINTENANCE = function () { };
+exports.MAINTENANCE0 = function () { };
+exports.MAINTENANCEZ = function () { };
+exports.REVIEW = function () { };
+exports.REVIEW0 = function () { };
+exports.REVIEWZ = function () { };
+exports.CLI = function () { };
 // https://www.npmjs.com/package/yow
-export const REQUIRE     = function(){return ;};
-export const MKDIR       = REQUIRE('YOW/MKDIR');
-export const MKPATH      = REQUIRE('YOW/MKPATH');
-export const FILEEXISTS  = REQUIRE('YOW/FILEEXISTS');
-export const READJSON    = REQUIRE('YOW/READJSON');
-export const WRITEJSON   = REQUIRE('YOW/WRITEJSON');
-
-
-export const UI = function(){};
-export const CODE = function(){};
-export const DATA = function(){};
-export const ANIMATE = function(){};
-
-
-export const SAVE =  function(){};
-export const LOAD =  function(){};
+exports.REQUIRE = function () { return; };
+exports.MKDIR = exports.REQUIRE('YOW/MKDIR');
+exports.MKPATH = exports.REQUIRE('YOW/MKPATH');
+exports.FILEEXISTS = exports.REQUIRE('YOW/FILEEXISTS');
+exports.READJSON = exports.REQUIRE('YOW/READJSON');
+exports.WRITEJSON = exports.REQUIRE('YOW/WRITEJSON');
+exports.UI = function () { };
+exports.CODE = function () { };
+exports.DATA = function () { };
+exports.ANIMATE = function () { };
+exports.SAVE = function () { };
+exports.LOAD = function () { };
 // export const DELETE =function(){};
-
-
-export const ENCRYPT = function(){};
-export const RANDOM = function(){};
-export const SHUFFLE = function(){};
-
-export const COMPRESS = function(){
-  //https://github.com/cthackers/adm-zip
+exports.ENCRYPT = function () { };
+exports.RANDOM = function () { };
+exports.SHUFFLE = function () { };
+exports.COMPRESS = function () {
+    //https://github.com/cthackers/adm-zip
 };
-
-
-
-export const GLOBAL= function(){};
-export const VAR   = function(){};
-export const LET   = function(){};
-export const CONST = function(){};
-
-export const PUBLIC = function(){};
-export const PRIVATE = function(){};
-export const PROTECT = function(){};
-export const STATIC  = function(){};
-export const INTERNAL = function(){};
-export const METHOD   = function(){};
+exports.GLOBAL = function () { };
+exports.VAR = function () { };
+exports.LET = function () { };
+exports.CONST = function () { };
+exports.PUBLIC = function () { };
+exports.PRIVATE = function () { };
+exports.PROTECT = function () { };
+exports.STATIC = function () { };
+exports.INTERNAL = function () { };
+exports.METHOD = function () { };
 // export const LAMBDA   = function(){};
-
-
-export const RULE     = function(){};
-export const PROTOCOL = function(){};
-
-
-export const NAMINGSYSTEM = function(){
-  let sys = {
+exports.RULE = function () { };
+exports.PROTOCOL = function () { };
+exports.NAMINGSYSTEM = function () {
+    let sys = {
     // syntax //
     // s<word>        ...  sroute ... singular
     // p<word>        ...  proute ... plural
@@ -3328,633 +3061,763 @@ export const NAMINGSYSTEM = function(){
     // pre<word>()    ... s3route() ... event ... before
     // dur<word>()    ... s4route() ... event ... during
     // post<word>()   ... s5route() ... event ... after  
-  };
+    };
 };
-
-
-export const TYP,DATATYPES:string[] = ["boolean","string","number","object","array","symbol","function","set"];
-
-export const NUM,NUMBER    = function(){return S._Number (...arguments);};  
-export const BOL,BOOLEAN   = function(){return S._Boolean(...arguments)};   
-export const STR,STRING    = function(){return S._String (...arguments)};   
-export const ARR,ARRAY     = function(){return S._Array  (...arguments)};   
-export const OBJ,OBJECT    = function(){return S._Object (...arguments)};   
-export const SET           = function(){return S._Set    (...arguments)};   
-export const SYM,SYMBOL    = function(){return S._Symbol (...arguments)};   
-export const FNC,FUNCTION  = function(){return S._Function(...arguments)};  
-export const LMD,LAMBDA    = function(){return Lambda (...arguments)};   
-export const CLS,CLASS     = function(){return Class  (...arguments)};   
-export const NUL,NULL      = function(){return Null   (...arguments)};   
-export const UND,UNDEFINED = function(){return Undefined(...arguments)}; 
-
-
-
-
-
-/*export*/ export const CAPSULE = function(cb:Function, props:{[index:string]:any}) {
-  for (let k in props) {
-    !RESTRICTEDPROPS.includes(k) || THROWE()
-}
-return S._Object.freeze(S._Object.assign(cb,props));
+exports.DATATYPES = ["boolean", "string", "number", "object", "array", "symbol", "function", "set"];
+exports.NUMBER = function () { return exports.S._Number(...arguments); };
+exports.BOOLEAN = function () { return exports.S._Boolean(...arguments); };
+exports.STRING = function () { return exports.S._String(...arguments); };
+exports.ARRAY = function () { return exports.S._Array(...arguments); };
+exports.OBJECT = function () { return exports.S._Object(...arguments); };
+exports.SET = function () { return exports.S._Set(...arguments); };
+exports.SYMBOL = function () { return exports.S._Symbol(...arguments); };
+exports.FUNCTION = function () { return exports.S._Function(...arguments); };
+exports.LAMBDA = function () { return Lambda(...arguments); };
+exports.CLASS = function () { return Class(...arguments); };
+exports.NULL = function () { return Null(...arguments); };
+exports.UNDEFINED = function () { return Undefined(...arguments); };
+/*export*/ exports.CAPSULE = function (cb, props) {
+    for (let k in props) {
+        !exports.RESTRICTEDPROPS.includes(k) || exports.THROWE();
+    }
+    return exports.S._Object.freeze(exports.S._Object.assign(cb, props));
 };
-/*export*/ export const RESTRICTEDPROPS = [
-"__defineGetter__",
-"__defineSetter__",      
-"__lookupGetter__",      
-"__lookupSetter__",      
-"__proto__",
-"hasOwnProperty",
-"isPrototypeOf",         
-"propertyIsEnumerable",  
-"toLocaleString",
-"valueOf",
-"apply",
-"bind",
-"call",                  
-"constructor",          
-"toString",
-"arguments",
-"caller",
-"length",
-"name",
-"prototype"              
-]; 
-
-export const FORBIDDEN_OBJECT_PROPS = [/***/];
+/*export*/ exports.RESTRICTEDPROPS = [
+    "__defineGetter__",
+    "__defineSetter__",
+    "__lookupGetter__",
+    "__lookupSetter__",
+    "__proto__",
+    "hasOwnProperty",
+    "isPrototypeOf",
+    "propertyIsEnumerable",
+    "toLocaleString",
+    "valueOf",
+    "apply",
+    "bind",
+    "call",
+    "constructor",
+    "toString",
+    "arguments",
+    "caller",
+    "length",
+    "name",
+    "prototype"
+];
+exports.FORBIDDEN_OBJECT_PROPS = [ /***/];
 console.warn("FORBIDDEN OBJECT PROPS UNFINISHED");
-
-export const VOBJ = CAPSULE(function(sel,val){
-  return{
-    0: ["TYPE","ALTERED","LEN0","FORBID"],
-    1: ["TYPE","ALTERED","LENZ","FORBID"],
-    2: ["TYPE","ALTERED","FORBID"],
-    3: ["TYPE","FORBID"]
-  }[sel].every(f=>{return VOBJ[f](val);});
-},{
-  TYPE:   (v)=>{if (S._Array.isArray(v) || typeof v !== "object")return false;  else return true;},
-  ALTERED:(v)=>{if (PROPSALTERED.OBJ(v))                         return false;  else return true;},
-  LEN0:   (v)=>{if (ISEMPTY(v))                                  return false;  else return true;},
-  LENZ:   (v)=>{if (ISNOTEMPTY(v))                               return false;  else return true;},
-  FORBID: (v)=>{for (let e in S._Object.keys(v)) {
-                    if (FORBIDDEN_OBJECT_PROPS.includes(k[e]))   return false;    
-  }return true;}
+exports.VOBJ = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "ALTERED", "LEN0", "FORBID"],
+        1: ["TYPE", "ALTERED", "LENZ", "FORBID"],
+        2: ["TYPE", "ALTERED", "FORBID"],
+        3: ["TYPE", "FORBID"]
+    }[sel].every(f => { return exports.VOBJ[f](val); });
+}, {
+    TYPE: (v) => { if (exports.S._Array.isArray(v) || typeof v !== "object")
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.OBJ(v))
+        return false;
+    else
+        return true; },
+    LEN0: (v) => { if (exports.ISEMPTY(v))
+        return false;
+    else
+        return true; },
+    LENZ: (v) => { if (exports.ISNOTEMPTY(v))
+        return false;
+    else
+        return true; },
+    FORBID: (v) => {
+        for (let e in exports.S._Object.keys(v)) {
+            if (exports.FORBIDDEN_OBJECT_PROPS.includes(k[e]))
+                return false;
+        }
+        return true;
+    }
 });
-export const VNUM = CAPSULE(function(sel,val){
-  return {
-    0:  ["TYPE","ISNAN","ALTERED","SAFEINT","FINITE"],
-    1:  ["TYPE","ISNAN","ALTERED","FINITE"],
-    2:  ["TYPE","ISNAN","ALTERED"],
-    3:  ["TYPE","ALTERED"],
-    4:  ["TYPE"]
-  }[sel].every(f=>{return VNUM[f](val);});
-},{
-  ISNAN:  (v)=>{if (S._Number.isNaN(v))                          return false;  else return true;},
-  TYPE:   (v)=>{if (typeof v !== "number")                       return false;  else return true;},
-  ALTERED:(v)=>{if (PROPSALTERED.NUM(v))                         return false;  else return true;},
-  SAFEINT:(v)=>{if (!S._Number.isSafeInteger(v))                 return false;  else return true;},
-  FINITE: (v)=>{if (!S._Number.isFinite(v))                      return false;  else return true;}
+exports.VNUM = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "ISNAN", "ALTERED", "SAFEINT", "FINITE"],
+        1: ["TYPE", "ISNAN", "ALTERED", "FINITE"],
+        2: ["TYPE", "ISNAN", "ALTERED"],
+        3: ["TYPE", "ALTERED"],
+        4: ["TYPE"]
+    }[sel].every(f => { return exports.VNUM[f](val); });
+}, {
+    ISNAN: (v) => { if (exports.S._Number.isNaN(v))
+        return false;
+    else
+        return true; },
+    TYPE: (v) => { if (typeof v !== "number")
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.NUM(v))
+        return false;
+    else
+        return true; },
+    SAFEINT: (v) => { if (!exports.S._Number.isSafeInteger(v))
+        return false;
+    else
+        return true; },
+    FINITE: (v) => { if (!exports.S._Number.isFinite(v))
+        return false;
+    else
+        return true; }
 });
-export const VSTR = CAPSULE(function(sel,val){
-  return {
-    0:  ["TYPE","ALTERED","EMPTY"],
-    1:  ["TYPE","ALTERED","NTEMPTY"],
-    2:  ["TYPE","ALTERED"],
-    3:  ["TYPE"]
-  }[sel].every(f=>{return VSTR[f](val);});
-},{
-  TYPE:   (v)=>{if (typeof v !== "string")                       return false;  else return true;},
-  ALTERED:(v)=>{if (PROPSALTERED.STR(v))                         return false;  else return true;},
-  EMPTY:  (v)=>{if (ISEMPTY(v))                                  return false;  else return true;},
-  NEMPTY: (v)=>{if (ISNOTEMPTY(v))                               return false;  else return true;}
+exports.VSTR = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "ALTERED", "EMPTY"],
+        1: ["TYPE", "ALTERED", "NTEMPTY"],
+        2: ["TYPE", "ALTERED"],
+        3: ["TYPE"]
+    }[sel].every(f => { return exports.VSTR[f](val); });
+}, {
+    TYPE: (v) => { if (typeof v !== "string")
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.STR(v))
+        return false;
+    else
+        return true; },
+    EMPTY: (v) => { if (exports.ISEMPTY(v))
+        return false;
+    else
+        return true; },
+    NEMPTY: (v) => { if (exports.ISNOTEMPTY(v))
+        return false;
+    else
+        return true; }
 });
-export const VFNC = CAPSULE(function(sel,val){
-  return {
-    0:["TYPE","NTFUNCTION","ALTERED","NTEMPTY"],
-    1:["TYPE","NTFUNCTION","ALTERED","EMPTY"],
-    2:["TYPE","NTFUNCTION","ALTERED"],
-    3:["TYPE","NTFUNCTION"]
-  }[sel].every(f=>{return FNC[f](val)})
-},{
-  
-  TYPE:      (v)=>{if (typeof v !== "function")                  return false;  else return true;},
-  NTFUNCTION:(v)=>{if (ISNOTFUNCTION(v))                         return false;  else return true;},
-  ALTERED:   (v)=>{if (PROPSALTERED.FNC(v))                      return false;  else return true;},
-  EMPTY:     (v)=>{if (ISEMPTY(v))                               return false;  else return true;},
-  NTEMPTY:   (v)=>{if (ISNOTEMPTY(v))                            return false;  else return true;}
+exports.VFNC = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "NTFUNCTION", "ALTERED", "NTEMPTY"],
+        1: ["TYPE", "NTFUNCTION", "ALTERED", "EMPTY"],
+        2: ["TYPE", "NTFUNCTION", "ALTERED"],
+        3: ["TYPE", "NTFUNCTION"]
+    }[sel].every(f => { return exports.FNC[f](val); });
+}, {
+    TYPE: (v) => { if (typeof v !== "function")
+        return false;
+    else
+        return true; },
+    NTFUNCTION: (v) => { if (exports.ISNOTFUNCTION(v))
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.FNC(v))
+        return false;
+    else
+        return true; },
+    EMPTY: (v) => { if (exports.ISEMPTY(v))
+        return false;
+    else
+        return true; },
+    NTEMPTY: (v) => { if (exports.ISNOTEMPTY(v))
+        return false;
+    else
+        return true; }
 });
-export const VLMD = CAPSULE(function(sel,val){
-  return {
-    0:["TYPE","NTLAMBDA","ALTERED","NTEMPTY"],
-    1:["TYPE","NTLAMBDA","ALTERED","EMPTY"],
-    2:["TYPE","NTLAMBDA","ALTERED"],
-    3:["TYPE","NTLAMBDA"]
-  }[sel].every(f=>{return VLMD[f](val);});
-},{
-  TYPE:     (v)=>{if (typeof v !== "function")                   return false;  else return true;},
-  NTLAMBDA: (v)=>{if (ISNOTLAMBDA(v))                            return false;  else return true;},
-  ALTERED:  (v)=>{if (PROPSALTERED.LMD(v))                       return false;  else return true;},
-  NTEMPTY:  (v)=>{if (ISNOTEMPTY(v))                             return false;  else return true;}
+exports.VLMD = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "NTLAMBDA", "ALTERED", "NTEMPTY"],
+        1: ["TYPE", "NTLAMBDA", "ALTERED", "EMPTY"],
+        2: ["TYPE", "NTLAMBDA", "ALTERED"],
+        3: ["TYPE", "NTLAMBDA"]
+    }[sel].every(f => { return exports.VLMD[f](val); });
+}, {
+    TYPE: (v) => { if (typeof v !== "function")
+        return false;
+    else
+        return true; },
+    NTLAMBDA: (v) => { if (exports.ISNOTLAMBDA(v))
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.LMD(v))
+        return false;
+    else
+        return true; },
+    NTEMPTY: (v) => { if (exports.ISNOTEMPTY(v))
+        return false;
+    else
+        return true; }
 });
-export const VSYM = CAPSULE(function(sel,val){
-  return {
-    0:["TYPE","ALTERED"],
-    1:["TYPE"]
-  }[sel].every(f=>{return VSYM[f](val);});
-},{
-  TYPE:   (v)=>{if (typeof v !== "symbol")                       return false;   else return true;},
-  ALTERED:(v)=>{if (PROPSALTERED.SYM(v))                         return false;   else return true;}
+exports.VSYM = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "ALTERED"],
+        1: ["TYPE"]
+    }[sel].every(f => { return exports.VSYM[f](val); });
+}, {
+    TYPE: (v) => { if (typeof v !== "symbol")
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.SYM(v))
+        return false;
+    else
+        return true; }
 });
-export const VSET = CAPSULE(function(sel,val){
-  throw new Error("UNFINISHED");
-  return {
-    0:["TYPE","ALTERED"],
-    1:["TYPE"]
-  }[sel].every(f=>{return VSET[f](val);});
-},{
-  TYPE:   (v)=>{if (typeof v !== "set")                          return false;  else return true;},
-  ALTERED:(v)=>{if (PROPSALTERED.SET(v))                         return false;  else return true;}
+exports.VSET = exports.CAPSULE(function (sel, val) {
+    throw new Error("UNFINISHED");
+    return {
+        0: ["TYPE", "ALTERED"],
+        1: ["TYPE"]
+    }[sel].every(f => { return exports.VSET[f](val); });
+}, {
+    TYPE: (v) => { if (typeof v !== "set")
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.SET(v))
+        return false;
+    else
+        return true; }
 });
-
-export const VCLA = CAPSULE(function(sel,val){
-  throw new Error("UNFINISHED");
-  return {
-    0:["TYPE","NEWABLE","NTCLASS","ALTERED","NTEMPTY"],
-    1:["TYPE","NEWABLE","NTCLASS","ALTERED","EMPTY"],
-    2:["TYPE","NEWABLE","NTCLASS","ALTERED"],
-    3:["TYPE","NEWABLE","NTCLASS"]
-  }[sel].every(f=>{return VCLA[f](val);});
-},{
-  TYPE:   (v) => {if (typeof v !== "function")                  return false;  else return true;},
-  NEWABLE:(v) => {if (NEWABLE(v))                               return false;  else return true;},
-  NTCLASS:(v) => {if (ISCLASS(v))                               return false;  else return true;},
-  ALTERED:(v) => {if (PROPSALTERED.CLS(v))                      return false;  else return true;},
-  EMPTY:  (v) => {if (ISEMPTY(v))                               return false;  else return true;},
-  NTEMPTY:(v) => {if (NOTEMPTY(v))                              return false;  else return true;}
+exports.VCLA = exports.CAPSULE(function (sel, val) {
+    throw new Error("UNFINISHED");
+    return {
+        0: ["TYPE", "NEWABLE", "NTCLASS", "ALTERED", "NTEMPTY"],
+        1: ["TYPE", "NEWABLE", "NTCLASS", "ALTERED", "EMPTY"],
+        2: ["TYPE", "NEWABLE", "NTCLASS", "ALTERED"],
+        3: ["TYPE", "NEWABLE", "NTCLASS"]
+    }[sel].every(f => { return exports.VCLA[f](val); });
+}, {
+    TYPE: (v) => { if (typeof v !== "function")
+        return false;
+    else
+        return true; },
+    NEWABLE: (v) => { if (NEWABLE(v))
+        return false;
+    else
+        return true; },
+    NTCLASS: (v) => { if (exports.ISCLASS(v))
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.CLS(v))
+        return false;
+    else
+        return true; },
+    EMPTY: (v) => { if (exports.ISEMPTY(v))
+        return false;
+    else
+        return true; },
+    NTEMPTY: (v) => { if (exports.NOTEMPTY(v))
+        return false;
+    else
+        return true; }
 });
-export const VARR = CAPSULE(function(sel,val){
-  return {
-    0:["TYPE","NTEMPTY","ALTERED"],
-    1:["TYPE","EMPTY",  "ALTERED"],
-    2:["TYPE","ALTERED"],
-    3:["TYPE"]
-  }[sel].every(f=>{return VARR[f](val);});
-},{
-  TYPE:   (v) => {if (!S._Array.isArray(v))                     return false;  else return true;},
-  NTEMPTY:(v) => {if (ISEMPTY(v))                               return false;  else return true;},
-  EMPTY:  (v) => {if (ISNOTEMPTY(v))                            return false;  else return true;},
-  ALTERED:(v) => {if (PROPSALTERED.ARR(v))                      return false;  else return true;}
+exports.VARR = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "NTEMPTY", "ALTERED"],
+        1: ["TYPE", "EMPTY", "ALTERED"],
+        2: ["TYPE", "ALTERED"],
+        3: ["TYPE"]
+    }[sel].every(f => { return exports.VARR[f](val); });
+}, {
+    TYPE: (v) => { if (!exports.S._Array.isArray(v))
+        return false;
+    else
+        return true; },
+    NTEMPTY: (v) => { if (exports.ISEMPTY(v))
+        return false;
+    else
+        return true; },
+    EMPTY: (v) => { if (exports.ISNOTEMPTY(v))
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.ARR(v))
+        return false;
+    else
+        return true; }
 });
-export const VUND = CAPSULE(function(sel,val){
-  return {
-    0:["TYPE","ALTERED"],
-    1:["TYPE"]
-  }[sel].every(f=>{return VUND[f](val);});
-},{
-  TYPE:   (v) => {if (v === undefined)                          return false;  else return true;},
-  ALTERED:(v) => {if (PROPSALTERED.UND(v))                      return false;  else return true;}
+exports.VUND = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "ALTERED"],
+        1: ["TYPE"]
+    }[sel].every(f => { return exports.VUND[f](val); });
+}, {
+    TYPE: (v) => { if (v === undefined)
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.UND(v))
+        return false;
+    else
+        return true; }
 });
-
-export const VNUL = CAPSULE(function(sel,val){
-  return {
-    0:["TYPE","ALTERED"],
-    1:["TYPE"]
-  }[sel].every(f=>{return VNUL[f](val);});
-},{
-  TYPE:   (v) => {if (v === null)                               return false; else return true;},
-  ALTERED:(v) => {if (PROPSALTERED.NUL(v))                      return false; else return true;}
+exports.VNUL = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "ALTERED"],
+        1: ["TYPE"]
+    }[sel].every(f => { return exports.VNUL[f](val); });
+}, {
+    TYPE: (v) => { if (v === null)
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.NUL(v))
+        return false;
+    else
+        return true; }
 });
-export const VBOL = CAPSULE(function(sel,val){
-  return {
-    0:["TYPE","ALTERED"],
-    1:["TYPE"]
-  }[sel].every(f=>{return VBOL[f](val);});
-},{
-  TYPE:    (v) => {if (typeof v !== "boolean")                  return false; else return true;},
-  ALTERED: (v) => {if (PROPSALTERED.BOL(v))                     return false; else return true;}
+exports.VBOL = exports.CAPSULE(function (sel, val) {
+    return {
+        0: ["TYPE", "ALTERED"],
+        1: ["TYPE"]
+    }[sel].every(f => { return exports.VBOL[f](val); });
+}, {
+    TYPE: (v) => { if (typeof v !== "boolean")
+        return false;
+    else
+        return true; },
+    ALTERED: (v) => { if (exports.PROPSALTERED.BOL(v))
+        return false;
+    else
+        return true; }
 });
-
-/*export*/ export const DTYPE = CAPSULE(function(typ?,sel?,val?){
+/*export*/ exports.DTYPE = exports.CAPSULE(function (typ, sel, val) {
     /** LEGEND: arg SEL
-     * 
+     *
      * 0: STRICTEST VALIDATION ENFORCEMENT
      * |
      *(^)
-     * N: LESS STRICT VALIDATION ENFORCEMENT, NO ALTEREDPROP CHECK 
+     * N: LESS STRICT VALIDATION ENFORCEMENT, NO ALTEREDPROP CHECK
      */
-  throw new Error("UNFINISHED");
-  let a;
-  if (typ)  
-  return DType[typ](sel,val);
-},{
-    BOL:   VBOL,
-    NUM:   VNUM,
-    STR:   VSTR,
-    OBJ:   VOBJ,
-    FNC:   VFNC,
-    LMD:   VLMD,
-
-    CLA:   VCLA,
-    SYM:   VSYM,
-    ARR:   VARR,
-    SET:   VSET,
-    UND:   VUND,
-    NUL:   VNUL,
+    throw new Error("UNFINISHED");
+    let a;
+    if (typ)
+        return DType[typ](sel, val);
+}, {
+    BOL: exports.VBOL,
+    NUM: exports.VNUM,
+    STR: exports.VSTR,
+    OBJ: exports.VOBJ,
+    FNC: exports.VFNC,
+    LMD: exports.VLMD,
+    CLA: exports.VCLA,
+    SYM: exports.VSYM,
+    ARR: exports.VARR,
+    SET: exports.VSET,
+    UND: exports.VUND,
+    NUL: exports.VNUL,
 });
-export const TYPETRUTHY = CAPSULE(function(){
-  console.warn(`this assumes the conditional statements are the same to all types of conditions`);
-  console.warn(`bewarned, bug is probable`);
-},{
-/*const*/ BOL  : v => { if (v) return true; else return false; },
-/*const*/ NUM  : v => { if (v) return true; else return false; },
-/*const*/ STR  : v => { if (v) return true; else return false; },
-/*const*/ OBJ  : v => { if (v) return true; else return false; },
-/*const*/ ARR  : v => { if (v) return true; else return false; },
-/*const*/ SYM  : v => { if (v) return true; else return false; },
-/*const*/ SET  : v => { if (v) return true; else return false; },
-/*const*/ FNC  : v => { if (v) return true; else return false; },
-/*const*/ CLS  : v => { if (v) return true; else return false; },
-/*const*/ NUL  : v => { if (v) return true; else return false; },
-/*const*/ UND  : v => { if (v) return true; else return false; },
+exports.TYPETRUTHY = exports.CAPSULE(function () {
+    console.warn(`this assumes the conditional statements are the same to all types of conditions`);
+    console.warn(`bewarned, bug is probable`);
+}, {
+    /*const*/ BOL: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ NUM: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ STR: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ OBJ: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ ARR: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ SYM: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ SET: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ FNC: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ CLS: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ NUL: v => { if (v)
+        return true;
+    else
+        return false; },
+    /*const*/ UND: v => { if (v)
+        return true;
+    else
+        return false; },
 });
-export const TYPEFALSEY = CAPSULE(function(){
-
-},{
-/*const*/ BOL  : v => { if (v) return false; else return true; },
-/*const*/ NUM  : v => { if (v) return false; else return true; },
-/*const*/ STR  : v => { if (v) return false; else return true; },
-/*const*/ OBJ  : v => { if (v) return false; else return true; },
-/*const*/ ARR  : v => { if (v) return false; else return true; },
-/*const*/ SYM  : v => { if (v) return false; else return true; },
-/*const*/ SET  : v => { if (v) return false; else return true; },
-/*const*/ FNC  : v => { if (v) return false; else return true; },
-/*const*/ CLS  : v => { if (v) return false; else return true; },
-/*const*/ NUL  : v => { if (v) return false; else return true; },
-/*const*/ UND  : v => { if (v) return false; else return true; },
+exports.TYPEFALSEY = exports.CAPSULE(function () {
+}, {
+    /*const*/ BOL: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ NUM: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ STR: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ OBJ: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ ARR: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ SYM: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ SET: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ FNC: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ CLS: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ NUL: v => { if (v)
+        return false;
+    else
+        return true; },
+    /*const*/ UND: v => { if (v)
+        return false;
+    else
+        return true; },
 });
-export const TYPESTATE = CAPSULE(function(v,meth){
-
-  // TYPEID[typeof v][]
-
-
-},{
-BOL : {ISTRUE,ISFALSE},
-NUM : {ISSAFE,ISINFINITY,ISFINITE,ISMAXVALUE,ISMINVALUE,ISZERO,ISNAN,ISPOSITIVE,ISNEGATIVE,ISINTEGER,ISFLOAT},
-STR : {ISEMPTY,ISNOTEMPTY,ISALPHA,ISSYMBOL,ISLOWERCASE,ISUPPERCASE},
-FNC : {ISEMPTY,ISNOTEMPTY,ISFUNCTION,ISLAMBDA,ISANONYMOUS},
-OBJ : {ISEMPTY,ISNOTEMPTY},
-ARR : {ISEMPTY,ISNOTEMPTY},
-SYM : {ISEMPTY,ISNOTEMPTY},
-CLA : {ISEMPTY},
-UND : {},
-NUL : {}
+exports.TYPESTATE = exports.CAPSULE(function (v, meth) {
+    // TYPEID[typeof v][]
+}, {
+    BOL: { ISTRUE: exports.ISTRUE, ISFALSE: exports.ISFALSE },
+    NUM: { ISSAFE: exports.ISSAFE, ISINFINITY: exports.ISINFINITY, ISFINITE: exports.ISFINITE, ISMAXVALUE: exports.ISMAXVALUE, ISMINVALUE: exports.ISMINVALUE, ISZERO: exports.ISZERO, ISNAN: exports.ISNAN, ISPOSITIVE: exports.ISPOSITIVE, ISNEGATIVE: exports.ISNEGATIVE, ISINTEGER: exports.ISINTEGER, ISFLOAT: exports.ISFLOAT },
+    STR: { ISEMPTY: exports.ISEMPTY, ISNOTEMPTY: exports.ISNOTEMPTY, ISALPHA: exports.ISALPHA, ISSYMBOL: exports.ISSYMBOL, ISLOWERCASE: exports.ISLOWERCASE, ISUPPERCASE: exports.ISUPPERCASE },
+    FNC: { ISEMPTY: exports.ISEMPTY, ISNOTEMPTY: exports.ISNOTEMPTY, ISFUNCTION: exports.ISFUNCTION, ISLAMBDA: exports.ISLAMBDA, ISANONYMOUS: exports.ISANONYMOUS },
+    OBJ: { ISEMPTY: exports.ISEMPTY, ISNOTEMPTY: exports.ISNOTEMPTY },
+    ARR: { ISEMPTY: exports.ISEMPTY, ISNOTEMPTY: exports.ISNOTEMPTY },
+    SYM: { ISEMPTY: exports.ISEMPTY, ISNOTEMPTY: exports.ISNOTEMPTY },
+    CLA: { ISEMPTY: exports.ISEMPTY },
+    UND: {},
+    NUL: {}
 });
-export const PROPSALTERED = CAPSULE(function(){
-
-},{
-/*const*/ BOL  : v => {},
-/*const*/ NUM  : v => {},
-/*const*/ STR  : v => {},
-/*const*/ OBJ  : v => {},
-/*const*/ ARR  : v => {return Object.assign([],v).length !== 0},
-/*const*/ SYM  : v => {},
-/*const*/ SET  : v => {},
-/*const*/ FNC  : v => {},
-/*const*/ CLS  : v => {},
-/*const*/ NUL  : v => {},
-/*const*/ UND  : v => {},
+exports.PROPSALTERED = exports.CAPSULE(function () {
+}, {
+    /*const*/ BOL: v => { },
+    /*const*/ NUM: v => { },
+    /*const*/ STR: v => { },
+    /*const*/ OBJ: v => { },
+    /*const*/ ARR: v => { return Object.assign([], v).length !== 0; },
+    /*const*/ SYM: v => { },
+    /*const*/ SET: v => { },
+    /*const*/ FNC: v => { },
+    /*const*/ CLS: v => { },
+    /*const*/ NUL: v => { },
+    /*const*/ UND: v => { },
 });
-
-
 // export const CONST = function(script){
 //   isString(script);
 // };
 // RAW STATEMENTS
-export const UNHANDLED= function(){return THROWE("UNHANDLED EXCEPTION");}
-export const IF0      = function(){if(c0) return cb0()};
-export const IF1      = function(){if(c0) return cb0(); else return cb1();};
-export const IF2      = function(){if(c0) return cb0(); else if (c1) return cb1(); else return cb2();};
-export const IFZ      = function(){
-  if (c0) return cb0();
-  else {
-    for (let k in arr) if (arr[k][0]) return arr[k][1]();
-  }
+exports.UNHANDLED = function () { return exports.THROWE("UNHANDLED EXCEPTION"); };
+exports.IF0 = function () { if (c0)
+    return cb0(); };
+exports.IF1 = function () { if (c0)
+    return cb0();
+else
+    return cb1(); };
+exports.IF2 = function () { if (c0)
+    return cb0();
+else if (c1)
+    return cb1();
+else
+    return cb2(); };
+exports.IFZ = function () {
+    if (c0)
+        return cb0();
+    else {
+        for (let k in arr)
+            if (arr[k][0])
+                return arr[k][1]();
+    }
 };
 // CUSTOMIZED STATEMENTS
-
 console.warn(`
   An example
   *** else statement triggered ... throw new Error("unaacounted input");
 `);
-
 // export const SWITCH = function(){
 //   switch (key) {
 //     case value:
-      
 //       break;
-  
 //     default:
 //       break;
 //   }
 // };
-
-
-
-export const LOWERCASE = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z"];
-export const UPPERCASE = LOWERCASE.map(v => v.toUpperCase());
-export const ALPHA     = (LOWERCASE.join("")+UPPERCASE.join("")).split("");
-export const SYMBOLS   = ["!@#$%^&*()_+{}[]-=|;:'\"\\?,.<>`~"];
-export const NUMBERS   = ["0","1","2","3","4","5","6","7","8","9"];
-export const OPS       = ["!","%","%=","^","^=","&","&&","&=","&&=","*","*=","**","**=","-","-=","+","+=","|","||","/","/="];
-
-export const KYB5      = ["ESC","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"];
-export const KYB4      = ["~`","!1","@2","#3","$4","%5","^6","&7","*8","(9",")0","_-","+=","DELETE"];
-export const KYB3      = ["TAB","q","w","e","r","t","y","u","i","o","p","{[","}]","|\\"];
-export const KYB2      = ["CAPS LOCK","A","S","D","F","G","H","J","K","L",":;","\"'","RETURN"];
-export const KYB1      = ["SHIFT","Z","X","C","V","B","N","M","<,",">.","?/","SHIFT"];
-export const KYB0      = ["FN","CONTROL","OPTION","COMMAND","SPACE","COMMAND","OPTION","LEFT","UP/DOWN","RIGHT"];
-
-export const KYBRD         = {};
-export const KYBRD_EN      = {};
-export const KYBRD_PC      = {};
-export const KYBRD_MACBOOK = {KYB5,KYB4,KYB3,KYB2,KYB1,KYB0};
-
-
-export const TOBINARY = function(){};
-export const TOHEX = function(){};
-export const TODEC = function(){};
-export const TOBASE = function(){};
-export const TODATATYPE = function(){};
-
-
-export const INTERFACE = function(){
-  const fakeIfNull = function(obj,prop:string,val:any):void {
-    if (!obj.hasOwnProperty(prop)) {obj[prop] = val;}
-  };	
+exports.LOWERCASE = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"];
+exports.UPPERCASE = exports.LOWERCASE.map(v => v.toUpperCase());
+exports.ALPHA = (exports.LOWERCASE.join("") + exports.UPPERCASE.join("")).split("");
+exports.SYMBOLS = ["!@#$%^&*()_+{}[]-=|;:'\"\\?,.<>`~"];
+exports.NUMBERS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+exports.OPS = ["!", "%", "%=", "^", "^=", "&", "&&", "&=", "&&=", "*", "*=", "**", "**=", "-", "-=", "+", "+=", "|", "||", "/", "/="];
+exports.KYB5 = ["ESC", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12"];
+exports.KYB4 = ["~`", "!1", "@2", "#3", "$4", "%5", "^6", "&7", "*8", "(9", ")0", "_-", "+=", "DELETE"];
+exports.KYB3 = ["TAB", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "{[", "}]", "|\\"];
+exports.KYB2 = ["CAPS LOCK", "A", "S", "D", "F", "G", "H", "J", "K", "L", ":;", "\"'", "RETURN"];
+exports.KYB1 = ["SHIFT", "Z", "X", "C", "V", "B", "N", "M", "<,", ">.", "?/", "SHIFT"];
+exports.KYB0 = ["FN", "CONTROL", "OPTION", "COMMAND", "SPACE", "COMMAND", "OPTION", "LEFT", "UP/DOWN", "RIGHT"];
+exports.KYBRD = {};
+exports.KYBRD_EN = {};
+exports.KYBRD_PC = {};
+exports.KYBRD_MACBOOK = { KYB5: exports.KYB5, KYB4: exports.KYB4, KYB3: exports.KYB3, KYB2: exports.KYB2, KYB1: exports.KYB1, KYB0: exports.KYB0 };
+exports.TOBINARY = function () { };
+exports.TOHEX = function () { };
+exports.TODEC = function () { };
+exports.TOBASE = function () { };
+exports.TODATATYPE = function () { };
+exports.INTERFACE = function () {
+    const fakeIfNull = function (obj, prop, val) {
+        if (!obj.hasOwnProperty(prop)) {
+            obj[prop] = val;
+        }
+    };
 };
-export const VALIDATE  = function(){};
-export const BLOCK     = function(){};
-export const SPEC      = function(){};
-
-export const DELETEPROPKEY   = function(obj,prop){return delete obj[prop];};
-export const DELETEPROPVALUE = function(obj,prop){return obj[prop] = undefined;};
-
-export const KEYS = function(v){
-  return S._Object.keys(v);
-}
-
-export const FUNC0BLOCK = function(func0props){
-    return CAPSULE(
-      function(){
-        funC0validate(func0props.block,func0props.validate(arguments));
+exports.VALIDATE = function () { };
+exports.BLOCK = function () { };
+exports.SPEC = function () { };
+exports.DELETEPROPKEY = function (obj, prop) { return delete obj[prop]; };
+exports.DELETEPROPVALUE = function (obj, prop) { return obj[prop] = undefined; };
+exports.KEYS = function (v) {
+    return exports.S._Object.keys(v);
+};
+exports.FUNC0BLOCK = function (func0props) {
+    return exports.CAPSULE(function () {
+        funC0validate(func0props.block, func0props.validate(arguments));
         return func0props.block(...arguments);
-      },
-      func0props
-    );
+    }, func0props);
 };
-export const FUNC0VALIDATE = function(funCBlock,funCvalidate) {
-    if (typeof funCBlock    !== "function") {THROWE();}
-    if (typeof funCvalidate !== "function") {THROWE();}
+exports.FUNC0VALIDATE = function (funCBlock, funCvalidate) {
+    if (typeof funCBlock !== "function") {
+        exports.THROWE();
+    }
+    if (typeof funCvalidate !== "function") {
+        exports.THROWE();
+    }
     const _params = getParams(funCBlock);
-    return function() {
-        return _params.every((e,i)=>{
+    return function () {
+        return _params.every((e, i) => {
             return pS[e](arguments[i]);
         }) && funCvalidate(arguments);
     };
 };
-
-export const INHERITCONFIG:Function = function(config_inherit:{[index: string]: {}}, config_inheritor:{[index: string]: {}}):void {
-    for (let k in config_inherit) !config_inheritor.hasOwnProperty(k) && (config_inheritor[k]=config_inherit[k]);
+exports.INHERITCONFIG = function (config_inherit, config_inheritor) {
+    for (let k in config_inherit)
+        !config_inheritor.hasOwnProperty(k) && (config_inheritor[k] = config_inherit[k]);
 };
-export const CONFIGMAIN = function(config:{[index: string]: {}}){
-        allPropsRequired:for (let k in itf_keys) {
-            k = itf_keys[k];
-            // console.log(k, config[k]);
-            if (!config.hasOwnProperty(k)) {THROWE(k);}
+exports.CONFIGMAIN = function (config) {
+    allPropsRequired: for (let k in itf_keys) {
+        k = itf_keys[k];
+        // console.log(k, config[k]);
+        if (!config.hasOwnProperty(k)) {
+            exports.THROWE(k);
         }
-        allPropsValidated:for (let k in itf_keys) {
-            k = itf_keys[k];
-            // console.log(k, config[k]);
-            intF[k](config[k]);
-        }
+    }
+    allPropsValidated: for (let k in itf_keys) {
+        k = itf_keys[k];
+        // console.log(k, config[k]);
+        exports.intF[k](config[k]);
+    }
 };
-
-
-/*export*/ export const PARSEFUNCTION = function(functioN:Function) {
-        /** 
-         * - extracts information from regular code into funC template 
-         * - possibly detects errors
-         *         // looking for variables references.
-        // does not allow this references
-
-        // if it finds duplicate variable references it reports it's findings.
-
-        // console.warn("parse progam unprogrammed");
-        
-        */
-       return ()=>({
-        validate: ()=>({}),
-        block:	  ()=>({})
-    });
-},({
-hasName         	:() =>  {},
-hasDescription      :() =>  {},
-hasAuthor         	:() =>  {},
-hasNotes         	:() => f.toString().includes("//"),
-hasAsync         	:() => f.toString().indexOf("async") < 3,
-hasThis         	:f =>  f.toString().indexOf("function") < 2,
-hasCapsule         	:f =>  f.toString().slice(0,1) === "(",
-hasInputType        :() =>  {},
-hasOutputType       :() =>  {},
-hasInputBehavior    :() =>  {},
-hasOutputBehavior   :() =>  {},
-hasOnError         	:() =>  f.toString().includes("throw"),
-hasValidations      :() =>  {}/**memntioned 2x or more */,
-hasBlock         	:() =>  {}/**mentioned once */,
-hasSpec         	:() =>  {}/**recognized lib or console.assert */,
-});
-export const parserClass = function(){
+/*export*/ exports.PARSEFUNCTION = function (functioN) {
     /**
-     * 
-     * 
+     * - extracts information from regular code into funC template
+     * - possibly detects errors
+     *         // looking for variables references.
+    // does not allow this references
+
+    // if it finds duplicate variable references it reports it's findings.
+
+    // console.warn("parse progam unprogrammed");
+    
+    */
+    return () => ({
+        validate: () => ({}),
+        block: () => ({})
+    });
+};
+({
+    hasName: () => { },
+    hasDescription: () => { },
+    hasAuthor: () => { },
+    hasNotes: () => f.toString().includes("//"),
+    hasAsync: () => f.toString().indexOf("async") < 3,
+    hasThis: f => f.toString().indexOf("function") < 2,
+    hasCapsule: f => f.toString().slice(0, 1) === "(",
+    hasInputType: () => { },
+    hasOutputType: () => { },
+    hasInputBehavior: () => { },
+    hasOutputBehavior: () => { },
+    hasOnError: () => f.toString().includes("throw"),
+    hasValidations: () => { } /**memntioned 2x or more */,
+    hasBlock: () => { } /**mentioned once */,
+    hasSpec: () => { } /**recognized lib or console.assert */,
+});
+exports.parserClass = function () {
+    /**
+     *
+     *
      * returns the json result of parsed input
      */
 };
-
-export const GET       = function(){};
-export const GETMETHOD = function(){};
+exports.GET = function () { };
+exports.GETMETHOD = function () { };
 // const SET       = function(){};
-export const SETMETHOD = function(){};
-export const IS        = CAPSULE(function(val,sel){
-
-},{
+exports.SETMETHOD = function () { };
+exports.IS = exports.CAPSULE(function (val, sel) {
+}, {
 // ...DATATYPES
 });
-export const KINDA     = CAPSULE(function(){
-
-},{
-
+exports.KINDA = exports.CAPSULE(function () {
+}, {});
+exports.HAS = exports.CAPSULE(function (val, sel) {
+}, {});
+exports.TO = exports.CAPSULE(function (val, sel) {
+}, {
+    TOBINARY: exports.TOBINARY,
+    TOHEX: exports.TOHEX,
+    TODEC: exports.TODEC,
+    TOBASE: exports.TOBASE,
+    TODATATYPE: exports.TODATATYPE
 });
-export const HAS       = CAPSULE(function(val,sel){
-
-},{
-
-});
-
-export const TO        = CAPSULE(function(val,sel){
-
-},{
-TOBINARY,
-TOHEX,
-TODEC,
-TOBASE,
-TODATATYPE
-});
-
-export const ESSENTIAL = function(){
-    
-    throw new Error("UNFINISHED")
-    
-    return {    // procedural base layer (building block) functions
-/*const*/ COLLECTIONS : CAPSULE(function(){
-    
-},{
-
-}),
-/*const*/ LISTS    : CAPSULE(function(){
-
-},{
-
-}),
-/*const*/ FUNCTIONS: CAPSULE(function(){
-
-}), 
-/*const*/ MATHS    : CAPSULE(function(){
-
-},{
-
-}),
-/*const*/ RELATIONS: CAPSULE(function(){
-
-},{
-
-}),
-/*const*/ LOGICS: CAPSULE(function(){
-
-},{
-
-}),
-
-
+exports.ESSENTIAL = function () {
+    throw new Error("UNFINISHED");
+    return {
+        /*const*/ COLLECTIONS: exports.CAPSULE(function () {
+        }, {}),
+        /*const*/ LISTS: exports.CAPSULE(function () {
+        }, {}),
+        /*const*/ FUNCTIONS: exports.CAPSULE(function () {
+        }),
+        /*const*/ MATHS: exports.CAPSULE(function () {
+        }, {}),
+        /*const*/ RELATIONS: exports.CAPSULE(function () {
+        }, {}),
+        /*const*/ LOGICS: exports.CAPSULE(function () {
+        }, {}),
+    };
 };
-
-};
-export const CHARS = CAPSULE(function(){
-    THROWE("UNFINISHED");
-},{
-    LOWERCASE,
-    UPPERCASE,
-    SYMBOLS,
-    NUMBERS,
-    KYBRD
-})
+exports.CHARS = exports.CAPSULE(function () {
+    exports.THROWE("UNFINISHED");
+}, {
+    LOWERCASE: exports.LOWERCASE,
+    UPPERCASE: exports.UPPERCASE,
+    SYMBOLS: exports.SYMBOLS,
+    NUMBERS: exports.NUMBERS,
+    KYBRD: exports.KYBRD
+});
 // const SYM
-export const TRIM = CAPSULE(function(){
-
-},{
-/*const*/ ALL      : function(){},
-/*const*/ TRIMLEFT  : function(){},
-/*const*/ TRIMRIGHT : function(){},
-/*const*/ TRIMINNER : function(){},
-/*const*/ TRIMOUTER : function(){},
+exports.TRIM = exports.CAPSULE(function () {
+}, {
+    /*const*/ ALL: function () { },
+    /*const*/ TRIMLEFT: function () { },
+    /*const*/ TRIMRIGHT: function () { },
+    /*const*/ TRIMINNER: function () { },
+    /*const*/ TRIMOUTER: function () { },
 });
-export const SWAP = function(memA,memB) {
-  /**
-   * it would be better if memory addresses were swapped 
-   * instead of memoryValues to save RAM & CPU.
-   */
-  arguments.length !== 2 && THROWE();
-  let temp = memA;
-  memA = memB;
-  memB = temp;
-  temp = undefined;
-  return [memA,memB]
+exports.SWAP = function (memA, memB) {
+    /**
+     * it would be better if memory addresses were swapped
+     * instead of memoryValues to save RAM & CPU.
+     */
+    arguments.length !== 2 && exports.THROWE();
+    let temp = memA;
+    memA = memB;
+    memB = temp;
+    temp = undefined;
+    return [memA, memB];
 };
-export const LIST = CAPSULE(function(){
-
-},{
-  queries: {
-    ENDSWITH,
-    // FILTER,
-    FIND,
-    // Model.deleteMany()
-    // Model.deleteOne()
-    // Model.find()
-    // Model.findById()
-    // Model.findByIdAndDelete()
-    // Model.findByIdAndRemove()
-    // Model.findByIdAndUpdate()
-    // Model.findOne()
-    // Model.findOneAndDelete()
-    // Model.findOneAndRemove()
-    // Model.findOneAndReplace()
-    // Model.findOneAndUpdate()
-    // Model.replaceOne()
-    // Model.updateMany()
-    // Model.updateOne()
-    FINDINDEX,
-    FLATTEN,
-    FOREACH,
-    FROMPAIRS,
-    GROUPBY,
-    GROUPWITH,
-    INCLUDES,
-    INDEXBY,
-    INDEXOF,
-    LAST,
-    LASTINDEXOF,
-    TAKELAST,
-    UNIQ,
-    UNIQWITH,
-    UPDATE,
-    HAS
-  },
-  qmods:   {},
-  props:   function(){},
-  conversion:function(){},
-  replication:{}
-})
-
-
-
-
-export const POPULATION = CAPSULE(function(){
-  FLOOD,
-  BLAST,
-  FILL,
-  FLUSH
-},{
-
+exports.LIST = exports.CAPSULE(function () {
+}, {
+    queries: {
+        ENDSWITH: exports.ENDSWITH,
+        // FILTER,
+        FIND: exports.FIND,
+        // Model.deleteMany()
+        // Model.deleteOne()
+        // Model.find()
+        // Model.findById()
+        // Model.findByIdAndDelete()
+        // Model.findByIdAndRemove()
+        // Model.findByIdAndUpdate()
+        // Model.findOne()
+        // Model.findOneAndDelete()
+        // Model.findOneAndRemove()
+        // Model.findOneAndReplace()
+        // Model.findOneAndUpdate()
+        // Model.replaceOne()
+        // Model.updateMany()
+        // Model.updateOne()
+        FINDINDEX: exports.FINDINDEX,
+        FLATTEN: exports.FLATTEN,
+        FOREACH: exports.FOREACH,
+        FROMPAIRS: exports.FROMPAIRS,
+        GROUPBY: exports.GROUPBY,
+        GROUPWITH: exports.GROUPWITH,
+        INCLUDES: exports.INCLUDES,
+        INDEXBY: exports.INDEXBY,
+        INDEXOF: exports.INDEXOF,
+        LAST: exports.LAST,
+        LASTINDEXOF: exports.LASTINDEXOF,
+        TAKELAST: exports.TAKELAST,
+        UNIQ: exports.UNIQ,
+        UNIQWITH: exports.UNIQWITH,
+        UPDATE: exports.UPDATE,
+        HAS: exports.HAS
+    },
+    qmods: {},
+    props: function () { },
+    conversion: function () { },
+    replication: {}
 });
-export const LOGIC = function(){};
-export const VISUAL = function(){};
-export const VOCAL = function(){};
-export const SOUND = function(){};
-
-export const INTERFACECLASSIFICATIONS = CAPSULE(function(){
-
-},{
-  LOGIC,
-  VISUAL,
-  VOCAL,
-  SOUND
+exports.POPULATION = exports.CAPSULE(function () {
+    FLOOD,
+        BLAST,
+        FILL,
+        FLUSH;
+}, {});
+exports.LOGIC = function () { };
+exports.VISUAL = function () { };
+exports.VOCAL = function () { };
+exports.SOUND = function () { };
+exports.INTERFACECLASSIFICATIONS = exports.CAPSULE(function () {
+}, {
+    LOGIC: exports.LOGIC,
+    VISUAL: exports.VISUAL,
+    VOCAL: exports.VOCAL,
+    SOUND: exports.SOUND
 });
-export const CREATE = function(){};
-export const READ = function(){};
-export const UPDATE = function(){};
-export const DELETE = function(){};
-
+exports.CREATE = function () { };
+exports.READ = function () { };
+exports.UPDATE = function () { };
+exports.DELETE = function () { };
 // export const CRUDS = CAPSULE(function(){
-
 // },{
 //   CREATE,
 //   READ,
@@ -3962,7 +3825,6 @@ export const DELETE = function(){};
 //   DELETE
 // });
 // export const REMOTECALLS = CAPSULE(function(){
-
 // },{
 //   POST,
 //   GET,
@@ -3971,7 +3833,6 @@ export const DELETE = function(){};
 //   PATCH
 // });
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   STRUCTURE,
 //   INTERFACE,
@@ -3981,7 +3842,6 @@ export const DELETE = function(){};
 //   TEMPLATE
 // });
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   PROTOCOL,
 //   PACKET,
@@ -3995,23 +3855,19 @@ export const DELETE = function(){};
 //   STANDARD,
 //   CUSTOM
 // },{
-  
 // });
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   STACK,
 //   FIXED,
 //   DYNAMIC
 // });
 // export const ??? = CAPSULE(function(){
-
 // },{
 //     FLOW,
 //     STATEMENTS
 // });
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   CLUSTER,
 //   BATCH,
@@ -4021,9 +3877,7 @@ export const DELETE = function(){};
 //   HEAP,
 //   STACK
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   CONSTRAINT,
 //   VALIDATION,
@@ -4033,32 +3887,23 @@ export const DELETE = function(){};
 //   GUARD,
 //   FILTER
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   REMOTE,
 //   NETWORK,
 //   CONTACT
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   CONNECT,
 //   LINK
 // });
-
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // DISCONNECT,
 // SEPERATE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // TRANSFER,
 // TRANSPORT,
@@ -4068,24 +3913,19 @@ export const DELETE = function(){};
 // EXPORT
 // });
 // export const ??? = CAPSULE(function(){
-
 // },{
 // SCOPE,
 // ACCESSABILITY,
 // PERMISSIONS
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // LANGUAGE,
 // COMPILE,
 // INTERPRET,
 // TRANSPILE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // PROGRAM,
 // FILE,
@@ -4093,18 +3933,14 @@ export const DELETE = function(){};
 // SCRIPT,
 // EMBED
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // DIRECTORY,
 // CATALOGABLE,
 // ROSTER,
 // BOOK
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // REFERENCE,
 // VARIABLE,
@@ -4115,25 +3951,19 @@ export const DELETE = function(){};
 // ARG,
 // RESULT
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // CONDITION,
 // PIVOT,
 // SWITCHES,
 // CASE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // DATA,
 // VALUE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // ELEMENT,
 // ROOT,
@@ -4142,16 +3972,12 @@ export const DELETE = function(){};
 // CORE,
 // SEED
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // CAUSE,
 // EFFECT
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // OPERATE,
 // EQUATION,
@@ -4164,9 +3990,7 @@ export const DELETE = function(){};
 // PROCESS,
 // EXPRESSION
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // SINGULAR,
 // PLURAL,
@@ -4174,39 +3998,29 @@ export const DELETE = function(){};
 // MULTI,
 // POLY
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // ACTION
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // TASK,
 // JOB,
 // PURPOSE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // SERVICE,
 // UTILITY,
 // USE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // CREATIONAL,
 // STRUCTURAL,
 // BEHAVIORAL
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // MERGE,
 // JOIN,
@@ -4216,18 +4030,13 @@ export const DELETE = function(){};
 // SPLIT,
 // SEVER
 // });
-
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // ASSEMBLE,
 // BUILD,
 // CONSTRUCT
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // COMPUTE,
 // EXECUTE,
@@ -4235,25 +4044,19 @@ export const DELETE = function(){};
 // CALL,
 // RUN
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // STOP,
 // HALT,
 // KILL
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // LOCK,
 // FREEZE,
 // SEAL
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // BOX,
 // CAPSULE,
@@ -4261,48 +4064,36 @@ export const DELETE = function(){};
 // BUBBLE,
 // ISOLATE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // BLOCK,
 // CODE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // OPEN,
 // PEEL,
 // CRACK
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // CONVERT,
 // TRANSLATE,
 // TRANSFORM,
 // MODIFY
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // GENERATE,
 // FACTORY,
 // MACHINE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   HANDLE,
 //   CONTROL
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // CIRCLE,
 // CYCLE,
@@ -4312,34 +4103,26 @@ export const DELETE = function(){};
 // FOR,
 // WHILE
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // ID,
 // NAME,
 // ALIAS,
 // AKA
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // PROPERTIES,
 // ATTRIBUTES,
 // DESCRIPTION
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // INHERIT,
 // EXTEND,
 // IMPLEMENT
 // });
-
 // export const EVENTSTAGES = CAPSULE(function(){
-
 // },{
 // BEGIN,
 // START,
@@ -4350,39 +4133,29 @@ export const DELETE = function(){};
 // END,
 // POST
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // BOOT,
 // COLDBOOT,
 // HOTBOOT
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // BREAK,
 // CATCH
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // OBSERVE,
 // SUBSCRIBE,
 // INTERCEPT
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // COUNT,
 // NUMER
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 // INDICATE,
 // FLAG,
@@ -4390,7 +4163,6 @@ export const DELETE = function(){};
 // SIGNAL
 // });
 // export const ??? = CAPSULE(function(){
-
 // },{
 // MIMESIS,
 // SCHEMA,
@@ -4398,39 +4170,36 @@ export const DELETE = function(){};
 // MIRROR,
 // MODEL
 // });
-
 // export const ??? = CAPSULE(function(){
-
 // },{
 //   SHAPE, 
 //   MORPH,
 //   SHAPELESS
 // });
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*2)  LANGUAGE CONSTRUCT REVAMP & HARDENING
 */
-/*export*/ export const PARAMS:paramsLoader = function(paramsOBJ){
+/*export*/ exports.PARAMS = function (paramsOBJ) {
     // no duplicates allowed --> objects don't automatically overwrite duplications
-    if (!paramsOBJ) {THROWE();}
-    for (let k in paramsOBJ) { eval(`paramsOBJ[k] = function(${k}){ return ${paramsOBJ[k].replace("$p",k)}; }`); }
+    if (!paramsOBJ) {
+        exports.THROWE();
+    }
+    for (let k in paramsOBJ) {
+        eval(`paramsOBJ[k] = function(${k}){ return ${paramsOBJ[k].replace("$p", k)}; }`);
+    }
     return paramsOBJ;
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////
-
 //////////////////////////////////////////////////////////////////////////////////////////////////
-
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ export const CLOSURE = function(cb, variables) {
+/*export*/ exports.CLOSURE = function (cb, variables) {
     /** Mock Representation ... real version needs to parse cb and variables,
-     * 
+     *
      * then replace real values in placheholders.
-     * 
-     *  
+     *
+     *
     */
     const v = variables;
     const f = cb.bind({
@@ -4442,103 +4211,113 @@ export const DELETE = function(){};
     return f;
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const REPLICATE = CAPSULE(function(sel,val){
-// clone          100% copy & memory seperation
-// mirror         100% copy & no memory seperation
-// depth          clone "n" layers deep in
-  typeof sel === "string" || THROWE();
-  return REPLICATE[sel](val);
-},{
-MIRROR: CAPSULE(function(v:any){ // deep memory reference replication
-  let tP = typeof v;
-  if (tP === 'boolean') 	return REPLICATE.MIRROR[tP](v);
-  if (tP === 'number')  	return REPLICATE.MIRROR[tP](v);
-  if (tP === 'string')  	return REPLICATE.MIRROR[tP](v);
-  if (Array.isArray(tP))  return REPLICATE.MIRROR['array'](v);
-  if (tP === 'function')	return REPLICATE.MIRROR[tP](v);
-  if (tP === 'object')    return REPLICATE.MIRROR[tP];
-  if (tP === 'symbol')    throw new Error("UNFINISHED");
-  return ['mirroring error, type v is not builtin datatype '+v];
-},{
-  boolean  : function(v:boolean)  {return v;},
-  number   : function(v:number)   {return v;},
-  string   : function(v:string)   {return v},
-  array    : function(v:any[])    {return v},
-  object   : function(v:object)   {return v},
-  symbol   : function(v:object)   {return v},
-  function : function(v:Function) {return v;}
-}),
-CLONE:  CAPSULE(function(v:any):any { // deep memory referencing disattaching replication]
-  throw new Error("UNFINISHED ... DEEP CLONING LOOP NEEDED");
-  let tP = typeof v;
-  if (tP === 'boolean') 	return REPLICATE.CLONE[tP](v);
-  if (tP === 'number')  	return REPLICATE.CLONE[tP](v);
-  if (tP === 'string')  	return REPLICATE.CLONE[tP](v);
-  if (Array.isArray(tP))  return REPLICATE.CLONE['array'](v);
-  if (tP === 'function')	return REPLICATE.CLONE[tP](v);
-  if (tP === 'object')    return REPLICATE.CLONE[tP];
-  if (tP === 'symbol')    throw new Error("UNFINISHED");
-  return ['cloning error, type v is not builtin datatype '+v];
-},{
-  boolean  : function(v:boolean)  {return !!v;},
-  number   : function(v:number)   {return v+0;},
-  string   : function(v:string)   {return v.slice();},
-  array    : function(v:any[])    {return v.slice();},
-  object   : function(v:object)   {return Object.assign({}, v);},
-  symbol   : function(v:object)   {return Object.assign({}, v);},
-  function : function(v:Function) {const temp = v; return temp;/*new Function('return ' + v.toString())();*/}
-}),
-DEPTH:  CAPSULE(function(sel,val){
-  throw new Error("UNFINISHED");
-},{
-
-})
+exports.REPLICATE = exports.CAPSULE(function (sel, val) {
+    // clone          100% copy & memory seperation
+    // mirror         100% copy & no memory seperation
+    // depth          clone "n" layers deep in
+    typeof sel === "string" || exports.THROWE();
+    return exports.REPLICATE[sel](val);
+}, {
+    MIRROR: exports.CAPSULE(function (v) {
+        let tP = typeof v;
+        if (tP === 'boolean')
+            return exports.REPLICATE.MIRROR[tP](v);
+        if (tP === 'number')
+            return exports.REPLICATE.MIRROR[tP](v);
+        if (tP === 'string')
+            return exports.REPLICATE.MIRROR[tP](v);
+        if (Array.isArray(tP))
+            return exports.REPLICATE.MIRROR['array'](v);
+        if (tP === 'function')
+            return exports.REPLICATE.MIRROR[tP](v);
+        if (tP === 'object')
+            return exports.REPLICATE.MIRROR[tP];
+        if (tP === 'symbol')
+            throw new Error("UNFINISHED");
+        return ['mirroring error, type v is not builtin datatype ' + v];
+    }, {
+        boolean: function (v) { return v; },
+        number: function (v) { return v; },
+        string: function (v) { return v; },
+        array: function (v) { return v; },
+        object: function (v) { return v; },
+        symbol: function (v) { return v; },
+        function: function (v) { return v; }
+    }),
+    CLONE: exports.CAPSULE(function (v) {
+        throw new Error("UNFINISHED ... DEEP CLONING LOOP NEEDED");
+        let tP = typeof v;
+        if (tP === 'boolean')
+            return exports.REPLICATE.CLONE[tP](v);
+        if (tP === 'number')
+            return exports.REPLICATE.CLONE[tP](v);
+        if (tP === 'string')
+            return exports.REPLICATE.CLONE[tP](v);
+        if (Array.isArray(tP))
+            return exports.REPLICATE.CLONE['array'](v);
+        if (tP === 'function')
+            return exports.REPLICATE.CLONE[tP](v);
+        if (tP === 'object')
+            return exports.REPLICATE.CLONE[tP];
+        if (tP === 'symbol')
+            throw new Error("UNFINISHED");
+        return ['cloning error, type v is not builtin datatype ' + v];
+    }, {
+        boolean: function (v) { return !!v; },
+        number: function (v) { return v + 0; },
+        string: function (v) { return v.slice(); },
+        array: function (v) { return v.slice(); },
+        object: function (v) { return Object.assign({}, v); },
+        symbol: function (v) { return Object.assign({}, v); },
+        function: function (v) { const temp = v; return temp; /*new Function('return ' + v.toString())();*/ }
+    }),
+    DEPTH: exports.CAPSULE(function (sel, val) {
+        throw new Error("UNFINISHED");
+    }, {})
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////
-export const CONFIG = function(config){
-  /**should be used in funC & claS */
-  const o = config;
-  INTERFACE(o)    || o.onFailure();
-  VALIDATION(o)   || o.onFailure();
-  MEMASSIGN(o)    || o.onFailure();
-  o.onSuccess();
+exports.CONFIG = function (config) {
+    /**should be used in funC & claS */
+    const o = config;
+    exports.INTERFACE(o) || o.onFailure();
+    exports.VALIDATION(o) || o.onFailure();
+    exports.MEMASSIGN(o) || o.onFailure();
+    o.onSuccess();
 };
-export const VALIDATION = CAPSULE(function(){
-  throw new Error();
-  return Object.keys(VALIDATION).every(e=>{
-    e()
-  });
-},{
-  ITERATIVE:    function(){},
-  CROSSEXAMINE: function(){}
+exports.VALIDATION = exports.CAPSULE(function () {
+    throw new Error();
+    return Object.keys(exports.VALIDATION).every(e => {
+        e();
+    });
+}, {
+    ITERATIVE: function () { },
+    CROSSEXAMINE: function () { }
 });
-export const MEMASSIGN = function(){
-
+exports.MEMASSIGN = function () {
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ export const LOOP = {};
-export const LOOP_FOR                = function(){}; // for loop
-export const LOOP_FOREVER            = function(){}; // no explanation rqd
-export const LOOP_WHILE              = function(){}; // while loop
-export const LOOP_BREAK              = function(){}; // stops loop
-export const LOOP_CONTINUE           = function(){}; // skips loop iteration
-export const LOOP_EACH               = function(){}; // forEach iteration
-export const LOOP_DEEP               = function(){}; // loops everything loopable
-export const LOOP_DEEPRECURSION      = function(){}; // stacks all recursions into one list
-export const LOOP_CYCLE              = function(){}; // loop in circles
-export const LOOP_FILTER             = function(){}; // returns conditions matched
-export const LOOP_CHECKLIST          = function(){}; // ensures all info meets passes conditions
-export const LOOP_INTERVAL           = function(){}; // loop in time ms increments
-export const LOOP_WHEN               = function(){}; // mem-value equals
-export const LOOP_BEFORE             = function(){}; // 
-export const LOOP_AFTER              = function(){}; // 
-export const LOOP_NONEST             = function(){}; // 
-export const LOOP_SPLIT              = function(){}; //
-export const LOOP_MERGE              = function(){}; //
-
-export const LOOP_SKIP               = function(){}; // iterator fluxor
-    // vs
-export const LOOP_PINGPONG           = function(v,cbs){  }; // next exe memory swaping // instead of conditionals drags
+/*export*/ exports.LOOP = {};
+exports.LOOP_FOR = function () { }; // for loop
+exports.LOOP_FOREVER = function () { }; // no explanation rqd
+exports.LOOP_WHILE = function () { }; // while loop
+exports.LOOP_BREAK = function () { }; // stops loop
+exports.LOOP_CONTINUE = function () { }; // skips loop iteration
+exports.LOOP_EACH = function () { }; // forEach iteration
+exports.LOOP_DEEP = function () { }; // loops everything loopable
+exports.LOOP_DEEPRECURSION = function () { }; // stacks all recursions into one list
+exports.LOOP_CYCLE = function () { }; // loop in circles
+exports.LOOP_FILTER = function () { }; // returns conditions matched
+exports.LOOP_CHECKLIST = function () { }; // ensures all info meets passes conditions
+exports.LOOP_INTERVAL = function () { }; // loop in time ms increments
+exports.LOOP_WHEN = function () { }; // mem-value equals
+exports.LOOP_BEFORE = function () { }; // 
+exports.LOOP_AFTER = function () { }; // 
+exports.LOOP_NONEST = function () { }; // 
+exports.LOOP_SPLIT = function () { }; //
+exports.LOOP_MERGE = function () { }; //
+exports.LOOP_SKIP = function () { }; // iterator fluxor
+// vs
+exports.LOOP_PINGPONG = function (v, cbs) { }; // next exe memory swaping // instead of conditionals drags
 // export const ENTER = v => (typeof v=== "string"||typeof v==="object"||Array.isArray(v));
 // export const filter = function(v,hit,miss,conditions){
 //     if      (conditions(e)) return hit.push(v);
@@ -4549,83 +4328,80 @@ export const LOOP_PINGPONG           = function(v,cbs){  }; // next exe memory s
 // export const forever = function(cb){while (true) {cb();}};
 // export const cycle = function() {};
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ const funCLite:func0Loader = (function(){
-  const pS = {};
-  return function(paramsOBJ){
-      return {
-          funClite: func0block,
-          paramsOBJ: (pS = params(paramsOBJ))
-      }
-  };
+/*export*/ const funCLite = (function () {
+    const pS = {};
+    return function (paramsOBJ) {
+        return {
+            funClite: func0block,
+            paramsOBJ: (pS = params(paramsOBJ))
+        };
+    };
 })();
 //////////////////////////////////////////////////////////////////////////////////////////////////
-export const FUNC = function(config){
-  const M = MEM({
-      gConfig,
-      FInstances,
-      configs,
-      funcs,
-      intF,
-      intF_keys
-  });
-  CONFIG(config,
-      FUNCINTERFACE,
-      FUNCINDEPENDENTVALIDATION,
-      FUNCCROSSEXAMINEVALIDATION,
-      FUNCMEMASSIGN
-  );
-  return FUNCTRETURN(config);
+exports.FUNC = function (config) {
+    const M = MEM({
+        gConfig: exports.gConfig,
+        FInstances: exports.FInstances,
+        configs: exports.configs,
+        funcs: exports.funcs,
+        intF: exports.intF,
+        intF_keys: exports.intF_keys
+    });
+    exports.CONFIG(config, exports.FUNCINTERFACE, FUNCINDEPENDENTVALIDATION, exports.FUNCCROSSEXAMINEVALIDATION, exports.FUNCMEMASSIGN);
+    return exports.FUNCTRETURN(config);
 };
 /***************************************************************** */
-export const FUNCINTERFACE = function(config){
-  let obj = config;
-  const d = ["arguments","console","return","callback","onError/onSuccess","onTrue/onFalse","throw"];
-  ["name","description","author"]             .forEach((e)=>{ obj[e] = standardString(e);});
-  ["notes","params"]                          .forEach((e)=>{ obj[e] = standardStringArray(e);});
-  ["isStrict","isAsync","isThis","isCapsule"]	.forEach((e)=>{ obj[e] = standardBoolean(e);});
-  ["inputType","outputType"]					.forEach((e)=>{ obj[e] = arrayIncludes(datatypes);});
-  ["inputBehavior"]		                    .forEach((e)=>{ obj[e] = arrayIncludes([d[0],d[1]]);});
-  ["outputBehavior"]							.forEach((e)=>{ obj[e] = arrayIncludes([d[1],d[2],d[3],d[4],d[5]]);});
-  ["onError"]									.forEach((e)=>{ obj[e] = arrayIncludes([d[6]]);});
-  ["validations","block","spec"]				.forEach((e)=>{ obj[e] = vFunction;});
-  return true;
+exports.FUNCINTERFACE = function (config) {
+    let obj = config;
+    const d = ["arguments", "console", "return", "callback", "onError/onSuccess", "onTrue/onFalse", "throw"];
+    ["name", "description", "author"].forEach((e) => { obj[e] = standardString(e); });
+    ["notes", "params"].forEach((e) => { obj[e] = standardStringArray(e); });
+    ["isStrict", "isAsync", "isThis", "isCapsule"].forEach((e) => { obj[e] = standardBoolean(e); });
+    ["inputType", "outputType"].forEach((e) => { obj[e] = arrayIncludes(datatypes); });
+    ["inputBehavior"].forEach((e) => { obj[e] = arrayIncludes([d[0], d[1]]); });
+    ["outputBehavior"].forEach((e) => { obj[e] = arrayIncludes([d[1], d[2], d[3], d[4], d[5]]); });
+    ["onError"].forEach((e) => { obj[e] = arrayIncludes([d[6]]); });
+    ["validations", "block", "spec"].forEach((e) => { obj[e] = vFunction; });
+    return true;
 };
-export const FUNCFAKEIFNULL = function(obj,prop:string,val:any):void {
-  let fakeIfNull = function(){
-      if (!obj.hasOwnProperty(prop)) {obj[prop] = val;}
-  }
-  return Object.assign(function(){},{
-      "namE" 			    : function(obj) {fakeIfNull(obj,'name',			    "fake name to pass test");},
-      "description" 	: function(obj) {fakeIfNull(obj,'description',	"fake description to pass the test");},
-      "author"		    : function(obj) {fakeIfNull(obj,'author',		    "fake author")},
-      "notes" 		    : function(obj) {fakeIfNull(obj,'notes',		    ["fake notes to pass the test"]);},
-      "validations" 	: function(obj) {fakeIfNull(obj,'validations',	()=>{/*fake*/});},
-      "block" 		    : function(obj) {fakeIfNull(obj,'block',		    ()=>{/*fake*/});},
-      "spec" 			    : function(obj) {fakeIfNull(obj,'spec',			    ()=>{/*fake*/});}
-  });
+exports.FUNCFAKEIFNULL = function (obj, prop, val) {
+    let fakeIfNull = function () {
+        if (!obj.hasOwnProperty(prop)) {
+            obj[prop] = val;
+        }
+    };
+    return Object.assign(function () { }, {
+        "namE": function (obj) { fakeIfNull(obj, 'name', "fake name to pass test"); },
+        "description": function (obj) { fakeIfNull(obj, 'description', "fake description to pass the test"); },
+        "author": function (obj) { fakeIfNull(obj, 'author', "fake author"); },
+        "notes": function (obj) { fakeIfNull(obj, 'notes', ["fake notes to pass the test"]); },
+        "validations": function (obj) { fakeIfNull(obj, 'validations', () => { }); },
+        "block": function (obj) { fakeIfNull(obj, 'block', () => { }); },
+        "spec": function (obj) { fakeIfNull(obj, 'spec', () => { }); }
+    });
 };
-export const FUNCINDEPEDENTVALIDATION = function(){};
-export const FUNCCROSSEXAMINEVALIDATION = function(){};
-export const FUNCMEMASSIGN = function(){};
-export const FUNCTRETURN   = function(confiG){
-  return Object.freeze({
-      globalConfig:   FUNCCONFIGGLOBAL,
-      instance:       FUNCCONFIGINSTANCE,
-      funC:           FUNCTEMPLATE
-  });
+exports.FUNCINDEPEDENTVALIDATION = function () { };
+exports.FUNCCROSSEXAMINEVALIDATION = function () { };
+exports.FUNCMEMASSIGN = function () { };
+exports.FUNCTRETURN = function (confiG) {
+    return Object.freeze({
+        globalConfig: exports.FUNCCONFIGGLOBAL,
+        instance: exports.FUNCCONFIGINSTANCE,
+        funC: exports.FUNCTEMPLATE
+    });
 };
-export const FUNCTEMPLATE  = function(){
-  if (typeof this.config === "object") {inheritConfig(this.config,config);}
-
-  confiG.funC(config);
-  let c = config;
-  templatefunction: {
-      const strict				= c.isStrict?'"use strict";':"";
-      const async					= c.isAsync?'async ':''; 		
-      const _this = c.isThis? (`${async}function ${name}(${params}) `):(`const ${name} = ${async}(${params}) => `);
-      // let isCapsule		    = c.isCapsule === true;
-
-      const cb = `/*
+exports.FUNCTEMPLATE = function () {
+    if (typeof this.config === "object") {
+        inheritConfig(this.config, config);
+    }
+    confiG.funC(config);
+    let c = config;
+    templatefunction: {
+        const strict = c.isStrict ? '"use strict";' : "";
+        const async = c.isAsync ? 'async ' : '';
+        const _this = c.isThis ? (`${async}function ${name}(${params}) `) : (`const ${name} = ${async}(${params}) => `);
+        // let isCapsule		    = c.isCapsule === true;
+        const cb = `/*
       * author: ${author}
       * description: ${description}
       * notes: ${notes}
@@ -4634,61 +4410,67 @@ export const FUNCTEMPLATE  = function(){
       /* spec
           ${spec}
       */`;
-      console.log(cb); 
-      return new Function(params, `${cb}`);
-  }
+        console.log(cb);
+        return new Function(params, `${cb}`);
+    }
 };
-export const FUNCCONFIGGLOBAL = function(){
-  loopInterface(config);
-  confiG(config);	
-  gConfig = config;
-  configs["global"] = gConfig;
-  return pm;
+exports.FUNCCONFIGGLOBAL = function () {
+    loopInterface(config);
+    confiG(config);
+    exports.gConfig = config;
+    exports.configs["global"] = exports.gConfig;
+    return pm;
 };
-export const FUNCCONFIGINSTANCE = function(){
-  if (!name) 				 {THROWE();}
-  if (name&&config) {
-      if (instances[name]) {THROWE("no duplicates allowed")}
-      gConfig = S._Object.assign({},gConfig);
-      inheritConfig(gConfig, config);
-      loopInterface(config);
-      confiG(config);	
-      assignInstance(config,name);
-      incConfig(config,name);
-  } 
-  else if (name) 		   {	assignInstance(config,name) || (()=>{THROWE();})();} 
-  else 				   {	THROWE();	s}
-  return {funC:func.bind({config:config})};
+exports.FUNCCONFIGINSTANCE = function () {
+    if (!name) {
+        exports.THROWE();
+    }
+    if (name && config) {
+        if (instances[name]) {
+            exports.THROWE("no duplicates allowed");
+        }
+        exports.gConfig = exports.S._Object.assign({}, exports.gConfig);
+        inheritConfig(exports.gConfig, config);
+        loopInterface(config);
+        confiG(config);
+        assignInstance(config, name);
+        incConfig(config, name);
+    }
+    else if (name) {
+        assignInstance(config, name) || (() => { exports.THROWE(); })();
+    }
+    else {
+        exports.THROWE();
+        s;
+    }
+    return { funC: func.bind({ config: config }) };
 };
-export const FUNCCONFIGFUNC = function(){
-  confiG(config);
-  incConfig(config, config.name);
-}
-export const FUNCINCCONFIG = function(){
-  name = name || THROWE();
-  configs[name] = config;
+exports.FUNCCONFIGFUNC = function () {
+    confiG(config);
+    incConfig(config, config.name);
 };
-export const FUNCCONFIG = function(){S._Object.freeze(S._Object.assign(confiGmain,meths))};
-export const FUNCFAKEIFNULL = function(){};
-export const FUNCMETHS = function(){
-  return {
-      global: FUNCCONFIGGLOBAL,
-      instance: FUNCCONFIGINSTANCE,
-      funC: FUNCCONFIGFUNC
-  };
+exports.FUNCINCCONFIG = function () {
+    name = name || exports.THROWE();
+    exports.configs[name] = config;
 };
-export const FUNCLOOPINTERFACE = function(config){S._Object.keys(fakeIfNull).forEach(e=>{fakeIfNull[e](config)})};
-export const FUNCASSIGNINTERFACE = function(config,name){return instances[name]=config;};
-
-export const gConfig:   {[index: string]: {}} = {};
-export const FInstances: {[index: string]: {}} = {};
-export const configs:   {[index: string]: {}} = {};
-export const funcs:     {[index: string]: {}} = {};
-export const intF:interface_funCinterface 	= function(){return funCinterface};
-export const intF_keys: string[] 			= function(){return Object.keys(intF())};
+exports.FUNCCONFIG = function () { exports.S._Object.freeze(exports.S._Object.assign(confiGmain, meths)); };
+exports.FUNCFAKEIFNULL = function () { };
+exports.FUNCMETHS = function () {
+    return {
+        global: exports.FUNCCONFIGGLOBAL,
+        instance: exports.FUNCCONFIGINSTANCE,
+        funC: exports.FUNCCONFIGFUNC
+    };
+};
+exports.FUNCLOOPINTERFACE = function (config) { exports.S._Object.keys(fakeIfNull).forEach(e => { fakeIfNull[e](config); }); };
+exports.FUNCASSIGNINTERFACE = function (config, name) { return instances[name] = config; };
+exports.gConfig = {};
+exports.FInstances = {};
+exports.configs = {};
+exports.funcs = {};
+exports.intF = function () { return funCinterface; };
+exports.intF_keys = function () { return Object.keys(exports.intF()); };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 /** CLAS BLUEPRINT
  * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  * GLOBAL CONFIG            config settings only, stores as global config / zero index, no inherit
@@ -4697,7 +4479,7 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
  * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  * BUILD METHODS MODIFICATIONS
  * -- visible               func.toString() printed on terminal reveals insensitives
- * -- mutable               post render modifiable state  
+ * -- mutable               post render modifiable state
  * -- gettable              if information is readable
  * -- settable              if information is writeable
  * -- chainable             .method().method().method() ...
@@ -4709,7 +4491,7 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
  * -- SETTINGS          YES   NO      NO       NO       YES  NO             SETTINGS ARE IMMUTABLE & INHERITED
  * -- INTERNAL          YES   NO      YES      NO       YES  YES            INTERNAL PROGRAMMABLE TO SUPERCLASS ONLY
  * -- STATIC            YES   NO      NO       NO       YES  YES            ONLY AVAILABLE TO IT'S CLASS
- * -- PUBLIC            YES   YES     YES      YES      YES  YES            AVAILABLE EVERYWHERE    
+ * -- PUBLIC            YES   YES     YES      YES      YES  YES            AVAILABLE EVERYWHERE
  * -- PROTECT           YES   YES     YES      NO       YES  YES
  * -- PRIVATE           YES   NO      NO       NO       YES  YES
  * -- CONSTRUCTOR       YES   YES     NO       YES      NO   YES
@@ -4717,8 +4499,8 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
  * -- MIDDLEMANS        YES   NO      YES      NO       YES  YES            MIDDLEMANS PROGRAMMABLE TO SUPERCLASS ONLY
  * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  * -- NON METHODS | METHODS
- * d vs m   (data vs method)  
- * 
+ * d vs m   (data vs method)
+ *
  * -- INHERITANCE -> new,extend,implement
  * i vs s vs p0 vs p1 vs p2
  * internal static public private protect
@@ -4734,34 +4516,26 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
             extend:     extenD(PUBLIC),
             implement:  implemenT(PUBLIC)
   });
- * 
+ *
  * //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  * How does a programmer see all class configurations?; readonly access.
  * How does a programmer mod all class configuration?; read-write access.
- * 
+ *
  * How does a programmer confidently new configurations that don't mod others?
- * 
+ *
  * Should Internal be constant & available to all inheritances?
- * 
- * 
+ *
+ *
  */
-
-
 // export const c = Clas({/*global config*/});
-
 // export const ci0 = c.new(/*branch config*/);
-
 // export const ci0i0 = ci0.new(/* branch instance config*/);
-
-
 // export const CLAS = (function(){
-
 //     // const configs = {
 //     //   "GLOBAL":     {}, // FREEZE AFTER GLOBAL CONFIG ASSIGNED
 //     //   "BRANCH":     {}, 
 //     //   "BINSTANCES": {}
 //     // };
-
 //     /*export*/ const claS:claS = function(setupOBJ) {
 //         const __MEM__ = CONFIG(setupOBJ,
 //               CLASSINGULARVALIDATIONS,
@@ -4780,9 +4554,7 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //               };
 //         });
 //         // __MEM__.__middlemans__    = middlemans.block(__MEM__.__imports__);
-
 //         // claS_roster.push(__MEM__);        
-
 //         // setupOBJ = undefined;
 //         // let PUBLIC;
 //         // return __clas__public__instance(PUBLIC = function(__mem__) {
@@ -4804,13 +4576,9 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //         //         } else mp.block(__this__,pm,pd,__mem__);
 //         //     });
 //         //     const constructionComplete:constructionComplete = (__this__,__mem__)=>__settings__.public_mutable === false && Object.freeze(__this__),++__mem__.__internal__.di.instances;
-
 //         //     return buildPublic(__mem__);
 //         // }(__MEM__));
 //     // };
-
-
-
 //     const __clas__public = function(){};
 //     const __clas__public__instance = function(PUBLIC){
 //         return S._Object.freeze({
@@ -4824,7 +4592,6 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     const CLASDELETE    = function(PUBLIC)     {return function(){};};
 //     const CLASEXTEND    = function(PUBLIC)     {return function(){};};
 //     const CLASIMPLEMENT = function(PUBLIC)     {return function(){};};
-    
 //     const noDuplicates123456 = function(setupOBJ:setupOBJ) {
 //         let a = KEYS(setupOBJ.dp||{});
 //         let b = KEYS(setupOBJ.mp||{});
@@ -4835,11 +4602,8 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //         let neW = UNIQ(oriG);
 //         neW.length === oriG.length || (()=>{THROWE()})()
 //     };
-
 //     /*export*/ const parseClass = (function(){
-        
 //     });
-
 //     let list_mem = ["__settings__","__imports__","__middlemans__","__internal__","__static__","__public__","__constructor__"];
 //     const __mem__ = S._Object.assign(list_mem,list_mem.map((e,i)=>{
 //         let obj;
@@ -4853,7 +4617,6 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //         return obj;
 //     }));
 //     const CLASMEMSETUP = CAPSULE(function(){
-
 //     },{          // default                             // validate   // block
 //     IMPORTS:     [() => ({})                            ,()=>{}       ,(o,z)  => CLASSETUPOBJ["imports"][1](o,z)],
 //     MIDDLEMANS:  [() => ({})                            ,()=>{}       ,z      => CLONE(z)],
@@ -4866,7 +4629,6 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     CONSTRUCTOR: [()=>{}]
 //     });
 //     const CLASSETUPOBJ = function(){ return CAPSULE(function(){
-
 //     },
 //     {                      // SINGULAR VALIDATIONS                    BLOCK                       DEFAULT
 //     /*const*/  extends    : [[HASPROPERTY,ISOBJECT,NOTEMPTY,UHHHH]      ,CLONE,                   {}],
@@ -4887,7 +4649,6 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     /*const*/  mp2        : [[enforce_object_methods]                   ,[block_mp2,CLONE],       {}],
 //     /*const*/  constructor: [[enforce_object_methods]                   ,[CLONE],                 function(){}]
 //     });
-
 //     // const methods = ["mi","ms","mp","mp1","mp2","constructor"];
 //     // const datas   = ["di","ds","dp","dp1","dp2"];
 //     // const properties = [
@@ -4928,20 +4689,16 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     // const closure_block     = function(){return function(){THROWE("unfinished");}};
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     // consT(`
-
 //     // `);
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 //     const UHHHH = function(obj) {   
 //         // loopObject(obj, (obj,k)=>{ loopObject(obj.extends, k) });
 //         S._Object.keys(obj.extends).forEach(
@@ -4981,7 +4738,6 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //             e = period(e);
 //             let r = require(e);
 //             __imports__[e.toLowerCase()] = [()=>(new r()),()=>(r),()=>{THROWE();}]  [(isClas(r)&&1) || (isFunC(r)||isFunction(r)||isObj(r) && 2) || 0];
-
 //             });
 //     };
 //     // Object.keys(obj.ms).forEach(e => {const tempFunc = obj.ms[e];__static__.ms[e] = function () {return tempFunc.call(obj, ...arguments);};}); 
@@ -4993,8 +4749,6 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     const block_mp          :Function = obj => { loopObject(obj.mp,  (obj,k)=>{__public__  ["mp"] [k] = wrap.method("public",  obj["mp"] [k]); })};
 //     const block_mp1         :Function = obj => { loopObject(obj.mp1, (obj,k)=>{__private__ ["mp1"][k] = wrap.method("private", obj["mp1"][k]); })};
 //     const block_mp2         :Function = obj => { loopObject(obj.mp2, (obj,k)=>{__protect__ ["mp2"][k] = wrap.method("protect", obj["mp2"][k]); })};
-
-
 //     const getMethod:funClite = {
 //         validate:function(methods){
 //             if ("get" in methods) {THROWE();} 
@@ -5021,32 +4775,28 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //             }
 //         }
 //     };
-
-
-
 // })();
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*3)  LANGUAGE CONSTRUCT MUST HAVES
 */
-export const INPUT     = function(){};
-export const OUTPUT    = function(){};
-export const RANGE     = function(){};
-export const TEST      = function(){};
-export const SPEC      = function(){};
-export const AUDIT     = function(){};
-export const ASSERT    = function(){};
-export const SHOULD    = function(){};
-export const EXPECT    = function(){};
-export const LOG       = function(){};
-export const RESOLVE   = function(){};
-export const REJECT    = function(){};
-export const BEFORE    = function(){};
-export const AFTER     = function(){};
-export const BEFOREEACH = function(){};
-export const AFTEREACH = function(){};
-
+exports.INPUT = function () { };
+exports.OUTPUT = function () { };
+exports.RANGE = function () { };
+exports.TEST = function () { };
+exports.SPEC = function () { };
+exports.AUDIT = function () { };
+exports.ASSERT = function () { };
+exports.SHOULD = function () { };
+exports.EXPECT = function () { };
+exports.LOG = function () { };
+exports.RESOLVE = function () { };
+exports.REJECT = function () { };
+exports.BEFORE = function () { };
+exports.AFTER = function () { };
+exports.BEFOREEACH = function () { };
+exports.AFTEREACH = function () { };
 // var assert = require('assert');
 // describe('Array', function() {
 //   describe('#indexOf()', function() {
@@ -5055,29 +4805,23 @@ export const AFTEREACH = function(){};
 //     });
 //   });
 // });
-
 // describe('hooks', function() {
 //   before(function() {
 //     // runs once before the first test in this block
 //   });
-
 //   after(function() {
 //     // runs once after the last test in this block
 //   });
-
 //   beforeEach(function() {
 //     // runs before each test in this block
 //   });
-
 //   afterEach(function() {
 //     // runs after each test in this block
 //   });
-
 //   // test cases
 // });
-
-export const SPECDEV = CAPSULE(function(){
-  console.warn(`
+exports.SPECDEV = exports.CAPSULE(function () {
+    console.warn(`
   ** collects all tests from different projects and stores into one repository for data science
   ** study the other testing frameworks to see what they did wrong
   ** do everything in power to automate this
@@ -5087,212 +4831,194 @@ export const SPECDEV = CAPSULE(function(){
   ** notification system needs to be built. ??? display what notifications first? ???
   ** 
   `);
-  throw new Error("UNFINISHED");
-},{
-/*const*/ SPECDB : function(){
-
-},
-/*const*/ TESTSZONE : {
-  "E2E": {
-    DESCRIPTION: `END 2 END TESTING: ALL TESTS ARE EXECUTED ON LIVE FULLY ASSEMBLED SOFTWARE`
-  },
-  "SEG": {
-    DESCRIPTION: `SEGMENTED TESTING: ALL TESTS ARE EXECUTED ON ISOLATED COMPONENTS`
-  }
-},
-/*const*/ TESTSTYLE : {
-  "TDD":{
-    DESCRIPTION: `TEST-DRIVEN-DEVELOPMENT: ALL SOFTWARE DEVELOPMENT ORIENTED AROUND PASSING TESTS FOR NEW CODE`,
-  },
-  "BDD":{
-    DESCRIPTION: `BEHAVIOR-DRIVEN-DEVELOPMENT: DEVELOPMENT ORIENTED AROUND SEEMINGLY MAKING THE GRADE`,
-  },
-  "FDD":{
-    DESCRIPTION: `FEATURE-DRIVEN-DEVELOPMENT: DEVELOPMENT ORIENTED AROUND VERSIONING RELEASE PRIORITIES`
-  },
-},
-/*const*/ TESTAPPROACHES : {
-  "DATATYPES": {
-    DESCRIPTION: `WHAT DATATYPES ARE ACCEPTED`
-  },
-  "VALIDATIONS": {
-    DESCRIPTION: `WHAT CAUSES RETURN FALSE OR FAILURES`
-  },
-  "CONDITIONAL-SLIPPING": {
-    DESCRIPTION: `WHAT FUNKY DATATYPE INPUTS SLIP BY CONDITIONAL STATEMENTS`
-  },
-  "IOSETS": {
-    DESCRIPTION: `WHAT INPUT & OUTPUT SETS ARE SUPPOSE TO PASS`
-  },
-  "RANGES": {
-    DESCRIPTION: `WHAT RANGES OF INPUTS & OUTPUTS ARE ALLOWED`
-  }
-},
-/*const*/ TESTGUIDE : { // think of testing like gaming
-  "START PROJECT": {
-    DESCRIPTION: `ROSTERS PROJECT INTO DB. MAPS FOLDER STRUCTURES. CREATES A RESERVATION IN CODEDATABASE.`,
-    F:  function(){NEWPROJECTTITLE();NEWPROJECTDESCRIPTION();NEWFOLDERS();NEWSPECFOLDER();}
-  },
-  "START LAYER":   {
-    DESCRIPTION: `ROSTERS LAYER INTO DB. MAPS LAYER STRUCTURES. CREATES A LAYER IN PROJECT.`,
-    F:  function(){NEWLAYERTITLE();NEWLAYERDESCRIPTION();NEWFILELAYER();NEWSPECLAYER();}
-  },
-  "START FILE": {
-    DESCRIPTION: `ROSTERS FILE INTO BD. MAPS FILE STRUCTURES. CREATES A FILE IN FOLDER.`,
-    F:  function(){NEWFILETITLE();NEWFILEDESCRIPTION();NEWFILE();NEWSPECFILE();}
-  },
-  "START TASK":    {
-    DESCRIPTION: `ROSTERS LAYER INTO DB. MAPS TASK STRUCTURES. CREATES A TASK-ZONE IN FILE.`,
-    F:  function(){NEWTASKTITLE();NEWTASKDESCRIPTION();NEWTASK();NEWTASKSPEC();}
-  }
-},
-/*const*/ TESTMETHODS : {
-  "BYDATATYPE":{},
-  "BYRANGE":{},
-  "BYIOSET":{},
-  "BYVALIDATION":{}
-},
+    throw new Error("UNFINISHED");
+}, {
+    /*const*/ SPECDB: function () {
+    },
+    /*const*/ TESTSZONE: {
+        "E2E": {
+            DESCRIPTION: `END 2 END TESTING: ALL TESTS ARE EXECUTED ON LIVE FULLY ASSEMBLED SOFTWARE`
+        },
+        "SEG": {
+            DESCRIPTION: `SEGMENTED TESTING: ALL TESTS ARE EXECUTED ON ISOLATED COMPONENTS`
+        }
+    },
+    /*const*/ TESTSTYLE: {
+        "TDD": {
+            DESCRIPTION: `TEST-DRIVEN-DEVELOPMENT: ALL SOFTWARE DEVELOPMENT ORIENTED AROUND PASSING TESTS FOR NEW CODE`,
+        },
+        "BDD": {
+            DESCRIPTION: `BEHAVIOR-DRIVEN-DEVELOPMENT: DEVELOPMENT ORIENTED AROUND SEEMINGLY MAKING THE GRADE`,
+        },
+        "FDD": {
+            DESCRIPTION: `FEATURE-DRIVEN-DEVELOPMENT: DEVELOPMENT ORIENTED AROUND VERSIONING RELEASE PRIORITIES`
+        },
+    },
+    /*const*/ TESTAPPROACHES: {
+        "DATATYPES": {
+            DESCRIPTION: `WHAT DATATYPES ARE ACCEPTED`
+        },
+        "VALIDATIONS": {
+            DESCRIPTION: `WHAT CAUSES RETURN FALSE OR FAILURES`
+        },
+        "CONDITIONAL-SLIPPING": {
+            DESCRIPTION: `WHAT FUNKY DATATYPE INPUTS SLIP BY CONDITIONAL STATEMENTS`
+        },
+        "IOSETS": {
+            DESCRIPTION: `WHAT INPUT & OUTPUT SETS ARE SUPPOSE TO PASS`
+        },
+        "RANGES": {
+            DESCRIPTION: `WHAT RANGES OF INPUTS & OUTPUTS ARE ALLOWED`
+        }
+    },
+    /*const*/ TESTGUIDE: {
+        "START PROJECT": {
+            DESCRIPTION: `ROSTERS PROJECT INTO DB. MAPS FOLDER STRUCTURES. CREATES A RESERVATION IN CODEDATABASE.`,
+            F: function () { NEWPROJECTTITLE(); NEWPROJECTDESCRIPTION(); NEWFOLDERS(); NEWSPECFOLDER(); }
+        },
+        "START LAYER": {
+            DESCRIPTION: `ROSTERS LAYER INTO DB. MAPS LAYER STRUCTURES. CREATES A LAYER IN PROJECT.`,
+            F: function () { NEWLAYERTITLE(); NEWLAYERDESCRIPTION(); NEWFILELAYER(); NEWSPECLAYER(); }
+        },
+        "START FILE": {
+            DESCRIPTION: `ROSTERS FILE INTO BD. MAPS FILE STRUCTURES. CREATES A FILE IN FOLDER.`,
+            F: function () { NEWFILETITLE(); NEWFILEDESCRIPTION(); NEWFILE(); NEWSPECFILE(); }
+        },
+        "START TASK": {
+            DESCRIPTION: `ROSTERS LAYER INTO DB. MAPS TASK STRUCTURES. CREATES A TASK-ZONE IN FILE.`,
+            F: function () { NEWTASKTITLE(); NEWTASKDESCRIPTION(); NEWTASK(); NEWTASKSPEC(); }
+        }
+    },
+    /*const*/ TESTMETHODS: {
+        "BYDATATYPE": {},
+        "BYRANGE": {},
+        "BYIOSET": {},
+        "BYVALIDATION": {}
+    },
 });
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-export const LAYERS = function(){
-  // bottom layer: the functional layer   code density high,mostly imperative
-  // top layer:    the highlevel layer    code density low, mostly english & pseudo
-  // inbetween layers: programmable       code density med, mostly declarative & symbolic paradigm
+exports.LAYERS = function () {
+    // bottom layer: the functional layer   code density high,mostly imperative
+    // top layer:    the highlevel layer    code density low, mostly english & pseudo
+    // inbetween layers: programmable       code density med, mostly declarative & symbolic paradigm
 };
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-export const CODEDECONSTRUCTOR = function(inputs){
-
-
-  // codeparser     // converts findings into json jstructures
-  // deconstruct    // strips code apart into distinct properties; procedures not needed
-  // quantifier     // converts findings into numbers
-  // procedureprint // converts unarranged distincts into executable code
-  let props = {};
-  let funcs = {};
-  let dry   = {};
-  let found = [];
-  let k     = "";
-  let j     = "";
-
-  const CODEPARSER      = (function(inputs){
-
-  })(inputs);
-  const DESCONSTRUCT    = (function(inputs){
-
-    inputs.forEach(e=>{
-        for (let k in e) {
-            if (!props.hasOwnProperty(k)) props[k] = []; 
-            if (!funcs.hasOwnProperty(k)) props[k] = []; 
-            props[k].push(e[k]);
+exports.CODEDECONSTRUCTOR = function (inputs) {
+    // codeparser     // converts findings into json jstructures
+    // deconstruct    // strips code apart into distinct properties; procedures not needed
+    // quantifier     // converts findings into numbers
+    // procedureprint // converts unarranged distincts into executable code
+    let props = {};
+    let funcs = {};
+    let dry = {};
+    let found = [];
+    let k = "";
+    let j = "";
+    const CODEPARSER = (function (inputs) {
+    })(inputs);
+    const DESCONSTRUCT = (function (inputs) {
+        inputs.forEach(e => {
+            for (let k in e) {
+                if (!props.hasOwnProperty(k))
+                    props[k] = [];
+                if (!funcs.hasOwnProperty(k))
+                    props[k] = [];
+                props[k].push(e[k]);
+            }
+        });
+    })(inputs);
+    const QUANTIFIER = (function (inputs) {
+        for (let k in props) {
+            for (let j in props[k]) {
+                if (!found.includes(props[k][j])) {
+                    found.push(props[k][j]);
+                }
+            }
+            dry[k] = found;
+            found = [];
         }
     });
-  })(inputs);
-  const QUANTIFIER      = (function(inputs){
-    for (let k in props) {
-      for (let j in props[k]) {
-
-          if (!found.includes(props[k][j])) {found.push(props[k][j]);}
-
-      }
-      dry[k] = found;
-      found = [];
-  }
-  });
-  const PROCEDUREPRINT  = (function(inputs){
-
-  })(inputs);    
-  console.log(props);
-  console.log(dry);
+    const PROCEDUREPRINT = (function (inputs) {
+    })(inputs);
+    console.log(props);
+    console.log(dry);
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-export const DIFFERENTIALBUILDCODING = function(){};
-
+exports.DIFFERENTIALBUILDCODING = function () { };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*4)  ALGORITHMIC DATA STRUCTURES
 */
-export const INTUITLIST = function(){};
-export const TREES = function(){};
-export const WEB   = function(){};
-export const MATRIX= function(){};
-
-export const STORE = function(){};
-export const FETCH = function(){};
-export const AMBIENT=function(){};
+exports.INTUITLIST = function () { };
+exports.TREES = function () { };
+exports.WEB = function () { };
+exports.MATRIX = function () { };
+exports.STORE = function () { };
+exports.FETCH = function () { };
+exports.AMBIENT = function () { };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*5)  ALGORITHMIC ALGORITHMS
 */
-export const SORT = function(){};
-export const QUANTIFY = function(){};
-export const SEARCH  = function(){};
+exports.SORT = function () { };
+exports.QUANTIFY = function () { };
+exports.SEARCH = function () { };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*6)  WORKS OUT THE BOX
 */
-
-export const MIDDLEWARE = function(){};
-
-
-export const API           = function(){};
-export const SERVER        = function(){};
-export const CLIENT        = function(){};
-export const ZENDB         = function(){};
-export const PROXY         = function(){};
-export const CLUSTER       = function(){};
-export const DHCA          = function(){};
-export const SOCKET        = function(){};
-export const AUTOTEMPLATER = function(){};
-export const SMARTCSS      = function(){};
-export const TAPJS         = function(){};
+exports.MIDDLEWARE = function () { };
+exports.API = function () { };
+exports.SERVER = function () { };
+exports.CLIENT = function () { };
+exports.ZENDB = function () { };
+exports.PROXY = function () { };
+exports.CLUSTER = function () { };
+exports.DHCA = function () { };
+exports.SOCKET = function () { };
+exports.AUTOTEMPLATER = function () { };
+exports.SMARTCSS = function () { };
+exports.TAPJS = function () { };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /** 7) PARADIGM STYLER
- * 
+ *
  * ** FUNCTIONAL
  * ** OOP
  * ** DECLARATIVE
  * ** VERBOSE       // 100% DECLARATIVE
  * ** SENSICAL      // TYPING WORDS; NATURAL LANGUAGE INTERPRETTING
 */
-
-export const COMPARTMENTALIZE = function(){
-  throw new Error("UNFINISHED");
-  /**
-   * SUBJECTIVE/CUSTOMIZABLE API ORGANIZATION
-   * 
-   * 
-   * i.e
-   * 
-   * organize all methods by input datatype
-   * organize all methods by output datatype
-   * organize all methods by paradigms
-   * organize all methods by alphabet
-   * organize all methods by authors recommendation
-   * 
-   */
+exports.COMPARTMENTALIZE = function () {
+    throw new Error("UNFINISHED");
+    /**
+     * SUBJECTIVE/CUSTOMIZABLE API ORGANIZATION
+     *
+     *
+     * i.e
+     *
+     * organize all methods by input datatype
+     * organize all methods by output datatype
+     * organize all methods by paradigms
+     * organize all methods by alphabet
+     * organize all methods by authors recommendation
+     *
+     */
 };
-export const PARADIGMS = CAPSULE(function(sel){
-  throw new Error("UNFINISHED");
-  PARADIGMS.hasOwnProperty(sel) && PARADIGMS[sel]()
-},{
-"FUNCTIONAL":function(){},
-"GROUPING"  :function(){},
-"OOP"       :function(){},
-"VERBOSE"   :function(){},  
-"SENSICAL"  :function(){}   
+exports.PARADIGMS = exports.CAPSULE(function (sel) {
+    throw new Error("UNFINISHED");
+    exports.PARADIGMS.hasOwnProperty(sel) && exports.PARADIGMS[sel]();
+}, {
+    "FUNCTIONAL": function () { },
+    "GROUPING": function () { },
+    "OOP": function () { },
+    "VERBOSE": function () { },
+    "SENSICAL": function () { }
 });
-
 console.warn(`miscellaneous todo list
 ** analyze the functional libraries. remove duplicate functionalities.
 `);
@@ -5301,18 +5027,18 @@ console.warn(`miscellaneous todo list
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /** 7) SNIPPETS
 */
-export const SNIPPETS = {
-  CAPSULE: {},
-  CLOSURE: {},
-  FUNCLITE:{},
-  FUNC:{},
-  CLAS:{}
+exports.SNIPPETS = {
+    CAPSULE: {},
+    CLOSURE: {},
+    FUNCLITE: {},
+    FUNC: {},
+    CLAS: {}
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-export const LEARNDEVCORE = function(){
-  console.warn(`
+exports.LEARNDEVCORE = function () {
+    console.warn(`
   learn everything exported from devcore.
 
 
@@ -5327,18 +5053,11 @@ export const LEARNDEVCORE = function(){
 
 
 
-  `); 
-  throw new Error("UNFINISHED");
+  `);
+    throw new Error("UNFINISHED");
 };
-
-
-
-
-
 // export const weavePackageExportable = (function(){ 
-
 //   // enforce LOOPCHECKLIST on pkgs & functional programs
 //   // convert into pkg paradigm selection style
 //   // convert into exportable ${PROGRAMMING LANGUAGE}`
-
 // })();
