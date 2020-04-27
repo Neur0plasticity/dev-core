@@ -1,58 +1,1156 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- *
- *
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- *
- *
- * SELF MODIFYING DOCUMENT ON EVERY EXECUTION
- *
- * *
- *
- *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
- *
- */
 !(function sanityCheck() {
-    console.warn('asserting programming language functionality meets expectations');
-    console.warn("test all operators");
-    console.warn("test all builtin functions");
-    console.warn("test error-handling");
-    console.warn("test everything");
     1 + 1 === 2 || exports.THROWE();
     1 - 1 === 0 || exports.THROWE();
 });
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// export const ATTRS = { // ATTRIBUTES
+//   // INTERFACE ATTRIBUTE{
+//     // name:        String() > 0           // the attribute name
+//     // description
+//     // types:       [...types]
+//     // validate:    function(v){return v}  // verification
+//     // block:       function(v){return v}  // generate value
+//     // default:     undefined              // generate value is not present      
+//     // SQLITE:      "",                    // DB EQUIVALENT DATA TYPE
+//     // MYSQL:       "",                    // DB EQUIVALENT DATA TYPE
+//     // ORACLE:      "",                    // DB EQUIVALENT DATA TYPE
+//     // mongodb:     "",                    // DB EQUIVALENT DATA TYPE
+//   // }
+// };
+const ATTRS = {
+    a: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    b: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    c: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    d: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    e: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    f: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    g: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    h: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    i: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    j: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    k: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    l: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    m: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    n: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    o: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    p: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    q: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    r: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    s: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    t: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    u: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    v: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    w: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    x: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    y: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    z: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    acc: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    args: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    arity: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    array: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    cache: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    cb: {
+        name: "String() > 0",
+        description: "A populated callback",
+        types: ["function"],
+        validate: function (v) { return exports.NOTEMPTY(v); },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: "TEXT",
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    cbs: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    conditions: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    confiG: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    config: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    config_inherit: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    config_inheritor: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    defaultArgument: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    defaultValue: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    el: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    end: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    fn: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    fnOrPath: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    fns: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    funCBlock: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    funCvalidate: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    func: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    func0props: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    functioN: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    getter: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    input: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    inputArguments: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    inputs: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    iter: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    key: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    keys: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    left: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    lens: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    list: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    list1: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    list2: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    listOrString: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    max: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    maybeDate: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    maybeError: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    maybeRegex: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    memA: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    memB: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    meth: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    methodName: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    methodNames: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    name: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    obj: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    object: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    offset: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    paramsOBJ: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    pathInput: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    predicates: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    prefix: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    prop: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    props: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    right: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    sel: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    separator: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    setter: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    spec: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    start: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    suffix: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    target: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    typ: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    val: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    values: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    },
+    variables: {
+        name: "String() > 0",
+        description: undefined,
+        types: [],
+        validate: function (v) { return v; },
+        block: function (v) { return v; },
+        default: undefined,
+        sqlite: undefined,
+        mysql: undefined,
+        oracle: undefined,
+        mongodb: undefined,
+    }
+};
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -61,7 +1159,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
     *** anything global non related to module gets bumped to SHARED MEMORY VARIABLES
     *** sandbox-js must be the first to execute
 */
-/*export*/ exports.SANDBOX = (function SANDBOX() {
+exports.SANDBOX = (function SANDBOX() {
     let instances = 0;
     if (instances++ !== 0) {
         exports.THROWE();
@@ -294,79 +1392,79 @@ exports.S = exports.SANDBOX;
   * does not handle errors
   * does not use callbacks as an information return
 */
-exports.ISBOOLEAN = v => typeof v === "boolean";
-exports.ISNOTBOOLEAN = v => !exports.ISBOOLEAN(v);
-exports.ISNUMBER = v => typeof v === "number";
-exports.ISNOTNUMBER = v => !exports.ISNUMBER(v);
-exports.ISSTRING = v => typeof v === "string";
-exports.ISNOTSTRING = v => !exports.ISNOTSTRING(v);
-exports.ISJSON = v => typeof v === "object" && !exports.S._Array.isArray(v);
-exports.ISNOTJSON = v => !exports.ISNOTJSON(v);
-exports.ISOBJECT = v => typeof v === "object";
-exports.ISNOTOBJECT = v => !exports.ISNOTOBJECT(v);
-exports.ISARRAY = v => exports.S._Array.isArray(v);
-exports.ISNOTARRAY = v => !exports.ISARRAY(v);
-exports.ISSYMBOL = v => typeof v === "symbol";
-exports.ISNOTSYMBOL = v => !exports.ISSYMBOL(v);
-exports.ISFUNCTION = v => typeof v === "function";
-exports.ISNOTFUNCTION = v => !exports.ISFUNCTION(v);
-exports.ISTHIS = v => v.toString().includes("function ");
-exports.ISNOTTHIS = v => !exports.ISTHIS(v);
-exports.ISLAMBDA = v => exports.ISFUNCTION(v) && v.toString().includes("=>");
-exports.ISNOTLAMBDA = v => !exports.ISLAMBDA(v);
-exports.ISANONYMOUS = v => exports.ISFUNCTION(v) && !exports.ISLAMBDA(v) && v["name"] === undefined;
-exports.ISNOTANONYMOUS = v => !exports.ISANONYMOUS(v);
-exports.ISFUNC = v => exports.ISFUNCTION(v) && !exports.ISLAMBDA(v) && v.hasOwnProperty("name");
-exports.ISNOTFUNC = v => !exports.ISFUNC(v);
-exports.ISCLASS = v => { throw new Error("UNFINISHED"); };
-exports.ISNOTCLASS = v => !exports.ISCLASS(v);
-exports.ISNEWABLE = v => { throw new Error("UNFINISHED"); };
-exports.ISUNDEFINED = v => v === undefined;
-exports.ISNOTUNDEFINED = v => !exports.ISUNDEFINED(v);
-exports.ISNULL = v => v === "null";
-exports.ISNOTNULL = v => !exports.ISNULL(v);
-exports.ISSAFE = v => exports.S._Number.isSafeInteger(v);
-exports.ISNOTSAFE = v => !exports.ISSAFE(v);
-exports.ISTRUE = v => v === true;
-exports.ISNOTTRUE = V => !exports.ISTRUE(v);
-exports.ISFALSE = v => v === false;
-exports.ISNOTFALSE = v => !exports.ISSAFE(v);
-exports.ISINFINITY = v => v === Infinity;
-exports.ISNOTINFINITY = v => !exports.ISINFINITY(v);
-exports.ISFINITE = v => exports.S._isFinite(v);
-exports.ISNOTFINITE = v => !exports.ISFINITE(v);
-exports.ISMAXVALUE = v => v === exports.S._Number.MAX_VALUE;
-exports.ISNOTMAXVALUE = v => !exports.ISMAXVALUE(v);
-exports.ISMINVALUE = v => v === exports.S._Number.MAX_VALUE;
-exports.ISNOTMINVALUE = v => !exports.ISMINVALUE(v);
-exports.ISMAXSAFEVALUE = v => v === exports.S._Number.MAX_SAFE_INTEGER;
-exports.ISNOTMAXSAFEVALUE = v => !exports.ISMAXSAFEVALUE(v);
-exports.ISMINSAFEVALUE = v => v === exports.S._Number.MIN_SAFE_INTEGER;
-exports.ISNOTMINSAFEVALUE = v => !exports.ISMINSAFEVALUE(v);
-exports.ISNAN = v => exports.S._isNaN(v);
-exports.ISNOTNAN = v => !exports.ISNAN(v);
-exports.ISPOSITIVE = v => 0 < v;
-exports.ISNOTPOSITIVE = v => !exports.ISPOSITIVE(v);
-exports.ISNEGATIVE = v => 0 > v;
-exports.ISNOTNEGATIVE = v => !exports.ISNEGATIVE(v);
-exports.ISZERO = v => v === 0;
-exports.ISNOTZERO = v => !exports.ISZERO(v);
-exports.ISFLOAT = v => exports.S._String(v).includes(".");
-exports.ISNOTFLOAT = v => !exports.ISFLOAT(v);
-exports.ISINTEGER = v => (V << 0) === V;
-exports.ISNOTINTEGER = v => !exports.ISINTEGER(v);
-exports.ISALPHA = v => [..._lowerCase, ..._upperCase].includes(v);
-exports.ISNOTALPHA = v => !exports.ALPHA(v);
-exports.ISLOWERCASE = v => _lowerCase.includes(v);
-exports.ISNOTLOWERCASE = v => !exports.ISLOWERCASE(v);
-exports.ISUPPERCASE = v => _upperCase.includes(v);
-exports.ISNOTUPPERCASE = v => !exports.ISUPPERCASE(v);
-exports.ISSYMBOL = v => _symbols.includes(v);
-exports.ISNOTSYMBOL = v => !exports.ISSYMBOL(v);
+exports.ISBOOLEAN = (v) => typeof v === "boolean";
+exports.ISNOTBOOLEAN = (v) => !exports.ISBOOLEAN(v);
+exports.ISNUMBER = (v) => typeof v === "number";
+exports.ISNOTNUMBER = (v) => !exports.ISNUMBER(v);
+exports.ISSTRING = (v) => typeof v === "string";
+exports.ISNOTSTRING = (v) => !exports.ISSTRING(v);
+exports.ISJSON = (v) => typeof v === "object" && !exports.S._Array.isArray(v);
+exports.ISNOTJSON = (v) => !exports.ISJSON(v);
+exports.ISOBJECT = (v) => typeof v === "object";
+exports.ISNOTOBJECT = (v) => !exports.ISOBJECT(v);
+exports.ISARRAY = (v) => exports.S._Array.isArray(v);
+exports.ISNOTARRAY = (v) => !exports.ISARRAY(v);
+exports.ISSYMBOL = (v) => typeof v === "symbol";
+exports.ISNOTSYMBOL = (v) => !exports.ISSYMBOL(v);
+exports.ISFUNCTION = (v) => typeof v === "function";
+exports.ISNOTFUNCTION = (v) => !exports.ISFUNCTION(v);
+exports.ISTHIS = (v) => v.toString().includes("function ");
+exports.ISNOTTHIS = (v) => !exports.ISTHIS(v);
+exports.ISLAMBDA = (v) => exports.ISFUNCTION(v) && v.toString().includes("=>");
+exports.ISNOTLAMBDA = (v) => !exports.ISLAMBDA(v);
+exports.ISANONYMOUS = (v) => exports.ISFUNCTION(v) && !exports.ISLAMBDA(v) && v["name"] === undefined;
+exports.ISNOTANONYMOUS = (v) => !exports.ISANONYMOUS(v);
+exports.ISFUNC = (v) => exports.ISFUNCTION(v) && !exports.ISLAMBDA(v) && v.hasOwnProperty("name");
+exports.ISNOTFUNC = (v) => !exports.ISFUNC(v);
+exports.ISCLASS = (v) => { throw new Error("UNFINISHED"); };
+exports.ISNOTCLASS = (v) => !exports.ISCLASS(v);
+exports.ISNEWABLE = (v) => { throw new Error("UNFINISHED"); };
+exports.ISUNDEFINED = (v) => v === undefined;
+exports.ISNOTUNDEFINED = (v) => !exports.ISUNDEFINED(v);
+exports.ISNULL = (v) => v === "null";
+exports.ISNOTNULL = (v) => !exports.ISNULL(v);
+exports.ISSAFE = (v) => exports.S._Number.isSafeInteger(v);
+exports.ISNOTSAFE = (v) => !exports.ISSAFE(v);
+exports.ISTRUE = (v) => v === true;
+exports.ISNOTTRUE = (v) => !exports.ISTRUE(v);
+exports.ISFALSE = (v) => v === false;
+exports.ISNOTFALSE = (v) => !exports.ISSAFE(v);
+exports.ISINFINITY = (v) => v === Infinity;
+exports.ISNOTINFINITY = (v) => !exports.ISINFINITY(v);
+exports.ISFINITE = (v) => exports.S._isFinite(v);
+exports.ISNOTFINITE = (v) => !exports.ISFINITE(v);
+exports.ISMAXVALUE = (v) => v === exports.S._Number.MAX_VALUE;
+exports.ISNOTMAXVALUE = (v) => !exports.ISMAXVALUE(v);
+exports.ISMINVALUE = (v) => v === exports.S._Number.MAX_VALUE;
+exports.ISNOTMINVALUE = (v) => !exports.ISMINVALUE(v);
+exports.ISMAXSAFEVALUE = (v) => v === exports.S._Number.MAX_SAFE_INTEGER;
+exports.ISNOTMAXSAFEVALUE = (v) => !exports.ISMAXSAFEVALUE(v);
+exports.ISMINSAFEVALUE = (v) => v === exports.S._Number.MIN_SAFE_INTEGER;
+exports.ISNOTMINSAFEVALUE = (v) => !exports.ISMINSAFEVALUE(v);
+exports.ISNAN = (v) => exports.S._isNaN(v);
+exports.ISNOTNAN = (v) => !exports.ISNAN(v);
+exports.ISPOSITIVE = (v) => 0 < v;
+exports.ISNOTPOSITIVE = (v) => !exports.ISPOSITIVE(v);
+exports.ISNEGATIVE = (v) => 0 > v;
+exports.ISNOTNEGATIVE = (v) => !exports.ISNEGATIVE(v);
+exports.ISZERO = (v) => v === 0;
+exports.ISNOTZERO = (v) => !exports.ISZERO(v);
+exports.ISFLOAT = (v) => exports.S._String(v).includes(".");
+exports.ISNOTFLOAT = (v) => !exports.ISFLOAT(v);
+exports.ISINTEGER = (v) => (v << 0) === v;
+exports.ISNOTINTEGER = (v) => !exports.ISINTEGER(v);
+exports.ISALPHA = (v) => [...exports.LOWERCASE, ...exports.UPPERCASE].includes(v);
+exports.ISNOTALPHA = (v) => !exports.ISALPHA(v);
+exports.ISLOWERCASE = (v) => exports.LOWERCASE.includes(v);
+exports.ISNOTLOWERCASE = (v) => !exports.ISLOWERCASE(v);
+exports.ISUPPERCASE = (v) => exports.UPPERCASE.includes(v);
+exports.ISNOTUPPERCASE = (v) => !exports.ISUPPERCASE(v);
+// export const ISSYMBOL      =   (v) => SYMBOLS.includes(v);
+exports.ISNOTSYMBOL = (v) => !exports.ISSYMBOL(v);
 exports.ISEMPTY = function (v) {
     return {
         "str": v => v.length === 0, "obj": v => exports.S._Object.keys(v).length === 0,
-        "arr": v => v.length === 0, "fnc": v => v.toString()
+        "arr": v => v.length === 0, "fnc": (v) => v.toString()
     }[(exports.S._Array.isArray(v) && "arr") || (typeof v)](v);
 };
 exports.ISNOTEMPTY = (v) => {
@@ -375,21 +1473,42 @@ exports.ISNOTEMPTY = (v) => {
         "arr": v => v.length !== 0, "fnc": v => v.toString()
     }[(exports.S._Array.isArray(v) && "arr") || (typeof v)](v);
 };
-exports.GETNAME = function (func) { };
+/*const PARSEFUNCTION = {
+
+};*/
+exports.GETNAME = function (func) {
+    return func.hasOwnPropert("name") && new String(func.name);
+};
 exports.GETPARAMS = function (func) {
-    let start = 0;
-    let end = 0;
-    if (func.toString().includes("function")) {
-        start = func.toString().indexOf("(");
-        end = func.toString().indexOf(")");
-    }
-    else if (func.toString().includes("=>")) {
-        return [];
-    }
+    /**
+     * supports lamdbdas with params,
+     * why? It's redundant to support unneeded syntaxes
+     */
+    let s = func.toString().trimLeft();
+    let start = s.indexOf("(");
+    let end = s.indexOf(")");
     return func.toString().slice(start + 1, end).split(",") || [];
 };
 exports.GETCOMMENTS = function (func) { };
-exports.GETINPUTTYPE = function (func) { };
+//   > Object.assign(["a"],{"":"","a":"b"})
+// [ 'a', '': '', a: 'b' ]
+// > let a = Object.assign(["a"],{"":"","a":"b"})
+// new Set(["a"]) is typw object
+exports.GETINPUTTYPE = function (func) {
+    // uses the attributes information
+    let ps = exports.GETPARAMS(func);
+    let IPT = [];
+    for (let k in ps) {
+        IPT.push({
+            param: new String(ps[k]),
+            types: new Array(ATTRS[ps[k]].types)
+        });
+    }
+    return IPT;
+};
+/**
+ * not sure how to figureout outputtype easily
+ */
 exports.GETOUTPUTTYPE = function (func) { };
 exports.GETEXETYPE = function (func) { };
 exports.GETSTATEMENTS = function (func) { };
@@ -397,16 +1516,22 @@ exports.GETINNERMEM = function (func) { };
 // export const ALLSAMCASE         = e => {let _ = e.slice().shift(); e = (ISLOWERCASE(_) && isLowerCase) || (ISUPPUERCASE(_) && ISUPPERCASE);  for (let k in e) { true === _(e) || THROWE(); }};
 // export const ALLTWOCASE         = e => {let a,b,c;   for (let k in e){ (ISLOWERCASE(_) && (a=true)) || (ISUPPERCASE(_) && (b=true)) || (c=true); }; return (a&&b)^c};
 // export const ALLMULCASE         = e => {let a = false, b = false, c = false;for (let k in e) { (ISLOWERCASE(k)&&a=true) || (ISUPPERCASE(k)&&b=true) || (ISSYMBOL(k)&&c=true)};return a&&b&&c;};
-exports.ASSERTINDEPENDENCE = f => exports.EVERY(f.toString(), ALLSAMCASE) && exports.EVERY(f.toString(), ALLALPHA);
-exports.ASSERTCOMPOUND = f => exports.EVERY(f.toString(), ALLTWOCASE) && exports.EVERY(f.toString(), ALLALPHA);
-exports.assertComplex = f => exports.EVERY(f.toString(), ALLMULCASE) && exports.EVERY(f.toString(), ALLALPHA);
-exports.NOTEMPTY = v => (exports.ISARRAY(v) && exports.THROWE("must not be empty", (v.length > 0))
+exports.ASSERTINDEPENDENCE = (f) => exports.EVERY(f.toString(), ALLSAMCASE) && exports.EVERY(f.toString(), ALLALPHA);
+exports.ASSERTCOMPOUND = (f) => exports.EVERY(f.toString(), ALLTWOCASE) && exports.EVERY(f.toString(), ALLALPHA);
+exports.assertComplex = (f) => exports.EVERY(f.toString(), ALLMULCASE) && exports.EVERY(f.toString(), ALLALPHA);
+exports.NOTEMPTY = (v) => (exports.ISARRAY(v) && exports.THROWE("must not be empty", (v.length > 0))
     || (typeof v === "object" && exports.THROWE("must not be empty", (exports.S._Object.keys(v).length > 0)))
     || (typeof v === "string" && exports.THROWE("must not be empty", (v.length > 0)))
     || (false));
 exports.HASPROPERTY = (obj, prop) => exports.THROWE("must have prop " + prop, obj.hasOwnProperty(prop));
+exports.ISDIVISIBLE = function (n, d) { return n % d === 0; };
 exports.ISEVEN = function () { };
+exports.ISEVENINTEGER = function (v) { return (v & 1) ^ 1; };
+exports.ISEVENINTEGER = function (v) { return (v & 1) ^ 1; };
+exports.ISEVENFLOAT = function () { };
 exports.ISODD = function () { };
+exports.ISODDINTEGER = function (v) { return (v & 1) ^ 0; };
+exports.ISODDFLOAT = function () { };
 exports.PERIOD = (e) => {
     if (e[0] === ".") {
         if (e[1] === ".")
@@ -420,12 +1545,12 @@ exports.PERIOD = (e) => {
     return e;
 };
 // export const loopObject             = (obj,cb) => { for (let k in obj) cb(obj,k); };
-exports.enforce_object_datas = v => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isNotFunction); };
-exports.enforce_object_methods = v => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isFunction); };
-exports.enforce_object_propsss = v => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isNotFunction); };
-exports.enforce_object_nulls = v => { isObject(v); isNull(v); };
-exports.enforce_settings = v => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(enforceSetting); };
-exports.enforce_setting = v => { };
+exports.enforce_object_datas = (v) => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isNotFunction); };
+exports.enforce_object_methods = (v) => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isFunction); };
+exports.enforce_object_propsss = (v) => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(isNotFunction); };
+exports.enforce_object_nulls = (v) => { isObject(v); isNull(v); };
+exports.enforce_settings = (v) => { isObject(v); notEmpty(v); exports.S._Object.keys(v).forEach(enforceSetting); };
+exports.enforce_setting = (v) => { };
 exports.EVERY = function (v, cb) {
     if (typeof v === "string") {
         for (let k in v) {
@@ -453,52 +1578,52 @@ exports.EVERY = function (v, cb) {
     }
 };
 exports.ALL = exports.EVERY;
-exports.NUMSTR = v => exports.EVERY(v, function (a) { return exports.NUMBERS.includes(a); });
-exports.NNUMSTR = v => exports.EVERY(v, function (a) { return !exports.NUMBERS.includes(a); });
-exports.STRSTR = v => exports.EVERY(v, exports.ISSTRING);
-exports.NSTRSTR = v => exports.EVERY(v, exports.ISNOTSTRING);
-exports.BOLARR = v => exports.EVERY(v, exports.ISBOOLEAN);
-exports.NBOLARR = v => exports.EVERY(v, exports.ISNOTBOOLEAN);
-exports.NUMARR = v => exports.EVERY(v, exports.ISNUMBER);
-exports.NNUMARR = v => exports.EVERY(v, exports.ISNOTNUMBER);
-exports.STRARR = v => exports.EVERY(v, exports.ISSTRING);
-exports.NSTRARR = v => exports.EVERY(v, exports.ISNOTSTRING);
-exports.ARRARR = v => exports.EVERY(v, exports.ISARRAY);
-exports.NARRARR = v => exports.EVERY(v, exports.ISNOTARRAY);
-exports.OBJARR = v => exports.EVERY(v, exports.ISOBJECT);
-exports.NOBJARR = v => exports.EVERY(v, exports.ISNOTOBJECT);
-exports.JSNARR = v => exports.EVERY(v, exports.ISJSON);
-exports.NJSNARR = v => exports.EVERY(v, exports.ISNOTJSON);
-exports.FNCARR = v => exports.EVERY(v, exports.ISFUNCTION);
-exports.NFNCARR = v => exports.EVERY(v, exports.ISNOTFUNCTION);
-exports.OBJLMD = v => exports.EVERY(v, exports.ISLAMBDA);
-exports.NOBJLMD = v => exports.EVERY(v, exports.ISNOTLAMBDA);
-exports.ANOARR = v => exports.EVERY(v, exports.ISANONYMOUS);
-exports.NANOARR = v => exports.EVERY(v, exports.ISNOTANONYMOUS);
-exports.UNDARR = v => exports.EVERY(v, exports.ISUNDEFINED);
-exports.NUNDARR = v => exports.EVERY(v, exports.ISNOTUNDEFINED);
-exports.NULARR = v => exports.EVERY(v, exports.ISNULL);
-exports.NNULARR = v => exports.EVERY(v, exports.ISNOTNULL);
-exports.BOLJSN = v => exports.EVERY(v, exports.ISBOOLEAN);
-exports.NBOLJSN = v => exports.EVERY(v, exports.ISNOTBOOLEAN);
-exports.NUMJSN = v => exports.EVERY(v, exports.ISNUMBER);
-exports.NNUMJSN = v => exports.EVERY(v, exports.ISNOTNUMBER);
-exports.STRJSN = v => exports.EVERY(v, exports.ISSTRING);
-exports.NSTRJSN = v => exports.EVERY(v, exports.ISNOTSTRING);
-exports.JSNJSN = v => exports.EVERY(v, exports.ISJSON);
-exports.NJSNJSN = v => exports.EVERY(v, exports.ISNOTJSON);
-exports.OBJJSN = v => exports.EVERY(v, exports.ISOBJECT);
-exports.NOBJJSN = v => exports.EVERY(v, exports.ISNOTOBJECT);
-exports.FNCJSN = v => exports.EVERY(v, exports.ISFUNCTION);
-exports.NFNCJSN = v => exports.EVERY(v, exports.ISNOTFUNCTION);
-exports.OBJJSN = v => exports.EVERY(v, exports.ISLAMBDA);
-exports.OBJJSN = v => exports.EVERY(v, exports.ISNOTLAMBDA);
-exports.ANOJSN = v => exports.EVERY(v, exports.ISANONYMOUS);
-exports.NANOJSN = v => exports.EVERY(v, exports.ISNOTANONYMOUS);
-exports.UNDJSN = v => exports.EVERY(v, exports.ISUNDEFINED);
-exports.NUNDJSN = v => exports.EVERY(v, exports.ISNOTUNDEFINED);
-exports.NULJSN = v => exports.EVERY(v, exports.ISNULL);
-exports.NNULJSN = v => exports.EVERY(v, exports.ISNOTNULL);
+exports.NUMSTR = (v) => exports.EVERY(v, function (a) { return exports.NUMBERS.includes(a); });
+exports.NNUMSTR = (v) => exports.EVERY(v, function (a) { return !exports.NUMBERS.includes(a); });
+exports.STRSTR = (v) => exports.EVERY(v, exports.ISSTRING);
+exports.NSTRSTR = (v) => exports.EVERY(v, exports.ISNOTSTRING);
+exports.BOLARR = (v) => exports.EVERY(v, exports.ISBOOLEAN);
+exports.NBOLARR = (v) => exports.EVERY(v, exports.ISNOTBOOLEAN);
+exports.NUMARR = (v) => exports.EVERY(v, exports.ISNUMBER);
+exports.NNUMARR = (v) => exports.EVERY(v, exports.ISNOTNUMBER);
+exports.STRARR = (v) => exports.EVERY(v, exports.ISSTRING);
+exports.NSTRARR = (v) => exports.EVERY(v, exports.ISNOTSTRING);
+exports.ARRARR = (v) => exports.EVERY(v, exports.ISARRAY);
+exports.NARRARR = (v) => exports.EVERY(v, exports.ISNOTARRAY);
+exports.OBJARR = (v) => exports.EVERY(v, exports.ISOBJECT);
+exports.NOBJARR = (v) => exports.EVERY(v, exports.ISNOTOBJECT);
+exports.JSNARR = (v) => exports.EVERY(v, exports.ISJSON);
+exports.NJSNARR = (v) => exports.EVERY(v, exports.ISNOTJSON);
+exports.FNCARR = (v) => exports.EVERY(v, exports.ISFUNCTION);
+exports.NFNCARR = (v) => exports.EVERY(v, exports.ISNOTFUNCTION);
+exports.OBJLMD = (v) => exports.EVERY(v, exports.ISLAMBDA);
+exports.NOBJLMD = (v) => exports.EVERY(v, exports.ISNOTLAMBDA);
+exports.ANOARR = (v) => exports.EVERY(v, exports.ISANONYMOUS);
+exports.NANOARR = (v) => exports.EVERY(v, exports.ISNOTANONYMOUS);
+exports.UNDARR = (v) => exports.EVERY(v, exports.ISUNDEFINED);
+exports.NUNDARR = (v) => exports.EVERY(v, exports.ISNOTUNDEFINED);
+exports.NULARR = (v) => exports.EVERY(v, exports.ISNULL);
+exports.NNULARR = (v) => exports.EVERY(v, exports.ISNOTNULL);
+exports.BOLJSN = (v) => exports.EVERY(v, exports.ISBOOLEAN);
+exports.NBOLJSN = (v) => exports.EVERY(v, exports.ISNOTBOOLEAN);
+exports.NUMJSN = (v) => exports.EVERY(v, exports.ISNUMBER);
+exports.NNUMJSN = (v) => exports.EVERY(v, exports.ISNOTNUMBER);
+exports.STRJSN = (v) => exports.EVERY(v, exports.ISSTRING);
+exports.NSTRJSN = (v) => exports.EVERY(v, exports.ISNOTSTRING);
+exports.JSNJSN = (v) => exports.EVERY(v, exports.ISJSON);
+exports.NJSNJSN = (v) => exports.EVERY(v, exports.ISNOTJSON);
+exports.OBJJSN = (v) => exports.EVERY(v, exports.ISOBJECT);
+exports.NOBJJSN = (v) => exports.EVERY(v, exports.ISNOTOBJECT);
+exports.FNCJSN = (v) => exports.EVERY(v, exports.ISFUNCTION);
+exports.NFNCJSN = (v) => exports.EVERY(v, exports.ISNOTFUNCTION);
+exports.OBJJSN = (v) => exports.EVERY(v, exports.ISLAMBDA);
+exports.OBJJSN = (v) => exports.EVERY(v, exports.ISNOTLAMBDA);
+exports.ANOJSN = (v) => exports.EVERY(v, exports.ISANONYMOUS);
+exports.NANOJSN = (v) => exports.EVERY(v, exports.ISNOTANONYMOUS);
+exports.UNDJSN = (v) => exports.EVERY(v, exports.ISUNDEFINED);
+exports.NUNDJSN = (v) => exports.EVERY(v, exports.ISNOTUNDEFINED);
+exports.NULJSN = (v) => exports.EVERY(v, exports.ISNULL);
+exports.NNULJSN = (v) => exports.EVERY(v, exports.ISNOTNULL);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 exports.__FINDHIGHESTARITY = function (spec, max) {
     if (max === "undefined")
@@ -518,7 +1643,7 @@ exports.__FINDHIGHESTARITY = function (spec, max) {
 exports.__APPLYSPECWITHARITY = function (spec, arity, cache) {
     const remaining = arity - cache.length;
     if (remaining === 1)
-        return x => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, x));
+        return (x) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, x));
     if (remaining === 2)
         return (x, y) => exports.__APPLYSPECWITHARITY(spec, arity, exports.__FILTERUNDEFINED(...cache, x, y));
     if (remaining === 3)
@@ -565,7 +1690,7 @@ exports.FLIPEXPORT = function (fn) {
         return undefined;
     };
 };
-exports.ISINTEGER$1 = Number.isInteger || exports.ISINTEGER;
+exports.ISINTEGER$1 = exports.ISINTEGER;
 exports.INDEXBYPATH = function (pathInput, list) {
     const toReturn = {};
     for (let i = 0; i < list.length; i++) {
@@ -644,7 +1769,7 @@ exports._OBJECTIS = function (a, b) {
     }
     return a !== a && b !== b;
 };
-exports._OBJECTIS$1 = exports.S._Object.is || _objectIs;
+// export const _OBJECTIS$1 = _objectIs;
 exports.DEFAULTTO = function (defaultArgument, inputArguments) {
     if (arguments.length === 1) {
         return _inputArguments => exports.DEFAULTTO(defaultArgument, _inputArguments);
@@ -671,7 +1796,7 @@ exports.DEFAULTTO = function (defaultArgument, inputArguments) {
     }
     return holder === undefined ? defaultArgument : holder;
 };
-exports.Const = x => ({
+exports.Const = (x) => ({
     x,
     map: fn => exports.Const(x)
 });
@@ -786,7 +1911,7 @@ exports._FILTER = function (fn, list) {
 exports._ISTRANSFORMER = function (obj) {
     return obj != null && typeof obj['@@transducer/step'] === 'function';
 };
-exports._ISARRAY = exports.S._Array.isArray || function _ISARRAY(val) {
+exports._ISARRAY = function _ISARRAY(val) {
     return (val != null &&
         val.length >= 0 &&
         exports.S._Object.prototype.toString.call(val) === '[object Array]');
@@ -951,7 +2076,7 @@ exports.T = function () {
 };
 exports.TAP = function (fn, x) {
     if (arguments.length === 1)
-        return _x => exports.TAP(fn, _x);
+        return (_x) => exports.TAP(fn, _x);
     fn(x);
     return x;
 };
@@ -1144,7 +2269,7 @@ exports.INCLUDES = function (target, list) {
     if (typeof list === 'string') {
         return list.includes(target);
     }
-    if (!Array.isArray(list))
+    if (!exports.S._Array.isArray(list))
         return false;
     let index = -1;
     while (++index < list.length) {
@@ -1652,7 +2777,7 @@ exports.EQUALS = function (a, b) {
 exports.IDENTICAL = function (a, b) {
     if (arguments.length === 1)
         return _b => exports.IDENTICAL(a, _b);
-    return exports._OBJECTIS$1(a, b);
+    return _OBJECTIS$1(a, b);
 };
 exports.MAX = function (a, b) {
     if (arguments.length === 1)
@@ -2900,24 +4025,24 @@ exports.VIEW = function (lens, target) {
 //   return bcrypt;
 // }));
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-exports.THROWE = function () { };
-exports.THROWE0 /* IMMEDIATE */ = function () { };
-exports.THROWE1 /* STACK */ = function () { };
-exports.THROWE2 /* PROGRAMMABLE*/ = function () { };
-exports.THROWEZ = function () { };
+exports.THROWE = function () { throw new Error(...arguments); };
+exports.THROWE0 /* IMMEDIATE */ = function () { throw new Error(...arguments); };
+exports.THROWE1 /* STACK */ = function () { throw new Error(...arguments); };
+exports.THROWE2 /* PROGRAMMABLE*/ = function () { throw new Error(...arguments); };
+exports.THROWEZ = function () { throw new Error(...arguments); };
 exports.UNFINISHED = function () { throw new Error("UNFINISHED"); };
-exports.UNFINSHED0 /*IMMEDIATE*/ = function () { };
-exports.UNFINSHED1 /*STACK*/ = function () { };
-exports.UNFINSHEDZ = function () { };
-exports.BUG = function () { };
-exports.BUG0 = function () { };
-exports.BUGZ = function () { };
-exports.MAINTENANCE = function () { };
-exports.MAINTENANCE0 = function () { };
-exports.MAINTENANCEZ = function () { };
-exports.REVIEW = function () { };
-exports.REVIEW0 = function () { };
-exports.REVIEWZ = function () { };
+exports.UNFINSHED0 /*IMMEDIATE*/ = function () { throw new Error("UNFINISHED"); };
+exports.UNFINSHED1 /*STACK*/ = function () { throw new Error("UNFINISHED"); };
+exports.UNFINSHEDZ = function () { throw new Error("UNFINISHED"); };
+exports.BUG = function () { throw new Error("BUG"); };
+exports.BUG0 = function () { throw new Error("BUG"); };
+exports.BUGZ = function () { throw new Error("BUG"); };
+exports.MAINTENANCE = function () { throw new Error("MAINTENANCE"); };
+exports.MAINTENANCE0 = function () { throw new Error("MAINTENANCE"); };
+exports.MAINTENANCEZ = function () { throw new Error("MAINTENANCE"); };
+exports.REVIEW = function () { throw new Error("REVIEW"); };
+exports.REVIEW0 = function () { throw new Error("REVIEW"); };
+exports.REVIEWZ = function () { throw new Error("REVIEW"); };
 exports.CLI = function () { };
 // https://www.npmjs.com/package/yow
 exports.REQUIRE = function () { return; };
@@ -2981,13 +4106,16 @@ exports.LAMBDA = function () { return Lambda(...arguments); };
 exports.CLASS = function () { return Class(...arguments); };
 exports.NULL = function () { return Null(...arguments); };
 exports.UNDEFINED = function () { return Undefined(...arguments); };
-/*export*/ exports.CAPSULE = function (cb, props) {
+exports.FAKENATIVECODE = function (func) {
+    func.toString = `function ${func.name}(){ [native code] }`;
+};
+exports.CAPSULE = function (cb, props) {
     for (let k in props) {
         !exports.RESTRICTEDPROPS.includes(k) || exports.THROWE();
     }
     return exports.S._Object.freeze(exports.S._Object.assign(cb, props));
 };
-/*export*/ exports.RESTRICTEDPROPS = [
+exports.RESTRICTEDPROPS = [
     "__defineGetter__",
     "__defineSetter__",
     "__lookupGetter__",
@@ -3287,7 +4415,7 @@ exports.VBOL = exports.CAPSULE(function (sel, val) {
     else
         return true; }
 });
-/*export*/ exports.DTYPE = exports.CAPSULE(function (typ, sel, val) {
+exports.DTYPE = exports.CAPSULE(function (typ, sel, val) {
     /** LEGEND: arg SEL
      *
      * 0: STRICTEST VALIDATION ENFORCEMENT
@@ -3314,97 +4442,97 @@ exports.VBOL = exports.CAPSULE(function (sel, val) {
     NUL: exports.VNUL,
 });
 exports.TYPETRUTHY = exports.CAPSULE(function () {
-    console.warn(`this assumes the conditional statements are the same to all types of conditions`);
-    console.warn(`bewarned, bug is probable`);
+    // console.warn(`this assumes the conditional statements are the same to all types of conditions`);
+    // console.warn(`bewarned, bug is probable`);
 }, {
-    /*const*/ BOL: v => { if (v)
+    /*const*/ BOL: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ NUM: v => { if (v)
+    /*const*/ NUM: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ STR: v => { if (v)
+    /*const*/ STR: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ OBJ: v => { if (v)
+    /*const*/ OBJ: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ ARR: v => { if (v)
+    /*const*/ ARR: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ SYM: v => { if (v)
+    /*const*/ SYM: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ SET: v => { if (v)
+    /*const*/ SET: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ FNC: v => { if (v)
+    /*const*/ FNC: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ CLS: v => { if (v)
+    /*const*/ CLS: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ NUL: v => { if (v)
+    /*const*/ NUL: (v) => { if (v)
         return true;
     else
         return false; },
-    /*const*/ UND: v => { if (v)
+    /*const*/ UND: (v) => { if (v)
         return true;
     else
         return false; },
 });
 exports.TYPEFALSEY = exports.CAPSULE(function () {
 }, {
-    /*const*/ BOL: v => { if (v)
+    /*const*/ BOL: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ NUM: v => { if (v)
+    /*const*/ NUM: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ STR: v => { if (v)
+    /*const*/ STR: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ OBJ: v => { if (v)
+    /*const*/ OBJ: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ ARR: v => { if (v)
+    /*const*/ ARR: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ SYM: v => { if (v)
+    /*const*/ SYM: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ SET: v => { if (v)
+    /*const*/ SET: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ FNC: v => { if (v)
+    /*const*/ FNC: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ CLS: v => { if (v)
+    /*const*/ CLS: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ NUL: v => { if (v)
+    /*const*/ NUL: (v) => { if (v)
         return false;
     else
         return true; },
-    /*const*/ UND: v => { if (v)
+    /*const*/ UND: (v) => { if (v)
         return false;
     else
         return true; },
@@ -3425,17 +4553,17 @@ exports.TYPESTATE = exports.CAPSULE(function (v, meth) {
 });
 exports.PROPSALTERED = exports.CAPSULE(function () {
 }, {
-    /*const*/ BOL: v => { },
-    /*const*/ NUM: v => { },
-    /*const*/ STR: v => { },
-    /*const*/ OBJ: v => { },
-    /*const*/ ARR: v => { return Object.assign([], v).length !== 0; },
-    /*const*/ SYM: v => { },
-    /*const*/ SET: v => { },
-    /*const*/ FNC: v => { },
-    /*const*/ CLS: v => { },
-    /*const*/ NUL: v => { },
-    /*const*/ UND: v => { },
+    /*const*/ BOL: (v) => { },
+    /*const*/ NUM: (v) => { },
+    /*const*/ STR: (v) => { },
+    /*const*/ OBJ: (v) => { },
+    /*const*/ ARR: (v) => { return Object.assign([], v).length !== 0; },
+    /*const*/ SYM: (v) => { },
+    /*const*/ SET: (v) => { },
+    /*const*/ FNC: (v) => { },
+    /*const*/ CLS: (v) => { },
+    /*const*/ NUL: (v) => { },
+    /*const*/ UND: (v) => { },
 });
 // export const CONST = function(script){
 //   isString(script);
@@ -3464,10 +4592,10 @@ exports.IFZ = function () {
     }
 };
 // CUSTOMIZED STATEMENTS
-console.warn(`
-  An example
-  *** else statement triggered ... throw new Error("unaacounted input");
-`);
+// console.warn(`
+//   An example
+//   *** else statement triggered ... throw new Error("unaacounted input");
+// `);
 // export const SWITCH = function(){
 //   switch (key) {
 //     case value:
@@ -3477,21 +4605,21 @@ console.warn(`
 //   }
 // };
 exports.LOWERCASE = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"];
-exports.UPPERCASE = exports.LOWERCASE.map(v => v.toUpperCase());
+exports.UPPERCASE = exports.LOWERCASE.map((v) => v.toUpperCase());
 exports.ALPHA = (exports.LOWERCASE.join("") + exports.UPPERCASE.join("")).split("");
-exports.SYMBOLS = ["!@#$%^&*()_+{}[]-=|;:'\"\\?,.<>`~"];
+// export const SYMBOLS   = ["!@#$%^&*()_+{}[]-=|;:'\"\\?,.<>`~"];
 exports.NUMBERS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 exports.OPS = ["!", "%", "%=", "^", "^=", "&", "&&", "&=", "&&=", "*", "*=", "**", "**=", "-", "-=", "+", "+=", "|", "||", "/", "/="];
-exports.KYB5 = ["ESC", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12"];
-exports.KYB4 = ["~`", "!1", "@2", "#3", "$4", "%5", "^6", "&7", "*8", "(9", ")0", "_-", "+=", "DELETE"];
-exports.KYB3 = ["TAB", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "{[", "}]", "|\\"];
-exports.KYB2 = ["CAPS LOCK", "A", "S", "D", "F", "G", "H", "J", "K", "L", ":;", "\"'", "RETURN"];
-exports.KYB1 = ["SHIFT", "Z", "X", "C", "V", "B", "N", "M", "<,", ">.", "?/", "SHIFT"];
-exports.KYB0 = ["FN", "CONTROL", "OPTION", "COMMAND", "SPACE", "COMMAND", "OPTION", "LEFT", "UP/DOWN", "RIGHT"];
-exports.KYBRD = {};
-exports.KYBRD_EN = {};
-exports.KYBRD_PC = {};
-exports.KYBRD_MACBOOK = { KYB5: exports.KYB5, KYB4: exports.KYB4, KYB3: exports.KYB3, KYB2: exports.KYB2, KYB1: exports.KYB1, KYB0: exports.KYB0 };
+// export const KYB5      = ["ESC","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"];
+// export const KYB4      = ["~`","!1","@2","#3","$4","%5","^6","&7","*8","(9",")0","_-","+=","DELETE"];
+// export const KYB3      = ["TAB","q","w","e","r","t","y","u","i","o","p","{[","}]","|\\"];
+// export const KYB2      = ["CAPS LOCK","A","S","D","F","G","H","J","K","L",":;","\"'","RETURN"];
+// export const KYB1      = ["SHIFT","Z","X","C","V","B","N","M","<,",">.","?/","SHIFT"];
+// export const KYB0      = ["FN","CONTROL","OPTION","COMMAND","SPACE","COMMAND","OPTION","LEFT","UP/DOWN","RIGHT"];
+// export const KYBRD         = {};
+// export const KYBRD_EN      = {};
+// export const KYBRD_PC      = {};
+// export const KYBRD_MACBOOK = {KYB5,KYB4,KYB3,KYB2,KYB1,KYB0};
 exports.TOBINARY = function () { };
 exports.TOHEX = function () { };
 exports.TODEC = function () { };
@@ -3550,7 +4678,7 @@ exports.CONFIGMAIN = function (config) {
         exports.intF[k](config[k]);
     }
 };
-/*export*/ exports.PARSEFUNCTION = function (functioN) {
+exports.PARSEFUNC = exports.CAPSULE(function (funC) {
     /**
      * - extracts information from regular code into funC template
      * - possibly detects errors
@@ -3566,14 +4694,13 @@ exports.CONFIGMAIN = function (config) {
         validate: () => ({}),
         block: () => ({})
     });
-};
-({
+}, {
     hasName: () => { },
     hasDescription: () => { },
     hasAuthor: () => { },
     hasNotes: () => f.toString().includes("//"),
     hasAsync: () => f.toString().indexOf("async") < 3,
-    hasThis: f => f.toString().indexOf("function") < 2,
+    hasThis: (f) => f.toString().indexOf("function") < 2,
     hasCapsule: f => f.toString().slice(0, 1) === "(",
     hasInputType: () => { },
     hasOutputType: () => { },
@@ -3585,11 +4712,6 @@ exports.CONFIGMAIN = function (config) {
     hasSpec: () => { } /**recognized lib or console.assert */,
 });
 exports.parserClass = function () {
-    /**
-     *
-     *
-     * returns the json result of parsed input
-     */
 };
 exports.GET = function () { };
 exports.GETMETHOD = function () { };
@@ -3633,9 +4755,8 @@ exports.CHARS = exports.CAPSULE(function () {
 }, {
     LOWERCASE: exports.LOWERCASE,
     UPPERCASE: exports.UPPERCASE,
-    SYMBOLS: exports.SYMBOLS,
+    // SYMBOLS,
     NUMBERS: exports.NUMBERS,
-    KYBRD: exports.KYBRD
 });
 // const SYM
 exports.TRIM = exports.CAPSULE(function () {
@@ -4081,21 +5202,102 @@ exports.DELETE = function () { };
 //   MORPH,
 //   SHAPELESS
 // });
-exports.FINDDEADCODE = function (func) {
+exports.FINDDEADCODE = function (obj) {
+    /** not the best solution to finding deadcode, just pulls most of the weeds out of the grass*/
     /*  find dead code
         * returns nothing
         * does not modify inputs
         * does not modify externally referenced code
     */
-    let ps = exports.GETPARAMS(func);
-    let argS = func.toString().includes("arguments");
+    let deadcode = [];
+    let throws = [];
+    let params = [];
+    // let refargs   = [];
+    // let returnV   = undefined;
+    for (let k in obj) {
+        if (typeof obj[k] === "function") {
+            try {
+                if ([
+                    `function ${k}(){}`,
+                    `function ${k}(){ }`,
+                    `function ${k}(){  }`,
+                    `function ${k}(){   }`,
+                    `function ${k}(){    }`,
+                    `function ${k}(){     }`,
+                    `function ${k}(){      }`,
+                    `function ${k}(){       }`,
+                    `function ${k}(){        }`,
+                ].includes(obj[k].toString().trim()))
+                    deadcode.push([k, obj[k]]);
+                else if ([
+                    `function ${k}() {}`,
+                    `function ${k}() { }`,
+                    `function ${k}() {  }`,
+                    `function ${k}() {   }`,
+                    `function ${k}() {    }`,
+                    `function ${k}() {     }`,
+                    `function ${k}() {      }`,
+                    `function ${k}() {       }`,
+                    `function ${k}() {        }`,
+                ].includes(obj[k].toString().trim()))
+                    deadcode.push([k, obj[k]]);
+                else if (([
+                    `()=>()`,
+                    `()=>( )`,
+                    `()=>(  )`,
+                    `()=>(   )`,
+                    `()=>(    )`,
+                    `()=>(     )`,
+                    `()=>{}`,
+                    `()=>{ }`,
+                    `()=>{  }`,
+                    `()=>{   }`,
+                    `()=>{    }`,
+                    `()=>{     }`,
+                    `()=>{      }`,
+                    `()=>{       }`,
+                    `()=>{        }`,
+                ].includes(obj[k].toString().trim())))
+                    deadcode.push([k, obj[k]]);
+                else if ([
+                    `function ${k}(){return ;}`,
+                    `function ${k}() {return ;}`
+                ].includes(obj[k].toString().trim()))
+                    deadcode.push([k, obj[k]]);
+                else {
+                    if (exports.ISLAMBDA(obj[k])) { } //notdeadcode
+                    else if (obj[k].toString().includes("return")) { } //notdeadcode
+                    else if (obj[k].toString().includes("arguments")) { } //kinda not dead code
+                    else if (obj[k].toString().includes("this")) { } //notdeadcode because this is auto returned if no return statement
+                    else {
+                        params = exports.GETPARAMS(obj[k]);
+                        let found = false;
+                        for (let j in params) {
+                            if (obj[k].toString().includes(`${params[j]} = `)) {
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found)
+                            deadcode.push([k, obj[k]]);
+                    }
+                }
+            }
+            catch (e) {
+                throws.push(e);
+            }
+        }
+    }
+    // if (throws.length !== 0)    console.log("throws",throws);
+    // if (deadcode.length !== 0)  console.log("deadcode",deadcode);
+    return { throws, deadcode };
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*2)  LANGUAGE CONSTRUCT REVAMP & HARDENING
 */
-/*export*/ exports.PARAMS = function (paramsOBJ) {
+exports.PARAMS = function (paramsOBJ) {
     // no duplicates allowed --> objects don't automatically overwrite duplications
     if (!paramsOBJ) {
         exports.THROWE();
@@ -4105,10 +5307,17 @@ exports.FINDDEADCODE = function (func) {
     }
     return paramsOBJ;
 };
+exports.ATTRIBUTE = exports.CAPSULE(function () {
+    // rules for the attributes
+}, {
+    INTERFACE: function () { }
+});
+exports.SCHEMA = function () { };
+exports.MODEL = function () { };
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ exports.CLOSURE = function (cb, variables) {
+exports.CLOSURE = function (cb, variables) {
     /** Mock Representation ... real version needs to parse cb and variables,
      *
      * then replace real values in placheholders.
@@ -4210,7 +5419,7 @@ exports.VALIDATION = exports.CAPSULE(function () {
 exports.MEMASSIGN = function () {
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ exports.LOOP = {};
+exports.LOOP = {};
 exports.LOOP_FOR = function () { }; // for loop
 exports.LOOP_FOREVER = function () { }; // no explanation rqd
 exports.LOOP_WHILE = function () { }; // while loop
@@ -4232,7 +5441,7 @@ exports.LOOP_MERGE = function () { }; //
 exports.LOOP_SKIP = function () { }; // iterator fluxor
 // vs
 exports.LOOP_PINGPONG = function (v, cbs) { }; // next exe memory swaping // instead of conditionals drags
-// export const ENTER = v => (typeof v=== "string"||typeof v==="object"||Array.isArray(v));
+// export const ENTER = (v) => (typeof v=== "string"||typeof v==="object"||Array.isArray(v));
 // export const filter = function(v,hit,miss,conditions){
 //     if      (conditions(e)) return hit.push(v);
 //     else                    return miss.push(v);
@@ -4242,7 +5451,7 @@ exports.LOOP_PINGPONG = function (v, cbs) { }; // next exe memory swaping // ins
 // export const forever = function(cb){while (true) {cb();}};
 // export const cycle = function() {};
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ const funCLite = (function () {
+const funCLite = (function () {
     const pS = {};
     return function (paramsOBJ) {
         return {
@@ -4324,7 +5533,7 @@ exports.FUNCTEMPLATE = function () {
       /* spec
           ${spec}
       */`;
-        console.log(cb);
+        //console.log(cb); 
         return new Function(params, `${cb}`);
     }
 };
@@ -4450,7 +5659,7 @@ exports.intF_keys = function () { return Object.keys(exports.intF()); };
 //     //   "BRANCH":     {}, 
 //     //   "BINSTANCES": {}
 //     // };
-//     /*export*/ const claS:claS = function(setupOBJ) {
+//     const claS:claS = function(setupOBJ) {
 //         const __MEM__ = CONFIG(setupOBJ,
 //               CLASSINGULARVALIDATIONS,
 //               CLASSCROSSEXAMINEVALIDATIONS,
@@ -4516,7 +5725,7 @@ exports.intF_keys = function () { return Object.keys(exports.intF()); };
 //         let neW = UNIQ(oriG);
 //         neW.length === oriG.length || (()=>{THROWE()})()
 //     };
-//     /*export*/ const parseClass = (function(){
+//     const parseClass = (function(){
 //     });
 //     let list_mem = ["__settings__","__imports__","__middlemans__","__internal__","__static__","__public__","__constructor__"];
 //     const __mem__ = S._Object.assign(list_mem,list_mem.map((e,i)=>{
@@ -4579,7 +5788,7 @@ exports.intF_keys = function () { return Object.keys(exports.intF()); };
 //     //         block:    closure_block   (e)
 //     //     };
 //     // });
-//     // /*export*/ const setupOBJ = tempOBJ;
+//     // const setupOBJ = tempOBJ;
 //     // //////////////////////////////////////////////////////////////////////////
 //     // //////////////////////////////////////////////////////////////////////////
 //     // const closure_default   = function(){ return function(){THROWE("unfinished");}; };
@@ -4635,12 +5844,12 @@ exports.intF_keys = function () { return Object.keys(exports.intF()); };
 //     const CLASSLEGENDWRAP = Object.freeze(Object.assign(function() {},
 //     {
 //     /*const*/ method    : (v,f)=> {  },
-//     /*const*/ data      : v => {},
-//     /*const*/ internal  : v => {},  
-//     /*const*/ static    : v => {},
-//     /*const*/ public    : v => {},
-//     /*const*/ private   : v => {},
-//     /*const*/ protect   : v => {}
+//     /*const*/ data      : (v) => {},
+//     /*const*/ internal  : (v) => {},  
+//     /*const*/ static    : (v) => {},
+//     /*const*/ public    : (v) => {},
+//     /*const*/ private   : (v) => {},
+//     /*const*/ protect   : (v) => {}
 //     }));
 //     /** 
 //      *      internal 
@@ -4735,16 +5944,16 @@ exports.AFTEREACH = function () { };
 //   // test cases
 // });
 exports.SPECDEV = exports.CAPSULE(function () {
-    console.warn(`
-  ** collects all tests from different projects and stores into one repository for data science
-  ** study the other testing frameworks to see what they did wrong
-  ** do everything in power to automate this
-  ** applications are written in node-terminal. "manual-mode" demands thinking ahead.
-  ** tests zoning are automated
-  ** tests styles are selectable & documented in db
-  ** notification system needs to be built. ??? display what notifications first? ???
-  ** 
-  `);
+    // console.warn(`
+    // ** collects all tests from different projects and stores into one repository for data science
+    // ** study the other testing frameworks to see what they did wrong
+    // ** do everything in power to automate this
+    // ** applications are written in node-terminal. "manual-mode" demands thinking ahead.
+    // ** tests zoning are automated
+    // ** tests styles are selectable & documented in db
+    // ** notification system needs to be built. ??? display what notifications first? ???
+    // ** 
+    // `);
     throw new Error("UNFINISHED");
 }, {
     /*const*/ SPECDB: function () {
@@ -4854,8 +6063,8 @@ exports.CODEDECONSTRUCTOR = function (inputs) {
     });
     const PROCEDUREPRINT = (function (inputs) {
     })(inputs);
-    console.log(props);
-    console.log(dry);
+    // console.log(props);
+    // console.log(dry);
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 exports.DIFFERENTIALBUILDCODING = function () { };
@@ -4933,9 +6142,6 @@ exports.PARADIGMS = exports.CAPSULE(function (sel) {
     "VERBOSE": function () { },
     "SENSICAL": function () { }
 });
-console.warn(`miscellaneous todo list
-** analyze the functional libraries. remove duplicate functionalities.
-`);
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -4975,3 +6181,6 @@ exports.LEARNDEVCORE = function () {
 //   // convert into pkg paradigm selection style
 //   // convert into exportable ${PROGRAMMING LANGUAGE}`
 // })();
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////

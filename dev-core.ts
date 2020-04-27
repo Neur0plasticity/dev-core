@@ -1,228 +1,1153 @@
-/**
- * 
- * 
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING 
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING  
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING 
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING  
- * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING  
- * 
- * 
- * SELF MODIFYING DOCUMENT ON EVERY EXECUTION
- * 
- * * 
- * 
- *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING 
- *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING 
- *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING 
- *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING 
- * 
- */
 !(function sanityCheck(){
-
-console.warn('asserting programming language functionality meets expectations');
-console.warn("test all operators");
-console.warn("test all builtin functions");
-console.warn("test error-handling");
-console.warn("test everything");
-
 1+1 === 2 || THROWE();
 1-1 === 0 || THROWE();
-
 });
-
-
-/*1)  STRUCTURAL PRESENTATIONS
-    * TYPES
-    * INTERACES
-    * ABSTRACTIONS
-*/
-/*export*/ interface paramsLoader {
-    (paramsOBJ:paramsOBJ): {paramsOBJ} | {create,read,update,delete}
-};
-/*export*/ interface paramsOBJ {
-    [index: string]: string
-    // let pS = { // params_obj
-        // name: function as string
-        // func: `$DTypes.function($p)`,
-        // prop: `$DTypes.string($p)`,
-        // obj:  `$DTypes.object($p)`,
-        // cb:   `$Dtypes.function($p)`,
-        // prop: `$Dtypes.string($p)`,
-        // val:  `$Dtypes.undefined($p)`
-    // };
-};
-/*export*/ interface func0props {
-    validate: Function,
-    block: Function
-}
-/*export*/ interface func0loaderobj {
-    funClite: Function,
-    paramsOBJ:paramsOBJ
-}
-/*export*/ interface func0Loader {
-    (paramsOBJ:paramsOBJ): func0loaderobj
-}
-/*export*/ interface interface_pm {
-	globalConfig,
-	instance,
-	funC
-};
-/*export*/ interface interface_funCinterface {
-	name, description, author,
-	notes,
-	isStrict,isAsync,isThis,isCapsule,
-	inputType,outputType,
-	params,
-	inputBehavior,outputBehavior,
-	onError,
-	validations,block,spec
-};
-    /*export*/ interface interface_meths {
-      global,
-      instance,
-      funC
-  };
-
-type validate = Function;
-type block    = Function;
-type neW      = Function;
-type deletE   = Function;
-type extend = Function;
-type implement = Function;
-
-type debug = Boolean;   
-type public_reflects_imports = Boolean; 
-type public_async = Boolean;  
-type public_reflects_static = Boolean;
-type singleton = Boolean;
-type public_reflects_internal = Boolean;
-type public_visible = Boolean;  
-type public_methods_auth = Boolean;
-type public_mutable = Boolean;  
-type public_expires = Boolean;
-type public_gettable = Boolean;  
-type public_auth = Boolean;
-type public_settable = Boolean;  
-type public_chainable = Boolean;
-type public_input_interface = Object;   
-type sessionable_requests = Boolean;
-type public_output_interface = Object;   
-type maximum_requests_concurrently = Boolean | Number;                              
-type public_output = String;  
-type hot_reload = Boolean;     
-type name = String;
-type extendS = Array<object>;
-type implementS = Array<object>;
-type constructor = Function;
-type imports = string[];
-
-type di  = enumStrAny;  type mi  = enumStrFunc;
-type ds  = enumStrAny;  type ms  = enumStrFunc;
-type dp  = enumStrAny;  type mp  = enumStrFunc;
-type dp1 = enumStrAny;  type mp1 = enumStrFunc;
-type dp2 = enumStrAny;  type mp2 = enumStrFunc;
-
-/*export*/ interface funClite                   {   
-    validate:   validate,   block:  block    
-};
-/*export*/ interface claS {
-    (setupOBJ:setupOBJ):__claS__public
-}
-/*export*/ interface __claS__public             {};
-/*export*/ interface __claS__instance_public    {
-    new:        neW,        extend:     extend,
-    delete:     deletE,     implement:  implement
-};
-/*export*/ interface enumStrFunc    {   [index: string]: Function   };
-/*export*/ interface enumStrAny     {   [index: string]: any        };
-/*export*/ interface settings {
-    debug:                       debug,             public_reflects_imports:         public_reflects_imports,
-    public_async:                public_async,      public_reflects_static:          public_reflects_static,
-    singleton:                   singleton,         public_reflects_internal:        public_reflects_internal,
-                                        
-    public_visible:              public_visible,    public_methods_auth:             public_methods_auth,
-    public_mutable:              public_mutable,    public_expires:                  public_expires,
-    public_gettable:             public_gettable,   public_auth:                     public_auth,
-    public_settable:             public_settable,   public_chainable:                public_chainable,
-
-    public_input_interface:      public_input_interface,    sessionable_requests:            sessionable_requests,
-    public_output_interface:     public_output_interface,   maximum_requests_concurrently:   maximum_requests_concurrently,                              
-    public_output:               public_output,             hot_reload:                      hot_reload     
-};
-/*export*/ interface setupOBJ {
-    name:String, extends:Array<object>, implements:Array<object>,
-    constructor:    constructor,
-    settings:       settings,
-    imports:        imports,
-    events:         events,
-    di:di,ds:ds,dp:dp,dp1:dp1,dp2:dp2,
-    mi:mi,ms:ms,mp:mp,mp1:mp1,mp2:mp2
-};
-/*export*/ interface events         {   
-
-};
-/*export*/ interface __this__       {   [index:string]:any              };
-
-/*export*/ interface __internal__   {   di: enumStrAny, mi: enumStrFunc };
-/*export*/ interface __imports__    {   [index:string]:any              };
-/*export*/ interface __public__     {   dp: enumStrAny, mp: enumStrFunc };
-/*export*/ interface __middlemans__ {                                   };
-/*export*/ interface __static__     {   ds: enumStrAny, ms: enumStrFunc };
-/*export*/ interface __settings__   {
-                                    debug:                  Boolean,
-                                    singleton:              Boolean,
-                                    visible:         Boolean,
-                                    mutable:         Boolean,
-                                    gettable:        Boolean,
-                                    settable:        Boolean,
-                                    chainable:       Boolean,
-                                    async:           Boolean,
-                                    mirror:          Boolean,
-};
-/*export*/ interface __constructor__ {
-  ():any
-}
-/*export*/ interface __MEM__ {
-    (setupOBJ:setupOBJ):{
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __constructor__ :__constructor__
-    }
-};
-/*export*/ interface buildPublic {
-    (
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        constructorBlock:Function
-    ):Function
-};
-/*export*/ interface publicConstruction {
-    (
-        __this__        :__this__,
-        __internal__    :__internal__,
-        __static__      :__static__,
-        __public__      :__public__,
-        __settings__    :__settings__,
-        __imports__     :__imports__,
-        __middlemans__  :__middlemans__,
-        constructorBlock:Function
-    ):void
-};
-/*export*/ interface constructionComplete {
-    (
-        __settings__    :__settings__,
-        __this__        :__this__,
-        __internal__    :__internal__
-    ):void
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// export const ATTRS = { // ATTRIBUTES
+//   // INTERFACE ATTRIBUTE{
+//     // name:        String() > 0           // the attribute name
+//     // description
+//     // types:       [...types]
+//     // validate:    function(v){return v}  // verification
+//     // block:       function(v){return v}  // generate value
+//     // default:     undefined              // generate value is not present      
+//     // SQLITE:      "",                    // DB EQUIVALENT DATA TYPE
+//     // MYSQL:       "",                    // DB EQUIVALENT DATA TYPE
+//     // ORACLE:      "",                    // DB EQUIVALENT DATA TYPE
+//     // mongodb:     "",                    // DB EQUIVALENT DATA TYPE
+//   // }
+// };
+const ATTRS = {
+  a:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  b:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  c:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  d:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  e:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  f:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  g:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  h:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  i:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  j:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  k:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  l:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  m:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  n:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  o:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  p:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  q:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  r:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  s:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  t:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  u:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  v:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  w:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  x:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  y:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  z:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  acc:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  args:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  arity:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  array:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  cache:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  cb:{
+      name:        "String() > 0",           // the attribute name
+      description: "A populated callback",
+      types:       ["function"],
+      validate:    function(v){return NOTEMPTY(v)},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      "TEXT",                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  cbs:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  conditions:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  confiG:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  config:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  config_inherit:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  config_inheritor:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  defaultArgument:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  defaultValue:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  el:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  end:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  fn:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  fnOrPath:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  fns:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  funCBlock:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  funCvalidate:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  func:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  func0props:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  functioN:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  getter:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  input:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  inputArguments:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  inputs:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  iter:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  key:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  keys:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  left:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  lens:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  list:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  list1:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  list2:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  listOrString:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  max:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  maybeDate:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  maybeError:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  maybeRegex:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  memA:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  memB:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  meth:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  methodName:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  methodNames:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  name:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  obj:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  object:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  offset:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  paramsOBJ:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  pathInput:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  predicates:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  prefix:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  prop:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  props:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  right:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  sel:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  separator:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  setter:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  spec:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  start:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  suffix:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  target:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  typ:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  val:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  values:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  },
+  variables:{
+      name:        "String() > 0",           // the attribute name
+      description: undefined,
+      types:       [],
+      validate:    function(v){return v},     // verification
+      block:       function(v){return v},     // generate value
+      default:     undefined,                 // generate value is not present      
+      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+      oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+      mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
+  }
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -232,7 +1157,7 @@ type dp2 = enumStrAny;  type mp2 = enumStrFunc;
     *** anything global non related to module gets bumped to SHARED MEMORY VARIABLES
     *** sandbox-js must be the first to execute
 */
-/*export*/ export const SANDBOX = (function SANDBOX() {
+export const SANDBOX = (function SANDBOX() {
     let instances = 0;
 
     if (instances++ !== 0) {
@@ -459,6 +1384,77 @@ type dp2 = enumStrAny;  type mp2 = enumStrFunc;
 
 export const S = SANDBOX;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// ops . operators
+const MOV = function(){};
+const R00 = function(){};
+const R01 = function(){};
+const R02 = function(){};
+const R03 = function(){};
+const R04 = function(){};
+const R05 = function(){};
+const R06 = function(){};
+const R07 = function(){};
+const R08 = function(){};
+const R09 = function(){};
+const R10 = function(){};
+const R11 = function(){};
+const R12 = function(){};
+const R13 = function(){};
+const R14 = function(){};
+const R15 = function(){};
+const REX = function(){};
+
+const AND = function(){};
+const XOR = function(){};
+const OOR = function(){};
+
+const NOT = function(){};
+const NAD = function(){};
+const ORO = function(){};
+
+const FLI = function(){}; // ~
+
+const ADD = function(){};
+const SUB = function(){};
+const MUL = function(){};
+const DIV = function(){};
+
+const POW = function(){};
+const LOG = function(){};
+
+const MOD = function(){};
+
+const GTE = function(){};
+const GTT = function(){};
+const LTT = function(){};
+const LTE = function(){};
+
+const EEQ = function(){};
+const NEQ = function(){};
+
+const SHU = function(){};
+const SHD = function(){};
+
+// RAW STATEMENTS
+export const UNHANDLED= function(){return THROWE("UNHANDLED EXCEPTION");}
+export const IF0      = function(){if(c0) return cb0()};
+export const IF1      = function(){if(c0) return cb0(); else return cb1();};
+export const IF2      = function(){if(c0) return cb0(); else if (c1) return cb1(); else return cb2();};
+export const IFZ      = function(){
+  if (c0) return cb0();
+  else {
+    for (let k in arr) if (arr[k][0]) return arr[k][1]();
+  }
+};
+
+const SWITCH = function(){};
+const CASE = function(){};
+const TRY = function(){};
+const TRYCATCH = function(){};
+const TRYCATCHFINALLY = function(){};
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // lambdas                // returns true or false or value. no validations. barebones
 // GROUPED LAMBDAS        // OOP STYLE
 // FUNC WRAPPED LAMBDAS   // SPECIAL INPUT / OUTPUT BEHAVIOR
@@ -470,83 +1466,83 @@ export const S = SANDBOX;
   * does not handle errors
   * does not use callbacks as an information return
 */
-export const ISBOOLEAN     =   v => typeof v === "boolean";
-export const ISNOTBOOLEAN  =   v => !ISBOOLEAN(v);
-export const ISNUMBER      =   v => typeof v === "number";
-export const ISNOTNUMBER   =   v => !ISNUMBER(v);
-export const ISSTRING      =   v => typeof v === "string";
-export const ISNOTSTRING   =   v => !ISNOTSTRING(v);
-export const ISJSON        =   v => typeof v === "object" && !S._Array.isArray(v);
-export const ISNOTJSON     =   v => !ISNOTJSON(v);
-export const ISOBJECT      =   v => typeof v === "object";
-export const ISNOTOBJECT   =   v => !ISNOTOBJECT(v);
-export const ISARRAY       =   v => S._Array.isArray(v);
-export const ISNOTARRAY    =   v => !ISARRAY(v);
-export const ISSYMBOL      =   v => typeof v === "symbol";
-export const ISNOTSYMBOL   =   v => !ISSYMBOL(v);
-export const ISFUNCTION    =   v => typeof v === "function";
-export const ISNOTFUNCTION =   v => !ISFUNCTION(v);
-export const ISTHIS        =   v => v.toString().includes("function ");
-export const ISNOTTHIS     =   v => !ISTHIS(v);
-export const ISLAMBDA      =   v => ISFUNCTION(v) && v.toString().includes("=>");
-export const ISNOTLAMBDA   =   v => !ISLAMBDA(v);
-export const ISANONYMOUS   =   v => ISFUNCTION(v) && !ISLAMBDA(v) && v["name"] === undefined;
-export const ISNOTANONYMOUS=   v => !ISANONYMOUS(v);
-export const ISFUNC        =   v => ISFUNCTION(v) && !ISLAMBDA(v) && v.hasOwnProperty("name");
-export const ISNOTFUNC     =   v => !ISFUNC(v);
-export const ISCLASS       =   v => {throw new Error("UNFINISHED")};
-export const ISNOTCLASS    =   v => !ISCLASS(v);
-export const ISNEWABLE     =   v => {throw new Error("UNFINISHED")};
-export const ISUNDEFINED   =   v => v === undefined;
-export const ISNOTUNDEFINED=   v => !ISUNDEFINED(v);
-export const ISNULL        =   v => v === "null";
-export const ISNOTNULL     =   v => !ISNULL(v);
+export const ISBOOLEAN     =   (v) => typeof v === "boolean";
+export const ISNOTBOOLEAN  =   (v) => !ISBOOLEAN(v);
+export const ISNUMBER      =   (v) => typeof v === "number";
+export const ISNOTNUMBER   =   (v) => !ISNUMBER(v);
+export const ISSTRING      =   (v) => typeof v === "string";
+export const ISNOTSTRING   =   (v) => !ISSTRING(v);
+export const ISJSON        =   (v) => typeof v === "object" && !S._Array.isArray(v);
+export const ISNOTJSON     =   (v) => !ISJSON(v);
+export const ISOBJECT      =   (v) => typeof v === "object";
+export const ISNOTOBJECT   =   (v) => !ISOBJECT(v);
+export const ISARRAY       =   (v) => S._Array.isArray(v);
+export const ISNOTARRAY    =   (v) => !ISARRAY(v);
+export const ISSYMBOL      =   (v) => typeof v === "symbol";
+export const ISNOTSYMBOL   =   (v) => !ISSYMBOL(v);
+export const ISFUNCTION    =   (v) => typeof v === "function";
+export const ISNOTFUNCTION =   (v) => !ISFUNCTION(v);
+export const ISTHIS        =   (v) => v.toString().includes("function ");
+export const ISNOTTHIS     =   (v) => !ISTHIS(v);
+export const ISLAMBDA      =   (v) => ISFUNCTION(v) && v.toString().includes("=>");
+export const ISNOTLAMBDA   =   (v) => !ISLAMBDA(v);
+export const ISANONYMOUS   =   (v) => ISFUNCTION(v) && !ISLAMBDA(v) && v["name"] === undefined;
+export const ISNOTANONYMOUS=   (v) => !ISANONYMOUS(v);
+export const ISFUNC        =   (v) => ISFUNCTION(v) && !ISLAMBDA(v) && v.hasOwnProperty("name");
+export const ISNOTFUNC     =   (v) => !ISFUNC(v);
+export const ISCLASS       =   (v) => {throw new Error("UNFINISHED")};
+export const ISNOTCLASS    =   (v) => !ISCLASS(v);
+export const ISNEWABLE     =   (v) => {throw new Error("UNFINISHED")};
+export const ISUNDEFINED   =   (v) => v === undefined;
+export const ISNOTUNDEFINED=   (v) => !ISUNDEFINED(v);
+export const ISNULL        =   (v) => v === "null";
+export const ISNOTNULL     =   (v) => !ISNULL(v);
 
 
 
 
-export const ISSAFE        =   v => S._Number.isSafeInteger(v);
-export const ISNOTSAFE     =   v => !ISSAFE(v);
-export const ISTRUE        =   v => v === true;
-export const ISNOTTRUE     =   V => !ISTRUE(v);
-export const ISFALSE       =   v => v === false;
-export const ISNOTFALSE    =   v => !ISSAFE(v);
-export const ISINFINITY    =   v => v === Infinity;
-export const ISNOTINFINITY =   v => !ISINFINITY(v);
-export const ISFINITE      =   v => S._isFinite(v);
-export const ISNOTFINITE   =   v => !ISFINITE(v);
-export const ISMAXVALUE    =   v => v === S._Number.MAX_VALUE;
-export const ISNOTMAXVALUE =   v => !ISMAXVALUE(v);
-export const ISMINVALUE    =   v => v === S._Number.MAX_VALUE;
-export const ISNOTMINVALUE =   v => !ISMINVALUE(v);
-export const ISMAXSAFEVALUE=   v => v === S._Number.MAX_SAFE_INTEGER;
-export const ISNOTMAXSAFEVALUE=v => !ISMAXSAFEVALUE(v);
-export const ISMINSAFEVALUE=   v => v === S._Number.MIN_SAFE_INTEGER;
-export const ISNOTMINSAFEVALUE=v => !ISMINSAFEVALUE(v);
-export const ISNAN         =   v => S._isNaN(v);
-export const ISNOTNAN      =   v => !ISNAN(v);
-export const ISPOSITIVE    =   v => 0 < v;
-export const ISNOTPOSITIVE =   v => !ISPOSITIVE(v);
-export const ISNEGATIVE    =   v => 0 > v;
-export const ISNOTNEGATIVE =   v => !ISNEGATIVE(v);
-export const ISZERO        =   v => v === 0;
-export const ISNOTZERO     =   v => !ISZERO(v);
-export const ISFLOAT       =   v => S._String(v).includes(".");
-export const ISNOTFLOAT    =   v => !ISFLOAT(v);
-export const ISINTEGER     =   v => (V << 0) === V;
-export const ISNOTINTEGER  =   v => !ISINTEGER(v);
-export const ISALPHA       =   v => [..._lowerCase,..._upperCase].includes(v);
-export const ISNOTALPHA    =   v => !ALPHA(v);
-export const ISLOWERCASE   =   v => _lowerCase.includes(v);
-export const ISNOTLOWERCASE=   v => !ISLOWERCASE(v);
-export const ISUPPERCASE   =   v => _upperCase.includes(v);
-export const ISNOTUPPERCASE=   v => !ISUPPERCASE(v);
-export const ISSYMBOL      =   v => _symbols.includes(v);
-export const ISNOTSYMBOL   =   v => !ISSYMBOL(v);
+export const ISSAFE        =   (v) => S._Number.isSafeInteger(v);
+export const ISNOTSAFE     =   (v) => !ISSAFE(v);
+export const ISTRUE        =   (v) => v === true;
+export const ISNOTTRUE     =   (v) => !ISTRUE(v);
+export const ISFALSE       =   (v) => v === false;
+export const ISNOTFALSE    =   (v) => !ISSAFE(v);
+export const ISINFINITY    =   (v) => v === Infinity;
+export const ISNOTINFINITY =   (v) => !ISINFINITY(v);
+export const ISFINITE      =   (v) => S._isFinite(v);
+export const ISNOTFINITE   =   (v) => !ISFINITE(v);
+export const ISMAXVALUE    =   (v) => v === S._Number.MAX_VALUE;
+export const ISNOTMAXVALUE =   (v) => !ISMAXVALUE(v);
+export const ISMINVALUE    =   (v) => v === S._Number.MAX_VALUE;
+export const ISNOTMINVALUE =   (v) => !ISMINVALUE(v);
+export const ISMAXSAFEVALUE=   (v) => v === S._Number.MAX_SAFE_INTEGER;
+export const ISNOTMAXSAFEVALUE=(v) => !ISMAXSAFEVALUE(v);
+export const ISMINSAFEVALUE=   (v) => v === S._Number.MIN_SAFE_INTEGER;
+export const ISNOTMINSAFEVALUE=(v) => !ISMINSAFEVALUE(v);
+export const ISNAN         =   (v) => S._isNaN(v);
+export const ISNOTNAN      =   (v) => !ISNAN(v);
+export const ISPOSITIVE    =   (v) => 0 < v;
+export const ISNOTPOSITIVE =   (v) => !ISPOSITIVE(v);
+export const ISNEGATIVE    =   (v) => 0 > v;
+export const ISNOTNEGATIVE =   (v) => !ISNEGATIVE(v);
+export const ISZERO        =   (v) => v === 0;
+export const ISNOTZERO     =   (v) => !ISZERO(v);
+export const ISFLOAT       =   (v) => S._String(v).includes(".");
+export const ISNOTFLOAT    =   (v) => !ISFLOAT(v);
+export const ISINTEGER     =   (v) => (v << 0) === v;
+export const ISNOTINTEGER  =   (v) => !ISINTEGER(v);
+export const ISALPHA       =   (v) => [...LOWERCASE,...UPPERCASE].includes(v);
+export const ISNOTALPHA    =   (v) => !ISALPHA(v);
+export const ISLOWERCASE   =   (v) => LOWERCASE.includes(v);
+export const ISNOTLOWERCASE=   (v) => !ISLOWERCASE(v);
+export const ISUPPERCASE   =   (v) => UPPERCASE.includes(v);
+export const ISNOTUPPERCASE=   (v) => !ISUPPERCASE(v);
+// export const ISSYMBOL      =   (v) => SYMBOLS.includes(v);
+export const ISNOTSYMBOL   =   (v) => !ISSYMBOL(v);
 export const ISEMPTY       =   function(v){
                             return {
                                 "str":v=>v.length===0,"obj":v=>S._Object.keys(v).length===0,
-                                "arr":v=>v.length===0,"fnc":v => v.toString()
+                                "arr":v=>v.length===0,"fnc":(v) => v.toString()
                             }[(S._Array.isArray(v) && "arr") || (typeof v)](v);
 };
 export const ISNOTEMPTY    = (v)=>{
@@ -555,22 +1551,42 @@ export const ISNOTEMPTY    = (v)=>{
                                 "arr":v=>v.length!==0,"fnc":v=>v.toString()
                             }[(S._Array.isArray(v) && "arr") || (typeof v)](v);
 };
+/*const PARSEFUNCTION = {
 
-export const GETNAME       = function(func){};
+};*/
+export const GETNAME       = function(func){
+  return func.hasOwnPropert("name") && new String(func.name);
+};
 export const GETPARAMS     = function(func){
-    let start = 0;
-    let end = 0;
-
-    if (func.toString().includes("function")) {
-        start = func.toString().indexOf("(");
-        end   = func.toString().indexOf(")");
-    } else if (func.toString().includes("=>")) {
-      return [];
-    }
+    /**
+     * supports lamdbdas with params,
+     * why? It's redundant to support unneeded syntaxes
+     */
+    let s = func.toString().trimLeft();
+    let start = s.indexOf("(");
+    let end   = s.indexOf(")");
     return func.toString().slice(start+1,end).split(",") || [];
 };
 export const GETCOMMENTS   = function(func){};
-export const GETINPUTTYPE  = function(func){};
+//   > Object.assign(["a"],{"":"","a":"b"})
+// [ 'a', '': '', a: 'b' ]
+// > let a = Object.assign(["a"],{"":"","a":"b"})
+// new Set(["a"]) is typw object
+export const GETINPUTTYPE  = function(func){
+  // uses the attributes information
+  let ps = GETPARAMS(func);
+  let IPT = [];
+  for (let k in ps) {
+    IPT.push({
+      param:    new String(ps[k]),
+      types:    new Array(ATTRS[ps[k]].types)
+    })
+  }
+  return IPT;
+};
+  /**
+   * not sure how to figureout outputtype easily
+   */
 export const GETOUTPUTTYPE = function(func){};
 export const GETEXETYPE    = function(func){};
 export const GETSTATEMENTS = function(func){};
@@ -581,11 +1597,11 @@ export const GETINNERMEM   = function(func){};
 // export const ALLMULCASE         = e => {let a = false, b = false, c = false;for (let k in e) { (ISLOWERCASE(k)&&a=true) || (ISUPPERCASE(k)&&b=true) || (ISSYMBOL(k)&&c=true)};return a&&b&&c;};
 
 
-export const ASSERTINDEPENDENCE = f => EVERY(f.toString(),ALLSAMCASE)&&EVERY(f.toString(),ALLALPHA);
-export const ASSERTCOMPOUND     = f => EVERY(f.toString(),ALLTWOCASE)&&EVERY(f.toString(),ALLALPHA);
-export const assertComplex      = f => EVERY(f.toString(),ALLMULCASE)&&EVERY(f.toString(),ALLALPHA);
+export const ASSERTINDEPENDENCE = (f) => EVERY(f.toString(),ALLSAMCASE)&&EVERY(f.toString(),ALLALPHA);
+export const ASSERTCOMPOUND     = (f) => EVERY(f.toString(),ALLTWOCASE)&&EVERY(f.toString(),ALLALPHA);
+export const assertComplex      = (f) => EVERY(f.toString(),ALLMULCASE)&&EVERY(f.toString(),ALLALPHA);
 
-export const NOTEMPTY               = v => (ISARRAY(v)            && THROWE("must not be empty",(v.length > 0))
+export const NOTEMPTY               = (v) => (ISARRAY(v)   && THROWE("must not be empty",(v.length > 0))
                                 ||  (typeof v === "object" && THROWE("must not be empty",(S._Object.keys(v).length > 0)))
                                 ||  (typeof v === "string" && THROWE("must not be empty",(v.length > 0)))
                                 ||  (false)
@@ -593,8 +1609,15 @@ export const NOTEMPTY               = v => (ISARRAY(v)            && THROWE("mus
 export const HASPROPERTY         = (obj,prop) => THROWE("must have prop "+prop, obj.hasOwnProperty(prop));
 
 
-export const ISEVEN = function(){};
-export const ISODD = function(){};
+export const ISDIVISIBLE    = function(n,d){return n % d === 0};
+export const ISEVEN         = function(){};
+export const ISEVENINTEGER  = function(v){return (v & 1)^1};
+export const ISEVENINTEGER  = function(v){return (v & 1)^1};
+export const ISEVENFLOAT    = function(){};
+
+export const ISODD          = function(){};
+export const ISODDINTEGER   = function(v){return (v & 1)^0};
+export const ISODDFLOAT     = function(){};
 
 export const PERIOD = (e: string) => {
     if (e[0] === ".") {
@@ -608,12 +1631,12 @@ export const PERIOD = (e: string) => {
 // export const loopObject             = (obj,cb) => { for (let k in obj) cb(obj,k); };
 
 
-export const enforce_object_datas   = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
-export const enforce_object_methods = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isFunction);};
-export const enforce_object_propsss = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
-export const enforce_object_nulls   = v => {isObject(v);isNull(v);};
-export const enforce_settings       = v => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(enforceSetting);};
-export const enforce_setting        = v => {};
+export const enforce_object_datas   = (v) => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
+export const enforce_object_methods = (v) => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isFunction);};
+export const enforce_object_propsss = (v) => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(isNotFunction);};
+export const enforce_object_nulls   = (v) => {isObject(v);isNull(v);};
+export const enforce_settings       = (v) => {isObject(v);notEmpty(v);S._Object.keys(v).forEach(enforceSetting);};
+export const enforce_setting        = (v) => {};
 
 
 export const EVERY = function(v,cb){
@@ -626,53 +1649,53 @@ export const EVERY = function(v,cb){
 export const ALL = EVERY;
 
 
-export const NUMSTR = v => EVERY(v,function(a){return NUMBERS.includes(a)});
-export const NNUMSTR =v => EVERY(v,function(a){return !NUMBERS.includes(a)});
-export const STRSTR = v => EVERY(v,ISSTRING);
-export const NSTRSTR = v => EVERY(v,ISNOTSTRING);
-export const BOLARR = v => EVERY(v,ISBOOLEAN);
-export const NBOLARR = v => EVERY(v,ISNOTBOOLEAN);
-export const NUMARR = v => EVERY(v,ISNUMBER);
-export const NNUMARR = v => EVERY(v,ISNOTNUMBER);
-export const STRARR = v => EVERY(v,ISSTRING);
-export const NSTRARR = v => EVERY(v,ISNOTSTRING);
-export const ARRARR = v => EVERY(v,ISARRAY);
-export const NARRARR = v => EVERY(v,ISNOTARRAY);
-export const OBJARR = v => EVERY(v,ISOBJECT); 
-export const NOBJARR = v => EVERY(v,ISNOTOBJECT); 
-export const JSNARR = v => EVERY(v,ISJSON);
-export const NJSNARR = v => EVERY(v,ISNOTJSON);
-export const FNCARR = v => EVERY(v,ISFUNCTION); 
-export const NFNCARR = v => EVERY(v,ISNOTFUNCTION); 
-export const OBJLMD = v => EVERY(v,ISLAMBDA);
-export const NOBJLMD = v => EVERY(v,ISNOTLAMBDA);
-export const ANOARR = v => EVERY(v,ISANONYMOUS);
-export const NANOARR = v => EVERY(v,ISNOTANONYMOUS);
-export const UNDARR = v => EVERY(v,ISUNDEFINED); 
-export const NUNDARR = v => EVERY(v,ISNOTUNDEFINED); 
-export const NULARR = v => EVERY(v,ISNULL);
-export const NNULARR = v => EVERY(v,ISNOTNULL);
+export const NUMSTR = (v) => EVERY(v,function(a){return NUMBERS.includes(a)});
+export const NNUMSTR =(v) => EVERY(v,function(a){return !NUMBERS.includes(a)});
+export const STRSTR = (v) => EVERY(v,ISSTRING);
+export const NSTRSTR = (v) => EVERY(v,ISNOTSTRING);
+export const BOLARR = (v) => EVERY(v,ISBOOLEAN);
+export const NBOLARR = (v) => EVERY(v,ISNOTBOOLEAN);
+export const NUMARR = (v) => EVERY(v,ISNUMBER);
+export const NNUMARR = (v) => EVERY(v,ISNOTNUMBER);
+export const STRARR = (v) => EVERY(v,ISSTRING);
+export const NSTRARR = (v) => EVERY(v,ISNOTSTRING);
+export const ARRARR = (v) => EVERY(v,ISARRAY);
+export const NARRARR = (v) => EVERY(v,ISNOTARRAY);
+export const OBJARR = (v) => EVERY(v,ISOBJECT); 
+export const NOBJARR = (v) => EVERY(v,ISNOTOBJECT); 
+export const JSNARR = (v) => EVERY(v,ISJSON);
+export const NJSNARR = (v) => EVERY(v,ISNOTJSON);
+export const FNCARR = (v) => EVERY(v,ISFUNCTION); 
+export const NFNCARR = (v) => EVERY(v,ISNOTFUNCTION); 
+export const OBJLMD = (v) => EVERY(v,ISLAMBDA);
+export const NOBJLMD = (v) => EVERY(v,ISNOTLAMBDA);
+export const ANOARR = (v) => EVERY(v,ISANONYMOUS);
+export const NANOARR = (v) => EVERY(v,ISNOTANONYMOUS);
+export const UNDARR = (v) => EVERY(v,ISUNDEFINED); 
+export const NUNDARR = (v) => EVERY(v,ISNOTUNDEFINED); 
+export const NULARR = (v) => EVERY(v,ISNULL);
+export const NNULARR = (v) => EVERY(v,ISNOTNULL);
 
-export const BOLJSN = v => EVERY(v,ISBOOLEAN);
-export const NBOLJSN = v => EVERY(v,ISNOTBOOLEAN);
-export const NUMJSN = v => EVERY(v,ISNUMBER);
-export const NNUMJSN = v => EVERY(v,ISNOTNUMBER);
-export const STRJSN = v => EVERY(v,ISSTRING);
-export const NSTRJSN = v => EVERY(v,ISNOTSTRING);
-export const JSNJSN = v => EVERY(v,ISJSON);
-export const NJSNJSN = v => EVERY(v,ISNOTJSON);
-export const OBJJSN = v => EVERY(v,ISOBJECT); 
-export const NOBJJSN = v => EVERY(v,ISNOTOBJECT); 
-export const FNCJSN = v => EVERY(v,ISFUNCTION); 
-export const NFNCJSN = v => EVERY(v,ISNOTFUNCTION); 
-export const OBJJSN = v => EVERY(v,ISLAMBDA);
-export const OBJJSN = v => EVERY(v,ISNOTLAMBDA);
-export const ANOJSN = v => EVERY(v,ISANONYMOUS);
-export const NANOJSN = v => EVERY(v,ISNOTANONYMOUS);
-export const UNDJSN = v => EVERY(v,ISUNDEFINED); 
-export const NUNDJSN = v => EVERY(v,ISNOTUNDEFINED); 
-export const NULJSN = v => EVERY(v,ISNULL);  
-export const NNULJSN = v => EVERY(v,ISNOTNULL);  
+export const BOLJSN = (v) => EVERY(v,ISBOOLEAN);
+export const NBOLJSN = (v) => EVERY(v,ISNOTBOOLEAN);
+export const NUMJSN = (v) => EVERY(v,ISNUMBER);
+export const NNUMJSN = (v) => EVERY(v,ISNOTNUMBER);
+export const STRJSN = (v) => EVERY(v,ISSTRING);
+export const NSTRJSN = (v) => EVERY(v,ISNOTSTRING);
+export const JSNJSN = (v) => EVERY(v,ISJSON);
+export const NJSNJSN = (v) => EVERY(v,ISNOTJSON);
+export const OBJJSN = (v) => EVERY(v,ISOBJECT); 
+export const NOBJJSN = (v) => EVERY(v,ISNOTOBJECT); 
+export const FNCJSN = (v) => EVERY(v,ISFUNCTION); 
+export const NFNCJSN = (v) => EVERY(v,ISNOTFUNCTION); 
+export const OBJJSN = (v) => EVERY(v,ISLAMBDA);
+export const OBJJSN = (v) => EVERY(v,ISNOTLAMBDA);
+export const ANOJSN = (v) => EVERY(v,ISANONYMOUS);
+export const NANOJSN = (v) => EVERY(v,ISNOTANONYMOUS);
+export const UNDJSN = (v) => EVERY(v,ISUNDEFINED); 
+export const NUNDJSN = (v) => EVERY(v,ISNOTUNDEFINED); 
+export const NULJSN = (v) => EVERY(v,ISNULL);  
+export const NNULJSN = (v) => EVERY(v,ISNOTNULL);  
 
 
 
@@ -700,7 +1723,7 @@ export const __FINDHIGHESTARITY = function(spec, max) {
 
 export const __APPLYSPECWITHARITY = function(spec, arity, cache) {
     const remaining = arity - cache.length;
-    if (remaining === 1) return x => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x));
+    if (remaining === 1) return (x) => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x));
     if (remaining === 2) return (x, y) => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x, y));
     if (remaining === 3) return (x, y, z) => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x, y, z));
     if (remaining === 4) return (x, y, z, a) => __APPLYSPECWITHARITY(spec, arity, __FILTERUNDEFINED(...cache, x, y, z, a));
@@ -747,7 +1770,7 @@ export const FLIPEXPORT = function(fn) {
       return undefined;
     };
 };
-export const ISINTEGER$1 = Number.isInteger || ISINTEGER;
+export const ISINTEGER$1 = ISINTEGER;
 export const INDEXBYPATH = function(pathInput, list) {
   const toReturn = {};
 
@@ -836,7 +1859,7 @@ export const _OBJECTIS = function(a, b) {
 
   return a !== a && b !== b;
 };
-export const _OBJECTIS$1 = S._Object.is || _objectIs;
+// export const _OBJECTIS$1 = _objectIs;
 export const DEFAULTTO = function(defaultArgument, inputArguments) {
   if (arguments.length === 1) {
     return _inputArguments => DEFAULTTO(defaultArgument, _inputArguments);
@@ -864,7 +1887,7 @@ export const DEFAULTTO = function(defaultArgument, inputArguments) {
 
   return holder === undefined ? defaultArgument : holder;
 };
-export const Const = x => ({
+export const Const = (x) => ({
   x,
   map: fn => Const(x)
 });
@@ -979,7 +2002,7 @@ export const _FILTER = function(fn, list) {
 export const _ISTRANSFORMER = function(obj) {
     return obj != null && typeof obj['@@transducer/step'] === 'function';
 };
-export const _ISARRAY = S._Array.isArray || function _ISARRAY(val) {
+export const _ISARRAY = function _ISARRAY(val) {
     return (val != null &&
             val.length >= 0 &&
             S._Object.prototype.toString.call(val) === '[object Array]');
@@ -1139,7 +2162,7 @@ export const T = function() {
     return true;
 };
 export const TAP = function(fn, x) {
-    if (arguments.length === 1) return _x => TAP(fn, _x);
+    if (arguments.length === 1) return (_x) => TAP(fn, _x);
     fn(x);
     return x;
 };
@@ -1322,7 +2345,7 @@ export const INCLUDES = function(target, list) {
       return list.includes(target);
     }
   
-    if (!Array.isArray(list)) return false;
+    if (!S._Array.isArray(list)) return false;
     let index = -1;
   
     while (++index < list.length) {
@@ -1555,7 +2578,7 @@ export const UNIQWITH = function(fn, list) {
   
     return willReturn;
 };
-export const UPDATE = function(idx, val, list) {
+export const _UPDATE = function(idx, val, list) {
     if (val === undefined) {
       return (_val, _list) => UPDATE(idx, _val, _list);
     } else if (list === undefined) {
@@ -3146,28 +4169,28 @@ export const VIEW = function(lens, target) {
 //   return bcrypt;
 // }));
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const THROWE                  = function(){};
-export const THROWE0 /* IMMEDIATE */ = function(){};
-export const THROWE1 /* STACK */     = function(){};
-export const THROWE2 /* PROGRAMMABLE*/=function(){};
-export const THROWEZ                  =function(){};
+export const THROWE                  = function(){throw new Error(...arguments)};
+export const THROWE0 /* IMMEDIATE */ = function(){throw new Error(...arguments)};
+export const THROWE1 /* STACK */     = function(){throw new Error(...arguments)};
+export const THROWE2 /* PROGRAMMABLE*/=function(){throw new Error(...arguments)};
+export const THROWEZ                  =function(){throw new Error(...arguments)};
 
 export const UNFINISHED              = function(){throw new Error("UNFINISHED");};
-export const UNFINSHED0 /*IMMEDIATE*/= function(){};
-export const UNFINSHED1 /*STACK*/    = function(){};
-export const UNFINSHEDZ              = function(){};
+export const UNFINSHED0 /*IMMEDIATE*/= function(){throw new Error("UNFINISHED")};
+export const UNFINSHED1 /*STACK*/    = function(){throw new Error("UNFINISHED")};
+export const UNFINSHEDZ              = function(){throw new Error("UNFINISHED")};
 
-export const BUG                     = function(){};
-export const BUG0                    = function(){};
-export const BUGZ                    = function(){};
+export const BUG                     = function(){throw new Error("BUG")};
+export const BUG0                    = function(){throw new Error("BUG")};
+export const BUGZ                    = function(){throw new Error("BUG")};
 
-export const MAINTENANCE             = function(){};
-export const MAINTENANCE0            = function(){};
-export const MAINTENANCEZ            = function(){};
+export const MAINTENANCE             = function(){throw new Error("MAINTENANCE")};
+export const MAINTENANCE0            = function(){throw new Error("MAINTENANCE")};
+export const MAINTENANCEZ            = function(){throw new Error("MAINTENANCE")};
 
-export const REVIEW                  = function(){};
-export const REVIEW0                 = function(){};
-export const REVIEWZ                 = function(){};
+export const REVIEW                  = function(){throw new Error("REVIEW")};
+export const REVIEW0                 = function(){throw new Error("REVIEW")};
+export const REVIEWZ                 = function(){throw new Error("REVIEW")};
 
 export const CLI         = function(){};
 // https://www.npmjs.com/package/yow
@@ -3181,7 +4204,7 @@ export const WRITEJSON   = REQUIRE('YOW/WRITEJSON');
 
 export const UI = function(){};
 export const CODE = function(){};
-export const DATA = function(){};
+// export const DATA = function(){};
 export const ANIMATE = function(){};
 
 
@@ -3205,12 +4228,12 @@ export const VAR   = function(){};
 export const LET   = function(){};
 export const CONST = function(){};
 
-export const PUBLIC = function(){};
-export const PRIVATE = function(){};
-export const PROTECT = function(){};
-export const STATIC  = function(){};
-export const INTERNAL = function(){};
-export const METHOD   = function(){};
+// export const PUBLIC = function(){};
+// export const PRIVATE = function(){};
+// export const PROTECT = function(){};
+// export const STATIC  = function(){};
+// export const INTERNAL = function(){};
+// export const METHOD   = function(){};
 // export const LAMBDA   = function(){};
 
 
@@ -3252,16 +4275,18 @@ export const NUL,NULL      = function(){return Null   (...arguments)};
 export const UND,UNDEFINED = function(){return Undefined(...arguments)}; 
 
 
+export const FAKENATIVECODE = function(func) {
+  func.toString = `function ${func.name}(){ [native code] }`
+};
 
 
-
-/*export*/ export const CAPSULE = function(cb:Function, props:{[index:string]:any}) {
+export const CAPSULE = function(cb:Function, props:{[index:string]:any}) {
   for (let k in props) {
     !RESTRICTEDPROPS.includes(k) || THROWE()
 }
 return S._Object.freeze(S._Object.assign(cb,props));
 };
-/*export*/ export const RESTRICTEDPROPS = [
+export const RESTRICTEDPROPS = [
 "__defineGetter__",
 "__defineSetter__",      
 "__lookupGetter__",      
@@ -3437,7 +4462,7 @@ export const VBOL = CAPSULE(function(sel,val){
   ALTERED: (v) => {if (PROPSALTERED.BOL(v))                     return false; else return true;}
 });
 
-/*export*/ export const DTYPE = CAPSULE(function(typ?,sel?,val?){
+export const DTYPE = CAPSULE(function(typ?,sel?,val?){
     /** LEGEND: arg SEL
      * 
      * 0: STRICTEST VALIDATION ENFORCEMENT
@@ -3465,35 +4490,35 @@ export const VBOL = CAPSULE(function(sel,val){
     NUL:   VNUL,
 });
 export const TYPETRUTHY = CAPSULE(function(){
-  console.warn(`this assumes the conditional statements are the same to all types of conditions`);
-  console.warn(`bewarned, bug is probable`);
+  // console.warn(`this assumes the conditional statements are the same to all types of conditions`);
+  // console.warn(`bewarned, bug is probable`);
 },{
-/*const*/ BOL  : v => { if (v) return true; else return false; },
-/*const*/ NUM  : v => { if (v) return true; else return false; },
-/*const*/ STR  : v => { if (v) return true; else return false; },
-/*const*/ OBJ  : v => { if (v) return true; else return false; },
-/*const*/ ARR  : v => { if (v) return true; else return false; },
-/*const*/ SYM  : v => { if (v) return true; else return false; },
-/*const*/ SET  : v => { if (v) return true; else return false; },
-/*const*/ FNC  : v => { if (v) return true; else return false; },
-/*const*/ CLS  : v => { if (v) return true; else return false; },
-/*const*/ NUL  : v => { if (v) return true; else return false; },
-/*const*/ UND  : v => { if (v) return true; else return false; },
+/*const*/ BOL  : (v) => { if (v) return true; else return false; },
+/*const*/ NUM  : (v) => { if (v) return true; else return false; },
+/*const*/ STR  : (v) => { if (v) return true; else return false; },
+/*const*/ OBJ  : (v) => { if (v) return true; else return false; },
+/*const*/ ARR  : (v) => { if (v) return true; else return false; },
+/*const*/ SYM  : (v) => { if (v) return true; else return false; },
+/*const*/ SET  : (v) => { if (v) return true; else return false; },
+/*const*/ FNC  : (v) => { if (v) return true; else return false; },
+/*const*/ CLS  : (v) => { if (v) return true; else return false; },
+/*const*/ NUL  : (v) => { if (v) return true; else return false; },
+/*const*/ UND  : (v) => { if (v) return true; else return false; },
 });
 export const TYPEFALSEY = CAPSULE(function(){
 
 },{
-/*const*/ BOL  : v => { if (v) return false; else return true; },
-/*const*/ NUM  : v => { if (v) return false; else return true; },
-/*const*/ STR  : v => { if (v) return false; else return true; },
-/*const*/ OBJ  : v => { if (v) return false; else return true; },
-/*const*/ ARR  : v => { if (v) return false; else return true; },
-/*const*/ SYM  : v => { if (v) return false; else return true; },
-/*const*/ SET  : v => { if (v) return false; else return true; },
-/*const*/ FNC  : v => { if (v) return false; else return true; },
-/*const*/ CLS  : v => { if (v) return false; else return true; },
-/*const*/ NUL  : v => { if (v) return false; else return true; },
-/*const*/ UND  : v => { if (v) return false; else return true; },
+/*const*/ BOL  : (v) => { if (v) return false; else return true; },
+/*const*/ NUM  : (v) => { if (v) return false; else return true; },
+/*const*/ STR  : (v) => { if (v) return false; else return true; },
+/*const*/ OBJ  : (v) => { if (v) return false; else return true; },
+/*const*/ ARR  : (v) => { if (v) return false; else return true; },
+/*const*/ SYM  : (v) => { if (v) return false; else return true; },
+/*const*/ SET  : (v) => { if (v) return false; else return true; },
+/*const*/ FNC  : (v) => { if (v) return false; else return true; },
+/*const*/ CLS  : (v) => { if (v) return false; else return true; },
+/*const*/ NUL  : (v) => { if (v) return false; else return true; },
+/*const*/ UND  : (v) => { if (v) return false; else return true; },
 });
 export const TYPESTATE = CAPSULE(function(v,meth){
 
@@ -3515,40 +4540,30 @@ NUL : {}
 export const PROPSALTERED = CAPSULE(function(){
 
 },{
-/*const*/ BOL  : v => {},
-/*const*/ NUM  : v => {},
-/*const*/ STR  : v => {},
-/*const*/ OBJ  : v => {},
-/*const*/ ARR  : v => {return Object.assign([],v).length !== 0},
-/*const*/ SYM  : v => {},
-/*const*/ SET  : v => {},
-/*const*/ FNC  : v => {},
-/*const*/ CLS  : v => {},
-/*const*/ NUL  : v => {},
-/*const*/ UND  : v => {},
+/*const*/ BOL  : (v) => {},
+/*const*/ NUM  : (v) => {},
+/*const*/ STR  : (v) => {},
+/*const*/ OBJ  : (v) => {},
+/*const*/ ARR  : (v) => {return Object.assign([],v).length !== 0},
+/*const*/ SYM  : (v) => {},
+/*const*/ SET  : (v) => {},
+/*const*/ FNC  : (v) => {},
+/*const*/ CLS  : (v) => {},
+/*const*/ NUL  : (v) => {},
+/*const*/ UND  : (v) => {},
 });
 
 
 // export const CONST = function(script){
 //   isString(script);
 // };
-// RAW STATEMENTS
-export const UNHANDLED= function(){return THROWE("UNHANDLED EXCEPTION");}
-export const IF0      = function(){if(c0) return cb0()};
-export const IF1      = function(){if(c0) return cb0(); else return cb1();};
-export const IF2      = function(){if(c0) return cb0(); else if (c1) return cb1(); else return cb2();};
-export const IFZ      = function(){
-  if (c0) return cb0();
-  else {
-    for (let k in arr) if (arr[k][0]) return arr[k][1]();
-  }
-};
+
 // CUSTOMIZED STATEMENTS
 
-console.warn(`
-  An example
-  *** else statement triggered ... throw new Error("unaacounted input");
-`);
+// console.warn(`
+//   An example
+//   *** else statement triggered ... throw new Error("unaacounted input");
+// `);
 
 // export const SWITCH = function(){
 //   switch (key) {
@@ -3564,37 +4579,46 @@ console.warn(`
 
 
 export const LOWERCASE = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z"];
-export const UPPERCASE = LOWERCASE.map(v => v.toUpperCase());
+export const UPPERCASE = LOWERCASE.map((v) => v.toUpperCase());
 export const ALPHA     = (LOWERCASE.join("")+UPPERCASE.join("")).split("");
-export const SYMBOLS   = ["!@#$%^&*()_+{}[]-=|;:'\"\\?,.<>`~"];
+// export const SYMBOLS   = ["!@#$%^&*()_+{}[]-=|;:'\"\\?,.<>`~"];
 export const NUMBERS   = ["0","1","2","3","4","5","6","7","8","9"];
 export const OPS       = ["!","%","%=","^","^=","&","&&","&=","&&=","*","*=","**","**=","-","-=","+","+=","|","||","/","/="];
 
-export const KYB5      = ["ESC","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"];
-export const KYB4      = ["~`","!1","@2","#3","$4","%5","^6","&7","*8","(9",")0","_-","+=","DELETE"];
-export const KYB3      = ["TAB","q","w","e","r","t","y","u","i","o","p","{[","}]","|\\"];
-export const KYB2      = ["CAPS LOCK","A","S","D","F","G","H","J","K","L",":;","\"'","RETURN"];
-export const KYB1      = ["SHIFT","Z","X","C","V","B","N","M","<,",">.","?/","SHIFT"];
-export const KYB0      = ["FN","CONTROL","OPTION","COMMAND","SPACE","COMMAND","OPTION","LEFT","UP/DOWN","RIGHT"];
+// export const KYB5      = ["ESC","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"];
+// export const KYB4      = ["~`","!1","@2","#3","$4","%5","^6","&7","*8","(9",")0","_-","+=","DELETE"];
+// export const KYB3      = ["TAB","q","w","e","r","t","y","u","i","o","p","{[","}]","|\\"];
+// export const KYB2      = ["CAPS LOCK","A","S","D","F","G","H","J","K","L",":;","\"'","RETURN"];
+// export const KYB1      = ["SHIFT","Z","X","C","V","B","N","M","<,",">.","?/","SHIFT"];
+// export const KYB0      = ["FN","CONTROL","OPTION","COMMAND","SPACE","COMMAND","OPTION","LEFT","UP/DOWN","RIGHT"];
 
-export const KYBRD         = {};
-export const KYBRD_EN      = {};
-export const KYBRD_PC      = {};
-export const KYBRD_MACBOOK = {KYB5,KYB4,KYB3,KYB2,KYB1,KYB0};
+// export const KYBRD         = {};
+// export const KYBRD_EN      = {};
+// export const KYBRD_PC      = {};
+// export const KYBRD_MACBOOK = {KYB5,KYB4,KYB3,KYB2,KYB1,KYB0};
 
 
-export const TOBINARY = function(){};
+export const CLISTS = {
+  LOWERCASE,
+  UPPERCASE,
+  ALPHA,
+  NUMBERS,
+  OPS
+};
+
+export const IS = function(sel,val){
+  return CLISTS.hasOwnProperty(sel) && INCLUDES(val, CLISTS[sel]);
+};
+
+export const TOBINARY     = function(){};
 export const TOHEX = function(){};
 export const TODEC = function(){};
 export const TOBASE = function(){};
 export const TODATATYPE = function(){};
 
 
-export const INTERFACE = function(){
-  const fakeIfNull = function(obj,prop:string,val:any):void {
-    if (!obj.hasOwnProperty(prop)) {obj[prop] = val;}
-  };	
-};
+export const INTERFACESTRICT= function(){};
+export const INTERFACELOOSE = function(){};
 export const VALIDATE  = function(){};
 export const BLOCK     = function(){};
 export const SPEC      = function(){};
@@ -3643,7 +4667,7 @@ export const CONFIGMAIN = function(config:{[index: string]: {}}){
 };
 
 
-/*export*/ export const PARSEFUNCTION = function(functioN:Function) {
+export const PARSEFUNC = CAPSULE(function(funC:Function) {
         /** 
          * - extracts information from regular code into funC template 
          * - possibly detects errors
@@ -3659,13 +4683,13 @@ export const CONFIGMAIN = function(config:{[index: string]: {}}){
         validate: ()=>({}),
         block:	  ()=>({})
     });
-},({
+},{
 hasName         	:() =>  {},
 hasDescription      :() =>  {},
 hasAuthor         	:() =>  {},
 hasNotes         	:() => f.toString().includes("//"),
 hasAsync         	:() => f.toString().indexOf("async") < 3,
-hasThis         	:f =>  f.toString().indexOf("function") < 2,
+hasThis         	:(f) =>  f.toString().indexOf("function") < 2,
 hasCapsule         	:f =>  f.toString().slice(0,1) === "(",
 hasInputType        :() =>  {},
 hasOutputType       :() =>  {},
@@ -3677,22 +4701,53 @@ hasBlock         	:() =>  {}/**mentioned once */,
 hasSpec         	:() =>  {}/**recognized lib or console.assert */,
 });
 export const parserClass = function(){
-    /**
-     * 
-     * 
-     * returns the json result of parsed input
-     */
+    
 };
 
-export const GET       = function(){};
-export const GETMETHOD = function(){};
-// const SET       = function(){};
-export const SETMETHOD = function(){};
-export const IS        = CAPSULE(function(val,sel){
 
-},{
-// ...DATATYPES
-});
+export const DATA         = function(){};
+export const DATAPUBLIC   = function(){};
+export const DATAPRIVATE  = function(){};
+export const DATAPROTECT  = function(){};
+export const DATASTATIC   = function(){};
+export const DATAINTERNAL = function(){};
+export const DATAGET      = function(){};
+export const DATASET      = function(){};
+
+export const METHOD         = function(func,sel){// returns closure of cloned function. The "this" bindings are altered as well   
+  return func.toString().includes("this") && CLOSURE(func, this);
+};
+export const METHODPUBLIC   = function(name,obj,xports,func){
+  xports.global = METHOD(func);
+  return obj["mp"][name] = METHOD(func).bind(obj);
+};
+export const METHODPRIVATE  = function(name,obj,xports,func){
+  xports.private = METHOD(func);
+  return obj["mp"][name] = METHOD(func).bind(obj);
+};
+export const METHODPROTECT  = function(name,obj,xports,func){
+  xports.protect = METHOD(func);
+  return obj["mp"][name] = METHOD(func).bind(obj);
+};
+export const METHODSTATIC   = function(name,obj,xports,func){
+  xports.static = METHOD(func);
+  return obj["ms"][name] = METHOD(func).bind(obj);
+};
+export const METHODINTERNAL = function(name,obj,xports,func){
+  xports.internal = METHOD(func);
+  return obj["mi"][name] = METHOD(func).bind(obj);
+};
+export const METHODGET      = function(name,obj,xports,func){
+  xports.internal = METHOD(func);
+  return obj["mi"][name] = METHOD(func || function(prop){
+        return 
+  }.bind(obj));
+};
+export const METHODSET      = function(name,obj,xports,func){};
+
+
+
+
 export const KINDA     = CAPSULE(function(){
 
 },{
@@ -3757,9 +4812,9 @@ export const CHARS = CAPSULE(function(){
 },{
     LOWERCASE,
     UPPERCASE,
-    SYMBOLS,
+    // SYMBOLS,
     NUMBERS,
-    KYBRD
+    // KYBRD
 })
 // const SYM
 export const TRIM = CAPSULE(function(){
@@ -4311,51 +5366,130 @@ export const DELETE = function(){};
 //   SHAPELESS
 // });
 
-export const FINDDEADCODE = function(func){
+export const FINDDEADCODE = function(obj){ // lazy version
+/** not the best solution to finding deadcode, just pulls most of the weeds out of the grass*/
 /*  find dead code
     * returns nothing
     * does not modify inputs
     * does not modify externally referenced code
 */
-  let ps = GETPARAMS(func);
-  let argS = func.toString().includes("arguments");
+  let deadcode  = [];
+  let throws    = [];
+  let params    = [];
+  // let refargs   = [];
+  // let returnV   = undefined;
 
 
+
+  for (let k in obj) {
+    if (typeof obj[k] === "function") {
+      try {
+        if ([
+          `function ${k}(){}`,
+          `function ${k}(){ }`,
+          `function ${k}(){  }`,
+          `function ${k}(){   }`,
+          `function ${k}(){    }`,
+          `function ${k}(){     }`,
+          `function ${k}(){      }`,
+          `function ${k}(){       }`,
+          `function ${k}(){        }`,
+        ].includes(obj[k].toString().trim())) deadcode.push([k,obj[k]]);
+        else if ([
+          `function ${k}() {}`,
+          `function ${k}() { }`,
+          `function ${k}() {  }`,
+          `function ${k}() {   }`,
+          `function ${k}() {    }`,
+          `function ${k}() {     }`,
+          `function ${k}() {      }`,
+          `function ${k}() {       }`,
+          `function ${k}() {        }`,
+        ].includes(obj[k].toString().trim())) deadcode.push([k,obj[k]]);
+        else if (([
+          `()=>()`,
+          `()=>( )`,
+          `()=>(  )`,
+          `()=>(   )`,
+          `()=>(    )`,
+          `()=>(     )`,
+          `()=>{}`,
+          `()=>{ }`,
+          `()=>{  }`,
+          `()=>{   }`,
+          `()=>{    }`,
+          `()=>{     }`,
+          `()=>{      }`,
+          `()=>{       }`,
+          `()=>{        }`,
+        ].includes(obj[k].toString().trim()))) deadcode.push([k,obj[k]]);
+        else if ([
+          `function ${k}(){return ;}`,
+          `function ${k}() {return ;}`
+        ].includes(obj[k].toString().trim())) deadcode.push([k,obj[k]]);
+        else {
+
+
+
+
+          if      (ISLAMBDA(obj[k]))                     {}//notdeadcode
+          else if (obj[k].toString().includes("return")) {}//notdeadcode
+          else if (obj[k].toString().includes("arguments")) {}//kinda not dead code
+          else if (obj[k].toString().includes("this"))      {}//notdeadcode because this is auto returned if no return statement
+          else {
+            params = GETPARAMS(obj[k]);
+            let found = false;
+
+            for (let j in params) {
+              if (obj[k].toString().includes(`${params[j]} = `)) {found=true; break;}
+            }
+
+            if (!found) deadcode.push([k,obj[k]]);
+
+          }  
+        }
+      } catch (e) {
+          throws.push(e);
+      }
+    } 
+  }
+
+
+  // if (throws.length !== 0)    console.log("throws",throws);
+  // if (deadcode.length !== 0)  console.log("deadcode",deadcode);
+  return {throws,deadcode};
 };
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /*2)  LANGUAGE CONSTRUCT REVAMP & HARDENING
 */
-/*export*/ export const PARAMS:paramsLoader = function(paramsOBJ){
+export const PARAMS:paramsLoader = function(paramsOBJ){
     // no duplicates allowed --> objects don't automatically overwrite duplications
     if (!paramsOBJ) {THROWE();}
     for (let k in paramsOBJ) { eval(`paramsOBJ[k] = function(${k}){ return ${paramsOBJ[k].replace("$p",k)}; }`); }
     return paramsOBJ;
 };
+export const ATTRIBUTE = CAPSULE(function(){
+  // rules for the attributes
+},{
+INTERFACE: function(){}
+});
+export const SCHEMA = function(){};
+export const MODEL  = function(){};
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ export const CLOSURE = function(cb, variables) {
+export const CLOSURE = function(cb, variables) {
     /** Mock Representation ... real version needs to parse cb and variables,
      * 
      * then replace real values in placheholders.
      * 
      *  
     */
-    const v = variables;
-    const f = cb.bind({
-        sd: v.sd,
-        pd: v.pd,
-        sm: v.sm,
-        pm: v.pm
-    });
-    return f;
+    return cb.bind(v);
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export const REPLICATE = CAPSULE(function(sel,val){
@@ -4432,7 +5566,7 @@ export const MEMASSIGN = function(){
 
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ export const LOOP = {};
+export const LOOP = {};
 export const LOOP_FOR                = function(){}; // for loop
 export const LOOP_FOREVER            = function(){}; // no explanation rqd
 export const LOOP_WHILE              = function(){}; // while loop
@@ -4455,7 +5589,7 @@ export const LOOP_MERGE              = function(){}; //
 export const LOOP_SKIP               = function(){}; // iterator fluxor
     // vs
 export const LOOP_PINGPONG           = function(v,cbs){  }; // next exe memory swaping // instead of conditionals drags
-// export const ENTER = v => (typeof v=== "string"||typeof v==="object"||Array.isArray(v));
+// export const ENTER = (v) => (typeof v=== "string"||typeof v==="object"||Array.isArray(v));
 // export const filter = function(v,hit,miss,conditions){
 //     if      (conditions(e)) return hit.push(v);
 //     else                    return miss.push(v);
@@ -4465,7 +5599,7 @@ export const LOOP_PINGPONG           = function(v,cbs){  }; // next exe memory s
 // export const forever = function(cb){while (true) {cb();}};
 // export const cycle = function() {};
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*export*/ const funCLite:func0Loader = (function(){
+const funCLite:func0Loader = (function(){
   const pS = {};
   return function(paramsOBJ){
       return {
@@ -4550,7 +5684,7 @@ export const FUNCTEMPLATE  = function(){
       /* spec
           ${spec}
       */`;
-      console.log(cb); 
+      //console.log(cb); 
       return new Function(params, `${cb}`);
   }
 };
@@ -4678,7 +5812,7 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     //   "BINSTANCES": {}
 //     // };
 
-//     /*export*/ const claS:claS = function(setupOBJ) {
+//     const claS:claS = function(setupOBJ) {
 //         const __MEM__ = CONFIG(setupOBJ,
 //               CLASSINGULARVALIDATIONS,
 //               CLASSCROSSEXAMINEVALIDATIONS,
@@ -4752,7 +5886,7 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //         neW.length === oriG.length || (()=>{THROWE()})()
 //     };
 
-//     /*export*/ const parseClass = (function(){
+//     const parseClass = (function(){
         
 //     });
 
@@ -4820,7 +5954,7 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     //         block:    closure_block   (e)
 //     //     };
 //     // });
-//     // /*export*/ const setupOBJ = tempOBJ;
+//     // const setupOBJ = tempOBJ;
 //     // //////////////////////////////////////////////////////////////////////////
 //     // //////////////////////////////////////////////////////////////////////////
 //     // const closure_default   = function(){ return function(){THROWE("unfinished");}; };
@@ -4880,12 +6014,12 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     const CLASSLEGENDWRAP = Object.freeze(Object.assign(function() {},
 //     {
 //     /*const*/ method    : (v,f)=> {  },
-//     /*const*/ data      : v => {},
-//     /*const*/ internal  : v => {},  
-//     /*const*/ static    : v => {},
-//     /*const*/ public    : v => {},
-//     /*const*/ private   : v => {},
-//     /*const*/ protect   : v => {}
+//     /*const*/ data      : (v) => {},
+//     /*const*/ internal  : (v) => {},  
+//     /*const*/ static    : (v) => {},
+//     /*const*/ public    : (v) => {},
+//     /*const*/ private   : (v) => {},
+//     /*const*/ protect   : (v) => {}
 //     }));
 //     /** 
 //      *      internal 
@@ -4993,16 +6127,16 @@ export const AFTEREACH = function(){};
 // });
 
 export const SPECDEV = CAPSULE(function(){
-  console.warn(`
-  ** collects all tests from different projects and stores into one repository for data science
-  ** study the other testing frameworks to see what they did wrong
-  ** do everything in power to automate this
-  ** applications are written in node-terminal. "manual-mode" demands thinking ahead.
-  ** tests zoning are automated
-  ** tests styles are selectable & documented in db
-  ** notification system needs to be built. ??? display what notifications first? ???
-  ** 
-  `);
+  // console.warn(`
+  // ** collects all tests from different projects and stores into one repository for data science
+  // ** study the other testing frameworks to see what they did wrong
+  // ** do everything in power to automate this
+  // ** applications are written in node-terminal. "manual-mode" demands thinking ahead.
+  // ** tests zoning are automated
+  // ** tests styles are selectable & documented in db
+  // ** notification system needs to be built. ??? display what notifications first? ???
+  // ** 
+  // `);
   throw new Error("UNFINISHED");
 },{
 /*const*/ SPECDB : function(){
@@ -5123,8 +6257,8 @@ export const CODEDECONSTRUCTOR = function(inputs){
   const PROCEDUREPRINT  = (function(inputs){
 
   })(inputs);    
-  console.log(props);
-  console.log(dry);
+  // console.log(props);
+  // console.log(dry);
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 export const DIFFERENTIALBUILDCODING = function(){};
@@ -5208,10 +6342,6 @@ export const PARADIGMS = CAPSULE(function(sel){
 "VERBOSE"   :function(){},  
 "SENSICAL"  :function(){}   
 });
-
-console.warn(`miscellaneous todo list
-** analyze the functional libraries. remove duplicate functionalities.
-`);
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -5258,3 +6388,7 @@ export const LEARNDEVCORE = function(){
 //   // convert into exportable ${PROGRAMMING LANGUAGE}`
 
 // })();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////

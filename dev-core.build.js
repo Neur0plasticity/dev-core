@@ -1,11 +1,26 @@
+const BUILDDEVCORE = function(){
 const d = require("./dev-core.js");
 const fs = require("fs");
-let errors = [];
-let header = [];
-let abstractions = [];
-let params = [];
-let body = [];
-let xports = [];
+// SAVE FILE STRUCTURE
+let header          = [];   // ALL IMPORTANT DOCUMENT ADDRESSMENTS ARE IN THE HEADER
+let errors          = [];   // ALL SPEC ERRORS ARE SHOWN SECOND
+let attrs           = [];   // ALL PARAMETERS USED and useable for database storage
+let body            = [];   // ALL VALUES AS CONSTANTS 
+let xports          = [];   // ALL EXPORTABLE VALUES
+let buildFile       = [];
+
+let docstruct       = `
+    header"
+    docstruct
+    errors
+    attrs
+    body
+    xports
+    buildfile
+`;
+
+let deadcode = [];
+
 
 header[0] = `\`/**
 * 
@@ -17,7 +32,7 @@ header[0] = `\`/**
 * WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING  
 * 
 * 
-* SELF MODIFYING DOCUMENT ON EVERY EXECUTION
+* SELF MODIFYING DOCUMENT ON EVERY FILE EXECUTION
 * 
 * * 
 * 
@@ -27,15 +42,29 @@ header[0] = `\`/**
 *  WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING 
 * 
 */\``;
+header[1] = `\`/**
+   LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE 
+   LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE
+   LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE 
+   LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE 
+
+        MIT LICENSE GRANTED MIT LICENSE GRANTED MIT LICENSE GRANTED MIT LICENSE GRANTED MIT LICENSE GRANTED 
+
+   LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE 
+   LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE 
+   LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE 
+   LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE LICENSE 
+*/\``;
 
 console.log(d);
 for (let k in d) {
     if (typeof d[k] === "function") {
-        console.log(`const ${k} = ${d[k]};`);
-        body.push(`const ${k} = ${d[k]}`);    
+        // console.log(`const ${k} = ${d[k]};`);
+        deadcode = d.FINDDEADCODE(d[k]);
+        body.push(`const ${k} = ${d[k]}`);
     } else if (Array.isArray(d[k])) {
-        console.log(`const ${k} = [${d[k].join(",")}];`);
-        body.push(`const ${k} = [${d[k].join(",")}];`);    
+        // console.log(`const ${k} = "${d[k].join(",")}".split(",");`)
+        body.push(`const ${k} = "${d[k].join(",")}".split(",");`);    
     } else {}
 }
 console.log("devcore props above");
@@ -48,27 +77,37 @@ console.log(`
 
 `);
 console.log(`
-    collect all params from property functions
+    errors need debuggable timestamps
+`);
+console.log(`
+    collect all attrs from property functions
 `);
 for (let k in d) {
     let ps = [];
     ps = typeof d[k] === "function" && d.GETPARAMS(d[k]);
     typeof d[k] === "function" && ps.forEach(e => {
         e = e.trim();
-        e
-        !params.includes(e) && params.push(e);
+        e !== "" && !attrs.includes(e) && attrs.push(e);
+        console.log(e);
     });
 }
+console.log("fake native code");
 console.log(`
     find dead code
     * returns nothing
     * does not modify inputs
+    * ETC
 `);
+let dt = d.FINDDEADCODE(d);
+
+d.ISNOTEMPTY(dt.throws)     && errors.push(dt.throws);
+d.ISNOTEMPTY(dt.deadcode)   && errors.push(dt.deadcode);
+
+// console.log(`
+//     collect all attrs from property functions
+// `);
 console.log(`
-    collect all params from property functions
-`);
-console.log(`
-    once params collected fill out information to create a loose and strict version.
+    once attrs collected fill out information to create a loose and strict version.
 `)
 console.log(`
     once strict loose version completed, organizeby input/output
@@ -96,17 +135,43 @@ console.log(`
     * as categories
     * as categories - enumerical - linear ordering
 `);
-for (let k in body) {
-    xports[k] = `exports.${k} = ${k}`;
+for (let k in d) {
+    xports.push(`exports.${k} = ${k}`);
 }
-if (errors.length !== 0) {
+// if (errors.length !== 0) {
     // do not write to file
-    fs.writeFileSync("./dev-core.errors.txt",errors);
-} else {
-    // writeToFile
-    let file = `const __HEADER = [${header.join(", \n")}];\n\n\n\nconst __ERRORS = [${errors.join(",\n")}];\n\n\n\nconst __PARAMS = {${params.sort().join(":{},\n")}};\n\n\n\nconst __ABSTRACTIONS = [${abstractions.join(",\n")}];\n\n\n\n${body.sort().join(";\n")}};\n\n\n\n${xports.join("; \n")}`;
-    fs.writeFileSync("./dev-core.js",file);
-}
+    // fs.writeFileSync("./dev-core.errors.txt",errors);
+// } 
+// else {
+// writeToFile
 
-console.log("params",params);
-console.log("params len = ",params.length);
+const file = `
+"use strict";
+const HEADER = [${header.join(", \n")}];\n\n\n\n
+const DOCSTRUCT = \`${docstruct}\`;
+const ERRORS = [${errors.join(",\n")}];\n\n\n\n
+const ATTRS = {${attrs.sort().join(`:{
+    name:        "String() > 0",           // the attribute name
+    description: undefined,
+    types:       [],
+    validate:    function(v){return v},     // verification
+    block:       function(v){return v},     // generate value
+    default:     undefined,                 // generate value is not present      
+    sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+    mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
+    oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
+    mongodb:     unedfined,                 // DB EQUIVALENT DATA TYPE
+},\n`)}};\n\n\n\n
+${body.sort().join(";\n")}\n\n\n\n
+${xports.join("; \n")}\n\n\n\n
+const BUILDDEVCORE = ${BUILDDEVCORE.toString()}
+// BUILDDEVCORE();
+`;
+    fs.writeFileSync("./dev-core.js",file);
+// };
+console.log("deadcode",deadcode);
+console.log("attrs",attrs);
+console.log("attrs len = ",attrs.length);
+console.log("deadcode above deadcode cnt ", deadcode.length);
+};
+BUILDDEVCORE();
