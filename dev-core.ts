@@ -345,13 +345,13 @@ const ATTRS = {
       mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
   },
   args:{
-      name:        "String() > 0",           // the attribute name
-      description: undefined,
-      types:       [],
-      validate:    function(v){return v},     // verification
+      name:        "args",           // the attribute name
+      description: "input arguments",
+      types:       ["array"],
+      validate:    ["NOTEMPTY"],
       block:       function(v){return v},     // generate value
       default:     undefined,                 // generate value is not present      
-      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      sqlite:      "ARRAY",                 // DB EQUIVALENT DATA TYPE
       mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
       oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
       mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
@@ -369,13 +369,13 @@ const ATTRS = {
       mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
   },
   array:{
-      name:        "String() > 0",           // the attribute name
-      description: undefined,
-      types:       [],
+      name:        "årray",           // the attribute name
+      description: "listed data",
+      types:       ["array"],
       validate:    function(v){return v},     // verification
       block:       function(v){return v},     // generate value
       default:     undefined,                 // generate value is not present      
-      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      sqlite:      "ARRAY",                 // DB EQUIVALENT DATA TYPE
       mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
       oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
       mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
@@ -393,10 +393,10 @@ const ATTRS = {
       mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
   },
   cb:{
-      name:        "String() > 0",           // the attribute name
+      name:        "cb",           // the attribute name
       description: "A populated callback",
       types:       ["function"],
-      validate:    function(v){return NOTEMPTY(v)},     // verification
+      validate:    ["NOTEMPTY"],     // verification
       block:       function(v){return v},     // generate value
       default:     undefined,                 // generate value is not present      
       sqlite:      "TEXT",                 // DB EQUIVALENT DATA TYPE
@@ -525,13 +525,13 @@ const ATTRS = {
       mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
   },
   fn:{
-      name:        "String() > 0",           // the attribute name
-      description: undefined,
-      types:       [],
-      validate:    function(v){return v},     // verification
+      name:        "fn",           // the attribute name
+      description: "a thisable function, not lambdas",
+      types:       ["function"],
+      validate:    ["NOTEMPTY"],     // verification
       block:       function(v){return v},     // generate value
       default:     undefined,                 // generate value is not present      
-      sqlite:      undefined,                 // DB EQUIVALENT DATA TYPE
+      sqlite:      "TEXT",                 // DB EQUIVALENT DATA TYPE
       mysql:       undefined,                 // DB EQUIVALENT DATA TYPE
       oracle:      undefined,                 // DB EQUIVALENT DATA TYPE
       mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
@@ -1385,55 +1385,125 @@ export const SANDBOX = (function SANDBOX() {
 export const S = SANDBOX;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// ops . operators
-const MOV = function(){};
-const R00 = function(){};
-const R01 = function(){};
-const R02 = function(){};
-const R03 = function(){};
-const R04 = function(){};
-const R05 = function(){};
-const R06 = function(){};
-const R07 = function(){};
-const R08 = function(){};
-const R09 = function(){};
-const R10 = function(){};
-const R11 = function(){};
-const R12 = function(){};
-const R13 = function(){};
-const R14 = function(){};
-const R15 = function(){};
-const REX = function(){};
+export const RS = { // registers for registers
+  "00": 0,
+  "01": 0,
+  "02": 0,
+  "03": 0,
+  "04": 0,
+  "05": 0,
+  "06": 0,
+  "07": 0,
+  "08": 0,
+  "09": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "14": 0,
+  "15": 0
+};
+export const MEM = { // RAM for registers
 
-const AND = function(){};
-const XOR = function(){};
-const OOR = function(){};
+};
+export const MOV = function(m,a,c){m = a};
+export const R00 = function(a){RS["00"]=a};
+export const R01 = function(a){RS["01"]=a};
+export const R02 = function(a){RS["02"]=a};
+export const R03 = function(a){RS["03"]=a};
+export const R04 = function(a){RS["04"]=a};
+export const R05 = function(a){RS["05"]=a};
+export const R06 = function(a){RS["06"]=a};
+export const R07 = function(a){RS["07"]=a};
+export const R08 = function(a){RS["08"]=a};
+export const R09 = function(a){RS["09"]=a};
+export const R10 = function(a){RS["10"]=a};
+export const R11 = function(a){RS["11"]=a};
+export const R12 = function(a){RS["12"]=a};
+export const R13 = function(a){RS["13"]=a};
+export const R14 = function(a){RS["14"]=a};
+export const R15 = function(a){RS["15"]=a};
+// export const REX = function(a){RS["2"]=a};
 
-const NOT = function(){};
-const NAD = function(){};
-const ORO = function(){};
+export const AND = function(m,a,b){m = a & b};
+export const XOR = function(m,a,b){m = a ^ b};
+export const OOR = function(m,a,b){m = a | b};
 
-const FLI = function(){}; // ~
+export const NOT = function(m,a)  {m = !a};
+export const NAD = function(m,a,b){m = a && b};
+export const ORO = function(m,a,b){m = a || b};
 
-const ADD = function(){};
-const SUB = function(){};
-const MUL = function(){};
-const DIV = function(){};
+export const FLI = function(m,a)  {m = ~a}; // ~
 
-const POW = function(){};
-const LOG = function(){};
+export const ADD = function(m,a,b){m = a + b};
+export const SUB = function(m,a,b){m = a - b};
+export const MUL = function(m,a,b){m = a * b};
+export const DIV = function(m,a,b){m = a / b};
 
-const MOD = function(){};
+export const POW = function(m,a,b){m = a ** b};
+// export const LOG = function(m,a,b){m = };
 
-const GTE = function(){};
-const GTT = function(){};
-const LTT = function(){};
-const LTE = function(){};
+export const MOD = function(m,a,b){m = a % b};
 
-const EEQ = function(){};
-const NEQ = function(){};
+export const GTE = function(m,a,b){m = a >= b};
+export const GTT = function(m,a,b){m = a > b};
+export const LTT = function(m,a,b){m = a < b};
+export const LTE = function(m,a,b){m = a <= b};
 
-const SHU = function(){};
-const SHD = function(){};
+export const EEQ = function(m,a,b){m = a === b};
+export const NEQ = function(m,a,b){m = a !== b};
+
+export const SHU = function(m,a,b){};
+export const SHD = function(m,a,b){};
+
+export const ADC = function(m,a,b,c){m = a + b + c};
+export const B   = function(){};
+export const BIC = function(){};
+export const BL  = function(){};
+export const BX  = function(){};
+export const CDP = function(){};
+export const CMN = function(){};
+export const CMP = function(){};
+export const EOR = function(){};
+export const LDC = function(){};
+export const LDM = function(){};
+export const LDR = function(){};
+export const MCR = function(){};
+export const MLA = function(){};
+export const MRC = function(){};
+export const MRS = function(){};
+export const MSR = function(){};
+export const MVN = function(){};
+export const ORR = function(){};
+export const RSB = function(){};
+export const RSC = function(){};
+export const SBC = function(){};
+export const STC = function(){};
+export const STM = function(){};
+export const STR = function(){};
+export const SWI = function(){};
+export const SWP = function(){};
+export const TEQ = function(){};
+export const TST = function(){};
+
+// 0000 EQ Z set equal
+// 0001 NE Z clear not equal
+// 0010 CS C set unsigned higher or same
+// 0011 CC C clear unsigned lower
+// 0100 MI N set negative
+// 0101 PL N clear positive or zero
+// 0110 VS V set overflow
+// 0111 VC V clear no overflow
+// 1000 HI C set and Z clear unsigned higher
+// 1001 LS C clear or Z set unsigned lower or same
+// 1010 GE N equals V greater or equal
+// 1011 LT N not equal to V less than
+// 1100 GT Z clear AND (N equals V) greater than
+// 1101 LE Z set OR (N not equal to V) less than or equal
+// 1110 AL (ignored) always
+
+
+
 
 // RAW STATEMENTS
 export const UNHANDLED= function(){return THROWE("UNHANDLED EXCEPTION");}
@@ -1447,11 +1517,14 @@ export const IFZ      = function(){
   }
 };
 
-const SWITCH = function(){};
-const CASE = function(){};
-const TRY = function(){};
-const TRYCATCH = function(){};
-const TRYCATCHFINALLY = function(){};
+export const SWITCH = function(){};
+export const CASE = function(){};
+export const TRY = function(){};
+export const TRYCATCH = function(){};
+export const TRYCATCHFINALLY = function(){};
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
