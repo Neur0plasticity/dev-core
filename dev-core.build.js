@@ -60,7 +60,7 @@ console.log(d);
 for (let k in d) {
     if (typeof d[k] === "function") {
         // console.log(`const ${k} = ${d[k]};`);
-        deadcode = d.FINDDEADCODE(d[k]);
+        deadcode.push(d.FINDDEADCODE(d[k]));
         body.push(`const ${k} = ${d[k]}`);
     } else if (Array.isArray(d[k])) {
         // console.log(`const ${k} = "${d[k].join(",")}".split(",");`)
@@ -70,15 +70,7 @@ for (let k in d) {
 console.log("devcore props above");
 console.log("devocore imported");
 console.log("devcore props len = "+Object.keys(d).length);
-console.log(`
-    parse through the library and auto create 3letter alias
 
-    26**3 = 17576 3letter namespaces
-
-`);
-console.log(`
-    errors need debuggable timestamps
-`);
 console.log(`
     collect all attrs from property functions
 `);
@@ -91,7 +83,11 @@ for (let k in d) {
         console.log(e);
     });
 }
-console.log("fake native code");
+// console.log("fake native code");
+// for (let k in d) {
+//     let ps = [];
+//     ps = typeof d[k] === "function" && d.FAKENATIVECODE(d[k]);
+// }
 console.log(`
     find dead code
     * returns nothing
@@ -103,27 +99,9 @@ let dt = d.FINDDEADCODE(d);
 d.ISNOTEMPTY(dt.throws)     && errors.push(dt.throws);
 d.ISNOTEMPTY(dt.deadcode)   && errors.push(dt.deadcode);
 
-// console.log(`
-//     collect all attrs from property functions
-// `);
-console.log(`
-    once attrs collected fill out information to create a loose and strict version.
-`)
-console.log(`
-    once strict loose version completed, organizeby input/output
-`);
+
 console.log(`
     once organizeby input/output, wrap props with funC
-`);
-console.log(`
-    once completed,
-    brute force test all softwares IO's, create an IO mapper
-`);
-console.log(`
-    once completed, specdev can operate.
-`);
-console.log(`
-    once completed, create a python version
 `);
 
 console.log(`

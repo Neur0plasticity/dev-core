@@ -1149,6 +1149,158 @@ const ATTRS = {
       mongodb:     undefined,                 // DB EQUIVALENT DATA TYPE
   }
 };
+
+// let x = `args
+// type
+// listener
+// req
+// res
+// callback
+// fn
+// path
+// ext
+// fn
+// name
+// setting
+// val
+// arg0
+// options
+// _args
+// args
+// fns
+// inputArguments
+// _props
+// a
+// a0
+// a1
+// a2
+// a3
+// aFunc
+// actionCreators
+// args
+// args = []
+// arity
+// array
+// assertion
+// assertionName
+// b
+// c
+// chainingBehavior
+// collection
+// colors
+// conditions
+// converter
+// ctor
+// ctx
+// defaultArgument
+// defaultValue
+// defaultValues
+// depth
+// dispatch
+// el
+// end
+// enhancer
+// errMatcher
+// errmsg
+// errorLike
+// express
+// f
+// fn
+// fnOrPath
+// from
+// g
+// getter
+// hasher
+// i
+// idx
+// includeAll
+// input
+// isChainable
+// key
+// keyPath
+// keys
+// lambda
+// left
+// leftHandOperand
+// lens
+// list
+// list1
+// list2
+// listOrString
+// lockSsfi
+// m
+// maybeAssociative
+// maybeCollection
+// maybeImmutable
+// maybeIndexed
+// maybeKeyed
+// maybeList
+// maybeMap
+// maybeOrdered
+// maybeOrderedMap
+// maybeOrderedSet
+// maybeRecord
+// maybeSeq
+// maybeSet
+// maybeStack
+// maybeValue
+// merger
+// message
+// method
+// msg
+// n
+// n => n +
+// n => n -
+// name
+// nonChainableMethodName
+// notSetValue
+// o
+// obj
+// object
+// offset
+// options
+// p
+// params
+// path
+// pathsInput
+// pattern
+// predicate
+// predicates
+// prefix
+// preloadedState
+// prop
+// props
+// reducer
+// reducers
+// replacer
+// right
+// rightHandOperand
+// searchKeyPath
+// separator
+// setter
+// showHidden
+// spec
+// ssf
+// ssfi
+// start
+// step
+// str
+// suffix
+// target
+// thrown
+// times
+// to
+// transformers
+// types
+// updater
+// v
+// val
+// value
+// valueA
+// valueB
+// values
+// wrapper
+// x`.spilt("\n");
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1406,30 +1558,30 @@ export const RS = { // registers for registers
 export const MEM = { // RAM for registers
 
 };
-export const MOV = function(m,a,c){m = a};
-export const R00 = function(a){RS["00"]=a};
-export const R01 = function(a){RS["01"]=a};
-export const R02 = function(a){RS["02"]=a};
-export const R03 = function(a){RS["03"]=a};
-export const R04 = function(a){RS["04"]=a};
-export const R05 = function(a){RS["05"]=a};
-export const R06 = function(a){RS["06"]=a};
-export const R07 = function(a){RS["07"]=a};
-export const R08 = function(a){RS["08"]=a};
-export const R09 = function(a){RS["09"]=a};
-export const R10 = function(a){RS["10"]=a};
-export const R11 = function(a){RS["11"]=a};
-export const R12 = function(a){RS["12"]=a};
-export const R13 = function(a){RS["13"]=a};
-export const R14 = function(a){RS["14"]=a};
-export const R15 = function(a){RS["15"]=a};
-// export const REX = function(a){RS["2"]=a};
+export const  MOV = function(m,a,c){m = a};
+export const  M00 = function(a){return RS["00"]=a};
+export const  M01 = function(a){return RS["01"]=a};
+export const  M02 = function(a){return RS["02"]=a};
+export const  M03 = function(a){return RS["03"]=a};
+export const  M04 = function(a){return RS["04"]=a};
+export const  M05 = function(a){return RS["05"]=a};
+export const  M06 = function(a){return RS["06"]=a};
+export const  M07 = function(a){return RS["07"]=a};
+export const  M08 = function(a){return RS["08"]=a};
+export const  M09 = function(a){return RS["09"]=a};
+export const  M10 = function(a){return RS["10"]=a};
+export const  M11 = function(a){return RS["11"]=a};
+export const  M12 = function(a){return RS["12"]=a};
+export const  M13 = function(a){return RS["13"]=a};
+export const  M14 = function(a){return RS["14"]=a};
+export const  M15 = function(a){return RS["15"]=a};
+// export const REX = function(a){return RS["2"]=a};
 
 export const AND = function(m,a,b){m = a & b};
 export const XOR = function(m,a,b){m = a ^ b};
 export const OOR = function(m,a,b){m = a | b};
 
-export const NOT = function(m,a)  {m = !a};
+export const NOT = function(m,a)  {m = S._Number(!a)};
 export const NAD = function(m,a,b){m = a && b};
 export const ORO = function(m,a,b){m = a || b};
 
@@ -1507,9 +1659,9 @@ export const TST = function(){};
 
 // RAW STATEMENTS
 export const UNHANDLED= function(){return THROWE("UNHANDLED EXCEPTION");}
-export const IF0      = function(){if(c0) return cb0()};
-export const IF1      = function(){if(c0) return cb0(); else return cb1();};
-export const IF2      = function(){if(c0) return cb0(); else if (c1) return cb1(); else return cb2();};
+export const IF0      = function(c0,cb0)           {if(c0()) return cb0()};
+export const IF1      = function(c0,cb0,cb1)       {if(c0()) return cb0(); else return cb1();};
+export const IF2      = function(c0,cb0,c1,cb1,cb2){if(c0()) return cb0(); else if (c1) return cb1(); else return cb2();};
 export const IFZ      = function(){
   if (c0) return cb0();
   else {
@@ -1517,17 +1669,62 @@ export const IFZ      = function(){
   }
 };
 
-export const SWITCH = function(){};
-export const CASE = function(){};
-export const TRY = function(){};
-export const TRYCATCH = function(){};
-export const TRYCATCHFINALLY = function(){};
+export const SWITCH = class FluentSwitch {
+  constructor (object) {
+    this.object = object
+    this.actions = []
+    this.fallback = null
+  }
 
+  static createFrom (object) {
+    return new FluentSwitch(object)
+  }
 
+  case (conditionFn, actionFn) {
+    this.actions.push([conditionFn, actionFn])
+    return this
+  }
 
+  else (actionFn) {
+    this.fallback = actionFn
+    return this
+  }
 
+  execute () {
+    for (const item of this.actions) {
+      const [conditionFn, actionFn] = item
+      if (conditionFn(this.object)) return actionFn(this.object)
+    }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    return this.fallback
+      ? this.fallback(this.object)
+      : undefined
+  }
+}
+
+export const TRY = function(tryCB){
+  try {
+    tryCB();
+  } catch (e) {}
+};
+
+export const TRYCATCH = function(tryCB,catchCB){
+  try {
+    tryCB();
+  } catch(e) {
+    catchCB(e);
+  }
+};
+export const TRYCATCHFINALLY = function(tryCB,catchCB,finallyCB){
+  try {
+    tryCB();
+  } catch(e) {
+    catchCB(e);
+  } finally {
+    finallyCB();
+  }
+};
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // lambdas                // returns true or false or value. no validations. barebones
 // GROUPED LAMBDAS        // OOP STYLE
 // FUNC WRAPPED LAMBDAS   // SPECIAL INPUT / OUTPUT BEHAVIOR
@@ -1555,17 +1752,18 @@ export const ISSYMBOL      =   (v) => typeof v === "symbol";
 export const ISNOTSYMBOL   =   (v) => !ISSYMBOL(v);
 export const ISFUNCTION    =   (v) => typeof v === "function";
 export const ISNOTFUNCTION =   (v) => !ISFUNCTION(v);
-export const ISTHIS        =   (v) => v.toString().includes("function ");
+export const ISTHIS        =   (v) => v.toString().includes("function");
 export const ISNOTTHIS     =   (v) => !ISTHIS(v);
 export const ISLAMBDA      =   (v) => ISFUNCTION(v) && v.toString().includes("=>");
 export const ISNOTLAMBDA   =   (v) => !ISLAMBDA(v);
-export const ISANONYMOUS   =   (v) => ISFUNCTION(v) && !ISLAMBDA(v) && v["name"] === undefined;
+export const ISANONYMOUS   =   (v) => ISFUNCTION(v) && !v.hasOwnProperty("name");
 export const ISNOTANONYMOUS=   (v) => !ISANONYMOUS(v);
 export const ISFUNC        =   (v) => ISFUNCTION(v) && !ISLAMBDA(v) && v.hasOwnProperty("name");
 export const ISNOTFUNC     =   (v) => !ISFUNC(v);
-export const ISCLASS       =   (v) => {throw new Error("UNFINISHED")};
+export const ISCLASS       =   (v) => v.includes("class");
 export const ISNOTCLASS    =   (v) => !ISCLASS(v);
 export const ISNEWABLE     =   (v) => {throw new Error("UNFINISHED")};
+export const ISNOTNEWABLE  =   (v) => !ISNOTNEWABLE(v);
 export const ISUNDEFINED   =   (v) => v === undefined;
 export const ISNOTUNDEFINED=   (v) => !ISUNDEFINED(v);
 export const ISNULL        =   (v) => v === "null";
@@ -1638,13 +1836,34 @@ export const GETPARAMS     = function(func){
     let s = func.toString().trimLeft();
     let start = s.indexOf("(");
     let end   = s.indexOf(")");
-    return func.toString().slice(start+1,end).split(",") || [];
+    return func.toString().slice(start+1,end).split(",").map(e=>{return e.trim()}) || [];
 };
-export const GETCOMMENTS   = function(func){};
-//   > Object.assign(["a"],{"":"","a":"b"})
-// [ 'a', '': '', a: 'b' ]
-// > let a = Object.assign(["a"],{"":"","a":"b"})
-// new Set(["a"]) is typw object
+export const GETALLPARAMS  = function(obj,params){
+  for (let k in obj) {
+    typeof obj[k] === "function" && GETPARAMS(obj[k]).forEach(e=>{ !params.includes(e) && params.push(e) })
+    typeof obj[k] === "object" && GETALLPARAMS(obj[k],params); 
+  }
+  return params;
+};
+export const GETCOMMENTS   = (function(RGX_COMMENT, RGX_TRIM) {
+      return function (fn, opt_trim) {
+        var comments = [];
+        (fn + '').replace(RGX_COMMENT, function(m, a, b, c) {
+            if (!c) {
+                m = a == undefined ? b : a;
+                comments.push(opt_trim ? m.replace(RGX_TRIM, '') : m);
+            }
+        });
+        return comments;
+    };
+})(/\/\*([\s\S]*?)\*\/|(?:<\!--|\/\/)([^\r\n]*)|(["'])(?:[^\\\3]+|\\[\s\S])+\3/g, /^[\s\xA0]+|[\s\xA0]+$/g);
+export const GETALLCOMMENTS = function(obj,comments) {
+  for (let k in obj) {
+    typeof obj[k] === "function" && GETCOMMENTS(obj[k]).forEach(e=>{ !comments.includes(e) && comments.push(e) })
+    typeof obj[k] === "object" && GETALLCOMMENTS(obj[k],comments); 
+  }
+  return comments;
+};
 export const GETINPUTTYPE  = function(func){
   // uses the attributes information
   let ps = GETPARAMS(func);
@@ -1684,7 +1903,6 @@ export const HASPROPERTY         = (obj,prop) => THROWE("must have prop "+prop, 
 
 export const ISDIVISIBLE    = function(n,d){return n % d === 0};
 export const ISEVEN         = function(){};
-export const ISEVENINTEGER  = function(v){return (v & 1)^1};
 export const ISEVENINTEGER  = function(v){return (v & 1)^1};
 export const ISEVENFLOAT    = function(){};
 
@@ -4349,7 +4567,8 @@ export const UND,UNDEFINED = function(){return Undefined(...arguments)};
 
 
 export const FAKENATIVECODE = function(func) {
-  func.toString = `function ${func.name}(){ [native code] }`
+  func.toString = function() {return `function ${func.name}(){ [native code] }` }
+  func.toString.toString = function(){ return `function toString(str){ [native code] }` }
 };
 
 
@@ -5531,6 +5750,12 @@ export const FINDDEADCODE = function(obj){ // lazy version
   // if (throws.length !== 0)    console.log("throws",throws);
   // if (deadcode.length !== 0)  console.log("deadcode",deadcode);
   return {throws,deadcode};
+};
+export const VALUEASSESMENT = function(){
+  /**
+   * inject input into all functions in the codebase
+   * returns the outputs
+   */
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
