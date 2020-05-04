@@ -1760,16 +1760,14 @@ export const ISANONYMOUS   =   (v) => ISFUNCTION(v) && !v.hasOwnProperty("name")
 export const ISNOTANONYMOUS=   (v) => !ISANONYMOUS(v);
 export const ISFUNC        =   (v) => ISFUNCTION(v) && !ISLAMBDA(v) && v.hasOwnProperty("name");
 export const ISNOTFUNC     =   (v) => !ISFUNC(v);
-export const ISCLASS       =   (v) => v.includes("class");
+export const ISCLASS       =   (v) => v.toString().includes("class");
 export const ISNOTCLASS    =   (v) => !ISCLASS(v);
-export const ISNEWABLE     =   (v) => {throw new Error("UNFINISHED")};
+export const ISNEWABLE     =   (v) => ISCLASS(v) || ISFUNC(v); 
 export const ISNOTNEWABLE  =   (v) => !ISNOTNEWABLE(v);
 export const ISUNDEFINED   =   (v) => v === undefined;
 export const ISNOTUNDEFINED=   (v) => !ISUNDEFINED(v);
-export const ISNULL        =   (v) => v === "null";
+export const ISNULL        =   (v) => v === null;
 export const ISNOTNULL     =   (v) => !ISNULL(v);
-
-
 
 
 export const ISSAFE        =   (v) => S._Number.isSafeInteger(v);
@@ -2257,7 +2255,7 @@ XWRAP.prototype['@@transducer/step'] = function(acc, x) {
 };
 export const _XWRAP = function(fn) { return new XWRAP(fn); }
 export const _REDUCE = function(fn, acc, list) {
-if (typeof fn === 'function') {
+    if (typeof fn === 'function') {
       fn = _XWRAP(fn);
     }
     if (_ISARRAYLIKE(list)) {
@@ -5864,13 +5862,19 @@ export const MEMASSIGN = function(){
 
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////
-export const LOOP = {};
-export const LOOP_FOR                = function(){}; // for loop
-export const LOOP_FOREVER            = function(){}; // no explanation rqd
-export const LOOP_WHILE              = function(){}; // while loop
+export const LOOP = class Loop {
+  constructor(){}
+}
+export const LOOP_FOR                = function(i,lim,step,cb0,cb1){for (let i = i; lim(i); step(i)) cb0(); cb1();};
+export const LOOP_FOREVER            = function(cb){for (let i = 1; i; i) cb(i);}; // no explanation rqd
+export const LOOP_WHILE              = function(i,lim,cb){while (lim(i)) cb(i);}; // while loop
 export const LOOP_BREAK              = function(){}; // stops loop
 export const LOOP_CONTINUE           = function(){}; // skips loop iteration
-export const LOOP_EACH               = function(){}; // forEach iteration
+export const LOOP_EACH               = function(cb){
+  for (let k in obj) {
+    cb(obj[k],k,obj);
+  }
+}; // forEach iteration
 export const LOOP_DEEP               = function(){}; // loops everything loopable
 export const LOOP_DEEPRECURSION      = function(){}; // stacks all recursions into one list
 export const LOOP_CYCLE              = function(){}; // loop in circles
@@ -5887,15 +5891,7 @@ export const LOOP_MERGE              = function(){}; //
 export const LOOP_SKIP               = function(){}; // iterator fluxor
     // vs
 export const LOOP_PINGPONG           = function(v,cbs){  }; // next exe memory swaping // instead of conditionals drags
-// export const ENTER = (v) => (typeof v=== "string"||typeof v==="object"||Array.isArray(v));
-// export const filter = function(v,hit,miss,conditions){
-//     if      (conditions(e)) return hit.push(v);
-//     else                    return miss.push(v);
-// };
-// export const checklist = (v) => {for (let i=0;i^v.length;i++){ if (v[i] !== true) return false; }return true;}
-// export const interval = (ms,cb)=>(setInterval(cb,ms));
-// export const forever = function(cb){while (true) {cb();}};
-// export const cycle = function() {};
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 const funCLite:func0Loader = (function(){
   const pS = {};
@@ -6373,6 +6369,353 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 
 
 // })();
+
+/////
+/// BEHAVIORAL PATTERNS
+/////
+
+// export class ChainOfResponsibility {  // not finished
+// 	constructor() {
+// 		this.next = null;
+// 	}
+
+// 	appendNext(next) {
+// 		this.next = next;
+// 	}
+
+// 	executeOn() {}
+
+// 	execute(previousValues) {
+// 		const val = this.executeOn(previousValues);
+// 		if (!this.next) return val;
+// 		return this.next.execute(val);
+// 	}
+// };
+export class Commander {
+	commands = new Map();
+	scopes = new WeakMap();
+	register = (command, executeFunc, scope) => {
+		if (!this.commands.has(command)) {
+			this.commands.set(command, new Set());
+		}
+		this.commands.get(command).add(executeFunc);
+		const appliedScope = scope || this;
+		this.scopes.set(executeFunc, appliedScope);
+	};
+	execute = (command, ...args) => {
+		if (!this.commands.has(command)) throw new Error(`The command '${command}' you are trying to execute doesnt exist`);
+		const funcs = this.commands.get(command);
+		funcs.forEach(func => func.apply(this.scopes.get(func), args));
+	};
+}
+
+export class Momento {
+	save(obj) {
+		if (!this._compare) {
+			this._compare = compareInstances(obj);
+		}
+		const same = this._compare(obj);
+		if (!same) throw new Error('This momento does not belong to this instance.');
+		else if (!this._getState) this._getState = same;
+		if (!Object.isFrozen(this)) Object.freeze(this);
+	}
+
+	recover(obj) {
+		if (!this._compare) throw new Error('This momento has not been saved');
+		if (!this._compare(obj, false)) throw new Error('This momento does not belong to this instance');
+		const state = this._getState();
+		const propertyNames = getProperties(obj);
+		propertyNames.forEach(propertyName => {
+			if (state[propertyName] === undefined) delete obj[propertyName];
+			obj[propertyName] = state[propertyName];
+		});
+		Object.keys(state).forEach(key => {
+			if (obj[key]) return;
+			obj[key] = state[key];
+		});
+	}
+}
+const getProperties = (instance, propertyNames = []) => {
+	const names = Object.getOwnPropertyNames(instance).filter(name => typeof instance[name] !== 'function');
+	if (instance.__proto__.constructor.name === 'Object') return [...propertyNames, ...names];
+	return getProperties(instance.__proto__, [...propertyNames, ...names]);
+};
+const compareInstances = instance => {
+	let state = {};
+	return (compareTo, update = true) => {
+		const same = instance === compareTo;
+		if (same && update) {
+			const propertyNames = getProperties(instance);
+			state = propertyNames.reduce((state, name) => {
+				return {
+					...state,
+					[name]: instance[name],
+				};
+			}, state);
+		}
+		if (same) return () => ({ ...state });
+	};
+};
+export class Publisher {
+	constructor(name, ...channels) {
+		this.name = name;
+		this.channels = channels;
+	}
+	publish       = (channel, data) => this.pubsub.publish      (this, channel, data);
+	createChannel = channel         => this.pubsub.createChannel(this, channel);
+}
+export class Subscriber {
+	constructor(name, subscriptions) {
+		this.name = name;
+		this.subscriptions = subscriptions;
+		this.onPublish = () => {};
+	}
+	subscribe = (publisher, channel) => {
+		this.pubsub.subscribe(this, publisher, channel);
+	};
+	unsubscribe = (publisher, channel) => {
+		this.pubsub.unsubscribe(this, publisher, channel);
+	};
+	setOnPublish = func => {
+		this.onPublish = func;
+	};
+}
+
+const pubSubFactory = new Factory();
+pubSubFactory.setEnums(['PUBLISHER', 'SUBSCRIBER']);
+pubSubFactory.setLine('PUBLISHER', Publisher);
+pubSubFactory.setLine('SUBSCRIBER', Subscriber);
+
+export default class PubSub {
+	publishers = new Map();
+
+	subscribe = (subscriber, publisher, channel) => {
+		if (!this.publishers.has(publisher)) throw new Error('The publisher provided does not have any channels published.');
+		if (!this.publishers.get(publisher).has(channel)) throw new Error(`The publisher provided has not created the channel ${channel}.`);
+		this.publishers
+			.get(publisher)
+			.get(channel)
+			.add(subscriber);
+	};
+
+	unsubscribe = (subscriber, publisher, channel) => {
+		if (!this.publishers.has(publisher)) throw new Error('The publisher provided does not have any channels published.');
+		if (!this.publishers.get(publisher).has(channel)) throw new Error(`The publisher provided has not created the channel ${channel}.`);
+		this.publishers
+			.get(publisher)
+			.get(channel)
+			.delete(subscriber);
+	};
+
+	publish = (publisher, channel, data) => {
+		if (!this.publishers.has(publisher)) throw new Error('The publisher provided does not have any channels published.');
+		if (!this.publishers.get(publisher).has(channel)) throw new Error(`The publisher provided has not created the channel ${channel}.`);
+		this.publishers
+			.get(publisher)
+			.get(channel)
+			.forEach(subscriber => subscriber.onPublish(publisher.name, channel, data));
+	};
+
+	createChannel = (publisher, channel) => {
+		if (!this.publishers.has(publisher)) this.publishers.set(publisher, new Map([[channel, new Set()]]));
+		else this.publishers.get(publisher).set(channel, new Set());
+	};
+
+	getPublisher = (name, ...channels) => get(this, 'PUBLISHER', [name, ...channels]);
+
+	getSubscriber = (name, subscriptions = {}) => get(this, 'SUBSCRIBER', [name, subscriptions]);
+}
+
+const get = (pubsub, enumName, args = []) => {
+	if (enumName === 'PUBLISHER') {
+		const [name, ...channels] = args;
+		let publisher = [...pubsub.publishers.keys()].find(publisher => publisher.name === name);
+		if (publisher) return publisher;
+		publisher = pubSubFactory.get(enumName, ...args);
+		publisher.pubsub = pubsub;
+		publisher.channels.forEach(channel => pubsub.createChannel(publisher, channel));
+		return publisher;
+	} else if (enumName === 'SUBSCRIBER') {
+		const subscriber = pubSubFactory.get(enumName, ...args);
+		subscriber.pubsub = pubsub;
+		const subscriptionTransactions = new Map();
+		Object.keys(subscriber.subscriptions).forEach(name => {
+			const publisher = [...pubsub.publishers.keys()].find(publisher => publisher.name === name);
+			try {
+				subscriber.subscriptions[name].forEach(channel => {
+					pubsub.subscribe(subscriber, publisher, channel);
+					if (!subscriptionTransactions.has(publisher)) subscriptionTransactions.set(publisher, new Set());
+					subscriptionTransactions.get(publisher).add(channel);
+				});
+			} catch (e) {
+				[...subscriptionTransactions.keys()].forEach(publisher => {
+					subscriptionTransactions.get(publisher).forEach(channel => {
+						pubsub.unsubscribe(subscriber, publisher, channel);
+					});
+				});
+				throw e;
+			}
+		});
+		return subscriber;
+	}
+};
+
+//////////////////////////////////////////////
+class Builder {
+	constructor(className) {
+    this._className = className;
+    
+    const instance = new className();  // ??? Why is className a class?
+
+		this._setterMethods = getMethods(instance);
+		this._classProps = this._setterMethods.map(name => name.substr(3).toLowerCase());
+		this._classProps.forEach(prop => {
+			Object.defineProperty(this, prop, {
+				set: function(val) {
+					this[`_${prop}`] = val;
+				},
+			});
+		});
+	}
+
+	build() {
+		const instance = new this._className();
+		this._setterMethods.forEach((funcName, key) => {
+			const prop = this._classProps[key];
+			const val = this[`_${prop}`];
+			instance[funcName](val);
+		});
+		return instance;
+	}
+}
+
+const getMethods = obj => {
+	let properties = new Set();
+	let currentObj = obj;
+	do {
+		Object.getOwnPropertyNames(currentObj).map(item => properties.add(item));
+	} while ((currentObj = Object.getPrototypeOf(currentObj)));
+	return [...properties.keys()].filter(item => typeof obj[item] === 'function').filter(func => /^set[A-Z][a-zA-Z0-9]*$/.test(func));
+};
+
+
+
+export const Curry = (fn = () => {}, ...args) => {
+	let curriedArgs = [...args];
+	const curry = (...nextArgs) => {
+		if (!nextArgs.length) return fn(...curriedArgs);
+		curriedArgs = [...curriedArgs, ...nextArgs];
+		return curry;
+	};
+	return curry;
+};
+
+export class Factory {
+	constructor() {
+		this.mappings = new Map();
+		this.names = [];
+	}
+
+	setEnums = (enumNames = []) => {
+		this.names = [...enumNames];
+	};
+
+	setLine = (enumName, className) => {
+		if (!this.names.includes(enumName)) throw new Error(`${enumName} is not well defined in the list provided: ${this.names.join(', ')}`);
+		this.mappings.set(enumName, className);
+	};
+
+	get = (enumName, ...args) => {
+		if (!this.names.includes(enumName)) throw new Error(`${enumName} is not well defined in the list provided: ${this.names.join(', ')}`);
+		if (!this.mappings.has(enumName)) throw new Error(`${enumName} isnt mapped to a class`);
+		const className = this.mappings.get(enumName);
+		let instance;
+		try {
+			instance = new className(...args);
+		} catch (e) {
+			throw new Error(`${className} doesnt appear to be a class`);
+		}
+		return instance;
+	};
+}
+
+export const Lazy = (klass = {}) => {
+	const functions = helper(klass.prototype);
+	let instance;
+	const getInstance = () => instance;
+	return functions.reduce(
+		(obj, next) => {
+			return {
+				...obj,
+
+				[next]: function() {
+					if (!instance) {
+						try {
+							instance = new klass();
+						} catch (e) {
+							throw new Error('The passed "class" is not a class');
+						}
+					}
+					return getInstance()[next](...arguments);
+				},
+			};
+		},
+		{
+			getInstance,
+		}
+	);
+};
+
+const helper = (prototype, methods = []) => {
+	if (prototype.constructor.name === 'Object') return methods;
+	const properties = Object.getOwnPropertyNames(prototype).filter(name => name !== 'constructor');
+	const functions = properties.filter(prop => typeof prototype[prop] === 'function');
+	const nextMethods = [...methods, ...functions];
+	return helper(prototype.__proto__, nextMethods);
+};
+
+////////////////////
+
+export const Bridge = (keyScope, keyFunc) => (toScope, toFunc) => (...args) => toFunc.apply(toScope, [keyFunc.apply(keyScope, args)]);
+
+
+export const GOF4CREATIONAL = CAPSULE(function(){
+
+},{
+  Builder,
+  Curry,
+  Factory,
+  Lazy
+});
+export const GOF4BEHAVIORAL = CAPSULE(function(){
+
+},{
+  // ChainOfResponsibility,
+  Commander,
+  Momento,
+  Publisher,
+  Subscriber,
+  PubSub
+});
+export const GOF4STRUCTURAL = CAPSULE(function(){
+
+},{
+  Bridge
+});
+
+export const GOF4 = CAPSULE(function(){
+  /*Gang of Four Patterns*/
+
+},{
+  CREATIONAL: GOF4CREATIONAL,
+  BEHAVIORAL: GOF4BEHAVIORAL,
+  STRUCTURAL: GOF4STRUCTURAL
+});
+
+
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -6599,7 +6942,34 @@ export const PROXY         = function(){};
 export const CLUSTER       = function(){};
 export const DHCA          = function(){};
 export const SOCKET        = function(){};
-export const AUTOTEMPLATER = function(){};
+export const AUTOTEMPLATER = function(){
+  /** 
+   * AUTOTEMPLATER templates any json packet to the ui in pretty format
+  */
+  const CONCEPTS = {
+    "center is default":  {
+      DESCRIPTION: `the alignment of elements by default is always center`,
+      F: "CENTERISDEFAULT"
+      /**
+       * property align: left, center, right
+       */
+    },
+    "uniformity":         {
+      DESCRIPTION: `everything must align together`
+    },
+    "lang l or r":        {
+      DESCRIPTION: `language preferences left to right or vice versa`
+    },
+    "realestate":{
+
+    }
+  };
+
+  const INTERFACE_JSONINPUT = ({
+
+  });
+
+};
 export const SMARTCSS      = function(){};
 export const TAPJS         = function(){};
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -6674,7 +7044,16 @@ export const LEARNDEVCORE = function(){
   `); 
   throw new Error("UNFINISHED");
 };
-
+export const DEVCORESITE = function(){
+  let nav = [];
+  let window = [];
+  let footer = [];
+};
+export const DEVCOREDEVELOPMENT = function(){
+  // loads ui
+  // ui createFunction  // backed by site search
+  // ui createAttr      // backed by attr search
+};
 
 
 

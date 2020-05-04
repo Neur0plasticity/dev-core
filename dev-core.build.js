@@ -153,3 +153,4 @@ console.log("attrs len = ",attrs.length);
 console.log("deadcode above deadcode cnt ", deadcode.length);
 };
 BUILDDEVCORE();
+console.warn("allow void & return conversions to functions");
