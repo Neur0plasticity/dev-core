@@ -6169,16 +6169,7 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     const CLASEXTEND    = function(PUBLIC)     {return function(){};};
 //     const CLASIMPLEMENT = function(PUBLIC)     {return function(){};};
     
-//     const noDuplicates123456 = function(setupOBJ:setupOBJ) {
-//         let a = KEYS(setupOBJ.dp||{});
-//         let b = KEYS(setupOBJ.mp||{});
-//         let c = KEYS(setupOBJ.protectData||{});
-//         let e = KEYS(setupOBJ.privateData||{});
-//         let f = KEYS(setupOBJ.privateMethods||{});
-//         let oriG = a.concat(b).concat(c).concat(d).concat(e).concat(f);
-//         let neW = UNIQ(oriG);
-//         neW.length === oriG.length || (()=>{THROWE()})()
-//     };
+
 
 //     const parseClass = (function(){
         
@@ -6196,80 +6187,77 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //         `);
 //         return obj;
 //     }));
-//     const CLASMEMSETUP = CAPSULE(function(){
+    const CLASSETUPOBJSETUP = function(){ return CAPSULE(function(config){
+        !config || THROWE();
+        const __ = CLASSETUPOBJSETUP;
+        let r;
+        validate_singular: for (let k in __) {
+          if (
+            r = __[k][0].every((f,i)=>{
+              return f(config[k]);
+            }), !r
+            ) {
+            throw new Error()
+          }
+        }
+        validate_crossexamine: {
+          let a = KEYS(config.dp||{});
+          let b = KEYS(config.mp||{});
+          let c = KEYS(config.protectData||{});
+          let e = KEYS(config.privateData||{});
+          let f = KEYS(config.privateMethods||{});
+          let oriG = a.concat(b).concat(c).concat(d).concat(e).concat(f);
+          let neW = UNIQ(oriG);
+          neW.length === oriG.length || THROWE();
+        }
+        sever_memory_ties:{
+          r = {};
+          for (let k in __) {
+            if (r[k] = __[k][1][1](config[k]), !r) {
+              throw new Error()
+            }
+          }
+        }
+        return r;
+    },
+    {                      // SINGULAR VALIDATIONS                         BLOCK                       DEFAULT
+    /*const*/  name       : [[HASPROPERTY,ISSTRING,NOTEMPTY]            ,[CLONE],    ""],
+    /*const*/  extends    : [[HASPROPERTY,ISOBJECT,NOTEMPTY,UHHHH]      ,[CLONE],    {}],
+    /*const*/  implements : [[HASPROPERTY,ISOBJECT,NOTEMPTY,UHHHH]      ,[CLONE],    {}],
+    /*const*/  settings   : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,[CLONE],    {}],
+    /*const*/  imports    : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,[CLONE],    {}],
+    /*const*/  events     : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,[CLONE],    {}],
+    /*const*/  di         : [[enforce_object_datas]                     ,[CLONE],    {}],
+    /*const*/  ds         : [[enforce_object_datas]                     ,[CLONE],    {}],
+    /*const*/  dp         : [[enforce_object_datas]                     ,[CLONE],    {}],
+    /*const*/  dp1        : [[enforce_object_datas]                     ,[CLONE],    {}],
+    /*const*/  dp2        : [[enforce_object_datas]                     ,[CLONE],    {}],
+    /*const*/  mi         : [[enforce_object_methods]                   ,[CLONE],    {}],
+    /*const*/  ms         : [[enforce_object_methods]                   ,[CLONE],    {}],
+    /*const*/  mp         : [[enforce_object_methods]                   ,[CLONE],    {}],
+    /*const*/  mp1        : [[enforce_object_methods]                   ,[CLONE],    {}],
+    /*const*/  mp2        : [[enforce_object_methods]                   ,[CLONE],    {}],
+    /*const*/  constructor: [[enforce_object_methods]                   ,[CLONE],    function(){}]
+    });
+    const CLASMEMSETUP = CAPSULE(function(){
 
-//     },{          // default                             // validate   // block
-//     IMPORTS:     [() => ({})                            ,()=>{}       ,(o,z)  => CLASSETUPOBJ["imports"][1](o,z)],
-//     MIDDLEMANS:  [() => ({})                            ,()=>{}       ,z      => CLONE(z)],
-//     INTERNAL:    [() => ({"mi":{},"di":{"instances":0}}),()=>{}       ,(o,z)  => CLASSETUPOBJ["mi"][1](o,z),CLASSETUPOBJ["di"](o,z)],
-//     STATIC:      [() => ({"ds":{},"ms":{}})             ,()=>{}       ,o      => CLASSETUPOBJ["ms"](o,CLASMEMSETUP["STATIC"][0])],
-//     PUBLIC:      [() => ({"dp":{},"mp":{}})             ,()=>{}       ,o      => ({"dp": o.dp, "mp":o.mp})],
-//     PRIVATE:     [],
-//     PROTECT:     [],
-//     SETTINGS:    [()=>{}],
-//     CONSTRUCTOR: [()=>{}]
-//     });
-//     const CLASSETUPOBJ = function(){ return CAPSULE(function(){
+    },{                   // default                                    // block
+    /*const*/imports:     [() => ({})                                   ,(o,z)  => 
+    /*const*/middlemans:  [() => ({})                                   ,z      => 
+    /*const*/internal:    [() => ({"mi":{},"di":{"instances":0}})       ,(o,z)  => 
+    /*const*/static:      [() => ({"ds":{},"ms":{}})                    ,o      => 
+    /*const*/public:      [() => ({"dp":{},"mp":{}})                    ,o      => 
+    /*const*/private:     [() => ({})],
+    /*const*/protect:     [() => ({})],
+    /*const*/settings:    [() => ({})],
+    /*const*/constructor: [() => ({})]
+    });
 
-//     },
-//     {                      // SINGULAR VALIDATIONS                    BLOCK                       DEFAULT
-//     /*const*/  extends    : [[HASPROPERTY,ISOBJECT,NOTEMPTY,UHHHH]      ,CLONE,                   {}],
-//     /*const*/  implements : [[HASPROPERTY,ISOBJECT,NOTEMPTY,UHHHH]      ,CLONE,                   {}],
-//     /*const*/  name       : [[HASPROPERTY,ISSTRING,NOTEMPTY]            ,CLONE,                   ""],
-//     /*const*/  settings   : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,CLONE,                   {}],
-//     /*const*/  imports    : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,[CLONE,block_imports],   {}],
-//     /*const*/  events     : [[HASPROPERTY,ISOBJECT,NOTEMPTY]            ,CLONE,                   {}],
-//     /*const*/  di         : [[enforce_object_datas]                     ,CLONE,                   {}],
-//     /*const*/  ds         : [[enforce_object_datas]                     ,CLONE,                   {}],
-//     /*const*/  dp         : [[enforce_object_datas]                     ,CLONE,                   {}],
-//     /*const*/  dp1        : [[enforce_object_datas]                     ,CLONE,                   {}],
-//     /*const*/  dp2        : [[enforce_object_datas]                     ,CLONE,                   {}],
-//     /*const*/  mi         : [[enforce_object_methods]                   ,[block_mi,CLONE],        {}],
-//     /*const*/  ms         : [[enforce_object_methods]                   ,[block_ms,CLONE],        {}],
-//     /*const*/  mp         : [[enforce_object_methods]                   ,[block_mp,CLONE],        {}],
-//     /*const*/  mp1        : [[enforce_object_methods]                   ,[block_mp1,CLONE],       {}],
-//     /*const*/  mp2        : [[enforce_object_methods]                   ,[block_mp2,CLONE],       {}],
-//     /*const*/  constructor: [[enforce_object_methods]                   ,[CLONE],                 function(){}]
-//     });
+    const CLASSETUPOBJ  = CLASSETUPOBJSETUP(config);
+    const CLASMEM       = CLASSMEMSETUP(config);
 
-//     // const methods = ["mi","ms","mp","mp1","mp2","constructor"];
-//     // const datas   = ["di","ds","dp","dp1","dp2"];
-//     // const properties = [
-//     //     "name","extends","implements",/*"constructor"*/, "settings","imports","events",
-//     //      ...datas,
-//     //      ...methods
-//     // ];
-//     // let tempOBJ = {};
-//     // properties.forEach((e,i)=>{
-//     //     console.log(i);
-//     //     tempOBJ[e] = {
-//     //         default:  closure_default (e),
-//     //         validate: closure_validate(e),
-//     //         block:    closure_block   (e)
-//     //     };
-//     // });
-//     // const setupOBJ = tempOBJ;
-//     // //////////////////////////////////////////////////////////////////////////
-//     // //////////////////////////////////////////////////////////////////////////
-//     // const closure_default   = function(){ return function(){THROWE("unfinished");}; };
-//     // const closure_validate  = function(sel){
-//     //     let opts:any = {
-//     //         "datas":    enforce_object_datas,
-//     //         "methods":  enforce_object_methods,
-//     //         "propsss":  enforce_object_propsss,
-//     //         "nulls":    enforce_object_nulls,
-//     //     };
-//     //     if      (datas     .includes(sel)) opts = opts["datas"];
-//     //     else if (methods   .includes(sel)) opts = opts["methods"];
-//     //     else if (properties.includes(sel)) opts = opts["propsss"];
-//     //     else    (nulls     .includes(sel)) opts = opts["nulls"];
-//     //     return function(obj,val){
-//     //         hasOwnProperty(obj,val);
-//     //         opts(val);
-//     //         return true;
-//     //     };
-//     // };
-//     // const closure_block     = function(){return function(){THROWE("unfinished");}};
+
+
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -6296,30 +6284,7 @@ export const intF_keys: string[] 			= function(){return Object.keys(intF())};
 //     };
 //     ////////////////////////////////////////////////////////////////////////////////////////////////
 //     ////////////////////////////////////////////////////////////////////////////////////////////////
-//     const CLASSLEGEND = {
-//         "d0":    "data",
-//         "m0":    "method",
-//         "i0":    "internal",
-//         "s0":    "static",
-//         "p0":    "public",
-//         "p1":    "private",
-//         "p2":    "protect"
-//     };
-//     const CLASSLEGENDWRAP = Object.freeze(Object.assign(function() {},
-//     {
-//     /*const*/ method    : (v,f)=> {  },
-//     /*const*/ data      : (v) => {},
-//     /*const*/ internal  : (v) => {},  
-//     /*const*/ static    : (v) => {},
-//     /*const*/ public    : (v) => {},
-//     /*const*/ private   : (v) => {},
-//     /*const*/ protect   : (v) => {}
-//     }));
-//     /** 
-//      *      internal 
-//      *      static
-//      *      public
-//     */
+
 //     const block_imports     :Function = obj => {
 //         obj.imports.forEach((e:string)=>{
 //             e = period(e);
